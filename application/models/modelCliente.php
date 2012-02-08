@@ -26,6 +26,13 @@ class ModelCliente extends CI_Model {
 	
 	## SELECT ##
 
+	function DetalleCliente($Id) 
+	{
+		$query = $this->db->where("Cedula", $Id);
+		$query = $this->db->get('Cliente');
+		return $query->result_array();			
+	} 
+	
 	function BuscarInstituciones() 
 	{
 		$query =  $this->db->get('Institucion');
