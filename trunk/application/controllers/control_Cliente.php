@@ -286,6 +286,8 @@ class Control_Cliente extends CI_Controller {
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario; 
 		$Vendedor = $_POST['Vendedor'];
+		$usuario['Vendedor'] = $Vendedor; 
+		
 		$Lista = $this->modelCliente->BuscarClientes($Vendedor);
 		
 		$this->load->library('table');
@@ -299,7 +301,7 @@ class Control_Cliente extends CI_Controller {
 			$nombre = $row['Nombre']; 
 			$apellido = $row['Apellido']; 
 			$email = $row['Email'];
-			$this->table->add_row($cedula, $nombre, $apellido, $email, anchor('Control_Cliente/ver_detalle/'.$cedula.'','Ver Detalle'));
+			$this->table->add_row($cedula, $nombre, $apellido, $email, anchor('Control_Cliente/ver_detalle/'.$cedula.'/'.$Vendedor.'','Ver Detalle'));
 		}
 			
 		$usuario['table'] = $this->table->generate();
@@ -319,7 +321,7 @@ class Control_Cliente extends CI_Controller {
 		
 		$this->load->library('table');
 		$this->table->set_empty("&nbsp;");
-		$this->table->set_heading('<font style="font-size:12px" color="#369"><b>Cedula</b></font>', '<font style="font-size:12px" color="#369"><b>Nombre</b></font>', '<font style="font-size:12px" color="#369"><b>Apellido</b></font>', '<font style="font-size:12px" color="#369"><b>Email</b></font>', '<font style="font-size:12px" color="#369"><b>Telefono</b></font>');
+		$this->table->set_heading('<font style="font-size:12px" color="#369"><b>Cedula</b></font>', '<font style="font-size:12px" color="#369"><b>Nombre</b></font>', '<font style="font-size:12px" color="#369"><b>Apellido</b></font>', '<font style="font-size:12px" color="#369"><b>Email</b></font>');
 		
 	
 		foreach ($Lista as $row)
@@ -328,8 +330,7 @@ class Control_Cliente extends CI_Controller {
 			$nombre = $row['Nombre'];
 			$apellido = $row['Apellido'];
 			$email = $row['Email'];
-			$telefono = $row['Telefono'];
-			$this->table->add_row($cedula, $nombre, $apellido, $email, $telefono);
+			$this->table->add_row($cedula, $nombre, $apellido, $email, anchor('Control_Cliente/ver_detalle2/'.$cedula.'','Ver Detalle'));
 		}
 			
 		$usuario['table'] = $this->table->generate();
@@ -397,14 +398,26 @@ class Control_Cliente extends CI_Controller {
 	}
 	
 	// Funcion que me busca clientes en el sistema de el vendedor que yo desee
-	public function ver_detalle() 
+	public function ver_detalle($id, $Vendedor) 
 	{
 		$this->CI = &get_instance();
 		$this->CI->expiracion();
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario; 
-		$usuario['Vendedores'] = $this->modelCliente->Vendedores();
+		$usuario['Vendedor'] = $Vendedor; 
+		$usuario['Datos'] = $this->modelCliente->DetalleCliente($id);
 		
-		$this->load->view('Administrador/ACliente', $usuario);
+		$this->load->view('Administrador/ADetalleCliente', $usuario);
+	}
+	
+	public function ver_detalle2($id) 
+	{
+		$this->CI = &get_instance();
+		$this->CI->expiracion();
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario; 
+		$usuario['Datos'] = $this->modelCliente->DetalleCliente($id);
+		
+		$this->load->view('Administrador/ADetalleCliente2', $usuario);
 	}
 }
