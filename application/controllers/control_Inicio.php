@@ -7,6 +7,7 @@ class Control_Inicio extends CI_Controller
 		parent::__construct();
 		$this->load->model('modelInicio');
 		$this->load->model('modelCliente');
+		$this->load->model('modelventa');
 		$this->load->helper('form');
 		$this->load->helper('url');
 		$this->load->library('session');
@@ -92,6 +93,8 @@ class Control_Inicio extends CI_Controller
 				$usuario2 = array('nombre' => $firstName,'apellido' => $lastName,'Usuario' => $userEmail);
 				$this->session->set_userdata($usuario2);
 				
+				$usuario2['Ganadas'] = $this->modelventa->NegoGanadas(); 
+				
 				$this->load->view('Despachador/DPrincipal', $usuario2);
 			}
 		}
@@ -155,6 +158,8 @@ class Control_Inicio extends CI_Controller
 	{
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
+		
+		$usuario['Ganadas'] = $this->modelventa->NegoGanadas(); 
 		
 		$this->load->view('Despachador/DPrincipal', $usuario);	
 	}
