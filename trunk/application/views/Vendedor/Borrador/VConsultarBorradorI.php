@@ -153,28 +153,16 @@ function CambiaColor(esto,borde,texto)
 	<h3><a href="#">Nuevo</a></h3>
 	<div>
 		<li>- <a href="<?php echo base_url();?>index.php/Control_Cliente/agregar_cliente">Clientes</a></li>
-		<li>- <a href="<?php echo base_url();?>index.php/Control_Institucion">Institucion</a></li>
+		<li>- <a href="<?php echo base_url();?>index.php/Control_Institucion/agregar_institucion">Institucion</a></li>
 		<li>- <a href="<?php echo base_url();?>index.php/Control_Negociacion">Negociacion</a></li>
-		<li>- <a href="">Venta</a></li>
-		<li>- <a href="">Orden de Compra</a></li>
-		<li>- <a href="">Importacion</a></li>
 	</div>
 	<h3><a href="#">Ver</a></h3>
 	<div>
 		<li>- <a href="<?php echo base_url();?>index.php/Control_Negociacion/ver_negociacion">Negociacion</a></li>
-		<li>- <a href="">Venta</a></li>
-		<li>- <a href="">Orden de Compra</a></li>
-		<li>- <a href="">Importacion</a></li>
-		<li>- <a href="">Reporte</a></li>
 	</div>
 	<h3><a href="#">Herramientas</a></h3>
 	<div>
-		<li>- <a href="">Calendario</a></li>
-		<li>- <a href="">Almacen</a></li>
-		<li>- <a href="">Usuarios</a></li>
-		<li>- <a href="">Productos</a></li>
-		<li>- <a href="">Facturacion</a></li>
-		<li>- <a href="">Visitas</a></li>
+    
 	</div>
 </div>
 
@@ -194,8 +182,7 @@ function CambiaColor(esto,borde,texto)
           <td width="26" align="right" valign="top"><a href="<?php echo base_url();?>index.php/Control_Negociacion/cambio_status_3/<?php echo $Id_Negociacion; ?>/<?php echo $Id; ?>"><img src="<?php echo base_url();?>files/images/icono_filtro.png" alt="" width="25" height="25" title="Cambio de estatus" /></a></td>
         </tr>
         <tr>
-          <td><h4 style="color:#0066FF">PASO I</h4></td>
-          <td colspan="2" align="center" valign="top"><?php if ($Contador <= 5){ } else {echo "<b><font title='Negociaci&oacute;n Expirada' style='font-size:20px' color='#FF0000'>ALERTA</font><br/>Negociacion Expirada</b>";}?></td>
+          <td colspan="3"><h4 style="color:#0066FF">PASO I</h4></td>
           </tr>
         
         <tr>

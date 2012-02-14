@@ -100,7 +100,7 @@ return false;
 		<a href="index.html" title="Home"><img src="http://elp21.no-ip.info:4085/SGP/files/images/Portada/logo2.gif" alt="Your logo here" width="45" height="40" /> <span id="logo-text">YOMA
 		</span></a>
 		<div id="userbar">
-			<a href="<?php echo base_url();?>index.php/Control_Inicio/cerrar_sesion">Cerrar Sesion </a> | <a id="tabe" href="<?php echo base_url();?>index.php/Control_Pdf">Ayuda</a></div>
+			<a href="<?php echo base_url();?>index.php/Control_Inicio/cerrar_sesion">Cerrar Sesion </a> | <a id="tabe" href="">Ayuda</a></div>
 	</div>
 	<!-- END tagline -->
 
@@ -108,7 +108,7 @@ return false;
 <div id="navcontainer">
 	<ul id="navlist">
 		<li><a id="taba" class="active" href="<?php echo base_url();?>index.php/Control_Inicio/d_principal" title="Inicio">Inicio</a></li>
-		<li><a id="tabb" href="<?php echo base_url();?>index.php/Control_Negociacion/ver_negociacion" title="Gestionar Negociaciones">Ventas</a></li>
+		<li><a id="tabb" href="<?php echo base_url();?>index.php/Control_Venta" title="Gestionar Ventas">Ventas</a></li>
 		<li></li>
 		<li></li>
 	</ul>
@@ -120,7 +120,7 @@ return false;
 <!-- BEGIN search -->
 <div id="search">
   <div align="right">
-    <form id="form5" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/ver_vista_nego">
+    <form id="form5" method="post" action="">
       <table width="200" border="0" align="right" style="margin-top:-2px">
         <tr>
           <td width="158" align="left"><div align="right">
@@ -167,24 +167,8 @@ return false;
 <div id="cc">
   <table width="440" border="0">
     <tr>
-      <td width="160" align="right"><font style="font-size:12px; color:#369"><b>Negociaciones por corregir:</b></font></td>
-      <td width="271"><form id="form1" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/desbloquear">
-        <select name="Bloqueada" id="Bloqueada" style="width:150px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required">
-          <option></option>
-          <?php
-						foreach ($Rechazadas as $row) {
-				  ?>
-          <option value="<?php echo $row['Id_Negociacion']; ?>" <?php echo set_select('Hola',$row['Id_Negociacion']); ?> ><?php echo $row['Id_Negociacion']; ?></option>
-          <?php
-					}
-					?>
-          </select>
-        <input type="submit" name="Submit3" value="Desbloquear" onclick="return confirm('Desea desbloquear esta negociacion?');" />
-        </form></td>
+      <td width="431">&nbsp;</td>
     </tr>
-    <tr>
-      <td colspan="2"><hr align="left" style="width:435px;" /></td>
-      </tr>
   </table>
   <table width="440" border="0">
     <tr>

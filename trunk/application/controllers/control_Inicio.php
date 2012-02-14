@@ -14,15 +14,15 @@ class Control_Inicio extends CI_Controller
 	
 	// Funcion para inicializar todas las funciones con el fin de no poder 
 	// utilizar ningun metodo si la sesion muere en el tiempo de vida del sistema.
-	public function expiracion() 
-	{
-		if ($this->session->userdata('Usuario') == NULL)
-		{
-			$url = 'http://elp21.no-ip.info:4085/SGP';
-			echo '<script type="text/javascript">alert("Su sesion ha expirado'; 
-   			echo ', vuelva a logearse para continuar"); window.location="'.$url.'";</script>';
-		}
-	}
+	//public function expiracion() 
+	//{
+	//	if ($this->session->userdata('Usuario') == NULL)
+		//{
+		//	$url = 'http://elp21.no-ip.info:4085/SGP';
+		//	echo '<script type="text/javascript">alert("Su sesion ha expirado'; 
+   		//	echo ', vuelva a logearse para continuar"); window.location="'.$url.'";<//script>';
+		//}
+	//}
 	
 	// Funcion que se utiliza para iniciar el sistema.
 	public function index()
@@ -113,8 +113,6 @@ class Control_Inicio extends CI_Controller
 	// inicio a la pagina principal del sistema de los vendedores.
 	public function v_principal() 
 	{
-		$this->CI = &get_instance();
-		$this->CI->expiracion();
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
 		$cedula = $this->modelCliente->BuscarId($Usuario);
@@ -130,8 +128,6 @@ class Control_Inicio extends CI_Controller
 	// inicio a la pagina principal del sistema de los supervisores.
 	public function a_principal() 
 	{
-		$this->CI = &get_instance();
-		$this->CI->expiracion();
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
 		$cedula = $this->modelCliente->BuscarId($Usuario);
@@ -157,8 +153,6 @@ class Control_Inicio extends CI_Controller
 	// inicio a la pagina principal del sistema de los despachadores o encargados de ventas
 	public function d_principal() 
 	{
-		$this->CI = &get_instance();
-		$this->CI->expiracion();
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
 		

@@ -530,7 +530,7 @@ class Control_Reporte extends CI_Controller
 		
 		$this->load->library('table');
 		$this->table->set_empty("&nbsp;");
-		$this->table->set_heading('<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Codigo</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Status</b></font>','<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>NumeroODC</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>FechaODC</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Banco</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>PagoInicial</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>CondicionesPago</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>FechaPago</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Numero Deposito</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Total</b></font>');
+		$this->table->set_heading('<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Codigo</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Status</b></font>','<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>NumeroODC</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>FechaODC</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Banco</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>PagoInicial</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>CondicionesPago</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>FechaPago</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Numero Deposito</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Total</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Vendedor</b></font>');
 	
 		foreach ($Lista as $row)
 		{
@@ -545,7 +545,67 @@ class Control_Reporte extends CI_Controller
 			$fechapa = $row['FechaPago'];
 			$ndeposito = $row['NDeposito'];
 			$total = $row['Total'];
-			$this->table->add_row($codigo, $status, $fechap, $numeroo, $fechao, $banco, $pago, $condicion, $fechapa, $ndeposito, $total);
+			$nvendedor = $row['Nombre_1'];
+			$avendedor = $row['Apellido_1'];
+			$vendedor = $nvendedor.' '.$avendedor;
+			$this->table->add_row($codigo, $status, $numeroo, $fechao, $banco, $pago, $condicion, $fechapa, $ndeposito, $total, $vendedor);
+		}
+			
+		$usuario['table'] = $this->table->generate();
+		
+		$this->load->view('Administrador/Reporte/RNegociacion/RVista_5', $usuario);
+	}
+	
+	public function lista_negociaciones_especial($especialidad)
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$Lista = $this->modelReporte->BuscarNegociacionesEspecial($especialidad);
+		
+		$this->load->library('table');
+		$this->table->set_empty("&nbsp;");
+		$this->table->set_heading('<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Nombre</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Apellido</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Telefono</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>EMail</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Status</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Codigo Negociaci&oacute;n</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Vendedor</b></font>');
+	
+		foreach ($Lista as $row)
+		{
+			$nombre = $row['Nombre'];
+			$apellido = $row['Apellido'];
+			$telefono = $row['Telefono'];
+			$email = $row['Email'];
+			$status = $row['Status'];
+			$nego = $row['Id_Negociacion'];
+			$nvendedor = $row['Nombre_1'];
+			$avendedor = $row['Apellido_1'];
+			$vendedor = $nvendedor.' '.$avendedor;
+			$this->table->add_row($nombre, $apellido, $telefono, $email, $status, $nego, $vendedor);
+		}
+			
+		$usuario['table'] = $this->table->generate();
+		
+		$this->load->view('Administrador/Reporte/RNegociacion/RVista_5', $usuario);
+	}
+	
+	public function lista_negociaciones_especiali($especialidad)
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$Lista = $this->modelReporte->BuscarNegociacionesEspecialI($especialidad);
+		
+		$this->load->library('table');
+		$this->table->set_empty("&nbsp;");
+		$this->table->set_heading('<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Nombre</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Telefono</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>EMail</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Status</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Codigo Negociaci&oacute;n</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Vendedor</b></font>');
+	
+		foreach ($Lista as $row)
+		{
+			$nombre = $row['Nombre'];
+			$telefono = $row['Telefono1'];
+			$email = $row['Web'];
+			$status = $row['Status'];
+			$nego = $row['Id_Negociacion'];
+			$nvendedor = $row['Nombre_1'];
+			$avendedor = $row['Apellido_1'];
+			$vendedor = $nvendedor.' '.$avendedor;
+			$this->table->add_row($nombre, $telefono, $email, $status, $nego, $vendedor);
 		}
 			
 		$usuario['table'] = $this->table->generate();

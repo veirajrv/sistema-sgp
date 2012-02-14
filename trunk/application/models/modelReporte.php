@@ -85,10 +85,11 @@ class ModelReporte extends CI_Model
 	
 	function BuscarNegociaciones()
 	{
-		$query = $this->db->query('SELECT N.Id_Negociacion, N.FechaP, N.NumeroODC, N.FechaODC, N.Banco, N.PagoInicial, N.CondicionesPago, N.FechaPago, N.NDeposito, N.Total, S.Status
-								   FROM NEGOCIACION AS N, SEGUIMIENTO AS S, NS AS NS
+		$query = $this->db->query('SELECT N.Id_Negociacion, N.FechaP, N.NumeroODC, N.FechaODC, N.Banco, N.PagoInicial, N.CondicionesPago, N.FechaPago, N.NDeposito, N.Total, S.Status, E.Nombre_1, E.Apellido_1
+								   FROM NEGOCIACION AS N, SEGUIMIENTO AS S, NS AS NS, EMPLEADO AS E
 								   WHERE NS.Id_Negociacion = N.Id_Negociacion
 								   AND NS.Id_Seguimiento = S.Id_Seguimiento
+								   AND E.Cedula = N.Id_Empleado
 								   ORDER BY N.Id_Negociacion ASC ');	
 		
 		return $query->result_array();	
@@ -238,6 +239,34 @@ class ModelReporte extends CI_Model
 								   AND NS.Id_Negociacion = N.Id_Negociacion
 								   AND NS.Id_Seguimiento = S.Id_Seguimiento
 								   AND S.Porcentaje = '.$Porcentaje.'
+								   ORDER BY N.Id_Negociacion');	
+		
+		return $query->result_array();	
+	} 
+	
+	function BuscarNegociacionesEspecial($especialidad)
+	{
+		$query = $this->db->query('SELECT C.Nombre, C.Apellido, C.Telefono, C.Email, S.Status, N.Id_Negociacion, E.Nombre_1, E.Apellido_1
+								   FROM EMPLEADO AS E, NEGOCIACION AS N, NS AS NS, SEGUIMIENTO AS S, CLIENTE AS C
+								   WHERE C.Id_Cliente = N.Id_Cliente
+								   AND NS.Id_Negociacion = N.Id_Negociacion
+								   AND NS.Id_Seguimiento = S.Id_Seguimiento
+								   AND E.Cedula = N.Id_Empleado
+								   AND C.Especialidad =  "'.$especialidad.'"
+								   ORDER BY N.Id_Negociacion');	
+		
+		return $query->result_array();	
+	} 
+	
+	function BuscarNegociacionesEspecialI($especialidad)
+	{
+		$query = $this->db->query('SELECT I.Nombre, I.Telefono1, I.Web, S.Status, N.Id_Negociacion, E.Nombre_1, E.Apellido_1
+								   FROM EMPLEADO AS E, NEGOCIACION AS N, NS AS NS, SEGUIMIENTO AS S, INSTITUCION AS I
+								   WHERE I.Id_Institucion = N.Id_Institucion
+								   AND NS.Id_Negociacion = N.Id_Negociacion
+								   AND NS.Id_Seguimiento = S.Id_Seguimiento
+								   AND E.Cedula = N.Id_Empleado
+								   AND I.Especialidad =  "'.$especialidad.'"
 								   ORDER BY N.Id_Negociacion');	
 		
 		return $query->result_array();	

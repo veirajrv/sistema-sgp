@@ -26,17 +26,15 @@
   </div>
   <div id="login-box-name">Clave:</div>
   <div id="login-box-field">
-    <input name="Clave" type="Password" class="form-login" id="Clave" title="Clave" size="30" maxlength="20" required="required"/>
-  </div>
+    <input name="Clave" type="password" class="form-login" id="Clave" title="Clave" size="30" maxlength="20" required="required"/>
+    <br />
+    <span style="text-align: right">
+    <input type="submit" name="Submit" value="INGRESAR" style="height:30px; width:110px;"/>
+    </span><br />
   <br />
-  <span class="login-box-options">
-  <input type="checkbox" name="1" value="1" />
-Recordar Usuario
-<input type="submit" name="Submit" value="INGRESAR" style="height:30px; width:110px;"/> 
-<a href="#" style="margin-left:30px;"></a></span><br />
-<br />
-<a href="#"></a>
-<label></label>
+  <a href="#"></a>
+  <label></label>
+  </div>
 </form>
 <H2>&nbsp;</H2>
 </div>

@@ -2,8 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-<script src="<?php echo base_url();?>files/js/jquery-1.6.2.min.js" type="text/javascript"> </script>
-<script src="<?php echo base_url();?>files/js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"> </script>
+<script src="http://elp21.no-ip.info:4085/SGP/files/js/jquery-1.6.2.min.js" type="text/javascript"> </script>
+<script src="http://elp21.no-ip.info:4085/SGP/files/js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"> </script>
 <head>
 
 <script>
@@ -57,7 +57,7 @@
 	<div id="tagline">
 		<a href="index.html" title="Home"><img src="http://elp21.no-ip.info:4085/SGP/files/images/Portada/logo2.gif" alt="Your logo here" width="45" height="40" /> <span id="logo-text">YOMA</span></a>
 		<div id="userbar">
-			<a href="http://elp21.no-ip.info:4085/SGP/index.php/ControlInicio/CerrarSesion/">Cerrar Sesion </a> | <a id="tabe" href="http://elp21.no-ip.info:4085/SGP/index.php/ControlPdf">Ayuda</a>		</div>
+			<a href="<?php echo base_url();?>index.php/Control_Inicio/cerrar_sesion">Cerrar Sesion </a> | <a id="tabe" href="<?php echo base_url();?>index.php/Control_Pdf">Ayuda</a>		</div>
 	</div><!-- END tagline -->
 
 <!-- BEGIN tabs -->
@@ -92,27 +92,16 @@
 	<h3><a href="#">Nuevo</a></h3>
 	<div>
 		<li>- <a href="<?php echo base_url();?>index.php/Control_Cliente/agregar_cliente">Clientes</a></li>
-		<li>- <a href="<?php echo base_url();?>index.php/Control_Institucion">Institucion</a></li>
+		<li>- <a href="<?php echo base_url();?>index.php/Control_Institucion/agregar_institucion">Institucion</a></li>
 		<li>- <a href="<?php echo base_url();?>index.php/Control_Negociacion">Negociacion</a></li>
-		<li>- <a href="#">Venta</a></li>
-		<li>- <a href="#">Orden de Compra</a></li>
-		<li>- <a href="#">Importacion</a></li>
 	</div>
 	<h3><a href="#">Ver</a></h3>
 	<div>
 		<li>- <a href="<?php echo base_url();?>index.php/Control_Negociacion/ver_negociacion">Negociacion</a></li>
-		<li>- <a href="#">Venta</a></li>
-		<li>- <a href="#">Orden de Compra</a></li>
-		<li>- <a href="#">Importacion</a></li>
 	</div>
 	<h3><a href="#">Herramientas</a></h3>
 	<div>
-		<li>- <a href="#">Notificacion</a></li>
-		<li>- <a href="#">Almacen</a></li>
-		<li>- <a href="#">Usuarios</a></li>
-		<li>- <a href="#">Productos</a></li>
-		<li>- <a href="#">Facturacion</a></li>
-		<li>- <a href="#">Visitas</a></li>
+    
 	</div>
 </div>
 

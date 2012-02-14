@@ -53,3 +53,17 @@ ERROR - 2012-02-08 12:56:39 --> Severity: Notice  --> Undefined variable: ConAle
 ERROR - 2012-02-08 12:56:39 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Administrador\APrincipal.php 232
 ERROR - 2012-02-08 13:04:47 --> Severity: Notice  --> Undefined variable: Vendedor F:\htdocs\desarrollo\SGP\application\controllers\control_Cliente.php 333
 ERROR - 2012-02-08 13:04:47 --> Severity: Notice  --> Undefined variable: Vendedor F:\htdocs\desarrollo\SGP\application\controllers\control_Cliente.php 333
+ERROR - 2012-02-08 15:11:56 --> Severity: Notice  --> Undefined variable: Rechazadas F:\htdocs\desarrollo\SGP\application\views\Vendedor\VPrincipal.php 207
+ERROR - 2012-02-08 15:11:56 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Vendedor\VPrincipal.php 207
+ERROR - 2012-02-08 16:12:40 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string F:\htdocs\desarrollo\SGP\system\core\Utf8.php 89
+ERROR - 2012-02-08 16:14:02 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string F:\htdocs\desarrollo\SGP\system\core\Utf8.php 89
+ERROR - 2012-02-08 16:42:07 --> Severity: Notice  --> Undefined variable: ConAlerta F:\htdocs\desarrollo\SGP\application\views\Administrador\APrincipal.php 232
+ERROR - 2012-02-08 16:42:07 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Administrador\APrincipal.php 232
+ERROR - 2012-02-08 16:51:14 --> Severity: Notice  --> Undefined variable: ConAlerta F:\htdocs\desarrollo\SGP\application\views\Administrador\APrincipal.php 232
+ERROR - 2012-02-08 16:51:14 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Administrador\APrincipal.php 232
+ERROR - 2012-02-08 16:51:24 --> Severity: Notice  --> Undefined index:  Nombre F:\htdocs\desarrollo\SGP\application\controllers\control_Inicio.php 36
+ERROR - 2012-02-08 16:51:24 --> Severity: Notice  --> Undefined index:  Clave F:\htdocs\desarrollo\SGP\application\controllers\control_Inicio.php 37
+ERROR - 2012-02-08 16:51:24 --> Severity: Notice  --> Undefined variable: clave F:\htdocs\desarrollo\SGP\application\models\modelInicio.php 60
+ERROR - 2012-02-08 16:51:24 --> Severity: Notice  --> Undefined variable: tipo F:\htdocs\desarrollo\SGP\application\models\modelInicio.php 84
+ERROR - 2012-02-08 16:51:29 --> Severity: Notice  --> Undefined variable: ConAlerta F:\htdocs\desarrollo\SGP\application\views\Administrador\APrincipal.php 232
+ERROR - 2012-02-08 16:51:29 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Administrador\APrincipal.php 232

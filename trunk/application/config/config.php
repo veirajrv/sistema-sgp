@@ -12,7 +12,7 @@
 |
 | If this is not set then CodeIgniter will guess the protocol, domain and
 | path to your installation.
-|$config['base_url']	= "http://elp21.no-ip.info:4085/SGP/";
+|
 */
 $config['base_url']	= "http://elp21.no-ip.info:4085/SGP/";
 

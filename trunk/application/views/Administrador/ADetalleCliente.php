@@ -136,17 +136,17 @@ textarea.LV_invalid_field:active {
 		<a href="index.html" title="Home"><img src="http://elp21.no-ip.info:4085/SGP/files/images/Portada/logo2.gif" alt="Your logo here" width="45" height="40" /> <span id="logo-text">YOMA
 		</span></a>
 		<div id="userbar">
-			<a href="<?php echo base_url();?>index.php/Control_Inicio/cerrar_sesion/">Cerrar Sesion </a> | <a id="tabe" href="http://elp21.no-ip.info:4085/SGP/index.php/Control_Pdf">Ayuda</a>		</div>
+			<a href="<?php echo base_url();?>index.php/Control_Inicio/cerrar_sesion/">Cerrar Sesion </a> | <a id="tabe" href="">Ayuda</a>		</div>
   </div>
 	<!-- END tagline -->
 
 <!-- BEGIN tabs -->
 <div id="navcontainer">
 	<ul id="navlist">
-		<li><a id="taba" href="<?php echo base_url();?>index.php/Control_Inicio/v_principal" title="Inicio">Inicio</a></li>
-		<li><a id="tabb" href="<?php echo base_url();?>index.php/Control_Negociacion" title="Gestionar Negociaciones">Negociaciones</a></li>
-		<li><a id="tabc" class="active"  href="<?php echo base_url();?>index.php/Control_Cliente" title="Crear Clientes">Clientes</a></li>
-		<li><a id="tabd" href="<?php echo base_url();?>index.php/Control_Institucion" title="Visualizar Reportes">Instituci&oacute;n</a></li>
+		<li><a id="taba" class="active" href="<?php echo base_url();?>index.php/Control_Inicio/a_principal" title="Inicio">Inicio</a></li>
+		<li><a id="tabb" href="<?php echo base_url();?>index.php/Control_Negociacion/buscar_vendedores" title="Gestionar Negociaciones">Negociaciones</a></li>
+		<li><a id="tabb" href="<?php echo base_url();?>index.php/Control_Cliente/buscar_vendedores" title="Clientes">Clientes</a></li>
+		<li><a id="tabb" href="<?php echo base_url();?>index.php/Control_Reporte" title="Visualizar Reportes">Reportes</a></li>
 	</ul>
 </div><!-- END navcontainer -->
 
@@ -171,29 +171,15 @@ textarea.LV_invalid_field:active {
 <div id="accordion">
 	<h3><a href="#">Nuevo</a></h3>
 	<div>
-		<li>- <a href="<?php echo base_url();?>index.php/Control_Cliente/agregar_cliente">Clientes</a></li>
-		<li>- <a href="<?php echo base_url();?>index.php/Control_Institucion">Institucion</a></li>
-		<li>- <a href="<?php echo base_url();?>index.php/Control_Negociacion">Negociacion</a></li>
-		<li>- <a href="">Venta</a></li>
-		<li>- <a href="">Orden de Compra</a></li>
-		<li>- <a href="">Importacion</a></li>
+	    <li>- <a href="<?php echo base_url();?>index.php/Control_Producto">Producto</a></li>
 	</div>
 	<h3><a href="#">Ver</a></h3>
 	<div>
-		<li>- <a href="<?php echo base_url();?>index.php/Control_Negociacion/ver_negociacion">Negociacion</a></li>
-		<li>- <a href="">Venta</a></li>
-		<li>- <a href="">Orden de Compra</a></li>
-		<li>- <a href="">Importacion</a></li>
-		<li>- <a href="">Reporte</a></li>
+		<li>- <a href="<?php echo base_url();?>index.php/Control_Negociacion/buscar_vendedores">Negociacion</a></li>
 	</div>
 	<h3><a href="#">Herramientas</a></h3>
 	<div>
-		<li>- <a href="">Calendario</a></li>
-		<li>- <a href="">Almacen</a></li>
-		<li>- <a href="">Usuarios</a></li>
-		<li>- <a href="">Productos</a></li>
-		<li>- <a href="">Facturacion</a></li>
-		<li>- <a href="">Visitas</a></li>
+		
 	</div>
 </div>
 

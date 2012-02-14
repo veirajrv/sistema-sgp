@@ -95,31 +95,6 @@ class control_Negociacion extends CI_Controller {
 			$usuario['Lista'] = $this->modelProducto->ConsultarLista($Id_Negociacion);
 			$usuario['Lista2'] = $this->modelProducto->ConsultarLista2($Id_Negociacion);
 			
-			$consulta_fecha = $this->modelInicio->Fecha($Id_Negociacion);
-			$mes = $consulta_fecha[3].$consulta_fecha[4]; 
-			$ano = $consulta_fecha[8].$consulta_fecha[9]; 
-			$hoymes =  date("m"); 
-			$hoyano =  date("y"); 
-			if ($hoymes >= $mes and $hoyano == $ano) 
-			{
-				$numero = $hoymes - $mes;
-				$usuario['Contador'] = $hoymes - $mes;
-				
-				if ($numero > 3)
-				{
-					//$datos['ID2'] = $Id_Negociacion;
-					//$Alerta = new ModelNegociacion;
-					//$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-				}
-			}
-			else 
-			{
-				$usuario['Contador'] = 4;
-				//$datos['ID2'] = $Id_Negociacion;
-				//$Alerta = new ModelNegociacion;
-				//$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-			}
-			
 			$usuario['Descuento'] = $this->modelProducto->ConsultarDescuento($Id_Negociacion);
 			$Neto = $this->modelProducto->Neto($Id_Negociacion);
 			$Neto2 = $this->modelProducto->Neto2($Id_Negociacion);
@@ -144,31 +119,6 @@ class control_Negociacion extends CI_Controller {
 			$usuario['DatosVendedor'] = $this->modelCliente->DatosVendedor2($Id_Negociacion, $Vendedor); 
 			$usuario['Lista'] = $this->modelProducto->ConsultarLista($Id_Negociacion);
 			$usuario['Lista2'] = $this->modelProducto->ConsultarLista2($Id_Negociacion);
-			
-			$consulta_fecha = $this->modelInicio->Fecha($Id_Negociacion);
-			$mes = $consulta_fecha[3].$consulta_fecha[4]; 
-			$ano = $consulta_fecha[8].$consulta_fecha[9]; 
-			$hoymes =  date("m"); 
-			$hoyano =  date("y"); 
-			if ($hoymes >= $mes and $hoyano == $ano) 
-			{
-				$numero = $hoymes - $mes;
-				$usuario['Contador'] = $hoymes - $mes;
-				
-				if ($numero > 3)
-				{
-					//$datos['ID2'] = $Id_Negociacion;
-					//$Alerta = new ModelNegociacion;
-					//$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-				}
-			}
-			else 
-			{
-				$usuario['Contador'] = 4;
-				//$datos['ID2'] = $Id_Negociacion;
-				//$Alerta = new ModelNegociacion;
-				//$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-			}
 			
 			$usuario['Descuento'] = $this->modelProducto->ConsultarDescuento($Id_Negociacion);
 			$Neto = $this->modelProducto->Neto($Id_Negociacion);
@@ -356,31 +306,6 @@ class control_Negociacion extends CI_Controller {
 				$usuario['Lista'] = $this->modelProducto->ConsultarLista($Id_Negociacion);
 				$usuario['Lista2'] = $this->modelProducto->ConsultarLista2($Id_Negociacion);
 				
-				$consulta_fecha = $this->modelInicio->Fecha($Id_Negociacion);
-				$mes = $consulta_fecha[3].$consulta_fecha[4]; 
-				$ano = $consulta_fecha[8].$consulta_fecha[9]; 
-				$hoymes =  date("m"); 
-				$hoyano =  date("y"); 
-				if ($hoymes >= $mes and $hoyano == $ano) 
-				{
-					$numero = $hoymes - $mes;
-					$usuario['Contador'] = $hoymes - $mes;
-					
-					if ($numero > 3)
-					{
-						//$datos['ID2'] = $Id_Negociacion;
-						//$Alerta = new ModelNegociacion;
-						//$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-					}
-				}
-				else 
-				{
-					$usuario['Contador'] = 4;
-					//$datos['ID2'] = $Id_Negociacion;
-					//$Alerta = new ModelNegociacion;
-					//$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-				}
-				
 				$usuario['Descuento'] = $this->modelProducto->ConsultarDescuento($Id_Negociacion);
 				$Neto = $this->modelProducto->Neto($Id_Negociacion);
 				$Neto2 = $this->modelProducto->Neto2($Id_Negociacion);
@@ -405,31 +330,6 @@ class control_Negociacion extends CI_Controller {
 				$usuario['DatosVendedor'] = $this->modelCliente->DatosVendedor2($Id_Negociacion, $Vendedor); 
 				$usuario['Lista'] = $this->modelProducto->ConsultarLista($Id_Negociacion);
 				$usuario['Lista2'] = $this->modelProducto->ConsultarLista2($Id_Negociacion);
-			
-				$consulta_fecha = $this->modelInicio->Fecha($Id_Negociacion);
-				$mes = $consulta_fecha[3].$consulta_fecha[4]; 
-				$ano = $consulta_fecha[8].$consulta_fecha[9]; 
-				$hoymes =  date("m"); 
-				$hoyano =  date("y"); 
-				if ($hoymes >= $mes and $hoyano == $ano) 
-				{
-					$numero = $hoymes - $mes;
-					$usuario['Contador'] = $hoymes - $mes;
-					
-					if ($numero > 3)
-					{
-						//$datos['ID2'] = $Id_Negociacion;
-						//$Alerta = new ModelNegociacion;
-						//$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-					}
-				}
-				else 
-				{
-					$usuario['Contador'] = 4;
-					//$datos['ID2'] = $Id_Negociacion;
-					//$Alerta = new ModelNegociacion;
-					//$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-				}
 				
 				$usuario['Descuento'] = $this->modelProducto->ConsultarDescuento($Id_Negociacion);
 				$Neto = $this->modelProducto->Neto($Id_Negociacion);
@@ -577,31 +477,6 @@ class control_Negociacion extends CI_Controller {
 			$usuario['Lista'] = $this->modelProducto->ConsultarLista($Id_Negociacion);
 			$usuario['Lista2'] = $this->modelProducto->ConsultarLista2($Id_Negociacion);
 			
-			$consulta_fecha = $this->modelInicio->Fecha($Id_Negociacion);
-			$mes = $consulta_fecha[3].$consulta_fecha[4]; 
-			$ano = $consulta_fecha[8].$consulta_fecha[9]; 
-			$hoymes =  date("m"); 
-			$hoyano =  date("y"); 
-			if ($hoymes >= $mes and $hoyano == $ano) 
-			{
-				$numero = $hoymes - $mes;
-				$usuario['Contador'] = $hoymes - $mes;
-				
-				if ($numero > 3)
-				{
-					//$datos['ID2'] = $Id_Negociacion;
-					//$Alerta = new ModelNegociacion;
-					//$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-				}
-			}
-			else 
-			{
-				$usuario['Contador'] = 4;
-				//$datos['ID2'] = $Id_Negociacion;
-				//$Alerta = new ModelNegociacion;
-				//$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-			}
-			
 			$usuario['Descuento'] = $this->modelProducto->ConsultarDescuento($Id_Negociacion);
 			$Neto = $this->modelProducto->Neto($Id_Negociacion);
 			$Neto2 = $this->modelProducto->Neto2($Id_Negociacion);
@@ -626,31 +501,6 @@ class control_Negociacion extends CI_Controller {
 			$usuario['DatosVendedor'] = $this->modelCliente->DatosVendedor2($Id_Negociacion, $Vendedor); 
 			$usuario['Lista'] = $this->modelProducto->ConsultarLista($Id_Negociacion);
 			$usuario['Lista2'] = $this->modelProducto->ConsultarLista2($Id_Negociacion);
-			
-			$consulta_fecha = $this->modelInicio->Fecha($Id_Negociacion);
-			$mes = $consulta_fecha[3].$consulta_fecha[4]; 
-			$ano = $consulta_fecha[8].$consulta_fecha[9]; 
-			$hoymes =  date("m"); 
-			$hoyano =  date("y"); 
-			if ($hoymes >= $mes and $hoyano == $ano) 
-			{
-				$numero = $hoymes - $mes;
-				$usuario['Contador'] = $hoymes - $mes;
-				
-				if ($numero > 3)
-				{
-					//$datos['ID2'] = $Id_Negociacion;
-					//$Alerta = new ModelNegociacion;
-					//$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-				}
-			}
-			else 
-			{
-				$usuario['Contador'] = 4;
-				//$datos['ID2'] = $Id_Negociacion;
-				//$Alerta = new ModelNegociacion;
-				//$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-			}
 		
 			$usuario['Descuento'] = $this->modelProducto->ConsultarDescuento($Id_Negociacion);
 			$Neto = $this->modelProducto->Neto($Id_Negociacion);
@@ -698,31 +548,6 @@ class control_Negociacion extends CI_Controller {
 				$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 				$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Id_Negociacion);
 				
-				$consulta_fecha = $this->modelInicio->Fecha($Id_Negociacion);
-				$mes = $consulta_fecha[3].$consulta_fecha[4]; 
-				$ano = $consulta_fecha[8].$consulta_fecha[9]; 
-				$hoymes =  date("m"); 
-				$hoyano =  date("y"); 
-				if ($hoymes >= $mes and $hoyano == $ano) 
-				{
-					$numero = $hoymes - $mes;
-					$usuario['Contador'] = $hoymes - $mes;
-					
-					if ($numero > 3)
-					{
-						$datos['ID2'] = $IdNegoBorrador;
-						$Alerta = new ModelNegociacion;
-						$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-					}
-				}
-				else 
-				{
-					$usuario['Contador'] = 4;
-					$datos['ID2'] = $IdNegoBorrador;
-					$Alerta = new ModelNegociacion;
-					$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-				}
-				
 				$usuario['Total'] = $this->modelProducto->TotalI($Id_Negociacion);
 				$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 				
@@ -752,33 +577,7 @@ class control_Negociacion extends CI_Controller {
 				
 				$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 				$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Id_Negociacion);
-				$consulta_fecha = $this->modelInicio->Fecha($Id_Negociacion);
-				$mes = $consulta_fecha[3].$consulta_fecha[4]; 
-				$ano = $consulta_fecha[8].$consulta_fecha[9]; 
-				$hoymes =  date("m"); 
-				$hoyano =  date("y"); 
-				if ($hoymes >= $mes and $hoyano == $ano) 
-				{
-					$numero = $hoymes - $mes;
-					$usuario['Contador'] = $hoymes - $mes;
-				
-					if ($numero > 3)
-					{
-						$datos['ID2'] = $IdNegoBorrador;
-						$Alerta = new ModelNegociacion;
-						$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-					}
-				}
-				else 
-				{
-					$usuario['Contador'] = 4;
-					$datos['ID2'] = $Id_Negociacion;
-					$Alerta = new ModelNegociacion;
-					$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-				}
-			
 				$usuario['Total'] = $this->modelProducto->Total($Id_Negociacion);
-				$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 				
 				$this->load->view('Vendedor/Borrador/VConsultaBorrador', $usuario);
 			}
@@ -808,33 +607,7 @@ class control_Negociacion extends CI_Controller {
 				$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 				$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Id_Negociacion);
 				
-				$consulta_fecha = $this->modelInicio->Fecha($Id_Negociacion);
-				$mes = $consulta_fecha[3].$consulta_fecha[4]; 
-				$ano = $consulta_fecha[8].$consulta_fecha[9]; 
-				$hoymes =  date("m"); 
-				$hoyano =  date("y"); 
-				if ($hoymes >= $mes and $hoyano == $ano) 
-				{
-					$numero = $hoymes - $mes;
-					$usuario['Contador'] = $hoymes - $mes;
-					
-					if ($numero > 3)
-					{
-						$datos['ID2'] = $IdNegoBorrador;
-						$Alerta = new ModelNegociacion;
-						$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-					}
-				}
-				else 
-				{
-					$usuario['Contador'] = 4;
-					$datos['ID2'] = $IdNegoBorrador;
-					$Alerta = new ModelNegociacion;
-					$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-				}
-				
 				$usuario['Total'] = $this->modelProducto->TotalI($Id_Negociacion);
-				$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 				
 				$this->load->view('Vendedor/Cerrada/VConsultaCerradaI', $usuario);
 			}
@@ -861,31 +634,6 @@ class control_Negociacion extends CI_Controller {
 				$usuario['TelefonoC'] = $this->modelNegociacion->TelefonoCliente($Id_Cliente);
 			
 				$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Id_Negociacion);
-				$consulta_fecha = $this->modelInicio->Fecha($Id_Negociacion);
-				$mes = $consulta_fecha[3].$consulta_fecha[4]; 
-				$ano = $consulta_fecha[8].$consulta_fecha[9]; 
-				$hoymes =  date("m"); 
-				$hoyano =  date("y"); 
-				if ($hoymes >= $mes and $hoyano == $ano) 
-				{
-					$numero = $hoymes - $mes;
-					$usuario['Contador'] = $hoymes - $mes;
-				
-					if ($numero > 3)
-					{
-						$datos['ID2'] = $IdNegoBorrador;
-						$Alerta = new ModelNegociacion;
-						$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-					}
-				}
-				else 
-				{
-					$usuario['Contador'] = 4;
-					$datos['ID2'] = $Id_Negociacion;
-					$Alerta = new ModelNegociacion;
-					$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-				}
-			
 				$usuario['Total'] = $this->modelProducto->Total($Id_Negociacion);
 				$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 				
@@ -1074,6 +822,8 @@ class control_Negociacion extends CI_Controller {
 		$usuario['idcliente'] = $cliente;
 		$status = $this->modelNegociacion->StatusNegociacion($Id_Negociacion); 
 		$usuario['Status'] = $status;
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Id_Negociacion); 
+		$usuario['Porcentaje'] = $porcentaje;
 		
 		$this->modelNegociacion->EliminarP2($Equipo);
 		
@@ -1113,31 +863,6 @@ class control_Negociacion extends CI_Controller {
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Id_Negociacion);
 		
-		$consulta_fecha = $this->modelInicio->Fecha($Id_Negociacion);
-		$mes = $consulta_fecha[3].$consulta_fecha[4]; 
-		$ano = $consulta_fecha[8].$consulta_fecha[9]; 
-		$hoymes =  date("m"); 
-		$hoyano =  date("y"); 
-		if ($hoymes >= $mes and $hoyano == $ano) 
-		{
-			$numero = $hoymes - $mes;
-			$usuario['Contador'] = $hoymes - $mes;
-				
-			if ($numero > 3)
-			{
-				$datos['ID2'] = $Id_Negociacion;
-				$Alerta = new ModelNegociacion;
-				$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-			}
-		}
-		else 
-		{
-			$usuario['Contador'] = 4;
-			$datos['ID2'] = $Id_Negociacion;
-			$Alerta = new ModelNegociacion;
-			$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-		}
-		
 		$this->load->view('Vendedor/Borrador/VConsultaBorrador', $usuario);
 	}
 	
@@ -1149,6 +874,8 @@ class control_Negociacion extends CI_Controller {
 		$usuario['idcliente'] = $cliente;
 		$status = $this->modelNegociacion->StatusNegociacion($Id_Negociacion); 
 		$usuario['Status'] = $status;
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Id_Negociacion); 
+		$usuario['Porcentaje'] = $porcentaje;
 		
 		$this->modelNegociacion->EliminarP2($Equipo);
 		
@@ -1182,31 +909,6 @@ class control_Negociacion extends CI_Controller {
 		
 		$usuario['NombreI'] = $this->modelNegociacion->NombreInstitucion($cliente);
 		$usuario['TelefonoI'] = $this->modelNegociacion->TelefonoInstitucion($cliente);
-		
-		$consulta_fecha = $this->modelInicio->Fecha($Id_Negociacion);
-		$mes = $consulta_fecha[3].$consulta_fecha[4]; 
-		$ano = $consulta_fecha[8].$consulta_fecha[9]; 
-		$hoymes =  date("m"); 
-		$hoyano =  date("y"); 
-		if ($hoymes >= $mes and $hoyano == $ano) 
-		{
-			$numero = $hoymes - $mes;
-			$usuario['Contador'] = $hoymes - $mes;
-				
-			if ($numero > 3)
-			{
-				$datos['ID2'] = $Id_Negociacion;
-				$Alerta = new ModelNegociacion;
-				$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-			}
-		}
-		else 
-		{
-			$usuario['Contador'] = 4;
-			$datos['ID2'] = $Id_Negociacion;
-			$Alerta = new ModelNegociacion;
-			$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-		}
 		
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Id_Negociacion);
@@ -1243,31 +945,6 @@ class control_Negociacion extends CI_Controller {
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Negociacion);
 		
-		$consulta_fecha = $this->modelInicio->Fecha($Negociacion);
-		$mes = $consulta_fecha[3].$consulta_fecha[4]; 
-		$ano = $consulta_fecha[8].$consulta_fecha[9]; 
-		$hoymes =  date("m"); 
-		$hoyano =  date("y"); 
-		if ($hoymes >= $mes and $hoyano == $ano) 
-		{
-			$numero = $hoymes - $mes;
-			$usuario['Contador'] = $hoymes - $mes;
-				
-			if ($numero > 3)
-			{
-				$datos['ID2'] = $Negociacion;
-				$Alerta = new ModelNegociacion;
-				$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-			}
-		}
-		else 
-		{
-			$usuario['Contador'] = 4;
-			$datos['ID2'] = $Negociacion;
-			$Alerta = new ModelNegociacion;
-			$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-		}
-		
 		$this->load->view('Vendedor/Borrador/VConsultaBorrador', $usuario);
 	}
 	
@@ -1297,31 +974,6 @@ class control_Negociacion extends CI_Controller {
 		
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Negociacion);
-		
-		$consulta_fecha = $this->modelInicio->Fecha($Negociacion);
-		$mes = $consulta_fecha[3].$consulta_fecha[4]; 
-		$ano = $consulta_fecha[8].$consulta_fecha[9]; 
-		$hoymes =  date("m"); 
-		$hoyano =  date("y"); 
-		if ($hoymes >= $mes and $hoyano == $ano) 
-		{
-			$numero = $hoymes - $mes;
-			$usuario['Contador'] = $hoymes - $mes;
-				
-			if ($numero > 3)
-			{
-				$datos['ID2'] = $Negociacion;
-				$Alerta = new ModelNegociacion;
-				$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-			}
-		}
-		else 
-		{
-			$usuario['Contador'] = 4;
-			$datos['ID2'] = $Negociacion;
-			$Alerta = new ModelNegociacion;
-			$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-		}
 		
 		$this->load->view('Vendedor/Borrador/VConsultarBorradorI', $usuario);
 	}
@@ -1363,6 +1015,8 @@ class control_Negociacion extends CI_Controller {
 		$Id_Negociacion = $_POST['Negociacion'];
 		$usuario['Status'] = $_POST['Status'];
 		$usuario['idcliente'] = $_POST['idcliente'];
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Id_Negociacion); 
+		$usuario['Porcentaje'] = $porcentaje;
 		
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Id_Negociacion);
@@ -1377,6 +1031,8 @@ class control_Negociacion extends CI_Controller {
 		$Id_Negociacion = $_POST['Negociacion'];
 		$usuario['Status'] = $_POST['Status'];
 		$usuario['idcliente'] = $_POST['idcliente'];
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Id_Negociacion); 
+		$usuario['Porcentaje'] = $porcentaje;
 		
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Id_Negociacion);
@@ -1471,31 +1127,6 @@ class control_Negociacion extends CI_Controller {
 			$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 			$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Negociacion);
 				
-			$consulta_fecha = $this->modelInicio->Fecha($Negociacion);
-			$mes = $consulta_fecha[3].$consulta_fecha[4]; 
-			$ano = $consulta_fecha[8].$consulta_fecha[9]; 
-			$hoymes =  date("m"); 
-			$hoyano =  date("y"); 
-			if ($hoymes >= $mes and $hoyano == $ano) 
-			{
-					$numero = $hoymes - $mes;
-					$usuario['Contador'] = $hoymes - $mes;
-						
-					if ($numero > 3)
-					{
-						//$datos['ID2'] = $Negociacion;
-						//$Alerta = new ModelNegociacion;
-						//$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-					}
-				}
-			else 
-			{
-					$usuario['Contador'] = 4;
-					//$datos['ID2'] = $Negociacion;
-					//$Alerta = new ModelNegociacion;
-					//$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-				}
-				
 			$this->load->view('Vendedor/Cerrada/VConsultaCerrada', $usuario);
 		}
 		else
@@ -1520,31 +1151,6 @@ class control_Negociacion extends CI_Controller {
 				
 			$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 			$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Negociacion);
-				
-			$consulta_fecha = $this->modelInicio->Fecha($Negociacion);
-			$mes = $consulta_fecha[3].$consulta_fecha[4]; 
-			$ano = $consulta_fecha[8].$consulta_fecha[9]; 
-			$hoymes =  date("m"); 
-			$hoyano =  date("y"); 
-			if ($hoymes >= $mes and $hoyano == $ano) 
-			{
-					$numero = $hoymes - $mes;
-					$usuario['Contador'] = $hoymes - $mes;
-						
-					if ($numero > 3)
-					{
-						//$datos['ID2'] = $Negociacion;
-						//$Alerta = new ModelNegociacion;
-						//$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-					}
-				}
-			else 
-			{
-					$usuario['Contador'] = 4;
-					//$datos['ID2'] = $Negociacion;
-					//$Alerta = new ModelNegociacion;
-					//$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-				}
 			
 			$this->load->view('Vendedor/Borrador/VConsultaBorrador', $usuario);
 		}
@@ -1578,29 +1184,6 @@ class control_Negociacion extends CI_Controller {
 			$usuario['TelefonoI'] = $this->modelNegociacion->TelefonoInstitucion($cliente);
 			
 			$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Negociacion);
-			$consulta_fecha = $this->modelInicio->Fecha($Negociacion);
-			$mes = $consulta_fecha[3].$consulta_fecha[4]; 
-			$ano = $consulta_fecha[8].$consulta_fecha[9]; 
-			$hoymes =  date("m"); 
-			$hoyano =  date("y"); 
-			if ($hoymes >= $mes and $hoyano == $ano) 
-			{
-				$numero = $hoymes - $mes;
-				$usuario['Contador'] = $hoymes - $mes;
-				if ($numero > 3)
-				{
-					//$datos['ID2'] = $Negociacion;
-					//$Alerta = new ModelNegociacion;
-					//$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-				}
-			}
-			else 
-			{
-				$usuario['Contador'] = 4;
-				//$datos['ID2'] = $Negociacion;
-				//$Alerta = new ModelNegociacion;
-				//$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-			}
 			
 			$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 			$this->load->view('Vendedor/Cerrada/VConsultaCerradaI', $usuario);
@@ -1624,29 +1207,6 @@ class control_Negociacion extends CI_Controller {
 			$usuario['TelefonoI'] = $this->modelNegociacion->TelefonoInstitucion($cliente);
 			
 			$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Negociacion);
-			$consulta_fecha = $this->modelInicio->Fecha($Negociacion);
-			$mes = $consulta_fecha[3].$consulta_fecha[4]; 
-			$ano = $consulta_fecha[8].$consulta_fecha[9]; 
-			$hoymes =  date("m"); 
-			$hoyano =  date("y"); 
-			if ($hoymes >= $mes and $hoyano == $ano) 
-			{
-				$numero = $hoymes - $mes;
-				$usuario['Contador'] = $hoymes - $mes;
-				if ($numero > 3)
-				{
-					//$datos['ID2'] = $Negociacion;
-					//$Alerta = new ModelNegociacion;
-					//$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-				}
-			}
-			else 
-			{
-				$usuario['Contador'] = 4;
-				//$datos['ID2'] = $Negociacion;
-				//$Alerta = new ModelNegociacion;
-				//$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-			}
 			
 			$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 			$this->load->view('Vendedor/Borrador/VConsultarBorradorI', $usuario);
@@ -1693,30 +1253,6 @@ class control_Negociacion extends CI_Controller {
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaA($IdNegoBorrador);
 		
-		$consulta_fecha = $this->modelInicio->Fecha($IdNegoBorrador);
-		$mes = $consulta_fecha[3].$consulta_fecha[4]; 
-		$ano = $consulta_fecha[8].$consulta_fecha[9]; 
-		$hoymes =  date("m"); 
-		$hoyano =  date("y"); 
-		if ($hoymes >= $mes and $hoyano == $ano) 
-		{
-			$numero = $hoymes - $mes;
-			$usuario['Contador'] = $hoymes - $mes;
-			if ($numero > 3)
-			{
-				$datos['ID2'] = $IdNegoBorrador;
-				$Alerta = new ModelNegociacion;
-				$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-			}
-		}
-		else 
-		{
-			$usuario['Contador'] = 4;
-			$datos['ID2'] = $IdNegoBorrador;
-			$Alerta = new ModelNegociacion;
-			$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-		}
-		
 		$this->load->view('Vendedor/Borrador/VConsultarBorradorI', $usuario);
 	}
 	
@@ -1760,30 +1296,7 @@ class control_Negociacion extends CI_Controller {
 		
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaA($IdNegoBorrador);
-		$consulta_fecha = $this->modelInicio->Fecha($IdNegoBorrador);
-		$mes = $consulta_fecha[3].$consulta_fecha[4]; 
-		$ano = $consulta_fecha[8].$consulta_fecha[9]; 
-		$hoymes =  date("m"); 
-		$hoyano =  date("y"); 
-		if ($hoymes >= $mes and $hoyano == $ano) 
-		{
-			$numero = $hoymes - $mes;
-			$usuario['Contador'] = $hoymes - $mes;
-			if ($numero > 3)
-			{
-				$datos['ID2'] = $IdNegoBorrador;
-				$Alerta = new ModelNegociacion;
-				$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-			}
-		}
-		else 
-		{
-			$usuario['Contador'] = 4;
-			$datos['ID2'] = $IdNegoBorrador;
-			$Alerta = new ModelNegociacion;
-			$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-		}
-		
+	
 		$this->load->view('Vendedor/Borrador/VConsultaBorrador', $usuario);
 	}
 	
@@ -1818,30 +1331,6 @@ class control_Negociacion extends CI_Controller {
 		$cliente = $_POST['idcliente2'];
 		$usuario['NombreI'] = $this->modelNegociacion->NombreInstitucion($cliente);
 		$usuario['TelefonoI'] = $this->modelNegociacion->TelefonoInstitucion($cliente);
-		
-		$consulta_fecha = $this->modelInicio->Fecha($IdNegoBorrador);
-		$mes = $consulta_fecha[3].$consulta_fecha[4]; 
-		$ano = $consulta_fecha[8].$consulta_fecha[9]; 
-		$hoymes =  date("m"); 
-		$hoyano =  date("y"); 
-		if ($hoymes >= $mes and $hoyano == $ano) 
-		{
-			$numero = $hoymes - $mes;
-			$usuario['Contador'] = $hoymes - $mes;
-			if ($numero > 3)
-			{
-				$datos['ID2'] = $IdNegoBorrador;
-				$Alerta = new ModelNegociacion;
-				$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-			}
-		}
-		else 
-		{
-			$usuario['Contador'] = 4;
-			$datos['ID2'] = $IdNegoBorrador;
-			$Alerta = new ModelNegociacion;
-			$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-		}
 		
 		$this->load->view('Vendedor/Cerrada/VConsultaCerradaI', $usuario);
 	}
@@ -1878,29 +1367,6 @@ class control_Negociacion extends CI_Controller {
 		$usuario['ApellidoC'] = $this->modelNegociacion->ApellidoCliente($cliente);
 		$usuario['EMailC'] = $this->modelNegociacion->MailCliente($cliente);
 		$usuario['TelefonoC'] = $this->modelNegociacion->TelefonoCliente($cliente);
-		$consulta_fecha = $this->modelInicio->Fecha($IdNegoBorrador);
-		$mes = $consulta_fecha[3].$consulta_fecha[4]; 
-		$ano = $consulta_fecha[8].$consulta_fecha[9]; 
-		$hoymes =  date("m"); 
-		$hoyano =  date("y"); 
-		if ($hoymes >= $mes and $hoyano == $ano) 
-		{
-			$numero = $hoymes - $mes;
-			$usuario['Contador'] = $hoymes - $mes;
-			if ($numero > 3)
-			{
-				$datos['ID2'] = $IdNegoBorrador;
-				$Alerta = new ModelNegociacion;
-				$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-			}
-		}
-		else 
-		{
-			$usuario['Contador'] = 4;
-			$datos['ID2'] = $IdNegoBorrador;
-			$Alerta = new ModelNegociacion;
-			$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-		}
 		
 		$this->load->view('Vendedor/Cerrada/VConsultaCerrada', $usuario);
 	}
@@ -2004,29 +1470,6 @@ class control_Negociacion extends CI_Controller {
 		
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaA($IdNegoBorrador);
-		$consulta_fecha = $this->modelInicio->Fecha($IdNegoBorrador);
-		$mes = $consulta_fecha[3].$consulta_fecha[4]; 
-		$ano = $consulta_fecha[8].$consulta_fecha[9]; 
-		$hoymes =  date("m"); 
-		$hoyano =  date("y"); 
-		if ($hoymes >= $mes and $hoyano == $ano) 
-		{
-			$numero = $hoymes - $mes;
-			$usuario['Contador'] = $hoymes - $mes;
-			if ($numero > 3)
-			{
-				$datos['ID2'] = $IdNegoBorrador;
-				$Alerta = new ModelNegociacion;
-				$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-			}
-		}
-		else 
-		{
-			$usuario['Contador'] = 4;
-			$datos['ID2'] = $IdNegoBorrador;
-			$Alerta = new ModelNegociacion;
-			$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-		}
 		
 		$this->load->view('Vendedor/Borrador/VConsultarBorradorI', $usuario);
 	}
@@ -2066,29 +1509,6 @@ class control_Negociacion extends CI_Controller {
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 		
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaA($IdNegoBorrador);
-		$consulta_fecha = $this->modelInicio->Fecha($IdNegoBorrador);
-		$mes = $consulta_fecha[3].$consulta_fecha[4]; 
-		$ano = $consulta_fecha[8].$consulta_fecha[9]; 
-		$hoymes =  date("m"); 
-		$hoyano =  date("y"); 
-		if ($hoymes >= $mes and $hoyano == $ano) 
-		{
-			$numero = $hoymes - $mes;
-			$usuario['Contador'] = $hoymes - $mes;
-			if ($numero > 3)
-			{
-				$datos['ID2'] = $IdNegoBorrador;
-				$Alerta = new ModelNegociacion;
-				$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-			}
-		}
-		else 
-		{
-			$usuario['Contador'] = 4;
-			$datos['ID2'] = $IdNegoBorrador;
-			$Alerta = new ModelNegociacion;
-			$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-		}
 		
 		$this->load->view('Vendedor/Borrador/VConsultaBorrador', $usuario);
 	}
@@ -2129,30 +1549,6 @@ class control_Negociacion extends CI_Controller {
 		$this->modelProducto->AgregarEquipo($HistorialNP2);
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaA($IdNegoBorrador);
-		
-		$consulta_fecha = $this->modelInicio->Fecha($IdNegoBorrador);
-		$mes = $consulta_fecha[3].$consulta_fecha[4]; 
-		$ano = $consulta_fecha[8].$consulta_fecha[9]; 
-		$hoymes =  date("m"); 
-		$hoyano =  date("y"); 
-		if ($hoymes >= $mes and $hoyano == $ano) 
-		{
-			$numero = $hoymes - $mes;
-			$usuario['Contador'] = $hoymes - $mes;
-			if ($numero > 3)
-			{
-				$datos['ID2'] = $IdNegoBorrador;
-				$Alerta = new ModelNegociacion;
-				$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-			}
-		}
-		else 
-		{
-			$usuario['Contador'] = 4;
-			$datos['ID2'] = $IdNegoBorrador;
-			$Alerta = new ModelNegociacion;
-			$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-		}
 		
 		$this->load->view('Vendedor/Borrador/VConsultarBorradorI', $usuario);
 		
@@ -2195,30 +1591,6 @@ class control_Negociacion extends CI_Controller {
 		$this->modelProducto->AgregarEquipo($HistorialNP2);
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Negociacion);
-		
-		$consulta_fecha = $this->modelInicio->Fecha($Negociacion);
-		$mes = $consulta_fecha[3].$consulta_fecha[4]; 
-		$ano = $consulta_fecha[8].$consulta_fecha[9]; 
-		$hoymes =  date("m"); 
-		$hoyano =  date("y"); 
-		if ($hoymes >= $mes and $hoyano == $ano) 
-		{
-			$numero = $hoymes - $mes;
-			$usuario['Contador'] = $hoymes - $mes;
-			if ($numero > 3)
-			{
-				$datos['ID2'] = $Negociacion;
-				$Alerta = new ModelNegociacion;
-				$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-			}
-		}
-		else 
-		{
-			$usuario['Contador'] = 4;
-			$datos['ID2'] = $Negociacion;
-			$Alerta = new ModelNegociacion;
-			$this->modelNegociacion->ModificarAlerta($Alerta, $datos);
-		}
 		
 		$this->load->view('Vendedor/Borrador/VConsultaBorrador', $usuario);
 		
@@ -2264,6 +1636,8 @@ class control_Negociacion extends CI_Controller {
 		$usuario['Usuario'] = $Usuario;
 		$usuario['Id_Negociacion'] = $Negociacion;
 		$usuario['Status'] = $Status;
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Negociacion); 
+		$usuario['Porcentaje'] = $porcentaje;
 		
 		// PRODUCTO //
 		$HistorialNP['Id_Accesorio'] = $_POST['Accesorio']; // Id Accesorio //
@@ -2286,6 +1660,8 @@ class control_Negociacion extends CI_Controller {
 		$usuario['Usuario'] = $Usuario;
 		$usuario['Id_Negociacion'] = $Negociacion;
 		$usuario['Status'] = $Status;
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Negociacion); 
+		$usuario['Porcentaje'] = $porcentaje;
 		
 		// PRODUCTO //
 		$HistorialNP['Id_Accesorio'] = $_POST['Accesorio']; // Id Accesorio //

@@ -167,28 +167,16 @@ function CambiaColor(esto,borde,texto)
 	<h3><a href="#">Nuevo</a></h3>
 	<div>
 		<li>- <a href="<?php echo base_url();?>index.php/Control_Cliente/agregar_cliente">Clientes</a></li>
-		<li>- <a href="<?php echo base_url();?>index.php/Control_Institucion">Institucion</a></li>
+		<li>- <a href="<?php echo base_url();?>index.php/Control_Institucion/agregar_institucion">Institucion</a></li>
 		<li>- <a href="<?php echo base_url();?>index.php/Control_Negociacion">Negociacion</a></li>
-		<li>- <a href="">Venta</a></li>
-		<li>- <a href="">Orden de Compra</a></li>
-		<li>- <a href="">Importacion</a></li>
 	</div>
 	<h3><a href="#">Ver</a></h3>
 	<div>
 		<li>- <a href="<?php echo base_url();?>index.php/Control_Negociacion/ver_negociacion">Negociacion</a></li>
-		<li>- <a href="">Venta</a></li>
-		<li>- <a href="">Orden de Compra</a></li>
-		<li>- <a href="">Importacion</a></li>
-		<li>- <a href="">Reporte</a></li>
 	</div>
 	<h3><a href="#">Herramientas</a></h3>
 	<div>
-		<li>- <a href="">Calendario</a></li>
-		<li>- <a href="">Almacen</a></li>
-		<li>- <a href="">Usuarios</a></li>
-		<li>- <a href="">Productos</a></li>
-		<li>- <a href="">Facturacion</a></li>
-		<li>- <a href="">Visitas</a></li>
+    
 	</div>
 </div>
 
@@ -212,7 +200,7 @@ function CambiaColor(esto,borde,texto)
           <td><hr align="left" style="width:435px;" /></td>
         </tr>
         <tr>
-          <td align="center"><font style="font-size:15px; height:8px"><?php if ($Status == 'Borrador') { echo "<b><font color='#FF9900'>$Status</font></b>";} if ($Status == 'Activa') { echo "<b><font color='#6600FF'>$Status</font></b>";} if ($Status == 'Ganada') { echo "<b><font color='#00CC00'>$Status</font></b>";} if ($Status == 'Perdida') { echo "<b><font color='#FF0000'>$Status</font></b>";} if ($Status == 'Cerrada') { echo "<b><font color='#0033FF'>$Status</font></b>";}?></font></td>
+          <td align="center"><font style="font-size:15px; height:8px"><?php if ($Status == 'Borrador') { echo "<b><font color='#FF9900'>$Status $Porcentaje %</font></b>";} if ($Status == 'Activa') { echo "<b><font color='#6600FF'>$Status $Porcentaje %</font></b>";} if ($Status == 'Ganada') { echo "<b><font color='#00CC00'>$Status $Porcentaje %</font></b>";} if ($Status == 'Perdida') { echo "<b><font color='#FF0000'>$Status $Porcentaje %</font></b>";} if ($Status == 'Cerrada') { echo "<b><font color='#0033FF'>$Status $Porcentaje %</font></b>";}?></font></td>
         </tr>
         <tr>
           <td><hr align="left" style="width:435px;" /></td>
