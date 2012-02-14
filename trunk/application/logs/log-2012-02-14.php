@@ -232,3 +232,5 @@ ERROR - 2012-02-14 13:26:21 --> Severity: Notice  --> Undefined variable: Total 
 ERROR - 2012-02-14 13:26:21 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 14
 ERROR - 2012-02-14 13:29:03 --> Severity: Notice  --> Undefined variable: ConAlerta F:\htdocs\desarrollo\SGP\application\views\Administrador\APrincipal.php 221
 ERROR - 2012-02-14 13:29:03 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-02-14 13:37:41 --> Severity: Notice  --> Undefined variable: ConAlerta F:\htdocs\desarrollo\SGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-02-14 13:37:41 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Administrador\APrincipal.php 221
