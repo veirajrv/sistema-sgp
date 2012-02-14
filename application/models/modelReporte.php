@@ -246,7 +246,7 @@ class ModelReporte extends CI_Model
 	
 	function BuscarNegociacionesEspecial($especialidad)
 	{
-		$query = $this->db->query('SELECT C.Nombre, C.Apellido, C.Telefono, C.Email, S.Status, N.Id_Negociacion, E.Nombre_1, E.Apellido_1
+		$query = $this->db->query('SELECT C.Nombre, C.Apellido, C.Telefono, C.Email, S.Status, N.Id_Negociacion, E.Nombre_1, E.Apellido_1, N.Total
 								   FROM EMPLEADO AS E, NEGOCIACION AS N, NS AS NS, SEGUIMIENTO AS S, CLIENTE AS C
 								   WHERE C.Id_Cliente = N.Id_Cliente
 								   AND NS.Id_Negociacion = N.Id_Negociacion
@@ -260,7 +260,7 @@ class ModelReporte extends CI_Model
 	
 	function BuscarNegociacionesEspecialI($especialidad)
 	{
-		$query = $this->db->query('SELECT I.Nombre, I.Telefono1, I.Web, S.Status, N.Id_Negociacion, E.Nombre_1, E.Apellido_1
+		$query = $this->db->query('SELECT I.Nombre, I.Telefono1, I.Web, S.Status, N.Id_Negociacion, E.Nombre_1, E.Apellido_1, N.Total
 								   FROM EMPLEADO AS E, NEGOCIACION AS N, NS AS NS, SEGUIMIENTO AS S, INSTITUCION AS I
 								   WHERE I.Id_Institucion = N.Id_Institucion
 								   AND NS.Id_Negociacion = N.Id_Negociacion
