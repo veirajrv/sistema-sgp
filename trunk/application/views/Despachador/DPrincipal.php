@@ -167,13 +167,20 @@ return false;
 <div id="cc">
   <table width="440" border="0">
     <tr>
-      <td width="431">&nbsp;</td>
-    </tr>
-  </table>
-  <table width="440" border="0">
-    <tr>
-      <td width="160" align="right">&nbsp;</td>
-      <td width="270">&nbsp;</td>
+      <td width="140"><font style="font-size:12px; color:#369"><b>Negociaciones ganadas:</b></font></td>
+      <td width="290"><form id="form1" method="post" action="<?php echo base_url();?>index.php/Control_Venta/detalle_ganada">
+        <select name="Ganadas" id="Ganadas" style="width:150px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required">
+          <option></option>
+          <?php
+						foreach ($Ganadas as $row) {
+				  ?>
+          <option value="<?php echo $row['Id_Negociacion']; ?>" <?php echo set_select('Hola',$row['Id_Negociacion']); ?> ><?php echo $row['Id_Negociacion']; ?></option>
+          <?php
+					}
+					?>
+        </select>
+        <input type="submit" name="button" id="button" value="Ir" />
+      </form></td>
     </tr>
   </table>
   <p>&nbsp;</p>
