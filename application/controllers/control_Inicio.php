@@ -38,6 +38,7 @@ class Control_Inicio extends CI_Controller
 		
 		$Tipo_1 = 'Administrador';
 		$Tipo_2 = 'Vendedor';
+		$Tipo_3 = 'Despachador';
 		
 		$clavebd = $this->modelInicio->VerificarClave($usuario); // Clave del usuario en la base de datos //
 		$tipoemp = $this->modelInicio->VerificarTipo($usuario); // Tipo de usuario //
@@ -82,6 +83,16 @@ class Control_Inicio extends CI_Controller
 				$usuario2['ConAlerta'] = $this->modelInicio->ConAlerta($cedula); 
 				
 				$this->load->view('Vendedor/VPrincipal', $usuario2);
+			}
+			if($tipoemp == $Tipo_3) // Si se es vendedor entra en este if //
+			{
+				$firstName = $this->modelInicio->ConsultarNombre($usuario); 
+				$lastName = $this->modelInicio->ConsultarApellido($usuario); 
+				$userEmail = $this->modelInicio->ConsultarUsuario($usuario); 
+				$usuario2 = array('nombre' => $firstName,'apellido' => $lastName,'Usuario' => $userEmail);
+				$this->session->set_userdata($usuario2);
+				
+				$this->load->view('Despachador/DPrincipal', $usuario2);
 			}
 		}
 		else 
@@ -140,5 +151,17 @@ class Control_Inicio extends CI_Controller
 		$usuario['ConAlerta'] = $this->modelInicio->ConAlerta($cedula); 
 		
 		$this->load->view('Administrador/APrincipal', $usuario);	
+	}
+	
+	// Funcion que se utiliza para redireccionar todas las paginas por medio del boton de
+	// inicio a la pagina principal del sistema de los despachadores o encargados de ventas
+	public function d_principal() 
+	{
+		$this->CI = &get_instance();
+		$this->CI->expiracion();
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		
+		$this->load->view('Despachador/DPrincipal', $usuario);	
 	}
 }
