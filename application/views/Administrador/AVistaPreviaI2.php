@@ -92,7 +92,7 @@ return false;
 		<a href="index.html" title="Home"><img src="http://elp21.no-ip.info:4085/SGP/files/images/Portada/logo2.gif" alt="Your logo here" width="45" height="40" /> <span id="logo-text">YOMA
 		</span></a>
 		<div id="userbar">
-			<a href="<?php echo base_url();?>index.php/Control_Inicio/cerrar_sesion">Cerrar Sesion </a> | <a id="tabe" href="http://elp21.no-ip.info:4085/SGP/index.php/Control_Pdf">Ayuda</a>		</div>
+			<a href="<?php echo base_url();?>index.php/Control_Inicio/cerrar_sesion">Cerrar Sesion </a> | <a id="tabe" href="">Ayuda</a>		</div>
   </div>
 	<!-- END tagline -->
 
@@ -128,25 +128,14 @@ return false;
 	<h3><a href="#">Nuevo</a></h3>
 	<div>
 	    <li>- <a href="<?php echo base_url();?>index.php/Control_Producto">Producto</a></li>
-	    <li>- <a href="">Venta</a></li>
-		<li>- <a href="">Orden de Compra</a></li>
-		<li>- <a href="">Importacion</a></li>
 	</div>
 	<h3><a href="#">Ver</a></h3>
 	<div>
 		<li>- <a href="<?php echo base_url();?>index.php/Control_Negociacion/buscar_vendedores">Negociacion</a></li>
-		<li>- <a href="">Venta</a></li>
-		<li>- <a href="">Orden de Compra</a></li>
-		<li>- <a href="">Importacion</a></li>
 	</div>
 	<h3><a href="#">Herramientas</a></h3>
 	<div>
-		<li>- <a href="">Notificacion</a></li>
-		<li>- <a href="">Almacen</a></li>
-		<li>- <a href="">Usuarios</a></li>
-		<li>- <a href="">Productos</a></li>
-		<li>- <a href="">Facturacion</a></li>
-		<li>- <a href="">Visitas</a></li>
+		
 	</div>
 </div>
 
@@ -162,9 +151,6 @@ return false;
       <table width="441" border="0">
         <tr>
           <td><h2 style="font-size:30px">Codigo Negociaci&oacute;n (<?php echo $Id_Negociacion; ?>)</h2></td>
-          </tr>
-        <tr>
-          <td align="center"><?php if ($Contador <= 5){ } else {echo "<b><font title='Negociaci&oacute;n Expirada' style='font-size:20px' color='#FF0000'>ALERTA</font><br/>Negociacion Expirada</b>";}?></td>
           </tr>
         <tr>
           <td><hr align="left" style="width:435px;" /></td>

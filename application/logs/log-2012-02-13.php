@@ -1,30 +1,15 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
-ERROR - 2012-02-13 23:47:06 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: php_network_getaddresses: getaddrinfo failed: Host desconocido.  C:\wamp\www\OpenSGP\system\database\drivers\mysql\mysql_driver.php 91
-ERROR - 2012-02-13 23:47:06 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: [2002] php_network_getaddresses: getaddrinfo failed: Host desconocido.  (trying to connect via tcp://desarrollo:3306) C:\wamp\www\OpenSGP\system\database\drivers\mysql\mysql_driver.php 91
-ERROR - 2012-02-13 23:47:06 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: php_network_getaddresses: getaddrinfo failed: Host desconocido.  C:\wamp\www\OpenSGP\system\database\drivers\mysql\mysql_driver.php 91
-ERROR - 2012-02-13 23:47:06 --> Unable to connect to the database
-ERROR - 2012-02-13 23:47:46 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: php_network_getaddresses: getaddrinfo failed: Host desconocido.  C:\wamp\www\OpenSGP\system\database\drivers\mysql\mysql_driver.php 91
-ERROR - 2012-02-13 23:47:46 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: [2002] php_network_getaddresses: getaddrinfo failed: Host desconocido.  (trying to connect via tcp://desarrollo:3306) C:\wamp\www\OpenSGP\system\database\drivers\mysql\mysql_driver.php 91
-ERROR - 2012-02-13 23:47:46 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: php_network_getaddresses: getaddrinfo failed: Host desconocido.  C:\wamp\www\OpenSGP\system\database\drivers\mysql\mysql_driver.php 91
-ERROR - 2012-02-13 23:47:46 --> Unable to connect to the database
-ERROR - 2012-02-13 23:48:05 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: php_network_getaddresses: getaddrinfo failed: Host desconocido.  C:\wamp\www\OpenSGP\system\database\drivers\mysql\mysql_driver.php 91
-ERROR - 2012-02-13 23:48:05 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: [2002] php_network_getaddresses: getaddrinfo failed: Host desconocido.  (trying to connect via tcp://desarrollo:3306) C:\wamp\www\OpenSGP\system\database\drivers\mysql\mysql_driver.php 91
-ERROR - 2012-02-13 23:48:05 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: php_network_getaddresses: getaddrinfo failed: Host desconocido.  C:\wamp\www\OpenSGP\system\database\drivers\mysql\mysql_driver.php 91
-ERROR - 2012-02-13 23:48:05 --> Unable to connect to the database
-ERROR - 2012-02-13 23:48:55 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: php_network_getaddresses: getaddrinfo failed: Host desconocido.  C:\wamp\www\OpenSGP\system\database\drivers\mysql\mysql_driver.php 91
-ERROR - 2012-02-13 23:48:55 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: [2002] php_network_getaddresses: getaddrinfo failed: Host desconocido.  (trying to connect via tcp://desarrollo:3306) C:\wamp\www\OpenSGP\system\database\drivers\mysql\mysql_driver.php 91
-ERROR - 2012-02-13 23:48:55 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: php_network_getaddresses: getaddrinfo failed: Host desconocido.  C:\wamp\www\OpenSGP\system\database\drivers\mysql\mysql_driver.php 91
-ERROR - 2012-02-13 23:48:55 --> Unable to connect to the database
-ERROR - 2012-02-13 23:48:58 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: php_network_getaddresses: getaddrinfo failed: Host desconocido.  C:\wamp\www\OpenSGP\system\database\drivers\mysql\mysql_driver.php 91
-ERROR - 2012-02-13 23:48:58 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: [2002] php_network_getaddresses: getaddrinfo failed: Host desconocido.  (trying to connect via tcp://desarrollo:3306) C:\wamp\www\OpenSGP\system\database\drivers\mysql\mysql_driver.php 91
-ERROR - 2012-02-13 23:48:58 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: php_network_getaddresses: getaddrinfo failed: Host desconocido.  C:\wamp\www\OpenSGP\system\database\drivers\mysql\mysql_driver.php 91
-ERROR - 2012-02-13 23:48:58 --> Unable to connect to the database
-ERROR - 2012-02-13 23:55:13 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: php_network_getaddresses: getaddrinfo failed: Host desconocido.  C:\wamp\www\OpenSGP\system\database\drivers\mysql\mysql_driver.php 91
-ERROR - 2012-02-13 23:55:13 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: [2002] php_network_getaddresses: getaddrinfo failed: Host desconocido.  (trying to connect via tcp://desarrollo:3306) C:\wamp\www\OpenSGP\system\database\drivers\mysql\mysql_driver.php 91
-ERROR - 2012-02-13 23:55:13 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: php_network_getaddresses: getaddrinfo failed: Host desconocido.  C:\wamp\www\OpenSGP\system\database\drivers\mysql\mysql_driver.php 91
-ERROR - 2012-02-13 23:55:13 --> Unable to connect to the database
-ERROR - 2012-02-13 23:57:55 --> Severity: Notice  --> Undefined variable: Rechazadas C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 207
-ERROR - 2012-02-13 23:57:55 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 207
-ERROR - 2012-02-13 23:58:34 --> Severity: Notice  --> Undefined variable: ConAlerta C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 232
-ERROR - 2012-02-13 23:58:34 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 232
+ERROR - 2012-02-13 19:29:11 --> Severity: Notice  --> Undefined variable: Rechazadas F:\htdocs\desarrollo\SGP\application\views\Vendedor\VPrincipal.php 207
+ERROR - 2012-02-13 19:29:11 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Vendedor\VPrincipal.php 207
+ERROR - 2012-02-13 19:35:04 --> Severity: Notice  --> Undefined variable: ConAlerta F:\htdocs\desarrollo\SGP\application\views\Administrador\APrincipal.php 232
+ERROR - 2012-02-13 19:35:04 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Administrador\APrincipal.php 232
+ERROR - 2012-02-13 19:36:01 --> Severity: Notice  --> Undefined variable: Rechazadas F:\htdocs\desarrollo\SGP\application\views\Vendedor\VPrincipal.php 207
+ERROR - 2012-02-13 19:36:01 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Vendedor\VPrincipal.php 207
+ERROR - 2012-02-13 19:36:33 --> Severity: Notice  --> Undefined variable: Rechazadas F:\htdocs\desarrollo\SGP\application\views\Vendedor\VPrincipal.php 207
+ERROR - 2012-02-13 19:36:33 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Vendedor\VPrincipal.php 207
+ERROR - 2012-02-13 19:45:09 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string F:\htdocs\desarrollo\SGP\system\core\Utf8.php 89
+ERROR - 2012-02-13 19:45:13 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string F:\htdocs\desarrollo\SGP\system\core\Utf8.php 89
+ERROR - 2012-02-13 19:45:17 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-13 19:45:18 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-13 19:45:18 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1

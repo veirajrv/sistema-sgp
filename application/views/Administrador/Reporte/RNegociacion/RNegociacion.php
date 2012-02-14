@@ -90,7 +90,7 @@ return false;
 	<div id="tagline">
 		<a href="index.html" title="Home"><img src="http://elp21.no-ip.info:4085/SGP/files/images/Portada/logo2.gif" alt="Your logo here" width="45" height="40" /> <span id="logo-text">YOMA</span></a>
 		<div id="userbar">
-			<a href="http://elp21.no-ip.info:4085/SGP/index.php/Control_Inicio/cerrar_sesion">Cerrar Sesion </a> | <a href="#">Ayuda</a>		</div>
+			<a href="http://elp21.no-ip.info:4085/SGP/index.php/Control_Inicio/cerrar_sesion">Cerrar Sesion </a> | <a href="">Ayuda</a>		</div>
 	</div><!-- END tagline -->
 
 <!-- BEGIN tabs -->
@@ -121,25 +121,14 @@ return false;
 	<h3><a href="#">Nuevo</a></h3>
 	<div>
 	    <li>- <a href="<?php echo base_url();?>index.php/Control_Producto">Producto</a></li>
-	    <li>- <a href="">Venta</a></li>
-		<li>- <a href="">Orden de Compra</a></li>
-		<li>- <a href="">Importacion</a></li>
 	</div>
 	<h3><a href="#">Ver</a></h3>
 	<div>
 		<li>- <a href="<?php echo base_url();?>index.php/Control_Negociacion/buscar_vendedores">Negociacion</a></li>
-		<li>- <a href="">Venta</a></li>
-		<li>- <a href="">Orden de Compra</a></li>
-		<li>- <a href="">Importacion</a></li>
 	</div>
 	<h3><a href="#">Herramientas</a></h3>
 	<div>
-		<li>- <a href="">Notificacion</a></li>
-		<li>- <a href="">Almacen</a></li>
-		<li>- <a href="">Usuarios</a></li>
-		<li>- <a href="">Productos</a></li>
-		<li>- <a href="">Facturacion</a></li>
-		<li>- <a href="">Visitas</a></li>
+		
 	</div>
 </div>
 
@@ -165,12 +154,192 @@ return false;
     </table>
     <table width="441" border="0">
       <tr>
-        <td width="431">- <a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociacion')"><b>Lista de negociaciones</b></a></td>
+        <td colspan="2">- <a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociacion')"><b>Lista de negociaciones</b></a></td>
+      </tr>
+      <tr bgcolor="#00CCFF">
+        <td colspan="2" align="center" bgcolor="#369"><font color="#FFFFFF" style="font-size:12px;"><b>Clientes</b></font></td>
+      </tr>
+      <tr>
+        <td width="160">- Negociaciones por especialidad:</td>
+        <td width="271"><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especial/Cirugia')"><b>Cirugia</b></a></td>
       </tr>
       <tr>
         <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especial/Emergenciologia')"><b>Emergenciologia</b></a></td>
       </tr>
       <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especial/Fisiatria')"><b>Fisiatria</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especial/Fisioterapia')"><b>Fisioterapia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especial/Ginecologia')"><b>Ginecologia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especial/Gineco-Obstetricia')"><b>Gineco-Obstetricia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especial/Imagenologia')"><b>Imagenologia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especial/Intensivista')"><b>Intensivista</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especial/Mastologia')"><b>Mastologia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especial/Nefrologia')"><b>Nefrologia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especial/Neumonologia')"><b>Neumonologia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especial/Nutricion')"><b>Nutricion</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especial/Nutrologia')"><b>Nutrologia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especial/Obstetricia')"><b>Obstetricia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especial/Oncologia')"><b>Oncologia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especial/Pediatria')"><b>Pediatria</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especial/Radiologia')"><b>Radiologia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especial/Traumatologia')"><b>Traumatologia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especial/Medicina Interna')"><b>Medicina Interna</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especial/Endocrinologia')"><b>Endocrinologia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especial/Anestesiologia')"><b>Anestesiologia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especial/Multi-Especialidad')"><b>Multi-Especialidad</b></a></td>
+      </tr>
+      <tr bgcolor="#00CCFF">
+        <td colspan="2" align="center" bgcolor="#369"><font color="#FFFFFF" style="font-size:12px;"><b>Instituciones</b></font></td>
+      </tr>
+      <tr>
+        <td>- Negociaciones por especialidad:</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especiali/Cirugia')"><b>Cirugia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especiali/Emergenciologia')"><b>Emergenciologia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especiali/Fisiatria')"><b>Fisiatria</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especiali/Fisioterapia')"><b>Fisioterapia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especiali/Ginecologia')"><b>Ginecologia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especiali/Gineco-Obstetricia')"><b>Gineco-Obstetricia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especiali/Imagenologia')"><b>Imagenologia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especiali/Intensivista')"><b>Intensivista</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especiali/Mastologia')"><b>Mastologia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especiali/Nefrologia')"><b>Nefrologia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especiali/Neumonologia')"><b>Neumonologia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especiali/Nutricion')"><b>Nutricion</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especiali/Nutrologia')"><b>Nutrologia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especiali/Obstetricia')"><b>Obstetricia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especiali/Oncologia')"><b>Oncologia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especiali/Pediatria')"><b>Pediatria</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especiali/Radiologia')"><b>Radiologia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especiali/Traumatologia')"><b>Traumatologia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especiali/Medicina Interna')"><b>Medicina Interna</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especiali/Endocrinologia')"><b>Endocrinologia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especiali/Anestesiologia')"><b>Anestesiologia</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_negociaciones_especiali/Multi-Especialidad')"><b>Multi-Especialidad</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
         <td>&nbsp;</td>
       </tr>
     </table>

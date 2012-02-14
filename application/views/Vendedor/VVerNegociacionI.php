@@ -110,28 +110,16 @@ function CambiaColor(esto,borde,texto)
 	<h3><a href="#">Nuevo</a></h3>
 	<div>
 		<li>- <a href="<?php echo base_url();?>index.php/Control_Cliente/agregar_cliente">Clientes</a></li>
-		<li>- <a href="<?php echo base_url();?>index.php/Control_Institucion">Institucion</a></li>
+		<li>- <a href="<?php echo base_url();?>index.php/Control_Institucion/agregar_institucion">Institucion</a></li>
 		<li>- <a href="<?php echo base_url();?>index.php/Control_Negociacion">Negociacion</a></li>
-		<li>- <a href="">Venta</a></li>
-		<li>- <a href="">Orden de Compra</a></li>
-		<li>- <a href="">Importacion</a></li>
 	</div>
 	<h3><a href="#">Ver</a></h3>
 	<div>
 		<li>- <a href="<?php echo base_url();?>index.php/Control_Negociacion/ver_negociacion">Negociacion</a></li>
-		<li>- <a href="">Venta</a></li>
-		<li>- <a href="">Orden de Compra</a></li>
-		<li>- <a href="">Importacion</a></li>
-		<li>- <a href="">Reporte</a></li>
 	</div>
 	<h3><a href="#">Herramientas</a></h3>
 	<div>
-		<li>- <a href="">Calendario</a></li>
-		<li>- <a href="">Almacen</a></li>
-		<li>- <a href="">Usuarios</a></li>
-		<li>- <a href="">Productos</a></li>
-		<li>- <a href="">Facturacion</a></li>
-		<li>- <a href="">Visitas</a></li>
+    
 	</div>
 </div>
 
@@ -161,8 +149,8 @@ function CambiaColor(esto,borde,texto)
                   <td width="110" align="right"><font style="font-size:12px">Nombre:</font></td>
                   <td width="284">
 	<form id="form1" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/ver_negociacion_asociadas2">
-                      <select class="ui-widget" name="Cliente" id="Cliente" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')">
-                        <option><?php echo ' - '; ?></option>
+                      <select class="ui-widget" name="Cliente" id="Cliente" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required">
+                        <option></option>
                         <?php
 						foreach ($Institucion as $row) {
 				  ?>
@@ -178,8 +166,8 @@ function CambiaColor(esto,borde,texto)
                   <td align="right"><font style="font-size:12px">R.I.F:</font></td>
                   <td width="284">
 	<form id="form2" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/ver_negociacion_asociadas2">
-                      <select class="ui-widget" name="Cliente" id="Cliente" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')">
-                        <option><?php echo ' - '; ?></option>
+                      <select class="ui-widget" name="Cliente" id="Cliente" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required">
+                        <option></option>
                         <?php
 						foreach ($Institucion as $row) {
 				  ?>

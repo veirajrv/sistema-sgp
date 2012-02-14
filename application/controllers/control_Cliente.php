@@ -11,24 +11,10 @@ class Control_Cliente extends CI_Controller {
 		$this->load->helper('form');
 	}
 	
-	// Funcion para inicializar todas las funciones con el fin de no poder 
-	// utilizar ningun metodo si la sesion muere en el tiempo de vida del sistema.
-	public function expiracion() 
-	{
-		if ($this->session->userdata('Usuario') == NULL)
-		{
-			$url = 'http://elp21.no-ip.info:4085/SGP';
-			echo '<script type="text/javascript">alert("Su sesion ha expirado'; 
-   			echo ', vuelva a logearse para continuar"); window.location="'.$url.'";</script>';
-		}
-	}
-	
 	// Funcion que abre la pantalla de clientes del usuario en donde consultamos 
 	// clientes en el sistema.
 	public function index()
 	{
-		$this->CI = &get_instance();
-		$this->CI->expiracion();
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
 		$usuario['Clientes'] = $this->modelNegociacion->BuscarClientes();
@@ -39,8 +25,6 @@ class Control_Cliente extends CI_Controller {
 	// nuevos al sistema.  
 	public function agregar_cliente()
 	{
-		$this->CI = &get_instance();
-		$this->CI->expiracion();
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
 		$usuario['Institucion'] = $this->modelInstitucion->BuscarInstituciones();
@@ -51,8 +35,6 @@ class Control_Cliente extends CI_Controller {
 	// poder hacer la agregacion de un cliente al sistema.
 	public function crear_cliente() 
 	{
-		$this->CI = &get_instance();
-		$this->CI->expiracion();
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
 			
@@ -121,8 +103,6 @@ class Control_Cliente extends CI_Controller {
 	// queramos dentro de el sistema. 
 	public function ver_perfil()
 	{
-		$this->CI = &get_instance();
-		$this->CI->expiracion();
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
 		$id_cliente = $_POST['Cliente'];
@@ -149,8 +129,6 @@ class Control_Cliente extends CI_Controller {
 	
 	public function ver_perfil_2($cliente)
 	{
-		$this->CI = &get_instance();
-		$this->CI->expiracion();
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
 		$usuario['id_cliente'] = $cliente;
@@ -178,8 +156,6 @@ class Control_Cliente extends CI_Controller {
 	// los datos que queramos cambiar de un cliente. 
 	public function modificar_perfil()
 	{
-		$this->CI = &get_instance();
-		$this->CI->expiracion();
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
 		$id_cliente = $_POST['Cliente'];
@@ -215,8 +191,6 @@ class Control_Cliente extends CI_Controller {
 	// de un usuario en el sistema.
 	public function atras_index() 
 	{
-		$this->CI = &get_instance();
-		$this->CI->expiracion();
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
 		$usuario['Clientes'] = $this->modelNegociacion->BuscarClientes();
@@ -226,8 +200,6 @@ class Control_Cliente extends CI_Controller {
 	// Funcion que me busca cualquier cliente que sea en el sistema
 	public function buscar_cualquiera()
 	{
-		$this->CI = &get_instance();
-		$this->CI->expiracion();
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
 		$cadena = $_POST['Buscar'];
@@ -257,8 +229,6 @@ class Control_Cliente extends CI_Controller {
 	// Funcion que me busca clientes en el sistema de el vendedor que yo desee
 	public function buscar_vendedores() 
 	{
-		$this->CI = &get_instance();
-		$this->CI->expiracion();
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario; 
 		$usuario['Vendedores'] = $this->modelCliente->Vendedores();
@@ -268,8 +238,6 @@ class Control_Cliente extends CI_Controller {
 
 	public function buscar_vendedores_I()
 	{
-		$this->CI = &get_instance();
-		$this->CI->expiracion();
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
 		$usuario['Vendedores'] = $this->modelCliente->Vendedores();
@@ -281,8 +249,6 @@ class Control_Cliente extends CI_Controller {
 	// solo personas.
 	public function ver_clientes() 
 	{
-		$this->CI = &get_instance();
-		$this->CI->expiracion();
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario; 
 		$Vendedor = $_POST['Vendedor'];
@@ -313,8 +279,6 @@ class Control_Cliente extends CI_Controller {
 	// en este caso todos sin exclucion.
 	public function ver_clientes_lista() 
 	{
-		$this->CI = &get_instance();
-		$this->CI->expiracion();
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario; 
 		$Lista = $this->modelCliente->BuscarClientesTodos();
@@ -342,8 +306,6 @@ class Control_Cliente extends CI_Controller {
 	// solo instituciones.
 	public function ver_institucion() 
 	{
-		$this->CI = &get_instance();
-		$this->CI->expiracion();
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario; 
 		$Vendedor = $_POST['Vendedor'];
@@ -372,8 +334,6 @@ class Control_Cliente extends CI_Controller {
 	// en este caso todos sin exclucion.
 	public function ver_institucion_lista() 
 	{
-		$this->CI = &get_instance();
-		$this->CI->expiracion();
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario; 
 		$Lista = $this->modelCliente->BuscarInstitucionTodos();
@@ -400,8 +360,6 @@ class Control_Cliente extends CI_Controller {
 	// Funcion que me busca clientes en el sistema de el vendedor que yo desee
 	public function ver_detalle($id, $Vendedor) 
 	{
-		$this->CI = &get_instance();
-		$this->CI->expiracion();
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario; 
 		$usuario['Vendedor'] = $Vendedor; 
@@ -412,8 +370,6 @@ class Control_Cliente extends CI_Controller {
 	
 	public function ver_detalle2($id) 
 	{
-		$this->CI = &get_instance();
-		$this->CI->expiracion();
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario; 
 		$usuario['Datos'] = $this->modelCliente->DetalleCliente($id);
