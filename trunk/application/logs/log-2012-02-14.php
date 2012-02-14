@@ -142,3 +142,9 @@ ERROR - 2012-02-14 01:05:30 --> Severity: Notice  --> Undefined variable: Rechaz
 ERROR - 2012-02-14 01:05:30 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DPrincipal.php 175
 ERROR - 2012-02-14 01:05:46 --> Severity: Notice  --> Undefined variable: Rechazadas C:\wamp\www\OpenSGP\application\views\Despachador\DPrincipal.php 175
 ERROR - 2012-02-14 01:05:46 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DPrincipal.php 175
+ERROR - 2012-02-14 03:09:37 --> Severity: Notice  --> Undefined variable: ConAlerta C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 232
+ERROR - 2012-02-14 03:09:37 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 232
+ERROR - 2012-02-14 03:50:32 --> Severity: Notice  --> Undefined variable: Rechazadas C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 207
+ERROR - 2012-02-14 03:50:32 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 207
+ERROR - 2012-02-14 05:00:27 --> Severity: Notice  --> Undefined variable: ConAlerta C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 232
+ERROR - 2012-02-14 05:00:27 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 232

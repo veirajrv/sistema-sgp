@@ -490,6 +490,35 @@ class Control_Reporte extends CI_Controller
 		$this->load->view('Administrador/Reporte/REmpleado/RVista_4', $usuario);
 	}
 	
+	public function lista_empleado_status($Porcentaje)
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$Lista = $this->modelReporte->BuscarNegoEmpleadoTipo($Porcentaje);
+		
+		$this->load->library('table');
+		$this->table->set_empty("&nbsp;");
+		$this->table->set_heading('<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Nombre</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Apellido</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Telefono</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Email</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Codigo Negociaci&oacute;n</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Fecha Negociaci&oacute;n</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Status</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Total</b></font>');
+	
+		foreach ($Lista as $row)
+		{
+			$nombre = $row['Nombre_1'];
+			$apellido = $row['Apellido_1'];
+			$telefono = $row['Telf_Casa'];
+			$email = $row['Correo'];
+			$nego = $row['Id_Negociacion'];
+			$fechanego = $row['FechaP'];
+			$status = $row['Status'];
+			$total = $row['Total'];
+			$this->table->add_row($nombre, $apellido, $telefono, $email, $nego, $fechanego, $status, $total);
+		}
+			
+		$usuario['table'] = $this->table->generate();
+		
+		$this->load->view('Administrador/Reporte/REmpleado/RVista_4', $usuario);
+	}
+	
+	
 	
 	
 	// REPORTES DE NEGOCIACIONES //
