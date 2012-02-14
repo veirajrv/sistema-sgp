@@ -165,10 +165,35 @@ return false;
     </table>
     <table width="441" border="0">
       <tr>
-        <td width="431">- <a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_empleado')"><b>Lista de empleados</b></a></td>
+        <td colspan="2">- <a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_empleado')"><b>Lista de empleados</b></a></td>
+      </tr>
+      <tr>
+        <td width="220">- Lista de empleados y negociaciones por tipo: </td>
+        <td width="211"><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_empleado_status/25')"><b>Borrador</b></a></td>
       </tr>
       <tr>
         <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_empleado_status/50')"><b>Activa</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_empleado_status/75')"><b>&gt; 75%</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_empleado_status/90')"><b>&gt; 90%</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_empleado_status/100')"><b>Ganada</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_empleado_status/100')"><b>Cerrada</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_empleado_status/0')"><b>Perdida</b></a></td>
       </tr>
     </table>
     <p>&nbsp;</p>
