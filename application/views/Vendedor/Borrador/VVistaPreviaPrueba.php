@@ -166,7 +166,9 @@
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td align="right"><b>I.V.A 12%:</b></td>
-            <td><?php echo $Iva; ?></td>
+            <td><?php foreach ($Descuento as $row){
+							echo substr($row['Total']*0.12,0,8); 
+							     }?></td>
           </tr>
           <tr>
             <td>&nbsp;</td>
@@ -184,7 +186,7 @@
             <td>&nbsp;</td>
             <td align="right"><b>TOTAL:</b></td>
             <td bgcolor="#FFFF00"><?php foreach ($Descuento as $row){
-							echo substr($row['Total'],0,8); 
+							echo substr($row['Total'] + ($row['Total']*0.12),0,8); 
 							     }?></td>
           </tr>
         </table>

@@ -264,7 +264,9 @@ $(document).ready(function(){
                   <td>&nbsp;</td>
                   <td>&nbsp;</td>
                   <td align="right"><b>I.V.A 12%:</b></td>
-                  <td align="left"><?php echo $Iva; ?></td>
+                  <td align="left"><?php foreach ($Descuento as $row){
+							echo substr($row['Total']*0.12,0,8); 
+							     }?></td>
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
@@ -279,7 +281,7 @@ $(document).ready(function(){
                   <td>&nbsp;</td>
                   <td align="right"><b>TOTAL:</b></td>
                   <td align="left" bgcolor="#FFFF00"><?php foreach ($Descuento as $row){
-							echo substr($row['Total'],0,8); 
+							echo substr($row['Total'] + ($row['Total']*0.12),0,8); 
 							     }?></td>
                 </tr>
               </table>

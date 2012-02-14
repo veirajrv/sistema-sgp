@@ -277,12 +277,6 @@ return false;
   <tr>
     <td>&nbsp;</td>
     <td width="60">&nbsp;</td>
-    <td width="167" align="right"><b>I.V.A 12%:</b></td>
-    <td width="55"><?php echo $Iva; ?></td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td width="60">&nbsp;</td>
     <td width="167" align="right"><b>Descuento:</b></td>
     <td width="55"><input name="numero2" type="text" id="numero2" style="border:none; width:30px; text-align:left" onkeyup="calcula('+')" value="" maxlength="2" onkeypress="return soloNumeros(event)"/>
       %</td>

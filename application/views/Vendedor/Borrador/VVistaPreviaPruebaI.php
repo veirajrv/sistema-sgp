@@ -159,7 +159,9 @@
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td align="right"><b>I.V.A 12%:</b></td>
-            <td><?php echo $Iva; ?></td>
+            <td><?php foreach ($Descuento as $row){
+							echo $row['Total']*0.12; 
+							     }?></td>
           </tr>
           <tr>
             <td>&nbsp;</td>
@@ -177,7 +179,7 @@
             <td>&nbsp;</td>
             <td align="right"><b>TOTAL:</b></td>
             <td bgcolor="#FFFF00"><?php foreach ($Descuento as $row){
-							echo $row['Total']; 
+							echo ($row['Total'] + $row['Total']*0.12); 
 							     }?></td>
           </tr>
         </table>

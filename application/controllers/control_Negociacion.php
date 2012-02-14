@@ -279,7 +279,7 @@ class control_Negociacion extends CI_Controller {
 			$Neto2 = $this->modelProducto->Neto2($Id_Negociacion);
 			$Neto3 = $Neto+$Neto2;
 			$usuario['Neto'] = $Neto3;
-			$usuario['Iva'] = $Neto3*0.12;
+			//$usuario['Iva'] = $Neto3*0.12;
 			
 			$this->load->view('Administrador/AVistaPreviaI', $usuario);
 		}
@@ -304,7 +304,7 @@ class control_Negociacion extends CI_Controller {
 			$Neto2 = $this->modelProducto->Neto2($Id_Negociacion);
 			$Neto3 = $Neto+$Neto2;
 			$usuario['Neto'] = $Neto3;
-			$usuario['Iva'] = $Neto3*0.12;
+			//$usuario['Iva'] = $Neto3*0.12;
 			
 			$this->load->view('Administrador/AVistaPrevia', $usuario);
 		}
@@ -607,7 +607,7 @@ class control_Negociacion extends CI_Controller {
 			$Neto2 = $this->modelProducto->Neto2($Id_Negociacion);
 			$Neto3 = $Neto+$Neto2;
 			$usuario['Neto'] = $Neto3;
-			$usuario['Iva'] = $Neto3*0.12;
+			//$usuario['Iva'] = $Neto3*0.12;
 			
 			$this->load->view('Administrador/AVistaPreviaI2', $usuario);
 		}
@@ -657,7 +657,7 @@ class control_Negociacion extends CI_Controller {
 			$Neto2 = $this->modelProducto->Neto2($Id_Negociacion);
 			$Neto3 = $Neto+$Neto2;
 			$usuario['Neto'] = $Neto3;
-			$usuario['Iva'] = $Neto3*0.12;
+			//$usuario['Iva'] = $Neto3*0.12;
 			
 			$this->load->view('Administrador/AVistaPrevia2', $usuario);
 		}
@@ -1032,7 +1032,7 @@ class control_Negociacion extends CI_Controller {
 			$Neto2 = $this->modelProducto->Neto2($Id_Negociacion);
 			$Neto3 = $Neto+$Neto2;
 			$usuario['Neto'] = $Neto3;
-			$usuario['Iva'] = $Neto3*0.12;
+			//$usuario['Iva'] = $Neto3*0.12;
 			
 			$this->load->view('Vendedor/Borrador/VVistaPreviaPrueba', $usuario);
 		}
@@ -1058,7 +1058,7 @@ class control_Negociacion extends CI_Controller {
 			$Neto2 = $this->modelProducto->Neto2($Id_Negociacion);
 			$Neto3 = $Neto+$Neto2;
 			$usuario['Neto'] = $Neto3;
-			$usuario['Iva'] = $Neto3*0.12;
+			//$usuario['Iva'] = $Neto3*0.12;
 			
 			$this->load->view('Vendedor/Borrador/VVistaPreviaPruebaI', $usuario);
 		}		
@@ -1407,7 +1407,7 @@ class control_Negociacion extends CI_Controller {
 		$Neto2 = $this->modelProducto->Neto2($Id_Negociacion);
 		$Neto3 = $Neto+$Neto2;
 		$usuario['Neto'] = $Neto3;
-		$usuario['Iva'] = $Neto3*0.12;
+		//$usuario['Iva'] = $Neto3*0.12;
 		
 		$this->load->view('Vendedor/Borrador/VVistaPreviaPrueba', $usuario);
 	}
@@ -1433,7 +1433,7 @@ class control_Negociacion extends CI_Controller {
 		$Neto2 = $this->modelProducto->Neto2($Id_Negociacion);
 		$Neto3 = $Neto+$Neto2;
 		$usuario['Neto'] = $Neto3;
-		$usuario['Iva'] = $Neto3*0.12;
+		//$usuario['Iva'] = $Neto3*0.12;
 		
 		$this->load->view('Vendedor/Borrador/VVistaPreviaPruebaI', $usuario);
 	}
