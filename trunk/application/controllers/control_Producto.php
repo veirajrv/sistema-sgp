@@ -308,6 +308,9 @@ class Control_Producto extends CI_Controller {
 		
 		$usuario['Mensaje'] = 'Se agrego el nuevo equipo con &eacute;xito!';
 		
+		$usuario['Marca'] = $this->modelProducto->ConsultarMarcas();
+		$usuario['Equipo'] = $this->modelProducto->ConsultarEquipo();
+		
 		$this->load->view('Administrador/Producto/Equipo', $usuario);
 	}	
 	

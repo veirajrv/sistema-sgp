@@ -157,7 +157,7 @@ function CambiaColor(esto,borde,texto)
           <td><hr align="left" style="width:435px;" /></td>
         </tr>
         <tr>
-          <td><div align="center" style="font-size:15px; height:8px"><?php if ($Status == 'Borrador') { echo "<b><font color='#FF9900'>$Status</font></b>";} ?></div></td>
+          <td><div align="center" style="font-size:15px; height:8px"><?php if ($Status == 'Borrador') { echo "<b><font color='#FF9900'>$Status 25%</font></b>";} ?></div></td>
         </tr>
         <tr>
           <td><hr align="left" style="width:435px;" /></td>
