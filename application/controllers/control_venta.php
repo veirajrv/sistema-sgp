@@ -34,5 +34,26 @@ class Control_Venta extends CI_Controller
 		$this->load->view('Despachador/DVistaGanada', $usuario);
 	}
 	
+	public function mandar_orden_compra($Id_Negociacion)
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$Id = $this->modelVenta->ConsultarNego($Id_Negociacion);
+		
+		if($Id == NULL)
+		{
+			$venta['Id_Negociacion'] = $Id_Negociacion;
+			$venta['Status'] = "Enviada a compra";
+			$venta['Final'] = "0";
+			$this->modelVenta->CrearOrden($venta);
+		}
+		else 
+		{
+			$this->load->view('Despachador/DPrincipal', $usuario);
+		}
+		
+		$this->load->view('Despachador/DPrincipal', $usuario);
+	}
+	
 	
 }

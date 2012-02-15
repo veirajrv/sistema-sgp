@@ -163,7 +163,7 @@ $(document).ready(function(){
 <!-- BEGIN center column -->
 <div id="center">
   <div id="cc">
-    <form id="form1" method="post" action="">
+    <form id="form1" method="post" action="<?php echo base_url();?>index.php/Control_Venta/mandar_orden_compra/<?php echo $Id_Negociacion; ?>">
       <table width="441" border="0">
         <tr>
           <td width="406"><h2 style="font-size:30px">Codigo Negociaci&oacute;n (<?php echo $Id_Negociacion; ?>)</h2></td>
@@ -178,7 +178,7 @@ $(document).ready(function(){
         <tr>
           <td><fieldset>
             <legend style="font-size:15px"><b>Vista previa </b><a href="<?php echo base_url();?>index.php/Control_Negociacion/historial_status_a/<?php echo $Id_Negociacion; ?>"><img src="<?php echo base_url();?>files/images/Status.png" alt="e" width="16" height="16" title="Historial negociacion"/></a></legend>
-              <form name="MyForm" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/aprobar">
+              <form name="MyForm" method="post" action="">
                 <table width="410" border="0">
                   <tr>
                     <td width="270" rowspan="2"><img src="<?php echo base_url();?>files/images/Logo_Formato.png" alt="" width="147" height="69" /></td>
