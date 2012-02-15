@@ -2,10 +2,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-<script src="http://elp21.no-ip.info:4085/SGP/files/js/jquery-1.6.2.min.js" type="text/javascript"> </script>
-<script src="http://elp21.no-ip.info:4085/SGP/files/js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"> </script>
+<script src="http://elp21.no-ip.info:4085/SGP/files/js/jquery-1.6.2.min.js" type="text/javascript"></script>
+<script src="http://elp21.no-ip.info:4085/SGP/files/js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
 
 <head>
+
+<script> 
+function sumar() { 
+var n1 = parseInt(document.MyForm.numero2.value); 
+var n2 = (n1/100) * (<?php foreach ($Total as $row){echo $row['Total'];}?>);
+var n3 = <?php foreach ($Total as $row){echo $row['Total'];}?>;
+document.MyForm.resultado2.value = n3 - n2; 
+} 
+</script> 
 
 <script type="text/javascript">
 function CambiaColor(esto,borde,texto)
@@ -43,40 +52,39 @@ function CambiaColor(esto,borde,texto)
 
 <script>
 	$(function() {
-		$( "input:submit").button();
+		$( "input:submit, input:button, input:reset").button();
 		$( "a", ".demoo" ).click(function() { return false; });
 	});
 </script>
 
-<script>
-function soloNumeros(evt){
-//asignamos el valor de la tecla a keynum
-if(window.event){// IE
-keynum = evt.keyCode;
-}else{
-keynum = evt.which;
-}
-//comprobamos si se encuentra en el rango
-if(keynum>7 && keynum<58){
-return true;
-}else{
-return false;
-}
-}
+<script language="javascript">
+$(document).ready(function(){
+	// Parametros para e combo1
+   $("#combo1").change(function () {
+   		$("#combo1 option:selected").each(function () {
+			//alert($(this).val());
+				elegido=$(this).val();
+				$.post("<?php echo base_url();?>index.php/ControlCombox/Combo3", { elegido: elegido }, function(data){
+				$("#combo2").html(data);
+			});			
+        });
+   })
+	// Parametros para el combo2
+	$("#combo2").change(function () {
+   		$("#combo2 option:selected").each(function () {
+			//alert($(this).val());
+				elegido=$(this).val();
+				$.post("<?php echo base_url();?>index.php/ControlCombox/Combo4", { elegido: elegido }, function(data){
+				$("#combo3").html(data);
+			});			
+        });
+   })
+});
 </script>
-
-<script>
-	$(function() {
-		$( "#datepicker" ).datepicker();
-	});
-</script>
-
-
-
 	
 <!-- meta tags begin -->
 	<!-- vital meta tags -->
-	<meta http-equiv="refresh" content="15; url=<?php echo base_url();?>index.php/Control_Inicio/d_principal" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>SISTEMA DE GESTION DE PROCESOS</title>
 	<!-- defining stylesheet, rss feed and shortcut icon to use -->
 	<link rel="stylesheet" href="http://elp21.no-ip.info:4085/SGP/files/css/styling.css" type="text/css" media="screen" />
@@ -90,7 +98,7 @@ return false;
 	</style>
 <![endif]-->
 </head>
-<body onLoad="cambiar()">
+<body>
 
 <!-- BEGIN global wrapper -->
 <!-- BEGIN header -->
@@ -100,15 +108,15 @@ return false;
 		<a href="index.html" title="Home"><img src="http://elp21.no-ip.info:4085/SGP/files/images/Portada/logo2.gif" alt="Your logo here" width="45" height="40" /> <span id="logo-text">YOMA
 		</span></a>
 		<div id="userbar">
-			<a href="<?php echo base_url();?>index.php/Control_Inicio/cerrar_sesion">Cerrar Sesion </a> | <a id="tabe" href="">Ayuda</a></div>
-	</div>
+			<a href="<?php echo base_url();?>index.php/Control_Inicio/cerrar_sesion">Cerrar Sesion </a> | <a id="tabe" href="">Ayuda</a>		</div>
+  </div>
 	<!-- END tagline -->
 
 <!-- BEGIN tabs -->
 <div id="navcontainer">
 	<ul id="navlist">
 		<li><a id="taba" class="active" href="<?php echo base_url();?>index.php/Control_Inicio/d_principal" title="Inicio">Inicio</a></li>
-		<li><a id="tabb" href="<?php echo base_url();?>index.php/Control_Venta/consultar_negociaciones" title="Gestionar Ventas">Ventas</a></li>
+		<li><a id="tabb" href="<?php echo base_url();?>index.php/Control_Venta" title="Gestionar Ventas">Ventas</a></li>
 		<li></li>
 		<li></li>
 	</ul>
@@ -119,19 +127,10 @@ return false;
 
 <!-- BEGIN search -->
 <div id="search">
-  <div align="right">
-    <form id="form5" method="post" action="">
-      <table width="200" border="0" align="right" style="margin-top:-2px">
-        <tr>
-          <td width="158" align="left"><div align="right">
-            <input name="Nego" type="text" id="Buscar" style="width:100px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" placeholder="Buscar" required="required" onkeypress="return soloNumeros(event)"/>
-          </div></td>
-          <td width="32"><input name="image" type="image" value="Buscar" src="<?php echo base_url();?>files/images/lupa-32x32.png"/></td>
-        </tr>
-      </table>
-      </form>
-    </div>
-</div>
+
+	
+	
+  </div>
 <!-- END search -->
 
 <!-- BEGIN container -->
@@ -144,7 +143,7 @@ return false;
 <div id="accordion">
 	<h3><a href="#">Ver</a></h3>
 	<div>
-		<li>- <a href="<?php echo base_url();?>index.php/Control_Venta/consultar_negociaciones">Venta</a></li>
+		<li>- <a href="">Venta</a></li>
 	</div>
 	<h3><a href="#">Herramientas</a></h3>
 	<div>
@@ -159,36 +158,39 @@ return false;
 
 <!-- BEGIN center column -->
 <div id="center">
-
-<div id="cc">
-  <table width="440" border="0">
-    <tr>
-      <td width="140"><font style="font-size:12px; color:#369"><b>Negociaciones ganadas:</b></font></td>
-      <td width="290"><form id="form1" method="post" action="<?php echo base_url();?>index.php/Control_Venta/detalle_ganada">
-        <select name="Ganadas" id="Ganadas" style="width:150px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required">
-          <option></option>
-          <?php
-						foreach ($Ganadas as $row) {
-				  ?>
-          <option value="<?php echo $row['Id_Negociacion']; ?>" <?php echo set_select('Hola',$row['Id_Negociacion']); ?> ><?php echo $row['Id_Negociacion']; ?></option>
-          <?php
-					}
-					?>
-        </select>
-        <input type="submit" name="button" id="button" value="Ir" />
-      </form></td>
-    </tr>
-  </table>
-  <p>&nbsp;</p>
-  <p>
-</p>
-  <p>&nbsp;</p>
-  <p>
-    <label></label>
-  </p>
-  <p></p>
+  <div id="cc">
+    <form id="form1" method="post" action="">
+      <table width="441" border="0">
+        <tr>
+          <td><h2 style="font-size:30px">Negociaciones Seguimiento</h2></td>
+          </tr>
+        <tr>
+          <td><hr align="left" style="width:435px;" /></td>
+        </tr>
+      </table>
+    </form>
+      <table width="441" border="0">
+        <tr>
+          <td><font style="font-size:12px; color:#369"><b>Negociaciones enviadas a compra</b></font></td>
+        </tr>
+        <tr>
+          <td><?php $j=0; foreach ($Lista as $row){ echo "Codigo de seguimiento:"; echo " "; echo $row['Id_VentaNego']; echo "<br />"; echo "Codigo negociaci&oacute;n:"; echo " "; echo $row['Id_Negociacion']; echo "<p></p>"; $j++;}?></td>
+        </tr>
+        <tr>
+          <td><font style="font-size:12px; color:#369"><b>Negociaciones Facturadas</b></font></td>
+        </tr>
+        <tr>
+          <td><?php $j=0; foreach ($Lista2 as $row){ echo "Codigo de seguimiento:"; echo " "; echo $row['Id_VentaNego']; echo "<br />"; echo "Codigo negociaci&oacute;n:"; echo " "; echo $row['Id_Negociacion']; echo "<p></p>"; $j++;}?></td>
+        </tr>
+        <tr>
+          <td valign="top"><form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Inicio/d_principal">
+              <input name="Submit" type="image" src="<?php echo base_url();?>files/images/FlechaI.png" id="Submit" value="Atras" />
+          </form>		  </td>
+          </tr>
+      </table>
+    <p>&nbsp;</p>
   </div>
-<!-- END cc -->
+  <!-- END cc -->
 </div><!-- END center -->
 
 <!-- BEGIN right column -->

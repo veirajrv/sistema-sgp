@@ -141,10 +141,6 @@ $(document).ready(function(){
 	<div class="demo">
 
 <div id="accordion">
-	<h3><a href="#">Nuevo</a></h3>
-	<div>
-		<li>- <a href="">Venta</a></li>
-	</div>
 	<h3><a href="#">Ver</a></h3>
 	<div>
 		<li>- <a href="">Venta</a></li>
@@ -206,8 +202,9 @@ $(document).ready(function(){
                   <?php $j=0; foreach ($Lista2 as $row){ echo $row['Descripcion']; echo "<br />"; $j++;}?></td>
                 </tr>
                 <tr>
-                  <td colspan="3" align="right"><input type="hidden" name="Negociacion" id="Negociacion" style="width:20px" value="<?php echo $Id_Negociacion; ?>" />
-                    <input type="image" src="<?php echo base_url();?>files/images/aprobar.png" title="Aprobar Negociación" onclick="return confirm('Usted desea mandar a facturar esta negociaci&oacute;n?');" /></td>
+                  <td colspan="3" align="right"><form id="form2" method="post" action="<?php echo base_url();?>index.php/Control_Venta/mandar_facturar/<?php echo $Id_Negociacion; ?>">
+                    <input type="image" src="<?php echo base_url();?>files/images/aprobar.png" title="Aprobar Negociación" onclick="return confirm('Usted desea mandar a facturar esta negociaci&oacute;n?');" />
+                  </form></td>
                   </tr>
               </table>
           </fieldset></td>
