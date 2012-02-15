@@ -116,7 +116,7 @@ $(document).ready(function(){
 <div id="navcontainer">
 	<ul id="navlist">
 		<li><a id="taba" class="active" href="<?php echo base_url();?>index.php/Control_Inicio/d_principal" title="Inicio">Inicio</a></li>
-		<li><a id="tabb" href="<?php echo base_url();?>index.php/Control_Venta" title="Gestionar Ventas">Ventas</a></li>
+		<li><a id="tabb" href="<?php echo base_url();?>index.php/Control_Venta/consultar_negociaciones" title="Gestionar Ventas">Ventas</a></li>
 		<li></li>
 		<li></li>
 	</ul>
@@ -143,11 +143,11 @@ $(document).ready(function(){
 <div id="accordion">
 	<h3><a href="#">Ver</a></h3>
 	<div>
-		<li>- <a href="">Venta</a></li>
+		<li>- <a href="<?php echo base_url();?>index.php/Control_Venta/consultar_negociaciones">Venta</a></li>
 	</div>
 	<h3><a href="#">Herramientas</a></h3>
 	<div>
-		<li>- <a href="">Calendario</a></li>
+		
 	</div>
 </div>
 

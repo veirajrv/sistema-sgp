@@ -234,3 +234,65 @@ ERROR - 2012-02-14 13:29:03 --> Severity: Notice  --> Undefined variable: ConAle
 ERROR - 2012-02-14 13:29:03 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Administrador\APrincipal.php 221
 ERROR - 2012-02-14 13:37:41 --> Severity: Notice  --> Undefined variable: ConAlerta F:\htdocs\desarrollo\SGP\application\views\Administrador\APrincipal.php 221
 ERROR - 2012-02-14 13:37:41 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-02-14 23:03:44 --> Severity: Notice  --> Undefined variable: Total F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 13
+ERROR - 2012-02-14 23:03:44 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 13
+ERROR - 2012-02-14 23:03:44 --> Severity: Notice  --> Undefined variable: Total F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 14
+ERROR - 2012-02-14 23:03:44 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 14
+ERROR - 2012-02-14 23:33:27 --> Severity: Notice  --> Undefined variable: Total F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 13
+ERROR - 2012-02-14 23:33:27 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 13
+ERROR - 2012-02-14 23:33:27 --> Severity: Notice  --> Undefined variable: Total F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 14
+ERROR - 2012-02-14 23:33:27 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 14
+ERROR - 2012-02-14 23:33:44 --> Severity: Notice  --> Undefined index:  Ganadas F:\htdocs\desarrollo\SGP\application\controllers\control_venta.php 29
+ERROR - 2012-02-14 23:33:44 --> Severity: Notice  --> Undefined index:  Ganadas F:\htdocs\desarrollo\SGP\application\controllers\control_venta.php 30
+ERROR - 2012-02-14 23:33:44 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'GROUP BY H.Id_HistorialNP' at line 7
+ERROR - 2012-02-14 23:34:24 --> Severity: Notice  --> Undefined variable: Total F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 13
+ERROR - 2012-02-14 23:34:24 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 13
+ERROR - 2012-02-14 23:34:24 --> Severity: Notice  --> Undefined variable: Total F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 14
+ERROR - 2012-02-14 23:34:24 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 14
+ERROR - 2012-02-14 23:34:53 --> Severity: Notice  --> Undefined index:  Ganadas F:\htdocs\desarrollo\SGP\application\controllers\control_venta.php 29
+ERROR - 2012-02-14 23:34:53 --> Severity: Notice  --> Undefined index:  Ganadas F:\htdocs\desarrollo\SGP\application\controllers\control_venta.php 30
+ERROR - 2012-02-14 23:34:53 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'GROUP BY H.Id_HistorialNP' at line 7
+ERROR - 2012-02-14 23:35:32 --> Severity: Notice  --> Undefined index:  Ganadas F:\htdocs\desarrollo\SGP\application\controllers\control_venta.php 29
+ERROR - 2012-02-14 23:35:32 --> Severity: Notice  --> Undefined index:  Ganadas F:\htdocs\desarrollo\SGP\application\controllers\control_venta.php 30
+ERROR - 2012-02-14 23:35:32 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'GROUP BY H.Id_HistorialNP' at line 7
+ERROR - 2012-02-14 23:35:39 --> Severity: Notice  --> Undefined index:  Ganadas F:\htdocs\desarrollo\SGP\application\controllers\control_venta.php 29
+ERROR - 2012-02-14 23:35:39 --> Severity: Notice  --> Undefined index:  Ganadas F:\htdocs\desarrollo\SGP\application\controllers\control_venta.php 30
+ERROR - 2012-02-14 23:35:39 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'GROUP BY H.Id_HistorialNP' at line 7
+ERROR - 2012-02-14 23:36:37 --> Severity: Notice  --> Undefined variable: Total F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 13
+ERROR - 2012-02-14 23:36:37 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 13
+ERROR - 2012-02-14 23:36:37 --> Severity: Notice  --> Undefined variable: Total F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 14
+ERROR - 2012-02-14 23:36:37 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 14
+ERROR - 2012-02-14 23:36:39 --> Severity: Notice  --> Undefined index:  Ganadas F:\htdocs\desarrollo\SGP\application\controllers\control_venta.php 29
+ERROR - 2012-02-14 23:36:39 --> Severity: Notice  --> Undefined index:  Ganadas F:\htdocs\desarrollo\SGP\application\controllers\control_venta.php 30
+ERROR - 2012-02-14 23:36:39 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'GROUP BY H.Id_HistorialNP' at line 7
+ERROR - 2012-02-14 23:38:20 --> Severity: Notice  --> Undefined variable: Total F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 13
+ERROR - 2012-02-14 23:38:20 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 13
+ERROR - 2012-02-14 23:38:20 --> Severity: Notice  --> Undefined variable: Total F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 14
+ERROR - 2012-02-14 23:38:20 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 14
+ERROR - 2012-02-14 23:38:34 --> Severity: Notice  --> Undefined variable: Total F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 13
+ERROR - 2012-02-14 23:38:34 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 13
+ERROR - 2012-02-14 23:38:34 --> Severity: Notice  --> Undefined variable: Total F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 14
+ERROR - 2012-02-14 23:38:34 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 14
+ERROR - 2012-02-14 23:38:45 --> Severity: Notice  --> Undefined variable: Total F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 13
+ERROR - 2012-02-14 23:38:45 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 13
+ERROR - 2012-02-14 23:38:45 --> Severity: Notice  --> Undefined variable: Total F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 14
+ERROR - 2012-02-14 23:38:45 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 14
+ERROR - 2012-02-14 23:38:56 --> Severity: Notice  --> Undefined variable: Total F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 13
+ERROR - 2012-02-14 23:38:56 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 13
+ERROR - 2012-02-14 23:38:56 --> Severity: Notice  --> Undefined variable: Total F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 14
+ERROR - 2012-02-14 23:38:56 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 14
+ERROR - 2012-02-14 23:39:35 --> Severity: Notice  --> Undefined variable: Total F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 13
+ERROR - 2012-02-14 23:39:35 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 13
+ERROR - 2012-02-14 23:39:35 --> Severity: Notice  --> Undefined variable: Total F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 14
+ERROR - 2012-02-14 23:39:35 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 14
+ERROR - 2012-02-14 23:39:52 --> Severity: Notice  --> Undefined variable: Total F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 13
+ERROR - 2012-02-14 23:39:52 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 13
+ERROR - 2012-02-14 23:39:52 --> Severity: Notice  --> Undefined variable: Total F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 14
+ERROR - 2012-02-14 23:39:52 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 14
+ERROR - 2012-02-14 23:41:35 --> Severity: Notice  --> Undefined variable: Total F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 13
+ERROR - 2012-02-14 23:41:35 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 13
+ERROR - 2012-02-14 23:41:35 --> Severity: Notice  --> Undefined variable: Total F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 14
+ERROR - 2012-02-14 23:41:35 --> Severity: Warning  --> Invalid argument supplied for foreach() F:\htdocs\desarrollo\SGP\application\views\Despachador\DVistaGanada.php 14
+ERROR - 2012-02-14 23:41:38 --> Severity: Notice  --> Undefined index:  Ganadas F:\htdocs\desarrollo\SGP\application\controllers\control_venta.php 29
+ERROR - 2012-02-14 23:41:38 --> Severity: Notice  --> Undefined index:  Ganadas F:\htdocs\desarrollo\SGP\application\controllers\control_venta.php 30
+ERROR - 2012-02-14 23:41:38 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'GROUP BY H.Id_HistorialNP' at line 7
