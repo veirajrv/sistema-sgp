@@ -20,7 +20,28 @@ class ModelVenta extends CI_Model
 		return $query->result_array();	
 	} 
 	
+	function IdSeguimiento($Id_Negociacion)
+	{
+		$query = $this->db->query('SELECT S.Id_Seguimiento
+								   FROM NEGOCIACION AS N, SEGUIMIENTO AS S, NS AS NS 
+								   WHERE NS.Id_Negociacion = N.Id_Negociacion
+								   AND NS.Id_Seguimiento = S.Id_Seguimiento
+								   AND N.Id_Negociacion = '.$Id_Negociacion.'
+								   ORDER BY N.Id_Negociacion');	
+		
+		foreach ($query->result_array() as $row)
+	{
+		$id = $row['Id_Seguimiento'];
+	}
+		return $id;
+	} 
+	
 	function CrearOrden($venta)
+	{
+		$this->db->insert('ventanego', $venta);
+	} 
+	
+	function Facturar($venta)
 	{
 		$this->db->insert('ventanego', $venta);
 	} 
@@ -31,10 +52,56 @@ class ModelVenta extends CI_Model
 		$query = $this->db->where("Id_Negociacion", $Id_Negociacion);
 		$query = $this->db->get("ventanego");
 		foreach ($query->result_array() as $row)
+		{
+			if($row['Id_VentaNego'] == NULL)
+			{
+				return TRUE;
+			}
+			else
+			{
+				$id = $row['Id_VentaNego'];	
+				return $id;
+			}
+		}
+	}
+	
+	function ModificarStatus($Facturar, $datos) 
 	{
-		$id = $row['Id_VentaNego'];
+		$Facturar->Status = "Cerrada";
+		
+		$IdSegui = $datos['ID2'];
+		$this->db->where("Id_Seguimiento", $IdSegui);
+		$this->db->update('Seguimiento', $Facturar);
 	}
-		return $id;
+	
+	function ModificarStatus2($Facturar2, $datos) 
+	{
+		$Facturar2->Status = "Facturada";
+		$Facturar2->Final = "1";
+		
+		$Id = $datos['ID2'];
+		$this->db->where("Id_VentaNego", $Id);
+		$this->db->update('VentaNego', $Facturar2);
 	}
+	
+	function ConsultarLista()
+	{
+		$query = $this->db->query('SELECT V.Id_VentaNego, V.Id_Negociacion
+								   FROM VENTANEGO AS V
+								   WHERE V.Status = "Enviada a compra"
+								   ORDER BY V.Id_VentaNego');	
+		
+		return $query->result_array();	
+	} 
+	
+	function ConsultarLista2()
+	{
+		$query = $this->db->query('SELECT V.Id_VentaNego, V.Id_Negociacion
+								   FROM VENTANEGO AS V
+								   WHERE V.Status = "Facturada"
+								   ORDER BY V.Id_VentaNego');	
+		
+		return $query->result_array();	
+	} 
 	
 }
