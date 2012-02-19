@@ -30,6 +30,19 @@ class ModelReporte extends CI_Model
 		return $query->result_array();	
 	}
 	
+	function BuscarInstitucionesTipo($tipo)
+	{
+		$query = $this->db->query('SELECT E.Nombre_1, E.Apellido_1, I.Nombre, I.Web, I.Telefono1, N.Id_Negociacion, N.FechaP, S.Status
+								   FROM INSTITUCION AS I, EMPLEADO AS E, NEGOCIACION AS N, SEGUIMIENTO AS S, NS AS NS
+								   WHERE N.Id_Institucion = I.Id_Institucion
+								   AND N.Id_Empleado = E.Cedula
+								   AND N.Id_Negociacion = NS.Id_Negociacion
+								   AND NS.Id_Seguimiento = S.Id_Seguimiento
+								   AND I.Tipo_I =  "'.$tipo.'"');	
+		
+		return $query->result_array();	
+	}
+	
 	function BuscarClientesTipoStatus($tipo)
 	{
 		$query = $this->db->query('SELECT E.Nombre_1, E.Apellido_1, C.Nombre, C.Apellido, C.Email, C.Telefono, C.Tipo_C, N.Id_Negociacion, N.FechaP, S.Status
@@ -40,6 +53,20 @@ class ModelReporte extends CI_Model
 								   AND NS.Id_Seguimiento = S.Id_Seguimiento
 								   AND S.Porcentaje =  "'.$tipo.'"
 								   ORDER BY C.Tipo_C');		
+		
+		return $query->result_array();	
+	}
+	
+	function BuscarInstitucionesTipoStatus($tipo)
+	{
+		$query = $this->db->query('SELECT E.Nombre_1, E.Apellido_1, I.Nombre, I.Web, I.Telefono1, I.Tipo_I, N.Id_Negociacion, N.FechaP, S.Status
+								   FROM INSTITUCION AS I, EMPLEADO AS E, NEGOCIACION AS N, SEGUIMIENTO AS S, NS AS NS
+								   WHERE N.Id_Institucion = I.Id_Institucion
+								   AND N.Id_Empleado = E.Cedula
+								   AND N.Id_Negociacion = NS.Id_Negociacion
+								   AND NS.Id_Seguimiento = S.Id_Seguimiento
+								   AND S.Porcentaje =  "'.$tipo.'"
+								   ORDER BY I.Tipo_I');		
 		
 		return $query->result_array();	
 	}

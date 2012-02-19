@@ -308,6 +308,61 @@ class Control_Reporte extends CI_Controller
 		$this->load->view('Administrador/Reporte/RInstitucion/RVista_2', $usuario);
 	}
 	
+	public function lista_instituciones_tipo($tipo)
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$Lista = $this->modelReporte->BuscarInstitucionesTipo($tipo);
+		
+		$this->load->library('table');
+		$this->table->set_empty("&nbsp;");
+		$this->table->set_heading('<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Empleado</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Numero Negociaci&oacute;n</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Status</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Fecha</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Instituci&oacute;n</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Telefono</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Web</b></font>');
+	
+		foreach ($Lista as $row)
+		{
+			$empleado = $row['Nombre_1'].' '.$row['Apellido_1'];
+			$nego = $row['Id_Negociacion'];
+			$status = $row['Status'];
+			$fecha = $row['FechaP'];
+			$institucion = $row['Nombre'];
+			$telefono = $row['Telefono1'];
+			$web = $row['Web'];
+			$this->table->add_row($empleado, $nego, $status, $fecha, $institucion, $telefono, $web);
+		}
+			
+		$usuario['table'] = $this->table->generate();
+		
+		$this->load->view('Administrador/Reporte/RInstitucion/RVista_2', $usuario);
+	}
+	
+	public function lista_instituciones_tstatus($status)
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$Lista = $this->modelReporte->BuscarInstitucionesTipoStatus($status);
+		
+		$this->load->library('table');
+		$this->table->set_empty("&nbsp;");
+		$this->table->set_heading('<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Tipo</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Empleado</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Numero Negociaci&oacute;n</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Status</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Fecha</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Instituci&oacute;n</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Telefono</b></font>', '<font style="font-size:12px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>Web</b></font>');
+	
+		foreach ($Lista as $row)
+		{
+			$tipo = $row['Tipo_I'];
+			$empleado = $row['Nombre_1'].' '.$row['Apellido_1'];
+			$nego = $row['Id_Negociacion'];
+			$status = $row['Status'];
+			$fecha = $row['FechaP'];
+			$institucion = $row['Nombre'];
+			$telefono = $row['Telefono1'];
+			$web = $row['Web'];
+			$this->table->add_row($tipo, $empleado, $nego, $status, $fecha, $institucion, $telefono, $web);
+		}
+			
+		$usuario['table'] = $this->table->generate();
+		
+		$this->load->view('Administrador/Reporte/RInstitucion/RVista_2', $usuario);
+	}
+	
 	public function lista_institucion_especial($especialidad)
 	{
 		$Usuario = $this->session->userdata('Usuario');

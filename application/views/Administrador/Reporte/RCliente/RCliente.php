@@ -157,8 +157,8 @@ return false;
         <td colspan="3">- <a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes')"><b>Lista de clientes</b></a></td>
       </tr>
       <tr>
-        <td width="125">- Clientes por especialidad:</td>
-        <td width="179"><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Cirugia')"><b>Cirugia</b></a></td>
+        <td width="129">- Clientes por especialidad:</td>
+        <td width="175"><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Cirugia')"><b>Cirugia</b></a></td>
         <td width="123">&nbsp;</td>
         </tr>
       <tr>
