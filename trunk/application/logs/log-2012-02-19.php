@@ -38,3 +38,6 @@ ERROR - 2012-02-19 04:35:38 --> Severity: Notice  --> Undefined variable: Total 
 ERROR - 2012-02-19 04:35:38 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\AVistaPreviaI2.php 13
 ERROR - 2012-02-19 04:35:38 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Administrador\AVistaPreviaI2.php 14
 ERROR - 2012-02-19 04:35:38 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\AVistaPreviaI2.php 14
+ERROR - 2012-02-19 15:10:38 --> Severity: Notice  --> Undefined variable: ConAlerta C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-02-19 15:10:38 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-02-19 15:19:43 --> Query error: Unknown column 'C.Tipo_C' in 'where clause'
