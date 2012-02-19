@@ -159,7 +159,7 @@ return false;
               <option value="2">Instituciones</option>
               <option value="3">Productos</option>
               <option value="4">Negociaciones</option>
-              <option value="5">Empleados</option>
+              <option value="5">Status</option>
             </select>
             <input type="submit" name="Submit" value="Buscar" />
           </label></td>

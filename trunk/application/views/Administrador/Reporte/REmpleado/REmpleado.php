@@ -143,7 +143,7 @@ return false;
     <table width="440" border="0">
       <tr>
         <td width="128"><h2 style="font-size:30px">Reportes</h2></td>
-        <td width="234"><h2>( <font color="#0099FF">Empleados</font> )</h2></td>
+        <td width="234"><h2>( <font color="#0099FF">Status</font> )</h2></td>
         <td width="65" align="right"><form id="form1" method="post" action="<?php echo base_url();?>index.php/Control_Reporte">
           <input type="image" src="<?php echo base_url();?>files/images/FlechaI.png" name="Submit" value="Enviar" />
                 </form></td>
@@ -174,11 +174,7 @@ return false;
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_empleado_status/100')"><b>Ganada</b></a></td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_empleado_status/100')"><b>Cerrada</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_empleado_status/100')"><b>Ganada y Cerrada</b></a></td>
       </tr>
       <tr>
         <td>&nbsp;</td>

@@ -157,8 +157,8 @@ return false;
         <td colspan="3">- <a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes')"><b>Lista de clientes</b></a></td>
       </tr>
       <tr>
-        <td width="130">- Clientes por especialidad:</td>
-        <td width="174"><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Cirugia')"><b>Cirugia</b></a></td>
+        <td width="125">- Clientes por especialidad:</td>
+        <td width="179"><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Cirugia')"><b>Cirugia</b></a></td>
         <td width="123">&nbsp;</td>
         </tr>
       <tr>
@@ -302,6 +302,41 @@ return false;
       <tr>
         <td colspan="2">&nbsp;</td>
         <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_bagcp/0')"><b>Perdida</b></a></td>
+      </tr>
+      <tr>
+        <td colspan="3">- Clientes por tipo: <a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_tipo/Publico')"><b>Publico</b></a> o <a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_tipo/Privado')"><b>Privado</b></a></td>
+        </tr>
+      <tr>
+        <td>- Clientes por tipo y status: </td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_tstatus/25')"><b>Borrador</b></a></td>
+        <td rowspan="7">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_tstatus/50')"><b>Activa</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_tstatus/75')"><b>&gt; 75%</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_tstatus/90')"><b>&gt; 90%</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_tstatus/100')"><b>Ganada</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_tstatus/100')"><b>Cerrada</b></a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_tstatus/0')"><b>Perdida</b></a></td>
+        </tr>
+      <tr>
+        <td colspan="3">&nbsp;</td>
       </tr>
     </table>
     <p>&nbsp;</p>
