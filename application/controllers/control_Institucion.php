@@ -39,7 +39,6 @@ class Control_Institucion extends CI_Controller {
 		##  DATOS CLIENTE ##
 		$Institucion['Tipo_I'] = $_POST['select'];
 		$Institucion['Nombre'] = $_POST['Nombre'];
-		$Institucion['Especialidad'] = $_POST['Especialidad'];
 		$Institucion['Pais'] = $_POST['subgroup'];
 		$Institucion['Estado'] = $_POST['account'];
 		$Institucion['Ciudad'] = $_POST['equipo'];

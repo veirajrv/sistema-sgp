@@ -244,37 +244,6 @@ textarea.LV_invalid_field:active {
                 </td>
               </tr>
               <tr>
-                <td align="right"><font style="font-size:12px">Especialidad:</font></td>
-                <td>
-                  <select name="Especialidad" size="1" id="Especialidad" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')">
-                    <option selected="selected">- Selecciona -</option>
-                    <option>Cardiologia</option>
-                    <option>Cirugia</option>
-                    <option>Emergenciologia</option>
-                    <option>Fisiatria</option>
-                    <option>Fisioterapia</option>
-                    <option>Ginecologia</option>
-                    <option>Gineco-Obstetricia</option>
-                    <option>Imagenologia</option>
-                    <option>Intensivista</option>
-                    <option>Mastologia</option>
-                    <option>Nefrologia</option>
-                    <option>Neumonologia</option>
-                    <option>Nutricion</option>
-                    <option>Nutrologia</option>
-                    <option>Obstetricia</option>
-                    <option>Oncologia</option>
-                    <option>Pediatria</option>
-                    <option>Radiologia</option>
-                    <option>Traumatologia</option>
-                    <option>Medicina Interna</option>
-                    <option>Endocrinologia</option>
-                    <option>Anestesiologia</option>
-                    <option>Multi-Especialidad</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
                 <td align="right"><font style="font-size:12px">Pais:</font></td>
                 <td><select name="subgroup" id="subgroup" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')">
                   <option value="-1">- Selecciona -</option>
@@ -285,7 +254,7 @@ textarea.LV_invalid_field:active {
                   <?php
 					}
 					?>
-                </select></td>
+                  </select></td>
               </tr>
               <tr>
                 <td align="right"><font style="font-size:12px">Estado:</font></td>

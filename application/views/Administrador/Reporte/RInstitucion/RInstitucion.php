@@ -154,150 +154,40 @@ return false;
     </table>
     <table width="441" border="0">
       <tr>
-        <td colspan="3">- <a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion')"><b>Lista de Instituciones</b></a></td>
+        <td colspan="2">- <a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion')"><b>Lista de Instituciones</b></a></td>
       </tr>
       <tr>
-        <td width="129">- Clientes por especialidad:</td>
-        <td width="193"><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_especial/Cirugia')"><b>Cirugia</b></a></td>
-        <td width="105">&nbsp;</td>
+        <td colspan="2">- <a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_maxnego')"><b>Institucion con mas negociaciones abiertas</b></a></td>
       </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_especial/Emergenciologia')"><b>Emergenciologia</b></a></td>
-        <td>&nbsp;</td>
+        <td colspan="2">- <a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_minnego')"><b>Institucion con menos negociaciones abiertas</b></a></td>
       </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_especial/Fisiatria')"><b>Fisiatria</b></a></td>
-        <td>&nbsp;</td>
+        <td width="322">- Numero de negociaciones por Institucion y por tipo de negociacion: </td>
+        <td width="105"><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_bagcp/25')"><b>Borrador</b></a></td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_especial/Fisioterapia')"><b>Fisioterapia</b></a></td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_especial/Ginecologia')"><b>Ginecologia</b></a></td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_especial/Gineco-Obstetricia')"><b>Gineco-Obstetricia</b></a></td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_especial/Imagenologia')"><b>Imagenologia</b></a></td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_especial/Intensivista')"><b>Intensivista</b></a></td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_especial/Mastologia')"><b>Mastologia</b></a></td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_especial/Nefrologia')"><b>Nefrologia</b></a></td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_especial/Neumonologia')"><b>Neumonologia</b></a></td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_especial/Nutricion')"><b>Nutricion</b></a></td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_especial/Nutrologia')"><b>Nutrologia</b></a></td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_especial/Obstetricia')"><b>Obstetricia</b></a></td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_especial/Oncologia')"><b>Oncologia</b></a></td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_especial/Pediatria')"><b>Pediatria</b></a></td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_especial/Radiologia')"><b>Radiologia</b></a></td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_especial/Traumatologia')"><b>Traumatologia</b></a></td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_especial/Medicina Interna')"><b>Medicina Interna</b></a></td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_especial/Endocrinologia')"><b>Endocrinologia</b></a></td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_especial/Anestesiologia')"><b>Anestesiologia</b></a></td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_especial/Multi-Especialidad')"><b>Multi-Especialidad</b></a></td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <td colspan="3">- <a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_maxnego')"><b>Institucion con mas negociaciones abiertas</b></a></td>
-        </tr>
-      <tr>
-        <td colspan="3">- <a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_minnego')"><b>Institucion con menos negociaciones abiertas</b></a></td>
-      </tr>
-      <tr>
-        <td colspan="2">- Numero de negociaciones por Institucion y por tipo de negociacion: </td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_bagcp/25')"><b>Borrador</b></a></td>
-      </tr>
-      <tr>
-        <td colspan="2">&nbsp;</td>
         <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_bagcp/50')"><b>Activa</b></a></td>
       </tr>
       <tr>
-        <td colspan="2">&nbsp;</td>
+        <td>&nbsp;</td>
         <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_bagcp/75')"><b>&gt; 75%</b></a></td>
       </tr>
       <tr>
-        <td colspan="2">&nbsp;</td>
+        <td>&nbsp;</td>
         <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_bagcp/90')"><b>&gt; 90%</b></a></td>
       </tr>
       <tr>
-        <td colspan="2">&nbsp;</td>
+        <td>&nbsp;</td>
         <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_bagcp/100')"><b>Ganada</b></a></td>
       </tr>
       <tr>
-        <td colspan="2">&nbsp;</td>
+        <td>&nbsp;</td>
         <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_bagcp/100')"><b>Cerrada</b></a></td>
       </tr>
       <tr>
-        <td colspan="2">&nbsp;</td>
+        <td>&nbsp;</td>
         <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_bagcp/0')"><b>Perdida</b></a></td>
       </tr>
     </table>
