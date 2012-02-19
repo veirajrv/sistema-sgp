@@ -41,3 +41,13 @@ ERROR - 2012-02-19 04:35:38 --> Severity: Warning  --> Invalid argument supplied
 ERROR - 2012-02-19 15:10:38 --> Severity: Notice  --> Undefined variable: ConAlerta C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
 ERROR - 2012-02-19 15:10:38 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
 ERROR - 2012-02-19 15:19:43 --> Query error: Unknown column 'C.Tipo_C' in 'where clause'
+ERROR - 2012-02-19 16:18:12 --> 404 Page Not Found --> Control_Venta/ver_negociacion_despacho
+ERROR - 2012-02-19 16:18:53 --> Severity: Notice  --> Undefined property: Control_Venta::$modelCliente C:\wamp\www\OpenSGP\application\controllers\control_venta.php 115
+ERROR - 2012-02-19 16:19:31 --> Severity: Notice  --> Undefined property: Control_Venta::$modelNegociacion C:\wamp\www\OpenSGP\application\controllers\control_venta.php 117
+ERROR - 2012-02-19 16:19:58 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-19 16:19:58 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-19 16:19:58 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-19 16:19:58 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-19 16:24:28 --> 404 Page Not Found --> Control_Venta/ver_negociacion_despacho
+ERROR - 2012-02-19 16:56:46 --> 404 Page Not Found --> Control_Venta/ver_negociacion_despacho
+ERROR - 2012-02-19 17:06:07 --> Severity: Notice  --> Undefined property: Control_Venta::$modelInstitucion C:\wamp\www\OpenSGP\application\controllers\control_venta.php 300
