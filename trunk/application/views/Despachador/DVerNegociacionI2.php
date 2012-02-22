@@ -171,7 +171,7 @@ function CambiaColor(esto,borde,texto)
                 </tr>
                 <tr>
                   <td align="right"><font style="font-size:12px">Cerradas:</font></td>
-                  <td><form id="form4" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/cerrada_i">
+                  <td><form id="form4" method="post" action="<?php echo base_url();?>index.php/Control_Venta/cerrada_i">
 				  <select class="ui-widget" name="Nego" id="Nego" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required">
                       <option></option>
                       <?php
@@ -188,7 +188,7 @@ function CambiaColor(esto,borde,texto)
                 </tr>
                 <tr>
                   <td align="right"><font style="font-size:12px">Perdidas:</font></td>
-                  <td width="284"><form id="form5" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/cerrada_i">
+                  <td width="284"><form id="form5" method="post" action="<?php echo base_url();?>index.php/Control_Venta/cerrada_i">
 				  <select class="ui-widget" name="Nego" id="Nego" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required">
                       <option></option>
                       <?php

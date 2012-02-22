@@ -772,7 +772,7 @@ class Control_Venta extends CI_Controller
 				
 				$usuario['Total'] = $this->modelProducto->TotalI($Id_Negociacion);
 				
-				$this->load->view('Vendedor/Cerrada/VConsultaCerradaI', $usuario);
+				$this->load->view('Despachador/Cerrada/DConsultaCerradaI', $usuario);
 			}
 			else // Aqui entra si el cliente es una persona //
 			{
@@ -800,7 +800,7 @@ class Control_Venta extends CI_Controller
 				$usuario['Total'] = $this->modelProducto->Total($Id_Negociacion);
 				$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 				
-				$this->load->view('Vendedor/Cerrada/VConsultaCerrada', $usuario);
+				$this->load->view('Despachador/Cerrada/DConsultaCerrada', $usuario);
 			}
 		}
 	}
@@ -1943,6 +1943,72 @@ class Control_Venta extends CI_Controller
 		$usuario['table'] = $this->table->generate();
 		
 		$this->load->view('Despachador/Borrador/DHistorialStatusI2', $usuario);
+	}
+	
+	public function cerrada() 
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario; // Usuario //
+		$cliente = $_POST['IdCliente']; // Id cliente //
+		$IdNegoBorrador = $_POST['Nego']; // Id negociacion //
+		$usuario['Id_Negociacion'] = $_POST['Nego']; // Id negociacion //
+		$Id = $this->modelCliente->BuscarId($Usuario); // Id del usuario //
+		$status = $this->modelNegociacion->StatusNegociacion($IdNegoBorrador); 
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($IdNegoBorrador); 
+		$usuario['Status'] = $status;
+		$usuario['Porcentaje'] = $porcentaje;
+		
+		// DATOS DE LA NEGOCIACION //
+		$IdNegoBorrador = $_POST['Nego'];
+		$usuario['FechaP'] = $this->modelNegociacion->FechaPresupuesto($IdNegoBorrador);
+		$usuario['NumeroODC'] = $this->modelNegociacion->NumeroOrdenDC($IdNegoBorrador);
+		$usuario['FechaODC'] = $this->modelNegociacion->FechaOrdenDC($IdNegoBorrador);
+		$usuario['Banco'] = $this->modelNegociacion->Banco($IdNegoBorrador);
+		$usuario['PagoInicial'] = $this->modelNegociacion->PagoInicial($IdNegoBorrador);
+		$usuario['CondicionesPago'] = $this->modelNegociacion->CondicionesPago($IdNegoBorrador);
+		$usuario['FechaPago'] = $this->modelNegociacion->FechaDePago($IdNegoBorrador);
+		$usuario['NDeposito'] = $this->modelNegociacion->NumeroDeposito($IdNegoBorrador);
+		
+		// DATOS DEL CLIENTE //
+		$usuario['Id'] = $_POST['IdCliente'];
+		$usuario['NombreC'] = $this->modelNegociacion->NombreCliente($cliente);
+		$usuario['ApellidoC'] = $this->modelNegociacion->ApellidoCliente($cliente);
+		$usuario['EMailC'] = $this->modelNegociacion->MailCliente($cliente);
+		$usuario['TelefonoC'] = $this->modelNegociacion->TelefonoCliente($cliente);
+		
+		$this->load->view('Despachador/Cerrada/DConsultaCerrada', $usuario);
+	}
+	
+	public function cerrada_i() 
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario; // Usuario //
+		$cliente = $_POST['IdCliente']; // Id cliente //
+		$IdNegoBorrador = $_POST['Nego']; // Id negociacion //
+		$usuario['Id_Negociacion'] = $_POST['Nego']; // Id negociacion //
+		$Id = $this->modelCliente->BuscarId($Usuario); // Id del usuario //
+		$status = $this->modelNegociacion->StatusNegociacion($IdNegoBorrador);
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($IdNegoBorrador);  
+		$usuario['Status'] = $status;
+		$usuario['Porcentaje'] = $porcentaje;
+		
+		// DATOS DE LA NEGOCIACION //
+		$IdNegoBorrador = $_POST['Nego'];
+		$usuario['FechaP'] = $this->modelNegociacion->FechaPresupuesto($IdNegoBorrador);
+		$usuario['NumeroODC'] = $this->modelNegociacion->NumeroOrdenDC($IdNegoBorrador);
+		$usuario['FechaODC'] = $this->modelNegociacion->FechaOrdenDC($IdNegoBorrador);
+		$usuario['Banco'] = $this->modelNegociacion->Banco($IdNegoBorrador);
+		$usuario['PagoInicial'] = $this->modelNegociacion->PagoInicial($IdNegoBorrador);
+		$usuario['CondicionesPago'] = $this->modelNegociacion->CondicionesPago($IdNegoBorrador);
+		$usuario['FechaPago'] = $this->modelNegociacion->FechaDePago($IdNegoBorrador);
+		$usuario['NDeposito'] = $this->modelNegociacion->NumeroDeposito($IdNegoBorrador);
+		
+		// DATOS DEL CLIENTE //
+		$usuario['Id'] = $_POST['IdCliente'];
+		$usuario['NombreI'] = $this->modelNegociacion->NombreInstitucion($cliente);
+		$usuario['TelefonoI'] = $this->modelNegociacion->TelefonoInstitucion($cliente);
+		
+		$this->load->view('Despachador/Cerrada/DConsultaCerradaI', $usuario);
 	}
 	
 }

@@ -798,3 +798,19 @@ ERROR - 2012-02-22 19:13:21 --> Severity: Notice  --> Undefined variable: Total 
 ERROR - 2012-02-22 19:13:21 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
 ERROR - 2012-02-22 19:13:21 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
 ERROR - 2012-02-22 19:13:21 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-22 20:05:38 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DVistaGanada.php 13
+ERROR - 2012-02-22 20:05:38 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DVistaGanada.php 13
+ERROR - 2012-02-22 20:05:38 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DVistaGanada.php 14
+ERROR - 2012-02-22 20:05:38 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DVistaGanada.php 14
+ERROR - 2012-02-22 20:09:33 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-22 20:09:33 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-22 20:09:33 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-22 20:09:33 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-22 20:09:37 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DVistaGanada.php 13
+ERROR - 2012-02-22 20:09:37 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DVistaGanada.php 13
+ERROR - 2012-02-22 20:09:37 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DVistaGanada.php 14
+ERROR - 2012-02-22 20:09:37 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DVistaGanada.php 14
+ERROR - 2012-02-22 20:09:42 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-22 20:09:42 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-22 20:09:42 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-22 20:09:42 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
