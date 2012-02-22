@@ -120,7 +120,7 @@ function CambiaColor(esto,borde,texto)
               <table width="410" border="0">
                 <tr>
                   <td width="110" align="right"><font style="font-size:12px">Borradores:</font></td>
-                  <td width="284"><form id="form1" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/borrador_i/<?php echo $Usuario ?>">
+                  <td width="284"><form id="form1" method="post" action="<?php echo base_url();?>index.php/Control_Venta/ver_negociacion_tipo2/<?php echo $Usuario ?>">
 				  <select class="ui-widget" name="Nego" id="Nego" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required">
                        <option></option>
 					   <?php
@@ -132,11 +132,12 @@ function CambiaColor(esto,borde,texto)
 					?>
                     </select>
                     <input type="submit" name="Submit2" value="Ir" /><input type="hidden" name="IdCliente" id="IdCliente" value="<?php echo $Cliente; ?>" />
+                    <input type="hidden" name="Nombre" id="Nombre" value="<?php echo $NombreI; ?>" />
                   </form>                  </td>
                 </tr>
                 <tr>
                   <td align="right"><font style="font-size:12px">Activas:</font></td>
-                  <td><form id="form2" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/borrador_i">
+                  <td><form id="form2" method="post" action="<?php echo base_url();?>index.php/Control_Venta/ver_negociacion_tipo2">
 				  <select class="ui-widget" name="Nego" id="Nego" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required">
                       <option></option>
                       <?php
@@ -148,6 +149,7 @@ function CambiaColor(esto,borde,texto)
 					?>
                     </select>
 					<input type="submit" name="Submit2" value="Ir" /><input type="hidden" name="IdCliente" id="IdCliente" value="<?php echo $Cliente; ?>" />
+                    <input type="hidden" name="Nombre" id="Nombre" value="<?php echo $NombreI; ?>" />
                   </form>                  </td>
                 </tr>
                 <tr>
@@ -164,6 +166,7 @@ function CambiaColor(esto,borde,texto)
 					?>
                     </select>
 					<input type="submit" name="Submit2" value="Ir" /><input type="hidden" name="IdCliente" id="IdCliente" value="<?php echo $Cliente; ?>" />
+                    <input type="hidden" name="Nombre" id="Nombre" value="<?php echo $NombreI; ?>" />
                   </form>                  </td>
                 </tr>
                 <tr>
@@ -180,6 +183,7 @@ function CambiaColor(esto,borde,texto)
 					?>
                     </select>
 					<input type="submit" name="Submit2" value="Ir" /><input type="hidden" name="IdCliente" id="IdCliente" value="<?php echo $Cliente; ?>" />
+                    <input type="hidden" name="Nombre" id="Nombre" value="<?php echo $NombreI; ?>" />
                   </form>                  </td>
                 </tr>
                 <tr>
@@ -196,6 +200,7 @@ function CambiaColor(esto,borde,texto)
 					?>
                     </select>
 					<input type="submit" name="Submit2" value="Ir" /><input type="hidden" name="IdCliente" id="IdCliente" value="<?php echo $Cliente; ?>" />
+                    <input type="hidden" name="Nombre" id="Nombre" value="<?php echo $NombreI; ?>" />
                   </form>                  </td>
                 </tr>
               </table>

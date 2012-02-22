@@ -296,3 +296,41 @@ ERROR - 2012-02-22 14:36:50 --> Severity: Notice  --> iconv() [<a href='function
 ERROR - 2012-02-22 14:39:30 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
 ERROR - 2012-02-22 14:42:16 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
 ERROR - 2012-02-22 14:48:36 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
+ERROR - 2012-02-22 15:49:25 --> Severity: Notice  --> Undefined index: IdCliente C:\wamp\www\OpenSGP\application\controllers\control_venta.php 454
+ERROR - 2012-02-22 15:49:25 --> Severity: Notice  --> Undefined index: Nego C:\wamp\www\OpenSGP\application\controllers\control_venta.php 455
+ERROR - 2012-02-22 15:49:25 --> Severity: Notice  --> Undefined index: Nego C:\wamp\www\OpenSGP\application\controllers\control_venta.php 456
+ERROR - 2012-02-22 15:49:25 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5
+ERROR - 2012-02-22 15:49:51 --> Severity: Notice  --> Undefined index: Cliente C:\wamp\www\OpenSGP\application\controllers\control_venta.php 454
+ERROR - 2012-02-22 15:49:51 --> Severity: Notice  --> Undefined index: Nego C:\wamp\www\OpenSGP\application\controllers\control_venta.php 455
+ERROR - 2012-02-22 15:49:51 --> Severity: Notice  --> Undefined index: Nego C:\wamp\www\OpenSGP\application\controllers\control_venta.php 456
+ERROR - 2012-02-22 15:49:51 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5
+ERROR - 2012-02-22 15:49:53 --> Severity: Notice  --> Undefined index: Cliente C:\wamp\www\OpenSGP\application\controllers\control_venta.php 454
+ERROR - 2012-02-22 15:49:54 --> Severity: Notice  --> Undefined index: Nego C:\wamp\www\OpenSGP\application\controllers\control_venta.php 455
+ERROR - 2012-02-22 15:49:54 --> Severity: Notice  --> Undefined index: Nego C:\wamp\www\OpenSGP\application\controllers\control_venta.php 456
+ERROR - 2012-02-22 15:49:54 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5
+ERROR - 2012-02-22 15:50:00 --> Severity: Notice  --> Undefined index: Cliente C:\wamp\www\OpenSGP\application\controllers\control_venta.php 454
+ERROR - 2012-02-22 15:50:00 --> Severity: Notice  --> Undefined index: Nego C:\wamp\www\OpenSGP\application\controllers\control_venta.php 455
+ERROR - 2012-02-22 15:50:00 --> Severity: Notice  --> Undefined index: Nego C:\wamp\www\OpenSGP\application\controllers\control_venta.php 456
+ERROR - 2012-02-22 15:50:00 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5
+ERROR - 2012-02-22 15:51:15 --> Severity: Notice  --> Undefined index: Nego C:\wamp\www\OpenSGP\application\controllers\control_venta.php 462
+ERROR - 2012-02-22 15:51:15 --> Severity: Notice  --> Undefined variable: fechap C:\wamp\www\OpenSGP\application\models\modelNegociacion.php 306
+ERROR - 2012-02-22 15:51:16 --> Severity: Notice  --> Undefined variable: numerodc C:\wamp\www\OpenSGP\application\models\modelNegociacion.php 318
+ERROR - 2012-02-22 15:51:16 --> Severity: Notice  --> Undefined variable: fechaodc C:\wamp\www\OpenSGP\application\models\modelNegociacion.php 330
+ERROR - 2012-02-22 15:51:16 --> Severity: Notice  --> Undefined variable: banco C:\wamp\www\OpenSGP\application\models\modelNegociacion.php 342
+ERROR - 2012-02-22 15:51:16 --> Severity: Notice  --> Undefined variable: pinicial C:\wamp\www\OpenSGP\application\models\modelNegociacion.php 354
+ERROR - 2012-02-22 15:51:16 --> Severity: Notice  --> Undefined variable: condicionpago C:\wamp\www\OpenSGP\application\models\modelNegociacion.php 366
+ERROR - 2012-02-22 15:51:16 --> Severity: Notice  --> Undefined variable: fechapago C:\wamp\www\OpenSGP\application\models\modelNegociacion.php 378
+ERROR - 2012-02-22 15:51:16 --> Severity: Notice  --> Undefined variable: ndeposito C:\wamp\www\OpenSGP\application\models\modelNegociacion.php 390
+ERROR - 2012-02-22 15:51:16 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY H.Id_HistorialNP2 ASC' at line 6
+ERROR - 2012-02-22 15:51:34 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 16:00:50 --> 404 Page Not Found --> Control_Negociacion/historial_status_i
+ERROR - 2012-02-22 16:01:14 --> 404 Page Not Found --> Control_Negociacion/historial_status_i
+ERROR - 2012-02-22 16:06:32 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 16:06:36 --> 404 Page Not Found --> Control_Venta/agregar_equipo_2
+ERROR - 2012-02-22 16:06:52 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 16:06:56 --> 404 Page Not Found --> Control_Venta/agregar_equipo_2
+ERROR - 2012-02-22 16:07:17 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 16:07:28 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 16:08:58 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 16:15:14 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
+ERROR - 2012-02-22 16:15:29 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
