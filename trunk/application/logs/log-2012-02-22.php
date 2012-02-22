@@ -334,3 +334,467 @@ ERROR - 2012-02-22 16:07:28 --> Query error: You have an error in your SQL synta
 ERROR - 2012-02-22 16:08:58 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
 ERROR - 2012-02-22 16:15:14 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
 ERROR - 2012-02-22 16:15:29 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
+ERROR - 2012-02-22 16:22:52 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 17:40:38 --> Severity: Notice  --> Undefined variable: Rechazadas C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 195
+ERROR - 2012-02-22 17:40:38 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 195
+ERROR - 2012-02-22 17:41:04 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 17:41:22 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 17:41:29 --> Severity: Notice  --> Undefined index: Negociacion22 C:\wamp\www\OpenSGP\application\controllers\control_venta.php 1377
+ERROR - 2012-02-22 17:41:29 --> Severity: Notice  --> Undefined index: Negociacion22 C:\wamp\www\OpenSGP\application\controllers\control_venta.php 1378
+ERROR - 2012-02-22 17:41:29 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5
+ERROR - 2012-02-22 17:41:54 --> Severity: Notice  --> Undefined index: Negociacion22 C:\wamp\www\OpenSGP\application\controllers\control_venta.php 1377
+ERROR - 2012-02-22 17:41:54 --> Severity: Notice  --> Undefined index: Negociacion22 C:\wamp\www\OpenSGP\application\controllers\control_venta.php 1378
+ERROR - 2012-02-22 17:41:54 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5
+ERROR - 2012-02-22 17:42:09 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
+ERROR - 2012-02-22 17:42:16 --> Severity: Notice  --> Undefined variable: Rechazadas C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 195
+ERROR - 2012-02-22 17:42:16 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 195
+ERROR - 2012-02-22 17:42:23 --> Severity: Notice  --> Undefined variable: ConAlerta C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-02-22 17:42:23 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-02-22 17:42:36 --> Severity: Notice  --> Undefined variable: ConAlerta C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-02-22 17:42:36 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-02-22 17:43:40 --> Severity: Notice  --> Undefined variable: ConAlerta C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-02-22 17:43:40 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-02-22 17:43:53 --> Severity: Notice  --> Undefined variable: Rechazadas C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 195
+ERROR - 2012-02-22 17:43:53 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 195
+ERROR - 2012-02-22 17:44:31 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-22 17:44:31 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-22 17:44:31 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-22 17:44:31 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-22 17:44:34 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-22 17:44:34 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-22 17:44:34 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-22 17:44:34 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-22 17:44:36 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-22 17:44:36 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-22 17:44:36 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-22 17:44:36 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-22 17:45:03 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
+ERROR - 2012-02-22 17:47:25 --> Severity: Notice  --> Undefined variable: Rechazadas C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 195
+ERROR - 2012-02-22 17:47:25 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 195
+ERROR - 2012-02-22 17:47:36 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 17:47:42 --> Severity: Notice  --> Undefined index: Negociacion22 C:\wamp\www\OpenSGP\application\controllers\control_venta.php 1377
+ERROR - 2012-02-22 17:47:42 --> Severity: Notice  --> Undefined index: Negociacion22 C:\wamp\www\OpenSGP\application\controllers\control_venta.php 1378
+ERROR - 2012-02-22 17:47:42 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5
+ERROR - 2012-02-22 17:51:31 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 17:51:42 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 17:52:49 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 17:52:57 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 17:53:17 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-22 17:53:17 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-22 17:53:17 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-22 17:53:17 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-22 17:53:30 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-22 17:53:30 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-22 17:53:30 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-22 17:53:30 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-22 17:53:31 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-22 17:53:31 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-22 17:53:31 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-22 17:53:31 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-22 17:53:34 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-22 17:53:34 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-22 17:53:34 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-22 17:53:34 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-22 17:53:37 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-22 17:53:37 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-22 17:53:37 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-22 17:53:37 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-22 17:53:43 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-22 17:53:43 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-22 17:53:43 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-22 17:53:43 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-22 17:53:46 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-22 17:53:46 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-22 17:53:46 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-22 17:53:46 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-22 17:54:06 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 17:54:07 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 17:54:07 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 17:54:12 --> Severity: Notice  --> Undefined index: Negociacion3 C:\wamp\www\OpenSGP\application\controllers\control_venta.php 1532
+ERROR - 2012-02-22 17:54:12 --> Severity: Notice  --> Undefined index: Negociacion3 C:\wamp\www\OpenSGP\application\controllers\control_venta.php 1533
+ERROR - 2012-02-22 17:54:12 --> Severity: Notice  --> Undefined index: Negociacion3 C:\wamp\www\OpenSGP\application\controllers\control_venta.php 1534
+ERROR - 2012-02-22 17:54:12 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5
+ERROR - 2012-02-22 17:57:17 --> Severity: Notice  --> Undefined index: Negociacion3 C:\wamp\www\OpenSGP\application\controllers\control_venta.php 1532
+ERROR - 2012-02-22 17:57:17 --> Severity: Notice  --> Undefined index: Negociacion3 C:\wamp\www\OpenSGP\application\controllers\control_venta.php 1533
+ERROR - 2012-02-22 17:57:17 --> Severity: Notice  --> Undefined index: Negociacion3 C:\wamp\www\OpenSGP\application\controllers\control_venta.php 1534
+ERROR - 2012-02-22 17:57:17 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5
+ERROR - 2012-02-22 17:57:23 --> Severity: Notice  --> Undefined variable: idcliente C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 326
+ERROR - 2012-02-22 17:57:37 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 17:58:19 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 17:58:50 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 357
+ERROR - 2012-02-22 17:58:50 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 357
+ERROR - 2012-02-22 17:58:50 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 357
+ERROR - 2012-02-22 17:58:50 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 357
+ERROR - 2012-02-22 17:58:50 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 357
+ERROR - 2012-02-22 17:58:50 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 357
+ERROR - 2012-02-22 17:58:50 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 17:58:50 --> Severity: Notice  --> Undefined variable: idcliente C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 17:58:50 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 17:58:50 --> Severity: Notice  --> Undefined variable: idcliente C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 17:58:50 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 17:58:50 --> Severity: Notice  --> Undefined variable: idcliente C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 17:58:50 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 17:58:50 --> Severity: Notice  --> Undefined variable: idcliente C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 17:58:50 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 17:58:50 --> Severity: Notice  --> Undefined variable: idcliente C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 17:58:50 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 17:58:50 --> Severity: Notice  --> Undefined variable: idcliente C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 17:59:20 --> Severity: Notice  --> Undefined variable: Id_Negociacion C:\wamp\www\OpenSGP\application\controllers\control_venta.php 1563
+ERROR - 2012-02-22 17:59:20 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY H.Id_HistorialNP2 ASC' at line 6
+ERROR - 2012-02-22 17:59:37 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 357
+ERROR - 2012-02-22 17:59:37 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 357
+ERROR - 2012-02-22 17:59:37 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 357
+ERROR - 2012-02-22 17:59:37 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 357
+ERROR - 2012-02-22 17:59:37 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 357
+ERROR - 2012-02-22 17:59:37 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 357
+ERROR - 2012-02-22 17:59:37 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 357
+ERROR - 2012-02-22 17:59:37 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 357
+ERROR - 2012-02-22 17:59:37 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 17:59:37 --> Severity: Notice  --> Undefined variable: idcliente C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 17:59:37 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 17:59:37 --> Severity: Notice  --> Undefined variable: idcliente C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 17:59:37 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 17:59:37 --> Severity: Notice  --> Undefined variable: idcliente C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 17:59:37 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 17:59:37 --> Severity: Notice  --> Undefined variable: idcliente C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 17:59:37 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 17:59:37 --> Severity: Notice  --> Undefined variable: idcliente C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 17:59:37 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 17:59:37 --> Severity: Notice  --> Undefined variable: idcliente C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 17:59:37 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 17:59:37 --> Severity: Notice  --> Undefined variable: idcliente C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 17:59:37 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 17:59:37 --> Severity: Notice  --> Undefined variable: idcliente C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 18:00:15 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 357
+ERROR - 2012-02-22 18:00:15 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 357
+ERROR - 2012-02-22 18:00:15 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 357
+ERROR - 2012-02-22 18:00:15 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 357
+ERROR - 2012-02-22 18:00:15 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 357
+ERROR - 2012-02-22 18:00:15 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 357
+ERROR - 2012-02-22 18:00:15 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 357
+ERROR - 2012-02-22 18:00:15 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 357
+ERROR - 2012-02-22 18:00:15 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 357
+ERROR - 2012-02-22 18:00:15 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 18:00:15 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 18:00:15 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 18:00:15 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 18:00:15 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 18:00:15 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 18:00:15 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 18:00:15 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 18:00:15 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 373
+ERROR - 2012-02-22 18:01:13 --> Severity: Notice  --> Undefined variable: Rechazadas C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 195
+ERROR - 2012-02-22 18:01:13 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 195
+ERROR - 2012-02-22 18:02:37 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 18:05:31 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 18:06:30 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 18:07:59 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 18:08:34 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 18:08:38 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:08:38 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:08:38 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:08:38 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:08:38 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:08:39 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:08:39 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:08:39 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:08:39 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:08:39 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:08:39 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:08:39 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:08:39 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:08:39 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:08:39 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:08:39 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:08:39 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:08:39 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:08:39 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:08:39 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:08:39 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:08:39 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:08:39 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:08:39 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:08:39 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:08:39 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:08:39 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:08:39 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:09:41 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 18:09:46 --> Severity: Notice  --> Undefined index: Negociacion22 C:\wamp\www\OpenSGP\application\controllers\control_venta.php 1573
+ERROR - 2012-02-22 18:09:46 --> Severity: Notice  --> Undefined index: Negociacion22 C:\wamp\www\OpenSGP\application\controllers\control_venta.php 1574
+ERROR - 2012-02-22 18:09:46 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5
+ERROR - 2012-02-22 18:10:14 --> Severity: Notice  --> Undefined index: Negociacion22 C:\wamp\www\OpenSGP\application\controllers\control_venta.php 1573
+ERROR - 2012-02-22 18:10:14 --> Severity: Notice  --> Undefined index: Negociacion22 C:\wamp\www\OpenSGP\application\controllers\control_venta.php 1574
+ERROR - 2012-02-22 18:10:14 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5
+ERROR - 2012-02-22 18:10:19 --> Severity: Notice  --> Undefined index: Negociacion22 C:\wamp\www\OpenSGP\application\controllers\control_venta.php 1573
+ERROR - 2012-02-22 18:10:19 --> Severity: Notice  --> Undefined index: Negociacion22 C:\wamp\www\OpenSGP\application\controllers\control_venta.php 1574
+ERROR - 2012-02-22 18:10:19 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5
+ERROR - 2012-02-22 18:10:27 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 18:10:31 --> Severity: Notice  --> Undefined variable: NombreI C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 212
+ERROR - 2012-02-22 18:10:31 --> Severity: Notice  --> Undefined variable: TelefonoI C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 219
+ERROR - 2012-02-22 18:12:39 --> Severity: Notice  --> Undefined variable: TelefonoI C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 219
+ERROR - 2012-02-22 18:17:16 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:17:16 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:17:16 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:17:16 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:17:16 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:17:16 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:17:16 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:17:16 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:17:16 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:17:16 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:17:17 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:17:17 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:17:17 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:17:17 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:17:17 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:17:17 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:17:17 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:17:17 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:17:17 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:17:17 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:17:17 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:17:17 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:17:17 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:17:17 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:17:17 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:17:17 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:17:17 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:17:17 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:17:17 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:17:17 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:18:32 --> Severity: Notice  --> Undefined variable: NombreC C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 212
+ERROR - 2012-02-22 18:18:32 --> Severity: Notice  --> Undefined variable: ApellidoC C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 212
+ERROR - 2012-02-22 18:18:32 --> Severity: Notice  --> Undefined variable: TelefonoC C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 220
+ERROR - 2012-02-22 18:18:32 --> Severity: Notice  --> Undefined variable: EMailC C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 226
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 374
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 374
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 374
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 374
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 374
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 374
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 374
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 374
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 374
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 374
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 374
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 374
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 374
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 374
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 374
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 390
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 390
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 390
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 390
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 390
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 390
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 390
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 390
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 390
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 390
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 390
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 390
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 390
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 390
+ERROR - 2012-02-22 18:18:33 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador2.php 390
+ERROR - 2012-02-22 18:19:17 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:17 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:17 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:17 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:17 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:17 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:17 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:17 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:17 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:17 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:17 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:17 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:17 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:17 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:17 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:17 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:17 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:17 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:17 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:17 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:17 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:17 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:17 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:17 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:17 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:17 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:17 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:17 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:18 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:18 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:52 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:52 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:52 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:52 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:52 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:52 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:52 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:52 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:52 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:52 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:52 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:53 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:53 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:53 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:53 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:19:53 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:53 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:53 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:53 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:53 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:53 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:53 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:53 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:53 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:53 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:53 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:53 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:53 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:53 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:53 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:19:59 --> Severity: Warning  --> Missing argument 2 for Control_Venta::borrador_i_accesorio() C:\wamp\www\OpenSGP\application\controllers\control_venta.php 482
+ERROR - 2012-02-22 18:19:59 --> Severity: Notice  --> Undefined variable: IdNegoBorrador C:\wamp\www\OpenSGP\application\controllers\control_venta.php 486
+ERROR - 2012-02-22 18:19:59 --> Severity: Notice  --> Undefined variable: IdNegoBorrador C:\wamp\www\OpenSGP\application\controllers\control_venta.php 488
+ERROR - 2012-02-22 18:19:59 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5
+ERROR - 2012-02-22 18:21:03 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:21:03 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:21:03 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:21:03 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:21:03 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:21:03 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:21:03 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:21:03 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:21:03 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:21:03 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:21:04 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:21:04 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:21:04 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:21:04 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:21:04 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:21:04 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:21:04 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:21:04 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:21:04 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:21:04 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:21:04 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:21:04 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:21:04 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:21:04 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:21:04 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:21:04 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:21:04 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:21:04 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:21:04 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:21:04 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:28:25 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 18:29:30 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 18:58:20 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
+ERROR - 2012-02-22 19:01:20 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
+ERROR - 2012-02-22 19:01:20 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:01:20 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:01:20 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:01:21 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:01:21 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:01:21 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:01:21 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:01:21 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:01:21 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:01:21 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:01:21 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:01:21 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:01:21 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:01:21 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:01:21 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:01:21 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:01:21 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:01:21 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:01:21 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:01:21 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:01:21 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:01:21 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:01:21 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:01:21 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:01:21 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:01:21 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:01:21 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:01:21 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:01:21 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:01:21 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:02:03 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
+ERROR - 2012-02-22 19:02:03 --> Severity: Notice  --> Undefined variable: Id_Negociacion C:\wamp\www\OpenSGP\application\controllers\control_venta.php 1914
+ERROR - 2012-02-22 19:02:03 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY H.Id_HistorialNP2 ASC' at line 6
+ERROR - 2012-02-22 19:02:14 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
+ERROR - 2012-02-22 19:02:14 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:02:14 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:02:14 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:02:14 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:02:14 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:02:14 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:02:14 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:02:14 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:02:14 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:02:14 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:02:14 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:02:14 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:02:14 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:02:14 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:02:14 --> Severity: Notice  --> Undefined index: Id_Accesorio C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 356
+ERROR - 2012-02-22 19:02:14 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:02:14 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:02:14 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:02:14 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:02:14 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:02:14 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:02:14 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:02:14 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:02:14 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:02:15 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:02:15 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:02:15 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:02:15 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:02:15 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:02:15 --> Severity: Notice  --> Undefined index: Id_HistorialNP C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorradorI2.php 372
+ERROR - 2012-02-22 19:02:59 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
+ERROR - 2012-02-22 19:03:03 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
+ERROR - 2012-02-22 19:08:59 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
+ERROR - 2012-02-22 19:11:25 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 19:11:56 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 19:12:19 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 19:13:09 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-22 19:13:21 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-22 19:13:21 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-22 19:13:21 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-22 19:13:21 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14

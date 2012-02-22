@@ -207,7 +207,7 @@ function CambiaColor(esto,borde,texto)
         </tr>
       </table>
     </form>
-    <form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Venta/agregar_otro_accesorios2/<?php echo $Id_Negociacion?>/<?php echo $Status; ?>/<?php echo $idcliente; ?>">
+    <form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/agregar_otro_accesorios2/<?php echo $Id_Negociacion?>/<?php echo $Status; ?>/<?php echo $idcliente; ?>">
       <table width="440" border="0">
         <tr>
           <td width="434"><fieldset><legend style="font-size:15px"><b>Accesorio de un equipo</b></legend>
