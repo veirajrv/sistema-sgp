@@ -614,8 +614,8 @@ class Control_Reporte extends CI_Controller
 		{
 			$nombre = $row['Nombre_1'].' '.$row['Apellido_1'];
 			//$apellido = $row['Apellido_1'];
-			$telefono = $row['Telf_Casa'];
-			$email = $row['Correo'];
+			$telefono = $row['Telefono'];
+			$email = $row['Email'];
 			$nego = $row['Id_Negociacion'];
 			$fechanego = $row['FechaP'];
 			$status = $row['Status'];
