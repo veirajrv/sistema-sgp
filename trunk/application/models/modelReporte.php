@@ -287,7 +287,7 @@ class ModelReporte extends CI_Model
 	
 	function BuscarNegoEmpleadoTipo($Porcentaje)
 	{
-		$query = $this->db->query('SELECT E.Nombre_1, E.Apellido_1, C.Email, C.Telefono, N.Id_Negociacion, N.Id_Empleado, N.FechaP, N.Total, S.Status
+		$query = $this->db->query('SELECT E.Nombre_1, E.Apellido_1, C.Nombre, C.Apellido, C.Email, C.Telefono, N.Id_Negociacion, N.Id_Empleado, N.FechaP, N.Total, S.Status
 								   FROM EMPLEADO AS E, NEGOCIACION AS N, NS AS NS, SEGUIMIENTO AS S, CLIENTE AS C
 								   WHERE N.Id_Empleado = E.Cedula
 								   AND NS.Id_Negociacion = N.Id_Negociacion
