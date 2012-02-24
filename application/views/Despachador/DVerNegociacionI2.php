@@ -136,26 +136,9 @@ function CambiaColor(esto,borde,texto)
                   </form>                  </td>
                 </tr>
                 <tr>
-                  <td align="right"><font style="font-size:12px">Activas:</font></td>
-                  <td><form id="form2" method="post" action="<?php echo base_url();?>index.php/Control_Venta/ver_negociacion_tipo2">
-				  <select class="ui-widget" name="Nego" id="Nego" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required">
-                      <option></option>
-                      <?php
-						foreach ($NActiva as $row) {
-				  ?>
-                      <option value="<?php echo $row['Id_Negociacion']; ?>" <?php echo set_select('Hola',$row['Id_Negociacion']); ?> ><?php echo $row['Id_Negociacion']; ?><?php echo ' - ' ?><?php echo $row['FechaP']; ?></option>
-                      <?php
-					}
-					?>
-                    </select>
-					<input type="submit" name="Submit2" value="Ir" /><input type="hidden" name="IdCliente" id="IdCliente" value="<?php echo $Cliente; ?>" />
-                    <input type="hidden" name="Nombre" id="Nombre" value="<?php echo $NombreI; ?>" />
-                  </form>                  </td>
-                </tr>
-                <tr>
                   <td align="right"><font style="font-size:12px">Ganadas:</font></td>
                   <td><form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/cerrada_i">
-				  <select class="ui-widget" name="Nego" id="Nego" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required">
+                    <select class="ui-widget" name="Nego" id="Nego" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required">
                       <option></option>
                       <?php
 						foreach ($NGanada as $row) {
@@ -164,10 +147,10 @@ function CambiaColor(esto,borde,texto)
                       <?php
 					}
 					?>
-                    </select>
-					<input type="submit" name="Submit2" value="Ir" /><input type="hidden" name="IdCliente" id="IdCliente" value="<?php echo $Cliente; ?>" />
+                      </select>
+                    <input type="submit" name="Submit2" value="Ir" /><input type="hidden" name="IdCliente" id="IdCliente" value="<?php echo $Cliente; ?>" />
                     <input type="hidden" name="Nombre" id="Nombre" value="<?php echo $NombreI; ?>" />
-                  </form>                  </td>
+                    </form>                  </td>
                 </tr>
                 <tr>
                   <td align="right"><font style="font-size:12px">Cerradas:</font></td>
