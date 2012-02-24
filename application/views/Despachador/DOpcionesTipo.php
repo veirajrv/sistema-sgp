@@ -128,17 +128,16 @@ function CambiaColor(esto,borde,texto)
   <div id="cc">
       <table width="441" border="0">
         <tr>
-          <td colspan="2"><h2 style="font-size:30px"><?php echo $NombreC; ?> <?php echo $ApellidoC; ?></h2></td>
+          <td><h2 style="font-size:30px"><?php echo $NombreC; ?> <?php echo $ApellidoC; ?></h2></td>
           </tr>
         <tr>
-          <td colspan="2" align="center"><hr align="left" style="width:435px;" /></td>
+          <td align="center"><hr align="left" style="width:435px;" /></td>
           </tr>
         <tr>
-          <td width="204" align="center"><h2 style="font-size:30px"><a href="<?php echo base_url();?>index.php/Control_Venta/borrador_equipo/<?php echo $Cliente; ?>/<?php echo $Nego; ?>">EQUIPOS</a></h2></td>
-          <td width="227" align="center"><h2 style="font-size:30px"><a href="<?php echo base_url();?>index.php/Control_Venta/borrador_accesorio/<?php echo $Cliente; ?>/<?php echo $Nego; ?>">ACCESORIOS</a></h2></td>
-        </tr>
+          <td align="center"><h2 style="font-size:30px"><a href="<?php echo base_url();?>index.php/Control_Venta/borrador_accesorio/<?php echo $Cliente; ?>/<?php echo $Nego; ?>">ACCESORIOS</a></h2></td>
+          </tr>
         <tr>
-          <td colspan="2"><form id="form6" method="post" action="<?php echo base_url();?>index.php/Control_Venta/ver_negociacion_asociadas">
+          <td><form id="form6" method="post" action="<?php echo base_url();?>index.php/Control_Venta/ver_negociacion_asociadas">
               <p align="left" style="margin-left:-10px"><input type="image" name="Submit" src="<?php echo base_url();?>files/images/FlechaI.png" title="Atras"/><input type="hidden" name="Cliente" id="Cliente" value="<?php echo $Cliente; ?>" />
               </p>
             </form>            </td>
