@@ -222,26 +222,19 @@ textarea.LV_invalid_field:active {
                   <td align="right"><font style="font-size:12px">Status:</font></td>
                   <td>
                     <select name="StatusC" id="StatusC" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required">
-                      <option selected="selected"></option>
-                      <option>Borrador</option>
-                      <option>Activa</option>
+<option selected="selected"></option>
+					  <option>Ganada</option>
                       <option>Ganada</option>
                       <option>Perdida</option>
                     </select>                  </td>
                 </tr>
                 <tr>
-                  <td align="right"><font style="font-size:12px">Sub-Status:</font></td>
-                  <td><select name="SubStatus" id="SubStatus" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')">
-                    <option selected="selected"></option>
-                  </select></td>
-                </tr>
-                <tr>
                   <td align="right"><font style="font-size:12px">Resumen:</font></td>
                   <td>
-                      <textarea name="ResumenC" id="ResumenC" style="width:240px; font-size-adjust:inherit; height:80px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required"></textarea>
-					  <script>var f12 = new LiveValidation('ResumenC');
+                    <textarea name="ResumenC" id="ResumenC" style="width:240px; font-size-adjust:inherit; height:80px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required"></textarea>
+                    <script>var f12 = new LiveValidation('ResumenC');
 f12.add( Validate.Length, { maximum: 300 } );</script>
-                      <input type="hidden" name="Negociacion" id="Negociacion" style="width:20px" value="<?php echo $Id_Negociacion; ?>" /><input type="hidden" name="Cliente" id="Cliente" style="width:20px" value="<?php echo $Cliente; ?>" />                    </td>
+                    <input type="hidden" name="Negociacion" id="Negociacion" style="width:20px" value="<?php echo $Id_Negociacion; ?>" /><input type="hidden" name="Cliente" id="Cliente" style="width:20px" value="<?php echo $Cliente; ?>" />                    </td>
                 </tr>
               </table>
               </fieldset></td>
