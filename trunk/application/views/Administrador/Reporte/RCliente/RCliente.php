@@ -158,8 +158,8 @@ return false;
       </tr>
       <tr>
         <td width="129">- Clientes por especialidad:</td>
-        <td width="175"><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Cirugia')"><b>Cirugia</b></a></td>
-        <td width="123">&nbsp;</td>
+        <td width="118"><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Cirugia')"><b>Cirugia</b></a></td>
+        <td width="180">&nbsp;</td>
         </tr>
       <tr>
         <td>&nbsp;</td>
@@ -276,7 +276,7 @@ return false;
         <td colspan="3">- <a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_min_negociaciones')"><b>Clientes con menos negociaciones abiertas</b></a> </td>
       </tr>
       <tr>
-        <td colspan="2">- Numero de negociaciones por cliente y por tipo de negociacion: </td>
+        <td colspan="2">- Total de negociaciones por cliente segun su status: </td>
         <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_bagcp/25')"><b>Borrador</b></a></td>
       </tr>
       <tr>
@@ -307,7 +307,7 @@ return false;
         <td colspan="3">- Clientes por tipo: <a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_tipo/Publico')"><b>Publico</b></a> o <a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_tipo/Privado')"><b>Privado</b></a></td>
         </tr>
       <tr>
-        <td>- Clientes por tipo y status: </td>
+        <td>- Clientes publicos y privados por status: </td>
         <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_tstatus/25')"><b>Borrador</b></a></td>
         <td rowspan="7">&nbsp;</td>
       </tr>
