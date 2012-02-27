@@ -2011,4 +2011,195 @@ class Control_Venta extends CI_Controller
 		$this->load->view('Despachador/Cerrada/DConsultaCerradaI', $usuario);
 	}
 	
+	// Funcion que abre la pantalla de clientes del usuario en donde consultamos 
+	// clientes en el sistema.
+	public function clientes()
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$usuario['Clientes'] = $this->modelNegociacion->BuscarClientes();
+		$this->load->view('Despachador/Cliente/DVerCliente', $usuario);
+	}
+	
+	
+	// Funcion que nos abre la pantalla en donde el usuario podra crear clientes
+	// nuevos al sistema.  
+	public function agregar_cliente()
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$usuario['Institucion'] = $this->modelInstitucion->BuscarInstituciones();
+		$this->load->view('Despachador/Cliente/DCliente', $usuario);
+	}
+	
+	// Funcion que nos devuelve a la pantalla en donde esta la lista de clientes
+	// de un usuario en el sistema.
+	public function atras_index() 
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$usuario['Clientes'] = $this->modelNegociacion->BuscarClientes();
+		$this->load->view('Despachador/Cliente/DVerCliente', $usuario);		
+	}
+	
+	// Funcion que se encarga de recibir los campos que el usuario coloco para 
+	// poder hacer la agregacion de un cliente al sistema.
+	public function crear_cliente() 
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+			
+		##  DATOS CLIENTE ##
+		$Cliente['Tipo_C'] = $_POST['select'];
+		$Cliente['Nombre'] = $_POST['Nombre'];
+		$Cliente['Apellido'] = $_POST['Apellido'];
+		$tipo = $_POST['Tipo'];
+		$Cliente['Cedula'] = $tipo.'-'.$_POST['Cedula'];
+		$Cliente['Sexo'] = $_POST['Sexo'];
+		$Cliente['Dia'] = $_POST['Dia'];
+		$Cliente['Mes'] = $_POST['Mes'];
+		$tipo2 = $_POST['Tipo2'];
+		$codigo = $_POST['Codigo'];
+		$Cliente['Rif'] = $tipo2.'-'.$_POST['Rif'].'-'.$codigo;
+		$Cliente['Email'] = $_POST['Email'];
+		$Cliente['CPostal'] = $_POST['CPostal'];
+		$Cliente['Telefono'] = $_POST['Telefono'];
+		$Cliente['Telefono2'] = $_POST['Telefono2'];
+		$Cliente['Telefono3'] = $_POST['Telefono3'];
+		$Cliente['Especialidad'] = $_POST['Especialidad'];
+		$Cliente['Subespecial'] = $_POST['Subespecial'];
+		$Cliente['Web'] = $_POST['Web'];
+		$Cliente['Departamento'] = $_POST['Departamento'];
+			
+		##  DATOS DE REDES SOCIALES ##
+		$Cliente['Twitter'] = $_POST['Twitter'];
+		$Cliente['Facebook'] = $_POST['Facebook'];
+		$Cliente['Googleplus'] = $_POST['GoogleP'];
+			
+		##  DATOS DE LAS DIRECCIONES PERSONALES ##
+		$Cliente['Direccion'] = $_POST['Direccion'];
+		$Cliente['Direccion2'] = $_POST['Direccion2'];
+		$Cliente['Direccion3'] = $_POST['Direccion3'];
+			
+		$this->modelCliente->InsertarCliente($Cliente);
+			
+		$maxcliente = $this->modelCliente->BuscarMaxId();
+			
+		if(isset($_POST['checkbox']))
+		{
+			$usuario2 = $Usuario;
+			$EIC['Id_Empleado'] = $this->modelCliente->BuscarId($usuario2);
+			$EIC['Id_Institucion'] = $_POST['Instituto'];
+			$EIC['Id_Cliente'] = $maxcliente;
+			$this->modelCliente->InsertarAgenda($EIC);
+		}
+			
+		if(isset($_POST['checkbox2']))
+		{
+				$usuario3 = $Usuario;
+				$EIC2['Id_Empleado'] = $this->modelCliente->BuscarId($usuario3);
+				$EIC2['Id_Institucion'] = $_POST['Instituto2'];
+				$EIC2['Id_Cliente'] = $maxcliente;
+				$this->modelCliente->InsertarAgenda2($EIC2);
+			}
+			
+		$usuario['Institucion'] = $this->modelInstitucion->BuscarInstituciones();
+			
+		$usuario['Mensaje'] = 'Se agrego el cliente con &eacute;xito!';
+			
+		$this->load->view('Despachador/Cliente/DCliente', $usuario);	
+	}
+	
+	// Funcion que me busca cualquier cliente que sea en el sistema
+	public function buscar_cualquiera()
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$cadena = $_POST['Buscar'];
+		$respuesta = $this->modelCliente->BuscarTodo($cadena);
+		$Lista = $this->modelCliente->BuscarTodo($cadena);
+		
+		$this->load->library('table');
+		$this->table->set_empty("&nbsp;");
+		$this->table->set_heading('<font style="font-size:12px" color="#369"><b>Nombre</b></font>', '<font style="font-size:12px" color="#369"><b>Apellido</b></font>', '<font style="font-size:12px" color="#369"><b>Email</b></font>', '<font style="font-size:12px" color="#369"><b>Telefono</b></font>');
+		
+	
+		foreach ($Lista as $row)
+		{
+			$id = $row['Id_Cliente'];
+			$nombre = $row['Nombre'];
+			$apellido = $row['Apellido'];
+			$email = $row['Email'];
+			$telefono = $row['Telefono'];
+			$this->table->add_row($nombre, $apellido, $email, $telefono, anchor('Control_Cliente/ver_perfil_2/'.$id.'','Ver Detalle'));
+		}
+			
+		$usuario['table'] = $this->table->generate();
+		
+		$this->load->view('Despachador/Cliente/DBusquedaCliente', $usuario);
+	}
+	
+	// Funcion que nos permite ver el perfil de el cliente que nosotros 
+	// queramos dentro de el sistema. 
+	public function ver_perfil()
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$id_cliente = $_POST['Cliente'];
+		$usuario['id_cliente'] = $id_cliente;
+		$usuario['Nombre'] = $this->modelCliente->NombreCliente($id_cliente);
+		$usuario['Apellido'] = $this->modelCliente->ApellidoCliente($id_cliente);
+		$usuario['Email'] = $this->modelCliente->EmailCliente($id_cliente);
+		$usuario['Telefono1'] = $this->modelCliente->TelfCliente($id_cliente);
+		$usuario['Telefono2'] = $this->modelCliente->Telf2Cliente($id_cliente);
+		$usuario['Telefono3'] = $this->modelCliente->Telf3Cliente($id_cliente);
+		$usuario['Web'] = $this->modelCliente->WebCliente($id_cliente);
+		$usuario['Departamento'] = $this->modelCliente->DepartamentoCliente($id_cliente);
+			
+		$usuario['Twitter'] = $this->modelCliente->TwitterCliente($id_cliente);
+		$usuario['Facebook'] = $this->modelCliente->FacebookCliente($id_cliente);
+		$usuario['Google'] = $this->modelCliente->GoogleplusCliente($id_cliente);
+			
+		$usuario['Direccion1'] = $this->modelCliente->DireccionCliente($id_cliente);
+		$usuario['Direccion2'] = $this->modelCliente->Direccion2Cliente($id_cliente);
+		$usuario['Direccion3'] = $this->modelCliente->Direccion3Cliente($id_cliente);
+		
+		$this->load->view('Despachador/Cliente/DVerPerfilCliente', $usuario);
+	}
+	
+	// Funcion que nos lleva a la pantalla en donde nosotros cambiaremos
+	// los datos que queramos cambiar de un cliente. 
+	public function modificar_perfil()
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$id_cliente = $_POST['Cliente'];
+			
+		$datos['ID2'] = $id_cliente;
+		$cliente = new ModelCliente;
+		$this->modelCliente->ModificarCliente($cliente, $datos);
+			
+		$usuario['id_cliente'] = $id_cliente;
+		$usuario['Nombre'] = $this->modelCliente->NombreCliente($id_cliente);
+		$usuario['Apellido'] = $this->modelCliente->ApellidoCliente($id_cliente);
+		$usuario['Email'] = $this->modelCliente->EmailCliente($id_cliente);
+		$usuario['Telefono1'] = $this->modelCliente->TelfCliente($id_cliente);
+		$usuario['Telefono2'] = $this->modelCliente->Telf2Cliente($id_cliente);
+		$usuario['Telefono3'] = $this->modelCliente->Telf3Cliente($id_cliente);
+		$usuario['Web'] = $this->modelCliente->WebCliente($id_cliente);
+		$usuario['Departamento'] = $this->modelCliente->DepartamentoCliente($id_cliente);
+			
+		$usuario['Twitter'] = $this->modelCliente->TwitterCliente($id_cliente);
+		$usuario['Facebook'] = $this->modelCliente->FacebookCliente($id_cliente);
+		$usuario['Google'] = $this->modelCliente->GoogleplusCliente($id_cliente);
+			
+		$usuario['Direccion1'] = $this->modelCliente->DireccionCliente($id_cliente);
+		$usuario['Direccion2'] = $this->modelCliente->Direccion2Cliente($id_cliente);
+		$usuario['Direccion3'] = $this->modelCliente->Direccion3Cliente($id_cliente);
+			
+		$usuario['Mensaje'] = 'Se modificaron los datos del cliente con &eacute;xito!';
+			
+		$this->load->view('Despachador/Cliente/DVerPerfilCliente', $usuario);
+	}
+	
 }

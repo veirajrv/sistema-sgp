@@ -2,10 +2,21 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-<script src="http://elp21.no-ip.info:4085/SGP/files/js/jquery-1.6.2.min.js" type="text/javascript"></script>
-<script src="http://elp21.no-ip.info:4085/SGP/files/js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+<script src="http://elp21.no-ip.info:4085/SGP/files/js/jquery-1.6.2.min.js" type="text/javascript"> </script>
+<script src="http://elp21.no-ip.info:4085/SGP/files/js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"> </script>
+<script src="http://elp21.no-ip.info:4085/SGP/files/js/livevalidation_standalone.js" type="text/javascript"> </script>
 
 <head>
+
+<script>
+function confirmar()
+{
+	if(confirm("Usted quiere agregar este cliente al sistema?"))
+		return true;
+	else
+		return false;
+}
+</script>
 
 <script type="text/javascript">
 function CambiaColor(esto,borde,texto)
@@ -15,31 +26,6 @@ function CambiaColor(esto,borde,texto)
  }
 </script>
 
-<script language="javascript">
-$(document).ready(function(){
-	// Parametros para e combo1
-   $("#combo1").change(function () {
-   		$("#combo1 option:selected").each(function () {
-			//alert($(this).val());
-				elegido=$(this).val();
-				$.post("<?php echo base_url();?>index.php/ControlCombox/Combo3", { elegido: elegido }, function(data){
-				$("#combo2").html(data);
-			});			
-        });
-   })
-	// Parametros para el combo2
-	$("#combo2").change(function () {
-   		$("#combo2 option:selected").each(function () {
-			//alert($(this).val());
-				elegido=$(this).val();
-				$.post("<?php echo base_url();?>index.php/ControlCombox/Combo4", { elegido: elegido }, function(data){
-				$("#combo3").html(data);
-			});			
-        });
-   })
-});
-</script>
-	
 <script>
 	$(function() {
 		$( "#accordion" ).accordion({
@@ -68,10 +54,78 @@ $(document).ready(function(){
 
 <script>
 	$(function() {
-		$( "input:submit").button();
+		$( "input:submit, input:reset").button();
 		$( "a", ".demoo" ).click(function() { return false; });
 	});
 </script>
+
+<script>
+function confirmar()
+{
+	if(confirm("Quieres agregar esta institucion?"))
+		return true;
+	else
+		return false;
+}
+</script>
+
+<script>
+function soloNumeros(evt){
+//asignamos el valor de la tecla a keynum
+if(window.event){// IE
+keynum = evt.keyCode;
+}else{
+keynum = evt.which;
+}
+//comprobamos si se encuentra en el rango
+if(keynum>7 && keynum<58){
+return true;
+}else{
+return false;
+}
+}
+</script>
+
+<script type="text/javascript">
+function validar(e) { // 1
+    tecla = (document.all) ? e.keyCode : e.which; // 2
+    if (tecla==8) return true; // 3
+    patron =/[A-Za-z\s]/; // 4
+    te = String.fromCharCode(tecla); // 5
+    return patron.test(te); // 6
+} 
+</script>
+
+<style type="text/css">
+.LV_validation_message{
+    font-weight:bold;
+    margin:0 0 0 5px;
+}
+
+.LV_valid {
+    color:#1fa0dc;
+}
+	
+.LV_invalid {
+    color:#CC0000;
+}
+    
+.LV_valid_field,
+input.LV_valid_field:hover, 
+input.LV_valid_field:active,
+textarea.LV_valid_field:hover, 
+textarea.LV_valid_field:active {
+    border: 1px solid #1fa0dc;
+}
+    
+.LV_invalid_field, 
+input.LV_invalid_field:hover, 
+input.LV_invalid_field:active,
+textarea.LV_invalid_field:hover, 
+textarea.LV_invalid_field:active {
+    border: 1px solid #CC0000;
+}
+</style>
 	
 <!-- meta tags begin -->
 	<!-- vital meta tags -->
@@ -100,7 +154,7 @@ $(document).ready(function(){
 		</span></a>
 		<div id="userbar">
 			<a href="<?php echo base_url();?>index.php/Control_Inicio/cerrar_sesion/">Cerrar Sesion </a> | <a id="tabe" href="">Ayuda</a>		</div>
-	</div>
+  </div>
 	<!-- END tagline -->
 
 <!-- BEGIN tabs -->
@@ -138,10 +192,9 @@ $(document).ready(function(){
 	</div>
 	<h3><a href="#">Herramientas</a></h3>
 	<div>
-		<li>- <a href="">Calendario</a></li>
+		
 	</div>
 </div>
-
 
 </div>
 	<p>&nbsp;</p>
@@ -151,44 +204,27 @@ $(document).ready(function(){
 <!-- BEGIN center column -->
 <div id="center">
   <div id="cc">
-    <form id="form1" method="post" action="<?php echo base_url();?>index.php/Control_Venta/agregar_negociacion">
-      <table width="441" border="0">
+  <form id="form2" method="post" action="<?php echo base_url();?>index.php/Control_Venta/atras_index">
+    <table width="441" border="0">
+      <tr>
+        <td width="381" valign="top"><h2 style="font-size:30px">Busqueda Cliente</h2></td>
+        <td width="50" align="right" valign="top"><input name="Buttom" type="image" id="Buttom" title="Atras" src="<?php echo base_url();?>files/images/FlechaI.png"/></td>
+      </tr>
+      <tr>
+        <td colspan="2"><hr align="left" style="width:435px;" /></td>
+        </tr>
+    </table>
+  </form>
+  <form id="form1" method="post" action="<?php echo base_url();?>index.php/Control_Cliente/crear_cliente">
+      <table width="438" border="0">
         <tr>
-          <td><h2 style="font-size:30px">Nueva Negociacion</h2></td>
+          <td align="center"><cite>&quot;Para una busqueda completa de los datos del cliente ingresar a Ver detalle&quot;</cite></td>
           </tr>
         <tr>
-          <td><font style="font-size:12px"><a href="<?php echo base_url();?>index.php/Control_Venta/index2">Cliente</a></font> | <font style="font-size:12px"><a href="<?php echo base_url();?>index.php/Control_Venta/index3">Institucion</a></font></td>
-        </tr>
-        <tr>
-          <td><hr align="left" style="width:435px;" /></td>
-        </tr>
-        <tr>
-          <td><fieldset><legend style="font-size:15px"><b>Datos Cliente</b></legend>
-              <table width="410" border="0">
-                <tr>
-                  <td width="110" align="right"><font style="font-size:12px">Cliente:</font></td>
-                  <td width="284">
-                    <select name="select2" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required">
-                       <option></option>
-					   <?php
-						foreach ($Clientes as $row) {
-				  ?>
-                        <option value="<?php echo $row['Id_Cliente']; ?>" <?php echo set_select('Hola',$row['Id_Cliente']); ?> ><?php echo $row['Cedula']; ?><?php echo ' - ' ?><?php echo $row['Nombre']; ?><?php echo ' ' ?><?php echo $row['Apellido']; ?></option>
-                        <?php
-					}
-					?>
-                    </select>
-                  </td>
-                </tr>
-              </table>
-              </fieldset></td>
+          <td>&nbsp;</td>
           </tr>
         <tr>
-          <td><label>
-            <div align="right">
-              <input name="Submit" type="submit" value="Crear negociaci&oacute;n" OnClick="return confirm('Usted desea crear una nueva negociacion a este cliente?');"/>
-              </div>
-          </label></td>
+          <td><div id="div_demo" style="overflow:scroll; width:425px; height:200px;"><?php echo $table; ?></div></td>
           </tr>
       </table>
     </form>
