@@ -169,6 +169,9 @@ return false;
 <div id="cc">
   <table width="440" border="0">
     <tr>
+      <td colspan="2" align="center"><font style="font-size:12px;">Usted tienes <?php echo "<font style='font-size:18px;' color='#FF0000'><b>$NumeroPorAprobar</b></font>" ?> negociaciones <font style="font-size:12px; color:#369"><b>por aprobadas</b></font></font></td>
+      </tr>
+    <tr>
       <td width="160" align="right"><font style="font-size:12px; color:#369"><b>Negociaciones por aprobar:</b></font></td>
       <td width="271"><form id="form1" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/sin_aprobar">
         
@@ -186,6 +189,12 @@ return false;
           
       </form>        </td>
     </tr>
+    <tr>
+      <td colspan="2" align="right"><hr align="left" style="width:435px;" /></td>
+      </tr>
+    <tr>
+      <td colspan="2" align="center"><font style="font-size:12px;">Usted tienes <?php echo "<font style='font-size:18px;' color='#FF0000'><b>$NumeroRechazadas</b></font>" ?> negociaciones <font style="font-size:12px; color:#369"><b>por corregir</b></font></font></td>
+      </tr>
     <tr>
       <td width="160" align="right"><font style="font-size:12px; color:#369"><b>Negociaciones por corregir:</b></font></td>
       <td><form id="form1" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/desbloquear">
@@ -208,7 +217,7 @@ return false;
   </table>
   <table width="440" border="0">
     <tr>
-      <td colspan="2" align="center"><font style="font-size:12px;">Usted tienes <?php echo "<font style='font-size:18px;' color='#FF0000'><b>$NumeroAprobadas</b></font>" ?> negociaciones aprobadas</font></td>
+      <td colspan="2" align="center"><font style="font-size:12px;">Usted tienes <?php echo "<font style='font-size:18px;' color='#FF0000'><b>$NumeroAprobadas</b></font>" ?> negociaciones <font style="font-size:12px; color:#369"><b>Aprobadas</b></font></font></td>
       </tr>
     <tr>
       <td width="160" align="right"><font style="margin-left:-10px; font-size:12px; color:#369"><b>Negociaciones Aprobadas:</b></font></td>

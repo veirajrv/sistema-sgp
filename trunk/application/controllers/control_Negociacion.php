@@ -663,6 +663,9 @@ class control_Negociacion extends CI_Controller {
 		$usuario['NumeroPorAprobar'] = $this->modelInicio->NumeroPorAprobar();
 		$usuario['ConAlerta'] = $this->modelInicio->ConAlerta($cedula);
 		
+		$usuario['NumeroPorAprobar'] = $this->modelInicio->NumeroPorAprobar2();
+		$usuario['NumeroRechazadas'] = $this->modelInicio->NumeroRechazadas();
+		
 		//$this->load->library('email');  
 		//$this->email->from('jrodriguezv.11@gmail.com','Sistema de gestion SGP');  
 		//$this->email->to("jrodriguezv.11@gmail.com"); // mail de la jefa de YOMA //
@@ -750,6 +753,9 @@ class control_Negociacion extends CI_Controller {
 			$usuario['NumeroAprobadas'] = $this->modelInicio->NumeroAprobadas($cedula);
 			$usuario['ConAutorizar'] = $this->modelInicio->ConAutorizar($cedula);    	
 			$usuario['ConAlerta'] = $this->modelInicio->ConAlerta($cedula); 
+			
+			$usuario['NumeroPorAprobar'] = $this->modelInicio->NumeroPorAprobar2();
+			$usuario['NumeroRechazadas'] = $this->modelInicio->NumeroRechazadas();
 		
 			$this->load->view('Vendedor/VPrincipal', $usuario);
 		}
@@ -2211,6 +2217,9 @@ class control_Negociacion extends CI_Controller {
 		$usuario['NumeroAprobadas'] = $this->modelInicio->NumeroAprobadas($cedula);
 		$usuario['ConAutorizar'] = $this->modelInicio->ConAutorizar($cedula);    	
 		$usuario['ConAlerta'] = $this->modelInicio->ConAlerta($cedula); 
+		
+		$usuario['NumeroPorAprobar'] = $this->modelInicio->NumeroPorAprobar2();
+		$usuario['NumeroRechazadas'] = $this->modelInicio->NumeroRechazadas();
 		
 		$this->load->view('Vendedor/VPrincipal', $usuario);
 	}

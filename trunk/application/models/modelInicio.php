@@ -349,4 +349,35 @@ class ModelInicio extends CI_Model
 		return $query->result_array();	
 	}
 	
+	function NumeroPorAprobar2()
+	{
+		$query = $this->db->query('SELECT Count(N.Id_Negociacion) AS Numero
+							   FROM NEGOCIACION AS N, SEGUIMIENTO AS S, NS AS NS
+							   WHERE N.Id_Negociacion = NS.Id_Negociacion
+							   AND NS.Id_Seguimiento = S.Id_Seguimiento
+							   AND N.Status = 1
+							   AND ((S.Status = "Borrador") || (S.Status = "Activa"))');	
+		
+		foreach ($query->result_array() as $row)
+	{
+		$tipo = $row['Numero'];
+	}
+		return $tipo;
+	}
+	
+	function NumeroRechazadas()
+	{
+		$query = $this->db->query('SELECT Count(N.Id_Negociacion) AS Numero
+							   FROM NEGOCIACION AS N, SEGUIMIENTO AS S, NS AS NS
+							   WHERE N.Id_Negociacion = NS.Id_Negociacion
+							   AND NS.Id_Seguimiento = S.Id_Seguimiento
+							   AND N.Status = 4');	
+		
+		foreach ($query->result_array() as $row)
+	{
+		$tipo = $row['Numero'];
+	}
+		return $tipo;
+	}
+	
 }
