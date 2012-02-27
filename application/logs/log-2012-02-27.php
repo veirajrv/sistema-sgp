@@ -79,3 +79,108 @@ ERROR - 2012-02-27 18:32:28 --> Severity: Warning  --> Invalid argument supplied
 ERROR - 2012-02-27 18:37:49 --> Severity: Notice  --> Undefined variable: ConAlerta C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
 ERROR - 2012-02-27 18:37:49 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
 ERROR - 2012-02-27 18:42:08 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND ML.Id_Linea = L.Id_Linea' at line 1
+ERROR - 2012-02-27 18:47:39 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND ML.Id_Linea = L.Id_Linea' at line 1
+ERROR - 2012-02-27 18:49:39 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND ML.Id_Linea = L.Id_Linea' at line 1
+ERROR - 2012-02-27 19:03:26 --> Severity: Notice  --> Undefined variable: NumeroPorAprobar C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 172
+ERROR - 2012-02-27 19:03:26 --> Severity: Notice  --> Undefined variable: NumeroRechazadas C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 196
+ERROR - 2012-02-27 19:03:26 --> Severity: Notice  --> Undefined variable: Rechazadas C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 204
+ERROR - 2012-02-27 19:03:26 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 204
+ERROR - 2012-02-27 19:03:45 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 19:03:52 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 19:06:40 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 19:07:25 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 19:14:49 --> Severity: Notice  --> Undefined variable: NumeroPorAprobar C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 172
+ERROR - 2012-02-27 19:14:49 --> Severity: Notice  --> Undefined variable: NumeroRechazadas C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 196
+ERROR - 2012-02-27 19:14:49 --> Severity: Notice  --> Undefined variable: Rechazadas C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 204
+ERROR - 2012-02-27 19:14:49 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 204
+ERROR - 2012-02-27 19:15:24 --> Severity: Notice  --> Undefined variable: NumeroPorAprobar C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 172
+ERROR - 2012-02-27 19:15:24 --> Severity: Notice  --> Undefined variable: NumeroRechazadas C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 196
+ERROR - 2012-02-27 19:15:24 --> Severity: Notice  --> Undefined variable: Rechazadas C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 204
+ERROR - 2012-02-27 19:15:24 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 204
+ERROR - 2012-02-27 19:16:29 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 19:20:57 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 19:27:42 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 19:28:06 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 19:32:10 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 19:32:11 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 19:35:01 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 19:37:06 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 19:39:42 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 19:39:52 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 19:40:12 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 19:40:13 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 19:40:20 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 19:40:25 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 19:41:57 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 19:41:59 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 19:42:30 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 19:42:30 --> Severity: Notice  --> Undefined variable: equipo C:\wamp\www\OpenSGP\application\controllers\control_Combox.php 40
+ERROR - 2012-02-27 19:42:30 --> Severity: Notice  --> Undefined variable: equipo C:\wamp\www\OpenSGP\application\controllers\control_Combox.php 40
+ERROR - 2012-02-27 19:42:30 --> Severity: Notice  --> Undefined variable: equipo C:\wamp\www\OpenSGP\application\controllers\control_Combox.php 40
+ERROR - 2012-02-27 19:42:30 --> Severity: Notice  --> Undefined variable: equipo C:\wamp\www\OpenSGP\application\controllers\control_Combox.php 40
+ERROR - 2012-02-27 19:42:30 --> Severity: Notice  --> Undefined variable: equipo C:\wamp\www\OpenSGP\application\controllers\control_Combox.php 40
+ERROR - 2012-02-27 19:42:30 --> Severity: Notice  --> Undefined variable: equipo C:\wamp\www\OpenSGP\application\controllers\control_Combox.php 40
+ERROR - 2012-02-27 19:42:50 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 19:42:59 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 19:49:00 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-02-27 19:49:00 --> Severity: Notice  --> Undefined variable: result C:\wamp\www\OpenSGP\application\controllers\control_Combox.php 40
+ERROR - 2012-02-27 19:50:41 --> Severity: Notice  --> Undefined variable: ConAlerta C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-02-27 19:50:41 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-02-27 19:51:02 --> Severity: Notice  --> Undefined variable: ConAlerta C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-02-27 19:51:02 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-02-27 19:51:10 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND ML.Id_Linea = L.Id_Linea' at line 1
+ERROR - 2012-02-27 19:51:54 --> Severity: Notice  --> Undefined variable: Rechazadas C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 204
+ERROR - 2012-02-27 19:51:54 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 204
+ERROR - 2012-02-27 19:52:09 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-02-27 19:52:10 --> Severity: Notice  --> Undefined variable: result C:\wamp\www\OpenSGP\application\controllers\control_Combox.php 40
+ERROR - 2012-02-27 19:52:16 --> Severity: Notice  --> Undefined variable: result C:\wamp\www\OpenSGP\application\controllers\control_Combox.php 40
+ERROR - 2012-02-27 19:52:16 --> Severity: Notice  --> Undefined variable: result C:\wamp\www\OpenSGP\application\controllers\control_Combox.php 40
+ERROR - 2012-02-27 19:52:17 --> Severity: Notice  --> Undefined variable: result C:\wamp\www\OpenSGP\application\controllers\control_Combox.php 40
+ERROR - 2012-02-27 19:52:19 --> Severity: Notice  --> Undefined variable: result C:\wamp\www\OpenSGP\application\controllers\control_Combox.php 40
+ERROR - 2012-02-27 19:52:27 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-02-27 19:52:28 --> Severity: Notice  --> Undefined variable: result C:\wamp\www\OpenSGP\application\controllers\control_Combox.php 40
+ERROR - 2012-02-27 19:52:30 --> Severity: Notice  --> Undefined variable: result C:\wamp\www\OpenSGP\application\controllers\control_Combox.php 40
+ERROR - 2012-02-27 19:52:31 --> Severity: Notice  --> Undefined variable: result C:\wamp\www\OpenSGP\application\controllers\control_Combox.php 40
+ERROR - 2012-02-27 19:52:31 --> Severity: Notice  --> Undefined variable: result C:\wamp\www\OpenSGP\application\controllers\control_Combox.php 40
+ERROR - 2012-02-27 19:52:32 --> Severity: Notice  --> Undefined variable: result C:\wamp\www\OpenSGP\application\controllers\control_Combox.php 40
+ERROR - 2012-02-27 19:52:36 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 19:52:37 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-02-27 19:52:37 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-02-27 19:52:38 --> Severity: Notice  --> Undefined variable: result C:\wamp\www\OpenSGP\application\controllers\control_Combox.php 40
+ERROR - 2012-02-27 20:18:47 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-02-27 20:18:49 --> Severity: Notice  --> Undefined variable: result C:\wamp\www\OpenSGP\application\controllers\control_Combox.php 40
+ERROR - 2012-02-27 20:18:51 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-02-27 20:18:52 --> Severity: Notice  --> Undefined variable: result C:\wamp\www\OpenSGP\application\controllers\control_Combox.php 40
+ERROR - 2012-02-27 20:18:55 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-02-27 20:18:56 --> Severity: Notice  --> Undefined variable: result C:\wamp\www\OpenSGP\application\controllers\control_Combox.php 40
+ERROR - 2012-02-27 20:18:59 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-02-27 20:19:00 --> Severity: Notice  --> Undefined variable: result C:\wamp\www\OpenSGP\application\controllers\control_Combox.php 40
+ERROR - 2012-02-27 20:20:00 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-02-27 20:20:40 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-02-27 20:22:14 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-02-27 20:22:41 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-02-27 20:23:27 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-02-27 20:24:10 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-02-27 20:24:10 --> Severity: Notice  --> Undefined index: E.Id_Equipo C:\wamp\www\OpenSGP\application\controllers\control_Combox.php 40
+ERROR - 2012-02-27 20:24:10 --> Severity: Notice  --> Undefined index: E.Id_Equipo C:\wamp\www\OpenSGP\application\controllers\control_Combox.php 40
+ERROR - 2012-02-27 20:24:10 --> Severity: Notice  --> Undefined index: E.Id_Equipo C:\wamp\www\OpenSGP\application\controllers\control_Combox.php 40
+ERROR - 2012-02-27 20:27:05 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-02-27 20:29:13 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-02-27 20:32:19 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-02-27 20:35:45 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-02-27 20:36:33 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-02-27 20:36:34 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 20:37:06 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-02-27 20:37:07 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 20:37:55 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-02-27 20:37:56 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 20:37:56 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 20:38:20 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-27 20:38:20 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-02-27 20:38:20 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-27 20:38:20 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-02-27 20:38:52 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-02-27 20:39:53 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-02-27 20:39:54 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-02-27 20:40:10 --> Severity: Notice  --> Undefined variable: ConAlerta C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-02-27 20:40:10 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221

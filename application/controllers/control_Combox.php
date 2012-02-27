@@ -34,20 +34,20 @@ class Control_Combox extends CI_Controller {
 	{
 		$id = $this->uri->rsegment(3);
 		$accounts_list = $this->modelCombox->ComboEquipos($id);
-		$result2 = '<option value=" ">Seleccione un equipo</option>';
+		$result = '<option value=" ">Seleccione un equipo</option>';
 		foreach($accounts_list as $equipo)
 		{
-			$result2 .= '<option value="'.$equipo['Id_Equipo'].'">'.$equipo['Nombre'].'</option>';
+			$result .= '<option value="'.$equipo['Id_Equipo'].'">'.$equipo['Nombre'].'</option>';
 		}
-		echo $result2;
+		echo $result;
 	}
 	
 	public function ajax_get_accounts3() 
 	{
 		$id = $this->uri->rsegment(3);
-		$accounts_list = $this->modelCombox->ComboAccesorios($id);
-		$result3 = '<option value=" ">Seleccione un equipo</option>';
-		foreach($accounts_list as $Accesorio)
+		$accounts_list3 = $this->modelCombox->ComboAccesorios($id);
+		$result3 = '<option value=" ">Seleccione un accesorio</option>';
+		foreach($accounts_list3 as $Accesorio)
 		{
 			$result3 .= '<option value="'.$Accesorio['Id_Accesorio'].'">'.$Accesorio['Nombre'].'</option>';
 		}

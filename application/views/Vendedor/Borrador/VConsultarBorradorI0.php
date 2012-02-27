@@ -79,7 +79,7 @@ function CambiaColor(esto,borde,texto)
             });
 			
 			$("#equipo").live("click", function () {
-			var id = $('#account').val();
+			var id = $('#equipo').val();
 			console.log(id);
                 $.ajax({
                     type: "GET",
