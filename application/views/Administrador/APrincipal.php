@@ -2,8 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-<script src="http://elp21.no-ip.info:4085/SGP/files/js/jquery-1.6.2.min.js" type="text/javascript"></script>
-<script src="http://elp21.no-ip.info:4085/SGP/files/js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+<script src="<?php echo base_url();?>files/js/jquery-1.6.2.min.js" type="text/javascript"></script>
+<script src="<?php echo base_url();?>files/js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
 
 <head>
 
@@ -70,8 +70,8 @@ return false;
 	<meta http-equiv="refresh" content="15; url=<?php echo base_url();?>index.php/Control_Inicio/a_principal" />
 	<title>SISTEMA DE GESTION DE PROCESOS</title>
 	<!-- defining stylesheet, rss feed and shortcut icon to use -->
-	<link rel="stylesheet" href="http://elp21.no-ip.info:4085/SGP/files/css/styling.css" type="text/css" media="screen" />
-	<link href="http://elp21.no-ip.info:4085/SGP/files/css/flick/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" href="<?php echo base_url();?>files/css/styling.css" type="text/css" media="screen" />
+	<link href="<?php echo base_url();?>files/css/flick/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css"/>
 	<!-- secondary meta tags -->
 	<meta name="Autor" content="LP21" />
 <!-- meta tags end -->
@@ -88,9 +88,9 @@ return false;
 <div id="monster">
 
 	<div id="tagline">
-		<a href="index.html" title="Home"><img src="http://elp21.no-ip.info:4085/SGP/files/images/Portada/logo2.gif" alt="Your logo here" width="45" height="40" /> <span id="logo-text">YOMA</span></a>
+		<a href="index.html" title="Home"><img src="<?php echo base_url();?>files/images/Portada/logo2.gif" alt="Your logo here" width="45" height="40" /> <span id="logo-text">YOMA</span></a>
 		<div id="userbar">
-			<a href="http://elp21.no-ip.info:4085/SGP/index.php/Control_Inicio/cerrar_sesion">Cerrar Sesion </a> | <a href="">Ayuda</a>		</div>
+			<a href="<?php echo base_url();?>index.php/Control_Inicio/cerrar_sesion">Cerrar Sesion </a> | <a href="">Ayuda</a>		</div>
 	</div><!-- END tagline -->
 
 <!-- BEGIN tabs -->

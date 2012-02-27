@@ -2,8 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-<script src="http://elp21.no-ip.info:4085/SGP/files/js/jquery-1.6.2.min.js" type="text/javascript"></script>
-<script src="http://elp21.no-ip.info:4085/SGP/files/js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+<script src="<?php echo base_url();?>files/js/jquery-1.6.2.min.js" type="text/javascript"></script>
+<script src="<?php echo base_url();?>files/js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
 
 <head>
 
@@ -96,8 +96,8 @@ function CambiaColor(esto,borde,texto)
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>SISTEMA DE GESTION DE PROCESOS</title>
 	<!-- defining stylesheet, rss feed and shortcut icon to use -->
-	<link rel="stylesheet" href="http://elp21.no-ip.info:4085/SGP/files/css/styling.css" type="text/css" media="screen" />
-	<link href="http://elp21.no-ip.info:4085/SGP/files/css/flick/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" href="<?php echo base_url();?>files/css/styling.css" type="text/css" media="screen" />
+	<link href="<?php echo base_url();?>files/css/flick/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css"/>
 	<!-- secondary meta tags -->
 	<meta name="Autor" content="LP21" />
 <!-- meta tags end -->
@@ -114,10 +114,10 @@ function CambiaColor(esto,borde,texto)
 <div id="monster">
 
   <div id="tagline">
-		<a href="../index.html" title="Home"><img src="http://elp21.no-ip.info:4085/SGP/files/images/Portada/logo2.gif" alt="Your logo here" width="45" height="40" /> <span id="logo-text">YOMA
+		<a href="../index.html" title="Home"><img src="<?php echo base_url();?>files/images/Portada/logo2.gif" alt="Your logo here" width="45" height="40" /> <span id="logo-text">YOMA
 		</span></a>
 		<div id="userbar">
-			<a href="<?php echo base_url();?>index.php/Control_Inicio/cerrar_sesion/">Cerrar Sesion </a> | <a id="tabe" href="http://elp21.no-ip.info:4085/SGP/index.php/Control_Pdf">Ayuda</a>		</div>
+			<a href="<?php echo base_url();?>index.php/Control_Inicio/cerrar_sesion/">Cerrar Sesion </a> | <a id="tabe" href="<?php echo base_url();?>index.php/Control_Pdf">Ayuda</a>		</div>
   </div>
 	<!-- END tagline -->
 
@@ -251,7 +251,12 @@ function CambiaColor(esto,borde,texto)
                 <td align="right"><font style="font-size:12px">Condiciones de pago:</font></td>
                 <td align="center"><input type="checkbox" name="checkbox6" value="checkbox" onclick="document.getElementById('CondicionesPago').disabled = !this.checked"/></td>
                 <td>
-                  <input name="CondicionesPago" type="text" id="CondicionesPago" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" maxlength="20" value="<?php echo $CondicionesPago ?>" disabled="disabled"/>                </td>
+                  <select name="CondicionesPago" id="CondicionesPago" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" disabled="disabled">
+                    <option value="-1" selected="selected"><?php echo $CondicionesPago ?></option>
+                    <option>De contado</option>
+                  	<option>Financiado - Yoma</option>
+                    <option>Financiado – Banco</option>
+                </select></td>
               </tr>
               <tr>
                 <td align="right"><font style="font-size:12px">Fecha de pago:</font></td>
@@ -356,7 +361,7 @@ function CambiaColor(esto,borde,texto)
                 <td width="20" align="right"><a href="sdfsdf">
                   <?php $j=0; foreach ($Lista as $row){
 							
-							echo '<a href="http://elp21.no-ip.info:4085/SGP/index.php/Control_Negociacion/eliminar_producto_i2/'.$row['Id_HistorialNP2'].'/'.$Id.'/'.$Id_Negociacion.'">ELIMINAR</a>'; echo '</br>';
+							echo '<a href="<?php echo base_url();?>index.php/Control_Negociacion/eliminar_producto_i2/'.$row['Id_HistorialNP2'].'/'.$Id.'/'.$Id_Negociacion.'">ELIMINAR</a>'; echo '</br>';
 							
 							$j++;}?>
                 </a></td>
