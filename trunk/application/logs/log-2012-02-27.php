@@ -72,3 +72,10 @@ ERROR - 2012-02-27 16:08:05 --> Severity: Warning  --> Invalid argument supplied
 ERROR - 2012-02-27 16:08:13 --> Severity: Notice  --> Undefined variable: NumeroPorAprobar C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 172
 ERROR - 2012-02-27 16:08:13 --> Severity: Notice  --> Undefined variable: Rechazadas C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 205
 ERROR - 2012-02-27 16:08:13 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 205
+ERROR - 2012-02-27 16:19:39 --> Severity: Notice  --> Undefined variable: ConAlerta C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-02-27 16:19:39 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-02-27 18:32:28 --> Severity: Notice  --> Undefined variable: ConAlerta C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-02-27 18:32:28 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-02-27 18:37:49 --> Severity: Notice  --> Undefined variable: ConAlerta C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-02-27 18:37:49 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-02-27 18:42:08 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND ML.Id_Linea = L.Id_Linea' at line 1

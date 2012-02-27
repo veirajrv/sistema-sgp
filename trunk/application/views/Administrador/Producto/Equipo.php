@@ -210,7 +210,7 @@ function CambiaColor(esto,borde,texto)
       </tr>
       <tr>
         <td align="right"><font style="font-size:12px">Precio:</font></td>
-        <td colspan="2"><input name="Precio" type="text" id="Precio" onkeypress="return soloNumeros(event)" style="width:60px; font-size-adjust:inherit; height:30px; font-size:15px;" maxlength="7" required="required" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" /> <font style="font-size:12px">Bs.F</font></td>
+        <td colspan="2"><input name="Precio" type="text" id="Precio" onkeypress="return soloNumeros(event)" style="width:60px; font-size-adjust:inherit; height:30px; font-size:15px;" maxlength="10" required="required" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" /> <font style="font-size:12px">Bs.F</font></td>
       </tr>
       <tr>
         <td align="right"><font style="font-size:12px">Descripci&oacute;n:</font></td>
