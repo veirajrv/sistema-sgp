@@ -935,7 +935,14 @@ class modelNegociacion extends CI_Model {
 	function ModificarEstatus2($negociacion, $datos) 
 	{
 		$negociacion->Status = 3;
-		$negociacion->Descuento = $_POST['numero2'];
+		if($_POST['numero2'] == NULL)
+		{
+			$negociacion->Descuento = NULL;
+		}
+		else
+		{
+			$negociacion->Descuento = $_POST['numero2'];
+		}
 		$negociacion->Total = $_POST['resultado2'];
 		
 		$Id_Negociacion = $datos['ID2'];

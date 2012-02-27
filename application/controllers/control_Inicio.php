@@ -83,6 +83,9 @@ class Control_Inicio extends CI_Controller
 				$usuario2['ConAutorizar'] = $this->modelInicio->ConAutorizar($cedula);
 				$usuario2['ConAlerta'] = $this->modelInicio->ConAlerta($cedula); 
 				
+				$usuario['NumeroPorAprobar'] = $this->modelInicio->NumeroPorAprobar2();
+				$usuario['NumeroRechazadas'] = $this->modelInicio->NumeroRechazadas();
+				
 				$this->load->view('Vendedor/VPrincipal', $usuario2);
 			}
 			if($tipoemp == $Tipo_3) // Si se es vendedor entra en este if //
@@ -123,6 +126,9 @@ class Control_Inicio extends CI_Controller
 		$usuario['Rechazadas'] = $this->modelInicio->Rechazadas($cedula);
 		$usuario['NumeroAprobadas'] = $this->modelInicio->NumeroAprobadas($cedula);
 		$usuario['ConAutorizar'] = $this->modelInicio->ConAutorizar($cedula);   
+		
+		$usuario['NumeroPorAprobar'] = $this->modelInicio->NumeroPorAprobar2();
+		$usuario['NumeroRechazadas'] = $this->modelInicio->NumeroRechazadas();
 		
 		$this->load->view('Vendedor/VPrincipal', $usuario);	
 	}

@@ -145,11 +145,13 @@
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
-            <td align="right"><b>Descuento:</b></td>
-            <td><?php foreach ($Descuento as $row){
-							echo $row['Descuento']; 
-							     }?>
-% </td>
+            <td align="right"><b>
+              <?php if(isset($row['Descuento'])) { foreach ($Descuento as $row){
+							echo "<b>Descuento:</b>"; 
+							     }}?></b></td>
+            <td><?php if(isset($row['Descuento'])) { foreach ($Descuento as $row){
+							echo $row['Descuento']; echo "%";
+							     }}?></td>
           </tr>
           <tr>
             <td>&nbsp;</td>
