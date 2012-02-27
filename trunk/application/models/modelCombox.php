@@ -29,9 +29,14 @@ class ModelCombox extends CI_Model {
 		return $query->result_array();
 	}
 	
-	function ComboEquipos($id)
+	function ComboEquipos($id2)
 	{
-		$query = $this->db->query('SELECT DISTINCT(E.Id_Equipo), E.Nombre FROM Equipo AS E, ML_Equipo AS ME, Marca_Linea AS ML WHERE E.Id_Equipo = ME.Id_Equipo AND ME.Id_Marca_Linea = ML.Id_Marca_Linea AND ML.Id_Linea = '.$id.'');		
+		$query = $this->db->query('SELECT DISTINCT(E.Id_Equipo), E.Nombre
+								   FROM Equipo AS E, ML_Equipo AS ME, Marca_Linea AS ML, Linea AS L
+								   WHERE E.Id_Equipo = ME.Id_Equipo
+								   AND ME.Id_Marca_Linea = ML.Id_Marca_Linea
+								   AND L.Id_Linea = ML.Id_Linea
+								   AND L.Id_Linea = '.$id2.'');		
 		return $query->result_array();
 	}
 	

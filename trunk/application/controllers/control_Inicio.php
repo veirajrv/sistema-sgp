@@ -83,8 +83,8 @@ class Control_Inicio extends CI_Controller
 				$usuario2['ConAutorizar'] = $this->modelInicio->ConAutorizar($cedula);
 				$usuario2['ConAlerta'] = $this->modelInicio->ConAlerta($cedula); 
 				
-				$usuario['NumeroPorAprobar'] = $this->modelInicio->NumeroPorAprobar2();
-				$usuario['NumeroRechazadas'] = $this->modelInicio->NumeroRechazadas();
+				$usuario2['NumeroPorAprobar'] = $this->modelInicio->NumeroPorAprobar2();
+				$usuario2['NumeroRechazadas'] = $this->modelInicio->NumeroRechazadas();
 				
 				$this->load->view('Vendedor/VPrincipal', $usuario2);
 			}
