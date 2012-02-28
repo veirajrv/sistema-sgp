@@ -232,17 +232,10 @@ textarea.LV_invalid_field:active {
           <td><fieldset><legend style="font-size:15px"><b>Datos Personales</b></legend>
               <table width="410" border="0">
                 <tr>
-                  <td width="147" align="right"><font style="font-size:12px">Codigo Cliente:</font></td>
-                  <td colspan="2">
-                    <input name="Cliente" type="text" required="required" id="Cliente" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" onkeypress="return validar(event)" readonly="readonly" value="<?php echo $Cliente ?>" maxlength="150"/>                  </td>
-                </tr>
-                <tr>
-                  <td align="right"><font style="font-size:12px">Usuario:</font></td>
-                  <td colspan="2">
-                    <input name="Apellido" type="text" required="required" id="Apellido" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" onkeypress="return validar(event)" readonly="readonly" value="<?php echo $Usuario ?>" maxlength="150"/>                  </td>
-                </tr>
-                <tr>
-                  <td align="right"><font style="font-size:12px">Instituto de trabajo:</font></td>
+                  <td width="147" align="right"><font style="font-size:12px">
+                    <input name="Cliente" type="hidden" required="required" id="Cliente" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" onkeypress="return validar(event)" readonly="readonly" value="<?php echo $Cliente ?>" maxlength="150"/>
+                    <input name="Apellido" type="hidden" required="required" id="Apellido" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" onkeypress="return validar(event)" readonly="readonly" value="<?php echo $Usuario ?>" maxlength="150"/>
+                    Instituto de trabajo:</font></td>
                   <td width="206">
                     <select name="Instituto" size="1" id="Instituto" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" disabled="disabled">
                       <?php
