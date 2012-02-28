@@ -64,6 +64,8 @@ class Control_Institucion extends CI_Controller {
 		
 		$usuario['Mensaje'] = 'Se agrego la instituci&oacute;n con &eacute;xito!';
 		
+		$usuario['Pais'] = $this->modelInstitucion->BuscarPais();
+		
 		$this->load->view('Vendedor/Institucion/VInstitucion', $usuario);
 	}
 	
