@@ -289,6 +289,9 @@ f10.add( Validate.Length, { is: 11 } );</script>                  </td>
                   <td>
                     <textarea name="Direccion3" id="Direccion3" style="width:200px; font-size-adjust:inherit; height:50px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" placeholder="Direccion Extra" disabled="disabled"><?php echo $Direccion3; ?></textarea>                  </td>
                 </tr>
+                <tr>
+                  <td colspan="3" align="center"><font style="font-size:12px"><a href="<?php echo base_url();?>index.php/Control_Cliente/vinculaciones/<?php echo $id_cliente; ?>">Vinculaciones de trabajo</a></font></td>
+                  </tr>
               </table>             </td>
         </tr>
         <tr>

@@ -85,12 +85,12 @@ class Control_Cliente extends CI_Controller {
 			
 		if(isset($_POST['checkbox2']))
 		{
-				$usuario3 = $Usuario;
-				$EIC2['Id_Empleado'] = $this->modelCliente->BuscarId($usuario3);
-				$EIC2['Id_Institucion'] = $_POST['Instituto2'];
-				$EIC2['Id_Cliente'] = $maxcliente;
-				$this->modelCliente->InsertarAgenda2($EIC2);
-			}
+			$usuario3 = $Usuario;
+			$EIC2['Id_Empleado'] = $this->modelCliente->BuscarId($usuario3);
+			$EIC2['Id_Institucion'] = $_POST['Instituto2'];
+			$EIC2['Id_Cliente'] = $maxcliente;
+			$this->modelCliente->InsertarAgenda2($EIC2);
+		}
 			
 		$usuario['Institucion'] = $this->modelInstitucion->BuscarInstituciones();
 			
@@ -123,6 +123,8 @@ class Control_Cliente extends CI_Controller {
 		$usuario['Direccion1'] = $this->modelCliente->DireccionCliente($id_cliente);
 		$usuario['Direccion2'] = $this->modelCliente->Direccion2Cliente($id_cliente);
 		$usuario['Direccion3'] = $this->modelCliente->Direccion3Cliente($id_cliente);
+		
+		$usuario['Institucion'] = $this->modelInstitucion->BuscarInstituciones();
 		
 		$this->load->view('Vendedor/Cliente/VVerPerfilCliente', $usuario);
 	}
@@ -159,11 +161,11 @@ class Control_Cliente extends CI_Controller {
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
 		$id_cliente = $_POST['Cliente'];
-			
+		
 		$datos['ID2'] = $id_cliente;
 		$cliente = new ModelCliente;
 		$this->modelCliente->ModificarCliente($cliente, $datos);
-			
+		
 		$usuario['id_cliente'] = $id_cliente;
 		$usuario['Nombre'] = $this->modelCliente->NombreCliente($id_cliente);
 		$usuario['Apellido'] = $this->modelCliente->ApellidoCliente($id_cliente);
@@ -183,6 +185,8 @@ class Control_Cliente extends CI_Controller {
 		$usuario['Direccion3'] = $this->modelCliente->Direccion3Cliente($id_cliente);
 			
 		$usuario['Mensaje'] = 'Se modificaron los datos del cliente con &eacute;xito!';
+		
+		$usuario['Institucion'] = $this->modelInstitucion->BuscarInstituciones();
 			
 		$this->load->view('Vendedor/Cliente/VVerPerfilCliente', $usuario);
 	}
@@ -375,5 +379,47 @@ class Control_Cliente extends CI_Controller {
 		$usuario['Datos'] = $this->modelCliente->DetalleCliente($id);
 		
 		$this->load->view('Administrador/ADetalleCliente2', $usuario);
+	}
+	
+	public function vinculaciones($id_cliente)
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$usuario['Cliente'] = $id_cliente;
+		
+		$usuario['Institucion'] = $this->modelInstitucion->BuscarInstituciones();
+			
+		$this->load->view('Vendedor/Cliente/VVinculacion', $usuario);
+	}
+	
+	public function vinculaciones2()
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$usuario['Cliente'] = $_POST['Cliente'];
+		
+		if(isset($_POST['checkbox']))
+		{
+			$usuario2 = $Usuario;
+			$EIC['Id_Empleado'] = $this->modelCliente->BuscarId($usuario2);
+			$EIC['Id_Institucion'] = $_POST['Instituto'];
+			$EIC['Id_Cliente'] = $_POST['Cliente'];
+			$this->modelCliente->InsertarAgenda($EIC);
+		}
+			
+		if(isset($_POST['checkbox2']))
+		{
+			$usuario3 = $Usuario;
+			$EIC2['Id_Empleado'] = $this->modelCliente->BuscarId($usuario3);
+			$EIC2['Id_Institucion'] = $_POST['Instituto2'];
+			$EIC2['Id_Cliente'] = $_POST['Cliente'];
+			$this->modelCliente->InsertarAgenda2($EIC2);
+		}
+		
+		$usuario['Mensaje'] = 'Se vinculo al cliente con &eacute;xito!';
+		
+		$usuario['Institucion'] = $this->modelInstitucion->BuscarInstituciones();
+			
+		$this->load->view('Vendedor/Cliente/VVinculacion', $usuario);
 	}
 }
