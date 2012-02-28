@@ -60,7 +60,7 @@ class Control_Institucion extends CI_Controller {
 		$Institucion['Direccion2'] = $_POST['Direccion2'];
 		$Institucion['Direccion3'] = $_POST['Direccion3'];
 		
-		$this->modelInstitucion->InsertarInstitucion($Institucion);
+		$this->modelInstitucion->InsertarInstitucion($Institucion);;
 		
 		$usuario['Mensaje'] = 'Se agrego la instituci&oacute;n con &eacute;xito!';
 		
