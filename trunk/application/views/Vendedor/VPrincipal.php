@@ -169,7 +169,7 @@ return false;
 <div id="cc">
   <table width="440" border="0">
     <tr>
-      <td colspan="2" align="center"><font style="font-size:12px;">Usted tienes <?php echo "<font style='font-size:18px;' color='#FF0000'><b>$NumeroPorAprobar</b></font>" ?> negociaciones <font style="font-size:12px; color:#369"><b>por aprobadas</b></font></font></td>
+      <td colspan="2" align="center"><font style="font-size:12px;">Usted tienes <?php echo "<font style='font-size:18px;' color='#FF0000'><b>$NumeroPorAprobar</b></font>" ?> negociaciones <font style="font-size:12px; color:#369"><b>por aprobar</b></font></font></td>
       </tr>
     <tr>
       <td width="160" align="right"><font style="font-size:12px; color:#369"><b>Negociaciones por aprobar:</b></font></td>
