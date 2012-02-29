@@ -158,17 +158,19 @@
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
-            <td width="175" align="right"><b>Neto:</b></td>
-            <td width="35"><?php echo $Neto; ?></td>
+            <td width="175" align="right"><?php if($Total <> NULL){ echo "<b>Neto:</b>"; 
+							     }?></td>
+            <td width="35"><?php if($Total <> NULL){ echo $Neto; }?></td>
           </tr>
           <tr>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
-            <td align="right"><b>I.V.A 12%:</b></td>
-            <td><?php foreach ($Descuento as $row){
-							echo substr($row['Total']*0.12,0,8); 
+            <td align="right"><?php if($Total <> NULL){ echo "<b>I.V.A. 12%:</b>"; 
 							     }?></td>
+            <td><?php if($Total <> NULL){foreach ($Descuento as $row){
+							echo substr($row['Total']*0.12,0,8); 
+							     }}?></td>
           </tr>
           <tr>
             <td>&nbsp;</td>

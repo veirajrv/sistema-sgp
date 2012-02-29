@@ -1065,6 +1065,8 @@ class control_Negociacion extends CI_Controller {
 		$usuario['Lista2'] = $this->modelProducto->ConsultarLista2($Id_Negociacion);
 		
 		$usuario['Descuento'] = $this->modelProducto->ConsultarDescuento($Id_Negociacion);
+		$usuario['Total'] = $this->modelProducto->ConsultarTotal($Id_Negociacion);
+		
 		$Neto = $this->modelProducto->Neto($Id_Negociacion);
 		$Neto2 = $this->modelProducto->Neto2($Id_Negociacion);
 		$Neto3 = $Neto+$Neto2;

@@ -352,4 +352,16 @@ A.Precio * H.Cantidad) AS Monto
 		return $query->result_array();
 	}
 	
+	function ConsultarTotal($id) 
+	{
+		$query = $this->db->select("Total");
+		$query = $this->db->where("Id_Negociacion", $id);
+		$query = $this->db->get("negociacion");
+		foreach ($query->result_array() as $row)
+	{
+		$total = $row['Total'];
+	}
+		return $total;
+	}
+	
 }
