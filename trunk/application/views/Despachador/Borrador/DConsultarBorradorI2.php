@@ -369,7 +369,7 @@ function CambiaColor(esto,borde,texto)
               <td><a href="sdfsdf">
                 <?php $j=0; foreach ($Lista as $row){
 							
-							echo '<a href="<?php echo base_url();?>index.php/Control_Venta/eliminar_producto/'.$row['Id_HistorialNP'].'/'.$Id.'/'.$Id_Negociacion.'">ELIMINAR</a>'; echo '</br>';
+							echo '<a href="elp21.no-ip.info:4085/SGP/index.php/Control_Venta/eliminar_producto/'.$row['Id_HistorialNP'].'/'.$Id.'/'.$Id_Negociacion.'">ELIMINAR</a>'; echo '</br>';
 							
 							$j++;}?>
               </a></td>
