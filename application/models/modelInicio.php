@@ -349,14 +349,17 @@ class ModelInicio extends CI_Model
 		return $query->result_array();	
 	}
 	
-	function NumeroPorAprobar2()
+	function NumeroPorAprobar2($cedula)
 	{
 		$query = $this->db->query('SELECT Count(N.Id_Negociacion) AS Numero
-							   FROM NEGOCIACION AS N, SEGUIMIENTO AS S, NS AS NS
-							   WHERE N.Id_Negociacion = NS.Id_Negociacion
+							   FROM NEGOCIACION AS N, EMPLEADO AS E, NS AS NS, SEGUIMIENTO AS S
+							   WHERE E.Cedula = N.Id_Empleado
+							   AND N.Id_Negociacion = NS.Id_Negociacion
 							   AND NS.Id_Seguimiento = S.Id_Seguimiento
+							   AND N.Id_Empleado = '.$cedula.'
+							   AND ((S.Status = "Borrador") || (S.Status = "Activa"))
 							   AND N.Status = 1
-							   AND ((S.Status = "Borrador") || (S.Status = "Activa"))');	
+							   ORDER BY N.Id_Negociacion ASC');	
 		
 		foreach ($query->result_array() as $row)
 	{

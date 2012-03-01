@@ -660,10 +660,10 @@ class control_Negociacion extends CI_Controller {
 		$usuario['SinAutorizar'] = $this->modelInicio->SinAutorizar($cedula);
 		$usuario['NumeroAprobadas'] = $this->modelInicio->NumeroAprobadas($cedula);
 		$usuario['ConAutorizar'] = $this->modelInicio->ConAutorizar($cedula);
-		$usuario['NumeroPorAprobar'] = $this->modelInicio->NumeroPorAprobar();
+		//$usuario['NumeroPorAprobar'] = $this->modelInicio->NumeroPorAprobar();
 		$usuario['ConAlerta'] = $this->modelInicio->ConAlerta($cedula);
 		
-		$usuario['NumeroPorAprobar'] = $this->modelInicio->NumeroPorAprobar2();
+		$usuario['NumeroPorAprobar'] = $this->modelInicio->NumeroPorAprobar2($cedula);
 		$usuario['NumeroRechazadas'] = $this->modelInicio->NumeroRechazadas();
 		
 		//$this->load->library('email');  
@@ -745,7 +745,8 @@ class control_Negociacion extends CI_Controller {
 		$usuario['Id_Negociacion'] = $_POST['Nego']; // Id Negociacion //
 		$Id_Negociacion2 = $_POST['Nego'];
 		$Id_Negociacion = $this->modelNegociacion->BuscarExiste($Id_Negociacion2);
-		if ($Id_Negociacion == NULL)
+		$stado = $this->modelNegociacion->BuscarEstado($Id_Negociacion2);
+		if (($Id_Negociacion == NULL) || ($stado == 2))
 		{
 			$cedula = $this->modelCliente->BuscarId($Usuario);
 			$usuario['SinAutorizar'] = $this->modelInicio->SinAutorizar($cedula);
@@ -754,7 +755,7 @@ class control_Negociacion extends CI_Controller {
 			$usuario['ConAutorizar'] = $this->modelInicio->ConAutorizar($cedula);    	
 			$usuario['ConAlerta'] = $this->modelInicio->ConAlerta($cedula); 
 			
-			$usuario['NumeroPorAprobar'] = $this->modelInicio->NumeroPorAprobar2();
+			$usuario['NumeroPorAprobar'] = $this->modelInicio->NumeroPorAprobar2($cedula);
 			$usuario['NumeroRechazadas'] = $this->modelInicio->NumeroRechazadas();
 		
 			$this->load->view('Vendedor/VPrincipal', $usuario);
@@ -786,7 +787,7 @@ class control_Negociacion extends CI_Controller {
 			$Neto2 = $this->modelProducto->Neto2($Id_Negociacion);
 			$Neto3 = $Neto+$Neto2;
 			$usuario['Neto'] = $Neto3;
-			//$usuario['Iva'] = $Neto3*0.12;
+			$usuario['Total'] = $this->modelProducto->ConsultarTotal($Id_Negociacion);
 			
 			$this->load->view('Vendedor/Borrador/VVistaPreviaPrueba', $usuario);
 		}
@@ -812,7 +813,7 @@ class control_Negociacion extends CI_Controller {
 			$Neto2 = $this->modelProducto->Neto2($Id_Negociacion);
 			$Neto3 = $Neto+$Neto2;
 			$usuario['Neto'] = $Neto3;
-			//$usuario['Iva'] = $Neto3*0.12;
+			$usuario['Total'] = $this->modelProducto->ConsultarTotal($Id_Negociacion);
 			
 			$this->load->view('Vendedor/Borrador/VVistaPreviaPruebaI', $usuario);
 		}		
@@ -1097,7 +1098,7 @@ class control_Negociacion extends CI_Controller {
 		$Neto2 = $this->modelProducto->Neto2($Id_Negociacion);
 		$Neto3 = $Neto+$Neto2;
 		$usuario['Neto'] = $Neto3;
-		//$usuario['Iva'] = $Neto3*0.12;
+		$usuario['Total'] = $this->modelProducto->ConsultarTotal($Id_Negociacion);
 		
 		$this->load->view('Vendedor/Borrador/VVistaPreviaPruebaI', $usuario);
 	}
@@ -2220,7 +2221,7 @@ class control_Negociacion extends CI_Controller {
 		$usuario['ConAutorizar'] = $this->modelInicio->ConAutorizar($cedula);    	
 		$usuario['ConAlerta'] = $this->modelInicio->ConAlerta($cedula); 
 		
-		$usuario['NumeroPorAprobar'] = $this->modelInicio->NumeroPorAprobar2();
+		$usuario['NumeroPorAprobar'] = $this->modelInicio->NumeroPorAprobar2($cedula);
 		$usuario['NumeroRechazadas'] = $this->modelInicio->NumeroRechazadas();
 		
 		$this->load->view('Vendedor/VPrincipal', $usuario);
@@ -2305,6 +2306,8 @@ class control_Negociacion extends CI_Controller {
 		$usuario['Neto'] = $Neto3;
 		$usuario['Iva'] = $Neto3*0.12;
 		
+		$usuario['Total'] = $this->modelProducto->ConsultarTotal($Id_Negociacion);
+		
 		$this->load->view('Vendedor/Borrador/VImprecion', $usuario);
 	}
 	
@@ -2330,6 +2333,8 @@ class control_Negociacion extends CI_Controller {
 		$Neto3 = $Neto+$Neto2;
 		$usuario['Neto'] = $Neto3;
 		$usuario['Iva'] = $Neto3*0.12;
+		
+		$usuario['Total'] = $this->modelProducto->ConsultarTotal($Id_Negociacion);
 		
 		$this->load->view('Vendedor/Borrador/VImprecion2', $usuario);
 	}

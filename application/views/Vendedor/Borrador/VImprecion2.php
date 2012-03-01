@@ -131,25 +131,28 @@
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
-            <td width="173" align="right"><b>Neto:</b></td>
-            <td width="38"><?php echo $Neto; ?></td>
+            <td width="173" align="right"><?php if($Total <> NULL){ echo "<b>Neto:</b>"; 
+							     }?></td>
+            <td width="38"><?php if($Total <> NULL){ echo $Neto; }?></td>
           </tr>
           <tr>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
-            <td align="right"><b>I.V.A 12%:</b></td>
-            <td><?php echo $Iva; ?></td>
+            <td align="right"><?php if($Total <> NULL){ echo "<b>I.V.A. 12%:</b>"; 
+							     }?></td>
+            <td><?php if($Total <> NULL){foreach ($Descuento as $row){
+							echo substr($row['Total']*0.12,0,8); 
+							     }}?></td>
           </tr>
           <tr>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
-            <td align="right"><b>
-              <?php if(isset($row['Descuento'])) { foreach ($Descuento as $row){
+            <td align="right"><?php if($Total <> NULL) { foreach ($Descuento as $row){
 							echo "<b>Descuento:</b>"; 
-							     }}?></b></td>
-            <td><?php if(isset($row['Descuento'])) { foreach ($Descuento as $row){
+							     }}?></td>
+            <td><?php if($Total <> NULL) { foreach ($Descuento as $row){
 							echo $row['Descuento']; echo "%";
 							     }}?></td>
           </tr>
@@ -159,7 +162,7 @@
             <td>&nbsp;</td>
             <td align="right"><b>TOTAL:</b></td>
             <td bgcolor="#FFFF00"><?php foreach ($Descuento as $row){
-							echo $row['Total']; 
+							echo substr($row['Total'] + ($row['Total']*0.12),0,8); 
 							     }?></td>
           </tr>
         </table>    </td>
