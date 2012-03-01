@@ -795,6 +795,18 @@ class modelNegociacion extends CI_Model {
 		return $contador;
 	}
 	
+	function BuscarEstado($IdNegoBorrador) 
+	{
+		$query = $this->db->select("Status");
+		$query = $this->db->where("Id_Negociacion", $IdNegoBorrador);
+		$query = $this->db->get("Negociacion");
+		foreach ($query->result_array() as $row)
+	{
+		$status = $row['Status'];
+	}
+		return $status;
+    }
+	
 	function BuscarExiste($Id_Negociacion2) 
 	{
 		$query = $this->db->select("Id_Negociacion");

@@ -176,10 +176,10 @@
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
-            <td align="right"><?php if(isset($row['Descuento'])) { foreach ($Descuento as $row){
+            <td align="right"><?php if($Total <> NULL) { foreach ($Descuento as $row){
 							echo "<b>Descuento:</b>"; 
 							     }}?></td>
-            <td><?php if(isset($row['Descuento'])) { foreach ($Descuento as $row){
+            <td><?php if($Total <> NULL) { foreach ($Descuento as $row){
 							echo $row['Descuento']; echo "%";
 							     }}?></td>
           </tr>
