@@ -49,7 +49,18 @@ class modelNegociacion extends CI_Model {
 		$Seguimiento->TipoS = $_POST['TipoC'];
 		$Seguimiento->Resumen = $_POST['ResumenC'];
 		$Seguimiento->Status = $_POST['StatusC'];
-		$this->db->insert('Historial_Ns', $Seguimiento);
+		
+		$Status = $_POST['StatusC'];
+		
+		$fechapago = $this->modelNegociacion->BuscarFechaPago($id);
+		if(($fechapago == NULL) && ($Status == "Ganada"))
+		{
+			
+		}
+		else
+		{
+			$this->db->insert('Historial_Ns', $Seguimiento);
+		}
 	}
 	
 	function HistorialRechazos($Seguimiento, $datos) 
@@ -827,19 +838,44 @@ class modelNegociacion extends CI_Model {
 		}	
 	}	
 	
+	function BuscarFechaPago($IdNegoBorrador) 
+	{
+		$query = $this->db->select("FechaPago");
+		$query = $this->db->where("Id_Negociacion", $IdNegoBorrador);
+		$query = $this->db->get("Negociacion");
+		foreach ($query->result_array() as $row)
+	{
+		$fechap = $row['FechaPago'];
+	}
+		return $fechap;
+    }
+	
 	## UPDATE ##
 	
 	function ModificarStatus($Seguimiento, $datos) 
 	{	
+		
 		$Seguimiento->FechaS = $_POST['FechaC'];
 		$Seguimiento->TipoS = $_POST['TipoC'];
 		$Seguimiento->Resumen = $_POST['ResumenC'];
 		$Seguimiento->Status = $_POST['StatusC'];
 		$id = $datos['ID2'];
+		$Status = $_POST['StatusC'];
+		
+		$fechapago = $this->modelNegociacion->BuscarFechaPago($id);
+		if(($fechapago == NULL) && ($Status == "Ganada"))
+		{
+			echo " 
+                <script language='JavaScript'> 
+                alert('No puede poner la negociacion en ganada hasta que no llene todos los datos previos de la misma'); 
+                </script>";
+		}
+		else
+		{
 		$this->db->where("Id_Seguimiento", $id);
 		$this->db->update('Seguimiento', $Seguimiento);
 		
-		$Status = $_POST['StatusC'];
+		//$Status = $_POST['StatusC'];
 		if($Status == "Borrador")
 		{
 			$Seguimiento2 = new ModelNegociacion;
@@ -867,6 +903,7 @@ class modelNegociacion extends CI_Model {
 			$Seguimiento2->Porcentaje = '0';
 			$this->db->where("Id_Seguimiento", $id);
 			$this->db->update('Seguimiento', $Seguimiento2);
+		}
 		}
 	}
 	
