@@ -81,6 +81,8 @@ class Control_Reporte extends CI_Controller
 			
 		$usuario['table'] = $this->table->generate();
 		
+		$usuario['titulo'] = "Lista de clientes";
+		
 		$this->load->view('Administrador/Reporte/RCliente/RVista_1', $usuario);
 	}
 	
@@ -108,10 +110,13 @@ class Control_Reporte extends CI_Controller
 			
 		$usuario['table'] = $this->table->generate();
 		
+		if($tipo == "Publico"){ $usuario['titulo'] = "Negociaciones con clientes publicos"; }
+		if($tipo == "Privado"){ $usuario['titulo'] = "Negociaciones con clientes privados"; }
+		
 		$this->load->view('Administrador/Reporte/RCliente/RVista_1', $usuario);
 	}
 	
-	public function lista_clientes_tstatus($status)
+	public function lista_clientes_tstatus($status, $numero)
 	{
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
@@ -136,10 +141,18 @@ class Control_Reporte extends CI_Controller
 			
 		$usuario['table'] = $this->table->generate();
 		
+		if($numero == 1){ $usuario['titulo'] = "Clientes publicos y privados en status borrador"; }
+		if($numero == 2){ $usuario['titulo'] = "Clientes publicos y privados en status Activa"; }
+		if($numero == 3){ $usuario['titulo'] = "Clientes publicos y privados en status > 75%"; }
+		if($numero == 4){ $usuario['titulo'] = "Clientes publicos y privados en status > 90%"; }
+		if($numero == 5){ $usuario['titulo'] = "Clientes publicos y privados en status Ganada"; }
+		if($numero == 6){ $usuario['titulo'] = "Clientes publicos y privados en status Cerrada"; }
+		if($numero == 7){ $usuario['titulo'] = "Clientes publicos y privados en status Perdida"; }
+		
 		$this->load->view('Administrador/Reporte/RCliente/RVista_1', $usuario);
 	}
 	
-	public function lista_por_especialidad($especialidad)
+	public function lista_por_especialidad($especialidad, $numero)
 	{
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
@@ -162,6 +175,29 @@ class Control_Reporte extends CI_Controller
 		}
 			
 		$usuario['table'] = $this->table->generate();
+		
+		if($numero == 1){ $usuario['titulo'] = "Clientes por la especialidad Cirugia"; }
+		if($numero == 2){ $usuario['titulo'] = "Clientes por la especialidad Emergenciologia"; }
+		if($numero == 3){ $usuario['titulo'] = "Clientes por la especialidad Fisiatria"; }
+		if($numero == 4){ $usuario['titulo'] = "Clientes por la especialidad Fisioterapia"; }
+		if($numero == 5){ $usuario['titulo'] = "Clientes por la especialidad Ginecologia"; }
+		if($numero == 6){ $usuario['titulo'] = "Clientes por la especialidad Gineco-Obstetricia"; }
+		if($numero == 7){ $usuario['titulo'] = "Clientes por la especialidad Imagenologia"; }
+		if($numero == 8){ $usuario['titulo'] = "Clientes por la especialidad Intensivista"; }
+		if($numero == 9){ $usuario['titulo'] = "Clientes por la especialidad Mastologia"; }
+		if($numero == 10){ $usuario['titulo'] = "Clientes por la especialidad Nefrologia"; }
+		if($numero == 11){ $usuario['titulo'] = "Clientes por la especialidad Neumonologia"; }
+		if($numero == 12){ $usuario['titulo'] = "Clientes por la especialidad Nutricion"; }
+		if($numero == 13){ $usuario['titulo'] = "Clientes por la especialidad Nutrologia"; }
+		if($numero == 14){ $usuario['titulo'] = "Clientes por la especialidad Obstetricia"; }
+		if($numero == 15){ $usuario['titulo'] = "Clientes por la especialidad Oncologia"; }
+		if($numero == 16){ $usuario['titulo'] = "Clientes por la especialidad Pediatria"; }
+		if($numero == 17){ $usuario['titulo'] = "Clientes por la especialidad Radiologia"; }
+		if($numero == 18){ $usuario['titulo'] = "Clientes por la especialidad Traumatologia"; }
+		if($numero == 19){ $usuario['titulo'] = "Clientes por la especialidad Medicina Interna"; }
+		if($numero == 20){ $usuario['titulo'] = "Clientes por la especialidad Endocrinologia"; }
+		if($numero == 21){ $usuario['titulo'] = "Clientes por la especialidad Anestesiologia"; }
+		if($numero == 22){ $usuario['titulo'] = "Clientes por la especialidad Multi-Especialidad"; }
 		
 		$this->load->view('Administrador/Reporte/RCliente/RVista_1', $usuario);
 	}
@@ -189,6 +225,9 @@ class Control_Reporte extends CI_Controller
 		}
 			
 		$usuario['table'] = $this->table->generate();
+		
+		if($sexo == "Hombre"){ $usuario['titulo'] = "Clientes del sexo masculino"; }
+		if($sexo == "Mujer"){ $usuario['titulo'] = "Clientes del sexo femenino"; }
 		
 		$this->load->view('Administrador/Reporte/RCliente/RVista_1', $usuario);
 	}
@@ -219,6 +258,8 @@ class Control_Reporte extends CI_Controller
 			
 		$usuario['table'] = $this->table->generate();
 		
+		$usuario['titulo'] = "Clientes con mas negociaciones abiertas";
+		
 		$this->load->view('Administrador/Reporte/RCliente/RVista_1', $usuario);
 	}
 	
@@ -248,10 +289,12 @@ class Control_Reporte extends CI_Controller
 			
 		$usuario['table'] = $this->table->generate();
 		
+		$usuario['titulo'] = "Clientes con menos negociaciones abiertas";
+		
 		$this->load->view('Administrador/Reporte/RCliente/RVista_1', $usuario);
 	}
 	
-	public function lista_clientes_bagcp($Porcentaje)
+	public function lista_clientes_bagcp($Porcentaje, $numero)
 	{
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
@@ -275,6 +318,14 @@ class Control_Reporte extends CI_Controller
 		}
 			
 		$usuario['table'] = $this->table->generate();
+		
+		if($numero == 1){ $usuario['titulo'] = "Total de negociaciones por cliente en status borrador"; }
+		if($numero == 2){ $usuario['titulo'] = "Total de negociaciones por cliente en status Activa"; }
+		if($numero == 3){ $usuario['titulo'] = "Total de negociaciones por cliente en status > 75%"; }
+		if($numero == 4){ $usuario['titulo'] = "Total de negociaciones por cliente en status > 90%"; }
+		if($numero == 5){ $usuario['titulo'] = "Total de negociaciones por cliente en status Ganada"; }
+		if($numero == 6){ $usuario['titulo'] = "Total de negociaciones por cliente en status Cerrada"; }
+		if($numero == 7){ $usuario['titulo'] = "Total de negociaciones por cliente en status Perdida"; }
 		
 		$this->load->view('Administrador/Reporte/RCliente/RVista_1', $usuario);
 	}
@@ -305,6 +356,8 @@ class Control_Reporte extends CI_Controller
 			
 		$usuario['table'] = $this->table->generate();
 		
+		$usuario['titulo'] = "Lista de instituciones";
+		
 		$this->load->view('Administrador/Reporte/RInstitucion/RVista_2', $usuario);
 	}
 	
@@ -332,10 +385,13 @@ class Control_Reporte extends CI_Controller
 			
 		$usuario['table'] = $this->table->generate();
 		
+		if($tipo == "Publico"){ $usuario['titulo'] = "Negociaciones con instituciones publicas"; }
+		if($tipo == "Privado"){ $usuario['titulo'] = "Negociaciones con instituciones privadas"; }
+		
 		$this->load->view('Administrador/Reporte/RInstitucion/RVista_2', $usuario);
 	}
 	
-	public function lista_instituciones_tstatus($status)
+	public function lista_instituciones_tstatus($status, $numero)
 	{
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
@@ -359,6 +415,14 @@ class Control_Reporte extends CI_Controller
 		}
 			
 		$usuario['table'] = $this->table->generate();
+		
+		if($numero == 1){ $usuario['titulo'] = "Instituciones publicas y privadas en status borrador"; }
+		if($numero == 2){ $usuario['titulo'] = "Instituciones publicas y privadas en status Activa"; }
+		if($numero == 3){ $usuario['titulo'] = "Instituciones publicas y privadas en status > 75%"; }
+		if($numero == 4){ $usuario['titulo'] = "Instituciones publicas y privadas en status > 90%"; }
+		if($numero == 5){ $usuario['titulo'] = "Instituciones publicas y privadas en status Ganada"; }
+		if($numero == 6){ $usuario['titulo'] = "Instituciones publicas y privadas en status Cerrada"; }
+		if($numero == 7){ $usuario['titulo'] = "Instituciones publicas y privadas en status Perdida"; }
 		
 		$this->load->view('Administrador/Reporte/RInstitucion/RVista_2', $usuario);
 	}
@@ -414,6 +478,8 @@ class Control_Reporte extends CI_Controller
 			
 		$usuario['table'] = $this->table->generate();
 		
+		$usuario['titulo'] = "Lista de Institucion con mas negociaciones abiertas";
+		
 		$this->load->view('Administrador/Reporte/RInstitucion/RVista_2', $usuario);
 	}
 	
@@ -442,10 +508,12 @@ class Control_Reporte extends CI_Controller
 			
 		$usuario['table'] = $this->table->generate();
 		
+		$usuario['titulo'] = "Lista de Institucion con menos negociaciones abiertas";
+		
 		$this->load->view('Administrador/Reporte/RInstitucion/RVista_2', $usuario);
 	}
 	
-	public function lista_institucion_bagcp($Porcentaje)
+	public function lista_institucion_bagcp($Porcentaje, $numero)
 	{
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
@@ -468,6 +536,14 @@ class Control_Reporte extends CI_Controller
 		}
 			
 		$usuario['table'] = $this->table->generate();
+		
+		if($numero == 1){ $usuario['titulo'] = "Total de negociaciones por Institucion en status borrador"; }
+		if($numero == 2){ $usuario['titulo'] = "Total de negociaciones por Institucion en status Activa"; }
+		if($numero == 3){ $usuario['titulo'] = "Total de negociaciones por Institucion en status > 75%"; }
+		if($numero == 4){ $usuario['titulo'] = "Total de negociaciones por Institucion en status > 90%"; }
+		if($numero == 5){ $usuario['titulo'] = "Total de negociaciones por Institucion en status Ganada"; }
+		if($numero == 6){ $usuario['titulo'] = "Total de negociaciones por Institucion en status Cerrada"; }
+		if($numero == 7){ $usuario['titulo'] = "Total de negociaciones por Institucion en status Perdida"; }
 		
 		$this->load->view('Administrador/Reporte/RInstitucion/RVista_2', $usuario);
 	}
@@ -493,6 +569,8 @@ class Control_Reporte extends CI_Controller
 			
 		$usuario['table'] = $this->table->generate();
 		
+		$usuario['titulo'] = "Lista de marcas";
+		
 		$this->load->view('Administrador/Reporte/RProducto/RVista_3', $usuario);
 	}
 	
@@ -514,6 +592,8 @@ class Control_Reporte extends CI_Controller
 		}
 			
 		$usuario['table'] = $this->table->generate();
+		
+		$usuario['titulo'] = "Lista de lineas";
 		
 		$this->load->view('Administrador/Reporte/RProducto/RVista_3', $usuario);
 	}
@@ -540,6 +620,8 @@ class Control_Reporte extends CI_Controller
 			
 		$usuario['table'] = $this->table->generate();
 		
+		$usuario['titulo'] = "Lista de equipos";
+		
 		$this->load->view('Administrador/Reporte/RProducto/RVista_3', $usuario);
 	}
 	
@@ -565,6 +647,8 @@ class Control_Reporte extends CI_Controller
 		}
 			
 		$usuario['table'] = $this->table->generate();
+		
+		$usuario['titulo'] = "Lista de accesorios";
 		
 		$this->load->view('Administrador/Reporte/RProducto/RVista_3', $usuario);
 	}
@@ -597,10 +681,12 @@ class Control_Reporte extends CI_Controller
 			
 		$usuario['table'] = $this->table->generate();
 		
+		$usuario['titulo'] = "Lista de empleados";
+		
 		$this->load->view('Administrador/Reporte/REmpleado/RVista_4', $usuario);
 	}
 	
-	public function lista_empleado_status($Porcentaje)
+	public function lista_empleado_status($Porcentaje, $numero)
 	{
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
@@ -624,6 +710,13 @@ class Control_Reporte extends CI_Controller
 		}
 			
 		$usuario['table'] = $this->table->generate();
+		
+		if($numero == 1){ $usuario['titulo'] = "Lista de empleados y negociaciones en status borrador"; }
+		if($numero == 2){ $usuario['titulo'] = "Lista de empleados y negociaciones en status Activa"; }
+		if($numero == 3){ $usuario['titulo'] = "Lista de empleados y negociaciones en status > 75%"; }
+		if($numero == 4){ $usuario['titulo'] = "Lista de empleados y negociaciones en status > 90%"; }
+		if($numero == 5){ $usuario['titulo'] = "Lista de empleados y negociaciones en status Ganada y Cerrada"; }
+		if($numero == 6){ $usuario['titulo'] = "Lista de empleados y negociaciones en status Perdida"; }
 		
 		$this->load->view('Administrador/Reporte/REmpleado/RVista_4', $usuario);
 	}
@@ -663,10 +756,12 @@ class Control_Reporte extends CI_Controller
 			
 		$usuario['table'] = $this->table->generate();
 		
+		$usuario['titulo'] = "Lista de negociaciones";
+		
 		$this->load->view('Administrador/Reporte/RNegociacion/RVista_5', $usuario);
 	}
 	
-	public function lista_negociaciones_especial($especialidad)
+	public function lista_negociaciones_especial($especialidad, $numero)
 	{
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
@@ -693,10 +788,33 @@ class Control_Reporte extends CI_Controller
 			
 		$usuario['table'] = $this->table->generate();
 		
+		if($numero == 1){ $usuario['titulo'] = "Negociaciones con la especialidad Cirugia"; }
+		if($numero == 2){ $usuario['titulo'] = "Negociaciones con la especialidad Emergenciologia"; }
+		if($numero == 3){ $usuario['titulo'] = "Negociaciones con la especialidad Fisiatria"; }
+		if($numero == 4){ $usuario['titulo'] = "Negociaciones con la especialidad Fisioterapia"; }
+		if($numero == 5){ $usuario['titulo'] = "Negociaciones con la especialidad Ginecologia"; }
+		if($numero == 6){ $usuario['titulo'] = "Negociaciones con la especialidad Gineco-Obstetricia"; }
+		if($numero == 7){ $usuario['titulo'] = "Negociaciones con la especialidad Imagenologia"; }
+		if($numero == 8){ $usuario['titulo'] = "Negociaciones con la especialidad Intensivista"; }
+		if($numero == 9){ $usuario['titulo'] = "Negociaciones con la especialidad Mastologia"; }
+		if($numero == 10){ $usuario['titulo'] = "Negociaciones con la especialidad Nefrologia"; }
+		if($numero == 11){ $usuario['titulo'] = "Negociaciones con la especialidad Neumonologia"; }
+		if($numero == 12){ $usuario['titulo'] = "Negociaciones con la especialidad Nutricion"; }
+		if($numero == 13){ $usuario['titulo'] = "Negociaciones con la especialidad Nutrologia"; }
+		if($numero == 14){ $usuario['titulo'] = "Negociaciones con la especialidad Obstetricia"; }
+		if($numero == 15){ $usuario['titulo'] = "Negociaciones con la especialidad Oncologia"; }
+		if($numero == 16){ $usuario['titulo'] = "Negociaciones con la especialidad Pediatria"; }
+		if($numero == 17){ $usuario['titulo'] = "Negociaciones con la especialidad Radiologia"; }
+		if($numero == 18){ $usuario['titulo'] = "Negociaciones con la especialidad Traumatologia"; }
+		if($numero == 19){ $usuario['titulo'] = "Negociaciones con la especialidad Medicina Interna"; }
+		if($numero == 20){ $usuario['titulo'] = "Negociaciones con la especialidad Endocrinologia"; }
+		if($numero == 21){ $usuario['titulo'] = "Negociaciones con la especialidad Anestesiologia"; }
+		if($numero == 22){ $usuario['titulo'] = "Negociaciones con la especialidad Multi-Especialidad"; }
+		
 		$this->load->view('Administrador/Reporte/RNegociacion/RVista_5', $usuario);
 	}
 	
-	public function lista_negociaciones_especiali($especialidad)
+	public function lista_negociaciones_especiali($especialidad, $numero)
 	{
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
@@ -721,6 +839,29 @@ class Control_Reporte extends CI_Controller
 		}
 			
 		$usuario['table'] = $this->table->generate();
+		
+		if($numero == 1){ $usuario['titulo'] = "Negociaciones con la especialidad Cirugia"; }
+		if($numero == 2){ $usuario['titulo'] = "Negociaciones con la especialidad Emergenciologia"; }
+		if($numero == 3){ $usuario['titulo'] = "Negociaciones con la especialidad Fisiatria"; }
+		if($numero == 4){ $usuario['titulo'] = "Negociaciones con la especialidad Fisioterapia"; }
+		if($numero == 5){ $usuario['titulo'] = "Negociaciones con la especialidad Ginecologia"; }
+		if($numero == 6){ $usuario['titulo'] = "Negociaciones con la especialidad Gineco-Obstetricia"; }
+		if($numero == 7){ $usuario['titulo'] = "Negociaciones con la especialidad Imagenologia"; }
+		if($numero == 8){ $usuario['titulo'] = "Negociaciones con la especialidad Intensivista"; }
+		if($numero == 9){ $usuario['titulo'] = "Negociaciones con la especialidad Mastologia"; }
+		if($numero == 10){ $usuario['titulo'] = "Negociaciones con la especialidad Nefrologia"; }
+		if($numero == 11){ $usuario['titulo'] = "Negociaciones con la especialidad Neumonologia"; }
+		if($numero == 12){ $usuario['titulo'] = "Negociaciones con la especialidad Nutricion"; }
+		if($numero == 13){ $usuario['titulo'] = "Negociaciones con la especialidad Nutrologia"; }
+		if($numero == 14){ $usuario['titulo'] = "Negociaciones con la especialidad Obstetricia"; }
+		if($numero == 15){ $usuario['titulo'] = "Negociaciones con la especialidad Oncologia"; }
+		if($numero == 16){ $usuario['titulo'] = "Negociaciones con la especialidad Pediatria"; }
+		if($numero == 17){ $usuario['titulo'] = "Negociaciones con la especialidad Radiologia"; }
+		if($numero == 18){ $usuario['titulo'] = "Negociaciones con la especialidad Traumatologia"; }
+		if($numero == 19){ $usuario['titulo'] = "Negociaciones con la especialidad Medicina Interna"; }
+		if($numero == 20){ $usuario['titulo'] = "Negociaciones con la especialidad Endocrinologia"; }
+		if($numero == 21){ $usuario['titulo'] = "Negociaciones con la especialidad Anestesiologia"; }
+		if($numero == 22){ $usuario['titulo'] = "Negociaciones con la especialidad Multi-Especialidad"; }
 		
 		$this->load->view('Administrador/Reporte/RNegociacion/RVista_5', $usuario);
 	}

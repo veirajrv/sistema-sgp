@@ -158,27 +158,27 @@ return false;
       </tr>
       <tr>
         <td width="220">- Lista de empleados y negociaciones por tipo: </td>
-        <td width="211"><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_empleado_status/25')"><b>Borrador</b></a></td>
+        <td width="211"><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_empleado_status/25/1')"><b>Borrador</b></a></td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_empleado_status/50')"><b>Activa</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_empleado_status/50/2')"><b>Activa</b></a></td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_empleado_status/75')"><b>&gt; 75%</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_empleado_status/75/3')"><b>&gt; 75%</b></a></td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_empleado_status/90')"><b>&gt; 90%</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_empleado_status/90/4')"><b>&gt; 90%</b></a></td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_empleado_status/100')"><b>Ganada y Cerrada</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_empleado_status/100/5')"><b>Ganada y Cerrada</b></a></td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_empleado_status/0')"><b>Perdida</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_empleado_status/0/6')"><b>Perdida</b></a></td>
       </tr>
     </table>
     <p>&nbsp;</p>

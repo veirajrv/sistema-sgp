@@ -164,68 +164,68 @@ return false;
       </tr>
       <tr>
         <td colspan="2">- Total de negociaciones por Institucion segun su status:</td>
-        <td width="167"><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_bagcp/25')"><b>Borrador</b></a></td>
+        <td width="167"><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_bagcp/25/1')"><b>Borrador</b></a></td>
       </tr>
       <tr>
         <td colspan="2">&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_bagcp/50')"><b>Activa</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_bagcp/50/2')"><b>Activa</b></a></td>
       </tr>
       <tr>
         <td colspan="2">&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_bagcp/75')"><b>&gt; 75%</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_bagcp/75/3')"><b>&gt; 75%</b></a></td>
       </tr>
       <tr>
         <td colspan="2">&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_bagcp/90')"><b>&gt; 90%</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_bagcp/90/4')"><b>&gt; 90%</b></a></td>
       </tr>
       <tr>
         <td colspan="2">&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_bagcp/100')"><b>Ganada</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_bagcp/100/5')"><b>Ganada</b></a></td>
       </tr>
       <tr>
         <td colspan="2">&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_bagcp/100')"><b>Cerrada</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_bagcp/100/6')"><b>Cerrada</b></a></td>
       </tr>
       <tr>
         <td colspan="2">&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_bagcp/0')"><b>Perdida</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_institucion_bagcp/0/7')"><b>Perdida</b></a></td>
       </tr>
       <tr>
         <td colspan="3">- Instituciones por tipo: <a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_instituciones_tipo/Publico')"><b>Publico</b></a> o <a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_instituciones_tipo/Privado')"><b>Privado</b></a></td>
         </tr>
       <tr>
         <td width="206">- Instituciones publicas y privadas por status:</td>
-        <td width="54"><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_instituciones_tstatus/25')"><b>Borrador</b></a></td>
+        <td width="54"><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_instituciones_tstatus/25/1')"><b>Borrador</b></a></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_instituciones_tstatus/50')"><b>Activa</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_instituciones_tstatus/50/2')"><b>Activa</b></a></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_instituciones_tstatus/75')"><b>&gt; 75%</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_instituciones_tstatus/75/3')"><b>&gt; 75%</b></a></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_instituciones_tstatus/90')"><b>&gt; 90%</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_instituciones_tstatus/90/4')"><b>&gt; 90%</b></a></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_instituciones_tstatus/100')"><b>Ganada</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_instituciones_tstatus/100/5')"><b>Ganada</b></a></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_instituciones_tstatus/100')"><b>Cerrada</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_instituciones_tstatus/100/6')"><b>Cerrada</b></a></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_instituciones_tstatus/0')"><b>Perdida</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_instituciones_tstatus/0/7')"><b>Perdida</b></a></td>
         <td>&nbsp;</td>
       </tr>
     </table>
