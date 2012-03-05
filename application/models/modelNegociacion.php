@@ -49,6 +49,7 @@ class modelNegociacion extends CI_Model {
 		$Seguimiento->TipoS = $_POST['TipoC'];
 		$Seguimiento->Resumen = $_POST['ResumenC'];
 		$Seguimiento->Status = $_POST['StatusC'];
+		$Seguimiento->FechaCreacion = date("d/m/Y");
 		
 		$Status = $_POST['StatusC'];
 		
@@ -110,6 +111,30 @@ class modelNegociacion extends CI_Model {
 		$id = $row['Id_Seguimiento'];
 	}
 		return $id;
+    }
+	
+	function BuscarVendedor($IdNegociacion) 
+	{
+		$query = $this->db->select("Id_Empleado");
+		$query = $this->db->where("Id_Negociacion", $IdNegociacion);
+		$query = $this->db->get("Negociacion");
+		foreach ($query->result_array() as $row)
+	{
+		$id = $row['Id_Empleado'];
+	}
+		return $id;
+    }
+	
+	function BuscarVendedor2($Usuario) 
+	{
+		$query = $this->db->select("Cedula");
+		$query = $this->db->where("Usuario", $Usuario);
+		$query = $this->db->get("Empleado");
+		foreach ($query->result_array() as $row)
+	{
+		$cedula = $row['Cedula'];
+	}
+		return $cedula;
     }
 	
 	function IdMaxStatus($IdNegociacion) 
@@ -774,7 +799,7 @@ class modelNegociacion extends CI_Model {
 	
 	function HistorialLista($Negociacion) 
 	{
-		$query = $this->db->query('SELECT H.FechaS, H.TipoS, H.Resumen, H.Status
+		$query = $this->db->query('SELECT H.FechaS, H.TipoS, H.Resumen, H.Status, H.FechaCreacion
 								   FROM Historial_Ns AS H
 								   WHERE H.Id_Negociacion = '.$Negociacion.'
 								   ORDER BY H.FechaS DESC');	
