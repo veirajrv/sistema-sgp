@@ -41,3 +41,19 @@ ERROR - 2012-03-05 17:26:58 --> Severity: Notice  --> Use of undefined constant 
 ERROR - 2012-03-05 17:26:58 --> Severity: Notice  --> Use of undefined constant Privado - assumed 'Privado' C:\wamp\www\OpenSGP\application\controllers\control_Reporte.php 338
 ERROR - 2012-03-05 17:27:51 --> Severity: Notice  --> Use of undefined constant Publico - assumed 'Publico' C:\wamp\www\OpenSGP\application\controllers\control_Reporte.php 337
 ERROR - 2012-03-05 17:27:51 --> Severity: Notice  --> Use of undefined constant Privado - assumed 'Privado' C:\wamp\www\OpenSGP\application\controllers\control_Reporte.php 338
+ERROR - 2012-03-05 20:04:37 --> Severity: Notice  --> Undefined variable: ConAlerta C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-03-05 20:04:37 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-03-05 20:06:58 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Administrador\AVistaPrevia2.php 13
+ERROR - 2012-03-05 20:06:58 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\AVistaPrevia2.php 13
+ERROR - 2012-03-05 20:06:58 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Administrador\AVistaPrevia2.php 14
+ERROR - 2012-03-05 20:06:58 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\AVistaPrevia2.php 14
+ERROR - 2012-03-05 20:07:10 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Administrador\AVistaPrevia2.php 13
+ERROR - 2012-03-05 20:07:10 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\AVistaPrevia2.php 13
+ERROR - 2012-03-05 20:07:10 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Administrador\AVistaPrevia2.php 14
+ERROR - 2012-03-05 20:07:10 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\AVistaPrevia2.php 14
+ERROR - 2012-03-05 20:27:54 --> Severity: Notice  --> Undefined variable: Rechazadas C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 204
+ERROR - 2012-03-05 20:27:54 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 204
+ERROR - 2012-03-05 20:27:59 --> Severity: Notice  --> Undefined variable: ConAlerta C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-03-05 20:27:59 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-03-05 20:28:05 --> Severity: Notice  --> Undefined variable: ConAlerta C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-03-05 20:28:05 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221

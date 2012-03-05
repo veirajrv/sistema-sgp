@@ -177,7 +177,7 @@ class control_Negociacion extends CI_Controller {
 		
 		$this->load->library('table');
 		$this->table->set_empty("&nbsp;");
-		$this->table->set_heading('<font style="font-size:12px" color="#369"><b>Status</b></font>', '<font style="font-size:12px" color="#369"><b>Fecha</b></font>', '<font style="font-size:12px" color="#369"><b>Tipo de contacto</b></font>', '<font style="font-size:12px" color="#369"><b>Resumen</b></font>');
+		$this->table->set_heading('<font style="font-size:12px" color="#369"><b>Status</b></font>', '<font style="font-size:12px" color="#369"><b>Fecha del status</b></font>', '<font style="font-size:12px" color="#369"><b>Tipo de contacto</b></font>', '<font style="font-size:12px" color="#369"><b>Resumen</b></font>');
 		
 	
 		foreach ($Lista as $row)
@@ -720,7 +720,7 @@ class control_Negociacion extends CI_Controller {
 		
 		$this->load->library('table');
 		$this->table->set_empty("&nbsp;");
-		$this->table->set_heading('<font style="font-size:12px" color="#369"><b>Status</b></font>', '<font style="font-size:12px" color="#369"><b>Fecha</b></font>', '<font style="font-size:12px" color="#369"><b>Tipo de contacto</b></font>', '<font style="font-size:12px" color="#369"><b>Resumen</b></font>');
+		$this->table->set_heading('<font style="font-size:12px" color="#369"><b>Status</b></font>', '<font style="font-size:12px" color="#369"><b>Fecha del status</b></font>', '<font style="font-size:12px" color="#369"><b>Tipo de contacto</b></font>', '<font style="font-size:12px" color="#369"><b>Resumen</b></font>', '<font style="font-size:12px" color="#369"><b>Fecha de Acceso</b></font>');
 		
 	
 		foreach ($Lista as $row)
@@ -729,7 +729,9 @@ class control_Negociacion extends CI_Controller {
 			$fecha = $row['FechaS'];
 			$tipo = $row['TipoS'];
 			$resumen = $row['Resumen'];
-			$this->table->add_row($status, $fecha, $tipo, $resumen);
+			$fechacreacion = $row['FechaCreacion'];
+			$this->table->add_row($status, $fecha, $tipo, $resumen, $fechacreacion);
+			
 		}
 			
 		$usuario['table'] = $this->table->generate();
@@ -745,8 +747,12 @@ class control_Negociacion extends CI_Controller {
 		$usuario['Id_Negociacion'] = $_POST['Nego']; // Id Negociacion //
 		$Id_Negociacion2 = $_POST['Nego'];
 		$Id_Negociacion = $this->modelNegociacion->BuscarExiste($Id_Negociacion2);
+		
+		$vendedor = $this->modelNegociacion->BuscarVendedor($Id_Negociacion2);
+		$vendedor2 = $this->modelNegociacion->BuscarVendedor2($Usuario);
+		
 		$stado = $this->modelNegociacion->BuscarEstado($Id_Negociacion2);
-		if (($Id_Negociacion == NULL) || ($stado == 2))
+		if (($Id_Negociacion == NULL) || ($stado == 2) || ($vendedor <> $vendedor2))
 		{
 			$cedula = $this->modelCliente->BuscarId($Usuario);
 			$usuario['SinAutorizar'] = $this->modelInicio->SinAutorizar($cedula);
@@ -1938,7 +1944,7 @@ class control_Negociacion extends CI_Controller {
 		
 		$this->load->library('table');
 		$this->table->set_empty("&nbsp;");
-		$this->table->set_heading('<font style="font-size:12px" color="#369"><b>Status</b></font>', '<font style="font-size:12px" color="#369"><b>Fecha</b></font>', '<font style="font-size:12px" color="#369"><b>Tipo de contacto</b></font>', '<font style="font-size:12px" color="#369"><b>Resumen</b></font>');
+		$this->table->set_heading('<font style="font-size:12px" color="#369"><b>Status</b></font>', '<font style="font-size:12px" color="#369"><b>Fecha</b></font>', '<font style="font-size:12px" color="#369"><b>Tipo de contacto</b></font>', '<font style="font-size:12px" color="#369"><b>Resumen</b></font>', '<font style="font-size:12px" color="#369"><b>Fecha de Acceso</b></font>');
 		
 	
 		foreach ($Lista as $row)
@@ -1947,7 +1953,8 @@ class control_Negociacion extends CI_Controller {
 			$fecha = $row['FechaS'];
 			$tipo = $row['TipoS'];
 			$resumen = $row['Resumen'];
-			$this->table->add_row($status, $fecha, $tipo, $resumen);
+			$fechacreacion = $row['FechaCreacion'];
+			$this->table->add_row($status, $fecha, $tipo, $resumen, $fechacreacion);
 		}
 			
 		$usuario['table'] = $this->table->generate();
@@ -1996,7 +2003,7 @@ class control_Negociacion extends CI_Controller {
 		
 		$this->load->library('table');
 		$this->table->set_empty("&nbsp;");
-		$this->table->set_heading('<font style="font-size:12px" color="#369"><b>Status</b></font>', '<font style="font-size:12px" color="#369"><b>Fecha</b></font>', '<font style="font-size:12px" color="#369"><b>Tipo de contacto</b></font>', '<font style="font-size:12px" color="#369"><b>Resumen</b></font>');
+		$this->table->set_heading('<font style="font-size:12px" color="#369"><b>Status</b></font>', '<font style="font-size:12px" color="#369"><b>Fecha</b></font>', '<font style="font-size:12px" color="#369"><b>Tipo de contacto</b></font>', '<font style="font-size:12px" color="#369"><b>Resumen</b></font>', '<font style="font-size:12px" color="#369"><b>Fecha de Acceso</b></font>');
 		
 	
 		foreach ($Lista as $row)
@@ -2005,7 +2012,8 @@ class control_Negociacion extends CI_Controller {
 			$fecha = $row['FechaS'];
 			$tipo = $row['TipoS'];
 			$resumen = $row['Resumen'];
-			$this->table->add_row($status, $fecha, $tipo, $resumen);
+			$fechacreacion = $row['FechaCreacion'];
+			$this->table->add_row($status, $fecha, $tipo, $resumen, $fechacreacion);
 		}
 			
 		$usuario['table'] = $this->table->generate();
