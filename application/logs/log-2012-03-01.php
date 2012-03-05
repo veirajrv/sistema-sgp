@@ -149,3 +149,13 @@ ERROR - 2012-03-01 04:39:45 --> Severity: Warning  --> include(127.0.0.1/OpenSGP
 ERROR - 2012-03-01 04:39:45 --> Severity: Warning  --> include() [<a href='function.include'>function.include</a>]: Failed opening '127.0.0.1/OpenSGP/application/views/Menu.php' for inclusion (include_path='.;C:\php\pear') C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 109
 ERROR - 2012-03-01 04:40:02 --> Severity: Warning  --> include(127.0.0.1/OpenSGP/application/views/Menu.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 109
 ERROR - 2012-03-01 04:40:02 --> Severity: Warning  --> include() [<a href='function.include'>function.include</a>]: Failed opening '127.0.0.1/OpenSGP/application/views/Menu.php' for inclusion (include_path='.;C:\php\pear') C:\wamp\www\OpenSGP\application\views\Vendedor\VPrincipal.php 109
+ERROR - 2012-03-01 17:48:18 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: MySQL server has gone away C:\wamp\www\OpenSGP\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2012-03-01 17:50:03 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
+ERROR - 2012-03-01 17:58:03 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: MySQL server has gone away C:\wamp\www\OpenSGP\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2012-03-01 17:58:20 --> Severity: Notice  --> Undefined variable: fecha C:\wamp\www\OpenSGP\application\models\modelCliente.php 86
+ERROR - 2012-03-01 17:58:20 --> Severity: Notice  --> Undefined variable: Id_Negociacion C:\wamp\www\OpenSGP\application\views\Vendedor\VCambioStatus.php 192
+ERROR - 2012-03-01 17:58:20 --> Severity: Notice  --> Undefined variable: Id_Negociacion C:\wamp\www\OpenSGP\application\views\Vendedor\VCambioStatus.php 195
+ERROR - 2012-03-01 17:58:20 --> Severity: Notice  --> Undefined variable: Id_Negociacion C:\wamp\www\OpenSGP\application\views\Vendedor\VCambioStatus.php 203
+ERROR - 2012-03-01 17:58:20 --> Severity: Notice  --> Undefined variable: Id_Negociacion C:\wamp\www\OpenSGP\application\views\Vendedor\VCambioStatus.php 248
+ERROR - 2012-03-01 17:58:20 --> Severity: Notice  --> Undefined variable: Cliente C:\wamp\www\OpenSGP\application\views\Vendedor\VCambioStatus.php 248
+ERROR - 2012-03-01 17:58:20 --> Severity: Notice  --> Undefined variable: Usuario C:\wamp\www\OpenSGP\application\views\Vendedor\VCambioStatus.php 268

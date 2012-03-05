@@ -9,7 +9,7 @@
 <table width="836" border="0">
   <tr>
     <td width="147" rowspan="2"><img src="<?php echo base_url();?>files/images/Logo_Formato.png" alt="" width="147" height="69" /></td>
-    <td width="679" align="right" valign="top"><h2 style="font-size:20px; font-family:Arial, Helvetica, sans-serif; color:#369">Lista de negociaciones </h2></td>
+    <td width="679" align="right" valign="top"><h2 style="font-size:20px; font-family:Arial, Helvetica, sans-serif; color:#369"><?php echo $titulo; ?></h2></td>
   </tr>
   <tr>
     <td align="right" valign="top"><?php if(isset($Max)) echo '<font style="font-size:15px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>'.$Max.'</b></font>' ?><?php if(isset($Min)) echo '<font style="font-size:15px; font-family:Arial, Helvetica, sans-serif;" color="#369"><b>'.$Min.'</b></font>' ?></td>

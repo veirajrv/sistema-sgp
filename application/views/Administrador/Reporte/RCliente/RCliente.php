@@ -158,112 +158,112 @@ return false;
       </tr>
       <tr>
         <td width="129">- Clientes por especialidad:</td>
-        <td width="118"><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Cirugia')"><b>Cirugia</b></a></td>
+        <td width="118"><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Cirugia/1')"><b>Cirugia</b></a></td>
         <td width="180">&nbsp;</td>
         </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Emergenciologia')"><b>Emergenciologia</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Emergenciologia/2')"><b>Emergenciologia</b></a></td>
         <td>&nbsp;</td>
         </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Fisiatria')"><b>Fisiatria</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Fisiatria/3')"><b>Fisiatria</b></a></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Fisioterapia')"><b>Fisioterapia</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Fisioterapia/4')"><b>Fisioterapia</b></a></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Ginecologia')"><b>Ginecologia</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Ginecologia/5')"><b>Ginecologia</b></a></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Gineco-Obstetricia')"><b>Gineco-Obstetricia</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Gineco-Obstetricia/6')"><b>Gineco-Obstetricia</b></a></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Imagenologia')"><b>Imagenologia</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Imagenologia/7')"><b>Imagenologia</b></a></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Intensivista')"><b>Intensivista</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Intensivista/8')"><b>Intensivista</b></a></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Mastologia')"><b>Mastologia</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Mastologia/9')"><b>Mastologia</b></a></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Nefrologia')"><b>Nefrologia</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Nefrologia/10')"><b>Nefrologia</b></a></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Neumonologia')"><b>Neumonologia</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Neumonologia/11')"><b>Neumonologia</b></a></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Nutricion')"><b>Nutricion</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Nutricion/12')"><b>Nutricion</b></a></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Nutrologia')"><b>Nutrologia</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Nutrologia/13')"><b>Nutrologia</b></a></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Obstetricia')"><b>Obstetricia</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Obstetricia/14')"><b>Obstetricia</b></a></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Oncologia')"><b>Oncologia</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Oncologia/15')"><b>Oncologia</b></a></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Pediatria')"><b>Pediatria</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Pediatria/16')"><b>Pediatria</b></a></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Radiologia')"><b>Radiologia</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Radiologia/17')"><b>Radiologia</b></a></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Traumatologia')"><b>Traumatologia</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Traumatologia/18')"><b>Traumatologia</b></a></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Medicina Interna')"><b>Medicina Interna</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Medicina Interna/19')"><b>Medicina Interna</b></a></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Endocrinologia')"><b>Endocrinologia</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Endocrinologia/20')"><b>Endocrinologia</b></a></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Anestesiologia')"><b>Anestesiologia</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Anestesiologia/21')"><b>Anestesiologia</b></a></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Multi-Especialidad')"><b>Multi-Especialidad</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_por_especialidad/Multi-Especialidad/22')"><b>Multi-Especialidad</b></a></td>
         <td>&nbsp;</td>
       </tr>
       <tr>
@@ -277,63 +277,63 @@ return false;
       </tr>
       <tr>
         <td colspan="2">- Total de negociaciones por cliente segun su status: </td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_bagcp/25')"><b>Borrador</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_bagcp/25/1')"><b>Borrador</b></a></td>
       </tr>
       <tr>
         <td colspan="2">&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_bagcp/50')"><b>Activa</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_bagcp/50/2')"><b>Activa</b></a></td>
       </tr>
       <tr>
         <td colspan="2">&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_bagcp/75')"><b>&gt; 75%</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_bagcp/75/3')"><b>&gt; 75%</b></a></td>
       </tr>
       <tr>
         <td colspan="2">&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_bagcp/90')"><b>&gt; 90%</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_bagcp/90/4')"><b>&gt; 90%</b></a></td>
       </tr>
       <tr>
         <td colspan="2">&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_bagcp/100')"><b>Ganada</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_bagcp/100/5')"><b>Ganada</b></a></td>
       </tr>
       <tr>
         <td colspan="2">&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_bagcp/100')"><b>Cerrada</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_bagcp/100/6')"><b>Cerrada</b></a></td>
       </tr>
       <tr>
         <td colspan="2">&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_bagcp/0')"><b>Perdida</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_bagcp/0/7')"><b>Perdida</b></a></td>
       </tr>
       <tr>
         <td colspan="3">- Clientes por tipo: <a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_tipo/Publico')"><b>Publico</b></a> o <a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_tipo/Privado')"><b>Privado</b></a></td>
         </tr>
       <tr>
         <td>- Clientes publicos y privados por status: </td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_tstatus/25')"><b>Borrador</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_tstatus/25/1')"><b>Borrador</b></a></td>
         <td rowspan="7">&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_tstatus/50')"><b>Activa</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_tstatus/50/2')"><b>Activa</b></a></td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_tstatus/75')"><b>&gt; 75%</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_tstatus/75/3')"><b>&gt; 75%</b></a></td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_tstatus/90')"><b>&gt; 90%</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_tstatus/90/4')"><b>&gt; 90%</b></a></td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_tstatus/100')"><b>Ganada</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_tstatus/100/5')"><b>Ganada</b></a></td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_tstatus/100')"><b>Cerrada</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_tstatus/100/6')"><b>Cerrada</b></a></td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_tstatus/0')"><b>Perdida</b></a></td>
+        <td><a style="color:#0099FF" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Reporte/lista_clientes_tstatus/0/7')"><b>Perdida</b></a></td>
         </tr>
       <tr>
         <td colspan="3">&nbsp;</td>
