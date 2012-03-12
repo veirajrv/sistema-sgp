@@ -42,7 +42,7 @@ class ModelCombox extends CI_Model {
 	
 	function ComboAccesorios($id)
 	{
-		$query = $this->db->query('SELECT DISTINCT(A.Id_Accesorio), A.Nombre FROM Accesorio AS A, AEquipo AS AE WHERE A.Id_Accesorio = AE.Id_Accesorio AND AE.Id_Equipo = '.$id.'');		
+		$query = $this->db->query('SELECT DISTINCT(A.Id_Accesorio), A.Nombre, A.Descripcion FROM Accesorio AS A, AEquipo AS AE WHERE A.Id_Accesorio = AE.Id_Accesorio AND AE.Id_Equipo = '.$id.'');		
 		return $query->result_array();
 	}
 	
