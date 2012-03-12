@@ -49,7 +49,7 @@ class Control_Combox extends CI_Controller {
 		$result3 = '<option value=" ">Seleccione un accesorio</option>';
 		foreach($accounts_list3 as $Accesorio)
 		{
-			$result3 .= '<option value="'.$Accesorio['Id_Accesorio'].'">'.$Accesorio['Nombre'].'</option>';
+			$result3 .= '<option value="'.$Accesorio['Id_Accesorio'].'">'.$Accesorio['Nombre'].''.' - '.''.$Accesorio['Descripcion'].'</option>';
 		}
 		echo $result3;
 	}
