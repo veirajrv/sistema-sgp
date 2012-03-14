@@ -199,6 +199,35 @@ class control_Negociacion extends CI_Controller {
 		$this->load->view('Administrador/AHistorialStatus', $usuario);
 	}
 	
+	// Funcion que verifica el historial de todos los status que a tenido una negociacion //
+	public function historial_status_a2($Id_Negociacion) 
+	{
+		$Lista = $this->modelNegociacion->HistorialLista($Id_Negociacion);
+		
+		$this->load->library('table');
+		$this->table->set_empty("&nbsp;");
+		$this->table->set_heading('<font style="font-size:12px" color="#369"><b>Status</b></font>', '<font style="font-size:12px" color="#369"><b>Fecha del status</b></font>', '<font style="font-size:12px" color="#369"><b>Tipo de contacto</b></font>', '<font style="font-size:12px" color="#369"><b>Resumen</b></font>');
+		
+	
+		foreach ($Lista as $row)
+		{
+			$status = $row['Status'];
+			$fecha = $row['FechaS'];
+			$tipo = $row['TipoS'];
+			$resumen = $row['Resumen'];
+			$this->table->add_row($status, $fecha, $tipo, $resumen);
+		}
+			
+		$usuario['table'] = $this->table->generate();
+		
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario; 
+		$usuario['Id_Negociacion'] = $Id_Negociacion;
+		
+		
+		$this->load->view('Administrador/AHistorialStatus2', $usuario);
+	}
+	
 	// Funcion que me separa las negociaciones de clientes y de instituciones que hay q aprobar //
 	public function sin_aprobar_2() 
 	{

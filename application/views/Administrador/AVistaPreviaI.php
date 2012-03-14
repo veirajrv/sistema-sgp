@@ -161,7 +161,8 @@ return false;
     </form>
       <table width="441" border="0">
         <tr>
-          <td><fieldset><legend style="font-size:15px"><b>Vista previa</b></legend>
+          <td><fieldset>
+                <legend style="font-size:15px"><b>Vista previa <a href="<?php echo base_url();?>index.php/Control_Negociacion/historial_status_a2/<?php echo $Id_Negociacion; ?>"><img src="<?php echo base_url();?>files/images/Status.png" alt="e" width="16" height="16" title="Historial negociacion"/></a><a href="<?php echo base_url();?>index.php/Control_Negociacion/cambio_status_3a/<?php echo $Id_Negociacion; ?>"></a><a href="<?php echo base_url();?>index.php/Control_Negociacion/historial_status_d/<?php echo $Id_Negociacion; ?>/<?php echo $idcliente; ?>"></a></b></legend>
                 <table width="410" border="0">
                   <tr>
                     <td width="270" rowspan="2"><img src="<?php echo base_url();?>files/images/Logo_Formato.png" alt="" width="147" height="69" /></td>
