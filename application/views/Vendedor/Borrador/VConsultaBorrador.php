@@ -265,7 +265,7 @@ function CambiaColor(esto,borde,texto)
                 <td align="center"><input type="checkbox" name="checkbox6" value="checkbox" onclick="document.getElementById('CondicionesPago').disabled = !this.checked"/></td>
                 <td>
                   <select name="CondicionesPago" id="CondicionesPago" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" disabled="disabled">
-                    <option value="-1">&lt;?php echo $CondicionesPago ?&gt;</option>
+                    <option value="-1"><?php echo $CondicionesPago ?></option>
                     <option>De contado</option>
                   	<option>Financiado - Yoma</option>
                     <option>Financiado – Banco</option>
