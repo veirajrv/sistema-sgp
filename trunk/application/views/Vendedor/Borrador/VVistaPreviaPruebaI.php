@@ -42,7 +42,7 @@
   <tr>
     <td colspan="3">
       
-        <table width="810" border="0">
+      <table width="810" border="0">
           <tr>
             <td width="518" rowspan="2"><img src="<?php echo base_url();?>files/images/Logo_Formato.png" alt="a" width="147" height="69" /></td>
             <td width="282"><div align="right"><strong>R.I.F.</strong> J-00190554-5</div></td>
@@ -184,6 +184,18 @@
             <td bgcolor="#FFFF00"><?php foreach ($Descuento as $row){
 							echo substr($row['Total'] + ($row['Total']*0.12),0,8); 
 							     }?></td>
+          </tr>
+          <tr>
+            <td colspan="5">&nbsp;</td>
+          </tr>
+          <tr>
+            <td colspan="5" align="center"><div>Centro Comercial Plaza la Trinidad. Calle san Rafael con calle del Urape. Piso3, local1. &nbsp;</div>
+              <div>Urb.Lomas de la Trinidad. &nbsp;Caracas 1080<br />
+              </div>
+              <div><br />
+              </div>
+              <div>Teflf:&nbsp;+58 212 945 6666&nbsp;| 6444 / 941 1520 | 4331 &nbsp;</div>
+            <div>Web Site:&nbsp;www.grupoyoma.com</div></td>
           </tr>
         </table>
     </td>
