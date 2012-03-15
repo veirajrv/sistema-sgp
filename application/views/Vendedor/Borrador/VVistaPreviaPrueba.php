@@ -192,6 +192,18 @@
 							echo substr($row['Total'] + ($row['Total']*0.12),0,8); 
 							     }?></td>
           </tr>
+          <tr>
+            <td colspan="5">&nbsp;</td>
+          </tr>
+          <tr>
+            <td colspan="5" align="center"><div>Centro Comercial Plaza la Trinidad. Calle san Rafael con calle del Urape. Piso3, local1. &nbsp;</div>
+              <div>Urb.Lomas de la Trinidad. &nbsp;Caracas 1080<br />
+              </div>
+              <div><br />
+              </div>
+              <div>Teflf:&nbsp;+58 212 945 6666&nbsp;| 6444 / 941 1520 | 4331 &nbsp;</div>
+            <div>Web Site:&nbsp;www.grupoyoma.com</div></td>
+          </tr>
         </table>
         <p>&nbsp;</p>
       </form>    </td>

@@ -67,3 +67,5 @@ ERROR - 2012-03-14 04:12:47 --> Severity: Notice  --> Undefined variable: Id C:\
 ERROR - 2012-03-14 04:12:47 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5
 ERROR - 2012-03-14 04:12:59 --> Severity: Notice  --> Undefined variable: ConAlerta C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
 ERROR - 2012-03-14 04:12:59 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-03-14 18:52:12 --> Severity: Notice  --> Undefined variable: id C:\wamp\www\OpenSGP\application\models\modelInstitucion.php 196
+ERROR - 2012-03-14 18:52:12 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY Nombre' at line 1
