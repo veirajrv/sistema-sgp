@@ -215,6 +215,7 @@ class Control_Producto extends CI_Controller {
 		$Accesorio['Nombre'] = $_POST['Accesorio'];
 		$Accesorio['Precio'] = $_POST['Precio'];
 		$Accesorio['Descripcion'] = $_POST['Descripcion'];
+		$Accesorio['Descripcion2'] = $_POST['Descripcion2'];
 		$this->modelProducto->InsertarAccesorio($Accesorio);
 		
 		$AE['Id_Equipo'] = $_POST['Equipo'];
@@ -300,6 +301,7 @@ class Control_Producto extends CI_Controller {
 		$Equipo['Nombre'] = $_POST['Equipo'];
 		$Equipo['Precio'] = $_POST['Precio'];
 		$Equipo['Descripcion'] = $_POST['Descripcion'];
+		$Equipo['Descripcion2'] = $_POST['Descripcion2'];
 		$this->modelProducto->InsertarEquipo($Equipo);
 		
 		$MLE['Id_Equipo'] = $this->modelProducto->UltimoEquipo();

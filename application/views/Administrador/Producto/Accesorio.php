@@ -171,11 +171,15 @@ function CambiaColor(esto,borde,texto)
         <td colspan="2"><input name="Precio" type="text" id="Precio" onkeypress="return soloNumeros(event)" style="width:60px; font-size-adjust:inherit; height:30px; font-size:15px;" maxlength="10" required="required" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" /> <font style="font-size:12px">Bs.F</font></td>
       </tr>
       <tr>
-        <td align="right"><font style="font-size:12px">Descripci&oacute;n:</font></td>
-        <td width="200"><label>
-          <textarea name="Descripcion" id="Descripcion" style="width:200px; font-size-adjust:inherit; height:50px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" maxlength="150"></textarea>
-        </label></td>
-        <td width="106">&nbsp;</td>
+        <td align="right"><font style="font-size:12px">Descripci&oacute;n Corta:</font></td>
+        <td width="300"><input name="Descripcion" type="text" id="Descripcion" onkeypress="return validar(event)" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" maxlength="30" required="required" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')"/></td>
+        <td width="6">&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="right"><font style="font-size:12px">Descripci&oacute;n larga:</font></td>
+        <td align="right"><label for="Descripcion2"></label>
+          <textarea name="Descripcion2" id="Descripcion2" cols="45" rows="5" style="width:300px; font-size-adjust:inherit; height:100px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')"></textarea></td>
+        <td align="right">&nbsp;</td>
       </tr>
       <tr>
         <td width="120">&nbsp;</td>
