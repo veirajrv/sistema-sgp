@@ -211,9 +211,29 @@ function CambiaColor(esto,borde,texto)
 							$j++;}?>"/> <font style="font-size:12px">Bs.F</font></td>
       </tr>
       <tr>
+        <td align="right"><font style="font-size:12px">Descripci&oacute;n corta:</font></td>
+        <td align="left"><input name="Descripcion" type="text" id="Descripcion" onkeypress="return validar(event)" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" maxlength="30" required="required" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" value="<?php $j=0; foreach ($Datos as $row){
+			
+							echo $row['Descripcion'];
+							
+							$j++;}?>"/></td>
+        <td align="right">&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="right"><font style="font-size:12px">Descripci&oacute;n larga:</font></td>
+        <td align="left"><label for="Descripcion2"></label>
+          <textarea name="Descripcion2" id="Descripcion2" cols="45" rows="5" style="width:250px; font-size-adjust:inherit; height:80px; font-size:15px;"><?php $j=0; foreach ($Datos as $row){
+			
+							echo $row['Descripcion2'];
+							
+							$j++;}?>
+        </textarea></td>
+        <td align="right">&nbsp;</td>
+      </tr>
+      <tr>
         <td width="120">&nbsp;</td>
-        <td width="200" align="right"><input name="Submit" type="image" src="<?php echo base_url();?>files/images/Actualizando.png" value="Actualizar Equipo" OnClick="return confirm('Usted desea cambiar la informaci&oacute;n de este equipo?');" title="Actualizar Equipo"/></td>
-        <td width="106" align="right">&nbsp;</td>
+        <td width="300" align="right"><input name="Submit" type="image" src="<?php echo base_url();?>files/images/Actualizando.png" value="Actualizar Equipo" OnClick="return confirm('Usted desea cambiar la informaci&oacute;n de este equipo?');" title="Actualizar Equipo"/></td>
+        <td width="6" align="right">&nbsp;</td>
       </tr>
     </table>
   </form>

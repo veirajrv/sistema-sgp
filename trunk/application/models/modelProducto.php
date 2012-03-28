@@ -74,6 +74,8 @@ class ModelProducto extends CI_Model {
 	{	
 		$equipo->Nombre = $_POST['Nombre'];
 		$equipo->Precio = $_POST['Precio'];
+		$equipo->Descripcion = $_POST['Descripcion'];
+		$equipo->Descripcion2 = $_POST['Descripcion2'];
 			
 		$id = $datos['ID2'];
 		$this->db->where("Id_Equipo", $id);
@@ -84,6 +86,8 @@ class ModelProducto extends CI_Model {
 	{	
 		$accesorio->Nombre = $_POST['Nombre'];
 		$accesorio->Precio = $_POST['Precio'];
+		$accesorio->Descripcion = $_POST['Descripcion'];
+		$accesorio->Descripcion2 = $_POST['Descripcion2'];
 			
 		$id = $datos['ID2'];
 		$this->db->where("Id_Accesorio", $id);
