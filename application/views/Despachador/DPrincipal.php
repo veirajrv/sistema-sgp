@@ -152,8 +152,11 @@ return false;
 <div id="cc">
   <table width="440" border="0">
     <tr>
-      <td width="140"><font style="font-size:12px; color:#369"><b>Negociaciones ganadas:</b></font></td>
-      <td width="290"><form id="form1" method="post" action="<?php echo base_url();?>index.php/Control_Venta/detalle_ganada">
+      <td colspan="2" align="center"><font style="font-size:12px;">Usted tienes <?php echo "<font style='font-size:18px;' color='#FF0000'><b>$Ganadas2</b></font>" ?> negociaciones <font style="font-size:12px; color:#369"><b>por facturar</b></font></font></td>
+      </tr>
+    <tr>
+      <td width="160" align="right"><font style="font-size:12px; color:#369"><b>Negociaciones por facturar:</b></font></td>
+      <td width="270"><form id="form1" method="post" action="<?php echo base_url();?>index.php/Control_Venta/detalle_ganada">
         <select name="Ganadas" id="Ganadas" style="width:150px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required">
           <option></option>
           <?php
@@ -166,6 +169,38 @@ return false;
         </select>
         <input type="submit" name="button" id="button" value="Ir" />
       </form></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="right"><hr align="left" style="width:435px;" /></td>
+      </tr>
+    <tr>
+      <td colspan="2" align="center"><font style="font-size:12px;">Usted tienes <?php echo "<font style='font-size:18px;' color='#FF0000'><b>$NoFacturadas2</b></font>" ?> negociaciones <font style="font-size:12px; color:#369"><b>con mercancia en compra</b></font></font></td>
+      </tr>
+    <tr>
+      <td align="right"><font style="font-size:12px; color:#369"><b>Negociaciones con mercancia en compra:</b></font></td>
+      <td><form id="form2" method="post" action="<?php echo base_url();?>index.php/Control_Venta/detalle_ganada">
+        <select name="Ganadas" id="Ganadas" style="width:150px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required">
+          <option></option>
+          <?php
+						foreach ($NoFacturadas as $row) {
+				  ?>
+          <option value="<?php echo $row['Id_Negociacion']; ?>" <?php echo set_select('Hola',$row['Id_Negociacion']); ?> ><?php echo $row['Id_Negociacion']; ?></option>
+          <?php
+					}
+					?>
+        </select>
+        <input type="submit" name="button2" id="button2" value="Ir" />
+      </form></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="right"><hr align="left" style="width:435px;" /></td>
+      </tr>
+    <tr>
+      <td colspan="2" align="center"><font style="font-size:12px;">Usted tienes <?php echo "<font style='font-size:18px;' color='#FF0000'><b>$SiFacturadas</b></font>" ?> negociaciones <font style="font-size:12px; color:#369"><b>facturadas</b></font></font></td>
+      </tr>
+    <tr>
+      <td align="right">&nbsp;</td>
+      <td width="270">&nbsp;</td>
     </tr>
   </table>
   <p>&nbsp;</p>

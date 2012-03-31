@@ -98,6 +98,12 @@ class Control_Inicio extends CI_Controller
 				$this->session->set_userdata($usuario2);
 				
 				$usuario2['Ganadas'] = $this->modelventa->NegoGanadas(); 
+				$usuario2['Ganadas2'] = $this->modelventa->NumNegoGanadas(); 
+				
+				$usuario2['NoFacturadas'] = $this->modelventa->NoFacturadas(); 
+				$usuario2['NoFacturadas2'] = $this->modelventa->NumNoFacturadas();
+				
+				$usuario2['SiFacturadas'] = $this->modelventa->NumFacturadas();
 				
 				$this->load->view('Despachador/DPrincipal', $usuario2);
 			}
@@ -167,6 +173,12 @@ class Control_Inicio extends CI_Controller
 		$usuario['Usuario'] = $Usuario;
 		
 		$usuario['Ganadas'] = $this->modelventa->NegoGanadas(); 
+		$usuario['Ganadas2'] = $this->modelventa->NumNegoGanadas(); 
+		
+		$usuario['NoFacturadas'] = $this->modelventa->NoFacturadas(); 
+		$usuario['NoFacturadas2'] = $this->modelventa->NumNoFacturadas();
+		
+		$usuario['SiFacturadas'] = $this->modelventa->NumFacturadas();
 		
 		$this->load->view('Despachador/DPrincipal', $usuario);	
 	}

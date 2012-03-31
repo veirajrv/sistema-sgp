@@ -51,11 +51,15 @@ class Control_Venta extends CI_Controller
 			$this->modelventa->CrearOrden($venta);
 			
 			$usuario['Ganadas'] = $this->modelventa->NegoGanadas(); 
+			$usuario['Ganadas2'] = $this->modelventa->NumNegoGanadas(); 
+			
 			$this->load->view('Despachador/DPrincipal', $usuario);
 		}
 		else 
 		{
 			$usuario['Ganadas'] = $this->modelventa->NegoGanadas(); 
+			$usuario['Ganadas2'] = $this->modelventa->NumNegoGanadas(); 
+			
 			$this->load->view('Despachador/DPrincipal', $usuario);
 		}
 	}
@@ -80,6 +84,13 @@ class Control_Venta extends CI_Controller
 			$this->modelventa->ModificarStatus($Facturar, $datos);
 			
 			$usuario['Ganadas'] = $this->modelventa->NegoGanadas(); 
+			$usuario['Ganadas2'] = $this->modelventa->NumNegoGanadas(); 
+		
+			$usuario['NoFacturadas'] = $this->modelventa->NoFacturadas(); 
+			$usuario['NoFacturadas2'] = $this->modelventa->NumNoFacturadas();
+		
+			$usuario['SiFacturadas'] = $this->modelventa->NumFacturadas();
+		
 			$this->load->view('Despachador/DPrincipal', $usuario);
 		}
 		else 
@@ -94,6 +105,13 @@ class Control_Venta extends CI_Controller
 			$this->modelventa->ModificarStatus($Facturar, $datos);
 			
 			$usuario['Ganadas'] = $this->modelventa->NegoGanadas(); 
+			$usuario['Ganadas2'] = $this->modelventa->NumNegoGanadas(); 
+		
+			$usuario['NoFacturadas'] = $this->modelventa->NoFacturadas(); 
+			$usuario['NoFacturadas2'] = $this->modelventa->NumNoFacturadas();
+		
+			$usuario['SiFacturadas'] = $this->modelventa->NumFacturadas();
+			
 			$this->load->view('Despachador/DPrincipal', $usuario);
 		}
 	}
@@ -2131,7 +2149,7 @@ class Control_Venta extends CI_Controller
 			$apellido = $row['Apellido'];
 			$email = $row['Email'];
 			$telefono = $row['Telefono'];
-			$this->table->add_row($nombre, $apellido, $email, $telefono, anchor('Control_Cliente/ver_perfil_2/'.$id.'','Ver Detalle'));
+			$this->table->add_row($nombre, $apellido, $email, $telefono, anchor('Control_Venta/ver_perfil/'.$id.'','Ver Detalle'));
 		}
 			
 		$usuario['table'] = $this->table->generate();
@@ -2141,11 +2159,10 @@ class Control_Venta extends CI_Controller
 	
 	// Funcion que nos permite ver el perfil de el cliente que nosotros 
 	// queramos dentro de el sistema. 
-	public function ver_perfil()
+	public function ver_perfil($id_cliente)
 	{
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
-		$id_cliente = $_POST['Cliente'];
 		$usuario['id_cliente'] = $id_cliente;
 		$usuario['Nombre'] = $this->modelCliente->NombreCliente($id_cliente);
 		$usuario['Apellido'] = $this->modelCliente->ApellidoCliente($id_cliente);
