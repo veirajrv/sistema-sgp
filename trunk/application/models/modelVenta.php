@@ -11,13 +11,82 @@ class ModelVenta extends CI_Model
 	function NegoGanadas()
 	{
 		$query = $this->db->query('SELECT N.Id_Negociacion
-								   FROM NEGOCIACION AS N, SEGUIMIENTO AS S, NS AS NS 
+								   FROM NEGOCIACION AS N, SEGUIMIENTO AS S, NS AS NS, VENTANEGO AS VN
 								   WHERE NS.Id_Negociacion = N.Id_Negociacion
 								   AND NS.Id_Seguimiento = S.Id_Seguimiento
+								   AND VN.Id_Negociacion = N.Id_Negociacion
 								   AND S.Status = "Ganada"
+								   AND ((VN.Final <> "0") && (VN.Final <> "1"))
 								   ORDER BY N.Id_Negociacion');	
 		
 		return $query->result_array();	
+	} 
+	
+	function NoFacturadas()
+	{
+		$query = $this->db->query('SELECT N.Id_Negociacion
+								   FROM NEGOCIACION AS N, SEGUIMIENTO AS S, NS AS NS, VENTANEGO AS VN
+								   WHERE NS.Id_Negociacion = N.Id_Negociacion
+								   AND NS.Id_Seguimiento = S.Id_Seguimiento
+								   AND VN.Id_Negociacion = N.Id_Negociacion
+								   AND S.Status = "Ganada"
+								   AND VN.Final = 0
+								   ORDER BY N.Id_Negociacion');	
+		
+		return $query->result_array();	
+	} 
+	
+	function NumNoFacturadas()
+	{
+		$query = $this->db->query('SELECT COUNT(N.Id_Negociacion) AS NumeroNoF
+								   FROM NEGOCIACION AS N, SEGUIMIENTO AS S, NS AS NS, VENTANEGO AS VN
+								   WHERE NS.Id_Negociacion = N.Id_Negociacion
+								   AND NS.Id_Seguimiento = S.Id_Seguimiento
+								   AND VN.Id_Negociacion = N.Id_Negociacion
+								   AND S.Status = "Ganada"
+								   AND VN.Final = 0
+								   ORDER BY N.Id_Negociacion');	
+		
+		foreach ($query->result_array() as $row)
+	{
+		$num = $row['NumeroNoF'];
+	}
+		return $num;
+	} 
+	
+	function NumFacturadas()
+	{
+		$query = $this->db->query('SELECT COUNT(N.Id_Negociacion) AS NumeroSiF
+								   FROM NEGOCIACION AS N, SEGUIMIENTO AS S, NS AS NS, VENTANEGO AS VN
+								   WHERE NS.Id_Negociacion = N.Id_Negociacion
+								   AND NS.Id_Seguimiento = S.Id_Seguimiento
+								   AND VN.Id_Negociacion = N.Id_Negociacion
+								   AND S.Status = "Cerrada"
+								   AND VN.Final = 1
+								   ORDER BY N.Id_Negociacion');	
+		
+		foreach ($query->result_array() as $row)
+	{
+		$num = $row['NumeroSiF'];
+	}
+		return $num;
+	} 
+	
+	function NumNegoGanadas()
+	{
+		$query = $this->db->query('SELECT COUNT(N.Id_Negociacion) AS NumeroF
+								   FROM NEGOCIACION AS N, SEGUIMIENTO AS S, NS AS NS, VENTANEGO AS VN
+								   WHERE NS.Id_Negociacion = N.Id_Negociacion
+								   AND NS.Id_Seguimiento = S.Id_Seguimiento
+								   AND VN.Id_Negociacion = N.Id_Negociacion
+								   AND S.Status = "Ganada"
+								   AND ((VN.Final <> 0) && (VN.Final <> 1))');	
+		
+		foreach ($query->result_array() as $row)
+	{
+		$num = $row['NumeroF'];
+	}
+		return $num;
 	} 
 	
 	function IdSeguimiento($Id_Negociacion)
