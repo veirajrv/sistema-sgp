@@ -119,7 +119,18 @@ return false;
 
 <!-- BEGIN search -->
 <div id="search">
-  <div align="right"></div>
+  <div align="right">
+  <form id="form5" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/ver_vista_nego2">
+      <table width="200" border="0" align="right" style="margin-top:-2px">
+        <tr>
+          <td width="158" align="left"><div align="right">
+            <input name="Nego" type="text" id="Buscar" style="width:100px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" placeholder="Buscar" required="required" onkeypress="return soloNumeros(event)"/>
+          </div></td>
+          <td width="32"><input name="image" type="image" value="Buscar" src="<?php echo base_url();?>files/images/lupa-32x32.png"/></td>
+        </tr>
+      </table>
+      </form>
+  </div>
 </div>
 <!-- END search -->
 
