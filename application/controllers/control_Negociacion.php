@@ -10,6 +10,7 @@ class control_Negociacion extends CI_Controller {
 		$this->load->model('modelProducto');
 		$this->load->model('modelInstitucion');
 		$this->load->model('modelInicio');
+		$this->load->model('modelventa');
 		$this->load->helper('form');
 		$this->load->library('email');
 	}
@@ -851,6 +852,94 @@ class control_Negociacion extends CI_Controller {
 			$usuario['Total'] = $this->modelProducto->ConsultarTotal($Id_Negociacion);
 			
 			$this->load->view('Vendedor/Borrador/VVistaPreviaPruebaI', $usuario);
+		}		
+		}
+	}
+	
+	public function ver_vista_nego2() 
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario; // Id Usuario //
+		$usuario['Id_Negociacion'] = $_POST['Nego']; // Id Negociacion //
+		$Id_Negociacion2 = $_POST['Nego'];
+		$Id_Negociacion = $this->modelNegociacion->BuscarExiste($Id_Negociacion2);
+		
+		$vendedor = $this->modelNegociacion->BuscarVendedor($Id_Negociacion2);
+		$vendedor2 = $this->modelNegociacion->BuscarVendedor2($Usuario);
+		
+		$stado = $this->modelNegociacion->BuscarEstado($Id_Negociacion2);
+		if (($Id_Negociacion == NULL) || ($stado == 2) || ($vendedor <> $vendedor2))
+		{
+			$usuario['Ganadas'] = $this->modelventa->NegoGanadas(); 
+			$usuario['Ganadas2'] = $this->modelventa->NumNegoGanadas(); 
+		
+			$usuario['NoFacturadas'] = $this->modelventa->NoFacturadas(); 
+			$usuario['NoFacturadas2'] = $this->modelventa->NumNoFacturadas();
+		
+			$usuario['SiFacturadas'] = $this->modelventa->NumFacturadas();
+		
+			$this->load->view('Despachador/DPrincipal', $usuario);
+		}
+		else
+		{
+		$Cliente = $this->modelNegociacion->BuscarCliente($Id_Negociacion); // Id cliente persona //
+		$ClienteI = $this->modelNegociacion->BuscarClienteI($Id_Negociacion); // Id cliente institucion //
+		if ($ClienteI == NULL) // Si entre en el if significa que el empleado es una persona //
+		{
+			$usuario['idcliente'] = $Cliente; // Id Cliente
+			$usuario['Permiso'] = $this->modelNegociacion->ConsultarPermiso($Id_Negociacion); 
+			
+			$datos['ID2'] = $Id_Negociacion;	
+			$negociacion = new ModelNegociacion;
+			$this->modelNegociacion->ModificarEstatus3($negociacion, $datos); 
+		
+			$status = $this->modelNegociacion->StatusNegociacion($Id_Negociacion); 
+			$usuario['Status'] = $status;
+			
+			$usuario['DatosCliente'] = $this->modelCliente->DatosCliente($Id_Negociacion, $Cliente); 
+			$cedula = $this->modelCliente->BuscarId($Usuario); 
+			$usuario['DatosVendedor'] = $this->modelCliente->DatosVendedor($Id_Negociacion, $cedula); 
+			$usuario['Lista'] = $this->modelProducto->ConsultarLista($Id_Negociacion);
+			$usuario['Lista2'] = $this->modelProducto->ConsultarLista2($Id_Negociacion);
+
+			$usuario['Descuento'] = $this->modelProducto->ConsultarDescuento($Id_Negociacion);
+			$Neto = $this->modelProducto->Neto($Id_Negociacion);
+			$Neto2 = $this->modelProducto->Neto2($Id_Negociacion);
+			$Neto3 = $Neto+$Neto2;
+			$usuario['Neto'] = $Neto3;
+			$usuario['Iva'] = $Neto3*0.12;
+			$Iva = $Neto3*0.12;
+			$usuario['Total'] = $Neto3 + $Iva;
+			
+			$this->load->view('Despachador/Borrador/DVistaPreviaPrueba2', $usuario);
+		}
+		else // Si entre en el else significa que el empleado es una institucion //
+		{
+			$usuario['idcliente'] = $ClienteI; // Id Cliente
+			
+			$datos['ID2'] = $Id_Negociacion;	
+			$negociacion = new ModelNegociacion;
+			$this->modelNegociacion->ModificarEstatus3($negociacion, $datos); 
+			
+			$status = $this->modelNegociacion->StatusNegociacion($Id_Negociacion); 
+			$usuario['Status'] = $status;
+			
+			$usuario['DatosCliente'] = $this->modelCliente->DatosClienteI($Id_Negociacion, $ClienteI); 
+			$cedula = $this->modelCliente->BuscarId($Usuario); 
+			$usuario['DatosVendedor'] = $this->modelCliente->DatosVendedorI($Id_Negociacion, $cedula); 
+			$usuario['Lista'] = $this->modelProducto->ConsultarLista($Id_Negociacion);
+			$usuario['Lista2'] = $this->modelProducto->ConsultarLista2($Id_Negociacion);
+
+			$usuario['Descuento'] = $this->modelProducto->ConsultarDescuento($Id_Negociacion);
+			$Neto = $this->modelProducto->Neto($Id_Negociacion);
+			$Neto2 = $this->modelProducto->Neto2($Id_Negociacion);
+			$Neto3 = $Neto+$Neto2;
+			$usuario['Neto'] = $Neto3;
+			$usuario['Iva'] = $Neto3*0.12;
+			$Iva = $Neto3*0.12;
+			$usuario['Total'] = $Neto3 + $Iva;
+			
+			$this->load->view('Despachador/Borrador/DVistaPreviaPruebaI2', $usuario);
 		}		
 		}
 	}
