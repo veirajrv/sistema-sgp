@@ -118,25 +118,25 @@
         <td width="100"><h2 style="font-size:30px">Manuales</h2></td>
         </tr>
       <tr>
-        <td><a href="<?php echo base_url();?>files/pdf/MANUAL DE USUARIO SGP GRUPOYOMA.pdf">Manual Preventa</a></td>
+        <td>&nbsp;</td>
         </tr>
       <tr>
-        <td><a href="<?php echo base_url();?>files/pdf/MANUAL DE USUARIO SGP VENTAS GRUPOYOMA.pdf">Manual Venta</a></td>
+        <td>&nbsp;</td>
         </tr>
       <tr>
-        <td><a href="<?php echo base_url();?>files/pdf/MANUAL DE USUARIO SGP COMPRA GRUPOYOMA.pdf">Manual Compra</a></td>
+        <td>&nbsp;</td>
         </tr>
       <tr>
-        <td><a href="<?php echo base_url();?>files/pdf/MANUAL DE USUARIO SGP IMPORTACION GRUPOYOMA.pdf">Manual Importacion</a></td>
+        <td>&nbsp;</td>
         </tr>
       <tr>
-        <td><a href="<?php echo base_url();?>files/pdf/MANUAL DE USUARIO SGP ALMACEN GRUPOYOMA.pdf">Manual Almacen</a></td>
+        <td>&nbsp;</td>
         </tr>
       <tr>
-        <td><a href="<?php echo base_url();?>files/pdf/MANUAL DE USUARIO SGP FACTURACION GRUPOYOMA.pdf">Manual Facturacion </a></td>
+        <td>&nbsp;</td>
         </tr>
       <tr>
-        <td><a href="<?php echo base_url();?>files/pdf/Accesos_Web_a_Serv_Intranet_SGP.pdf">Manual de Acceso</a></td>
+        <td>&nbsp;</td>
         </tr>
     </table>
   </div>
