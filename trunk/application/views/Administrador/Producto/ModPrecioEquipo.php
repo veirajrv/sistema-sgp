@@ -187,12 +187,20 @@ function CambiaColor(esto,borde,texto)
 		}?></td>
       </tr>
       <tr>
-        <td align="right"><font style="font-size:12px">Codigo</font></td>
-        <td colspan="2"><input name="Codigo" type="text" id="Codigo" onkeypress="return validar(event)" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" maxlength="30" required="required" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" value="<?php $j=0; foreach ($Datos as $row){
+        <td align="right"><font style="font-size:12px">Codigo BD:</font></td>
+        <td colspan="2"><input name="CBD" type="text" id="CBD" onkeypress="return validar(event)" style="width:50px; font-size-adjust:inherit; height:30px; font-size:15px;" maxlength="50" required="required" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" value="<?php $j=0; foreach ($Datos as $row){
 			
 							echo $row['Id_Equipo'];
 							
-							$j++;}?>" readonly="readonly"/></td>
+							$j++;}?>" readonly="readonly" /></td>
+      </tr>
+      <tr>
+        <td align="right"><font style="font-size:12px">Codigo</font></td>
+        <td colspan="2"><input name="Codigo" type="text" id="Codigo" onkeypress="return validar(event)" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" maxlength="50" required="required" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" value="<?php $j=0; foreach ($Datos as $row){
+			
+							echo $row['Codigo'];
+							
+							$j++;}?>" /></td>
       </tr>
       <tr>
         <td align="right"><font style="font-size:12px">Nombre:</font></td>

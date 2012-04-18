@@ -205,6 +205,10 @@ function CambiaColor(esto,borde,texto)
       </select></td>
       </tr>
       <tr>
+        <td align="right"><font style="font-size:12px">Codigo:</font></td>
+        <td colspan="2"><input name="Codigo" type="text" id="Codigo" onkeypress="return validar(event)" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" maxlength="50" required="required" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')"/></td>
+      </tr>
+      <tr>
         <td align="right"><font style="font-size:12px">Nombre:</font></td>
         <td colspan="2"><input name="Equipo" type="text" id="Equipo" onkeypress="return validar(event)" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" maxlength="30" required="required" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')"/></td>
       </tr>

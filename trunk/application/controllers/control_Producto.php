@@ -128,7 +128,7 @@ class Control_Producto extends CI_Controller {
 	{
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
-		$id = $_POST['Codigo'];
+		$id = $_POST['CBD'];
 		
 		$datos['ID2'] = $id;
 		$equipo = new ModelProducto;
@@ -155,7 +155,7 @@ class Control_Producto extends CI_Controller {
 	{
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
-		$id = $_POST['Codigo'];
+		$id = $_POST['CBD'];
 		
 		$datos['ID2'] = $id;
 		$accesorio = new ModelProducto;
@@ -212,6 +212,7 @@ class Control_Producto extends CI_Controller {
 	{
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
+		$Accesorio['Codigo'] = $_POST['Codigo'];
 		$Accesorio['Nombre'] = $_POST['Accesorio'];
 		$Accesorio['Precio'] = $_POST['Precio'];
 		$Accesorio['Descripcion'] = $_POST['Descripcion'];
@@ -298,6 +299,7 @@ class Control_Producto extends CI_Controller {
 	{
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
+		$Equipo['Codigo'] = $_POST['Codigo'];
 		$Equipo['Nombre'] = $_POST['Equipo'];
 		$Equipo['Precio'] = $_POST['Precio'];
 		$Equipo['Descripcion'] = $_POST['Descripcion'];

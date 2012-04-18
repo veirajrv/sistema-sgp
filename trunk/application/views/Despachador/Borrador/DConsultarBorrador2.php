@@ -166,6 +166,7 @@ function CambiaColor(esto,borde,texto)
 <div id="accordion">
 	<h3><a href="#">Ver</a></h3>
 	<div>
+		<li>- <a href="<?php echo base_url();?>index.php/Control_Venta/ver_negociacion">Negociaciones</a></li>
 		<li>- <a href="<?php echo base_url();?>index.php/Control_Venta/consultar_negociaciones">Venta</a></li>
 	</div>
 	<h3><a href="#">Herramientas</a></h3>
@@ -275,10 +276,11 @@ function CambiaColor(esto,borde,texto)
                 <td align="center"><input type="checkbox" name="checkbox6" value="checkbox" onclick="document.getElementById('CondicionesPago').disabled = !this.checked"/></td>
                 <td><select name="CondicionesPago" id="CondicionesPago" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" disabled="disabled">
                   <option value="-1"><?php echo $CondicionesPago ?></option>
-                  <option>De contado</option>
-                  <option>Financiado - Yoma</option>
-                  <option>Financiado – Banco</option>
-                  <option>Contra Entrega</option>
+                  <option>Pago Contado - Entrega Inmediata</option>
+                  <option>Financiamiento Yoma</option>
+                  <option>Financiamiento Yoma Stock</option>
+                  <option>Pago 30-70 Bco - Entrega 180 Dias</option>
+                  <option>Pago Contado - Entrega 180 Dias</option>
                 </select></td>
               </tr>
               <tr>

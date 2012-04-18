@@ -72,6 +72,7 @@ class ModelProducto extends CI_Model {
 	
 	function CambiarDatosEquipo($equipo, $datos) 
 	{	
+		$equipo->Codigo = $_POST['Codigo'];
 		$equipo->Nombre = $_POST['Nombre'];
 		$equipo->Precio = $_POST['Precio'];
 		$equipo->Descripcion = $_POST['Descripcion'];
@@ -84,6 +85,7 @@ class ModelProducto extends CI_Model {
 	
 	function CambiarDatosAccesorio($accesorio, $datos) 
 	{	
+		$accesorio->Codigo = $_POST['Codigo'];
 		$accesorio->Nombre = $_POST['Nombre'];
 		$accesorio->Precio = $_POST['Precio'];
 		$accesorio->Descripcion = $_POST['Descripcion'];
