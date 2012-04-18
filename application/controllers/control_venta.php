@@ -52,6 +52,11 @@ class Control_Venta extends CI_Controller
 			
 			$usuario['Ganadas'] = $this->modelventa->NegoGanadas(); 
 			$usuario['Ganadas2'] = $this->modelventa->NumNegoGanadas(); 
+				
+			$usuario['NoFacturadas'] = $this->modelventa->NoFacturadas(); 
+			$usuario['NoFacturadas2'] = $this->modelventa->NumNoFacturadas();
+				
+			$usuario['SiFacturadas'] = $this->modelventa->NumFacturadas();
 			
 			$this->load->view('Despachador/DPrincipal', $usuario);
 		}
@@ -59,6 +64,11 @@ class Control_Venta extends CI_Controller
 		{
 			$usuario['Ganadas'] = $this->modelventa->NegoGanadas(); 
 			$usuario['Ganadas2'] = $this->modelventa->NumNegoGanadas(); 
+				
+			$usuario['NoFacturadas'] = $this->modelventa->NoFacturadas(); 
+			$usuario['NoFacturadas2'] = $this->modelventa->NumNoFacturadas();
+				
+			$usuario['SiFacturadas'] = $this->modelventa->NumFacturadas();
 			
 			$this->load->view('Despachador/DPrincipal', $usuario);
 		}
@@ -1312,6 +1322,7 @@ class Control_Venta extends CI_Controller
 		$usuario['Permiso'] = $this->modelNegociacion->ConsultarPermiso($Id_Negociacion); 
 		
 		$status = $this->modelNegociacion->StatusNegociacion($Id_Negociacion); 
+		$usuario['condiciones'] = $this->modelNegociacion->CondicionesPagos($Id_Negociacion); 
 		$usuario['Status'] = $status;
 		
 		$usuario['DatosCliente'] = $this->modelCliente->DatosCliente($Id_Negociacion, $Id); 
@@ -1800,6 +1811,7 @@ class Control_Venta extends CI_Controller
 		$usuario['idcliente'] = $Id; // Id Cliente
 		
 		$status = $this->modelNegociacion->StatusNegociacion($Id_Negociacion); 
+		$usuario['condiciones'] = $this->modelNegociacion->CondicionesPagos($Id_Negociacion); 
 		$usuario['Status'] = $status;
 		
 		$usuario['DatosCliente'] = $this->modelCliente->DatosClienteI($Id_Negociacion, $Id); 

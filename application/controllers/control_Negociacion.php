@@ -1181,6 +1181,7 @@ class control_Negociacion extends CI_Controller {
 		$usuario['Permiso'] = $this->modelNegociacion->ConsultarPermiso($Id_Negociacion); 
 		
 		$status = $this->modelNegociacion->StatusNegociacion($Id_Negociacion); 
+		$usuario['condiciones'] = $this->modelNegociacion->CondicionesPagos($Id_Negociacion); 
 		$usuario['Status'] = $status;
 		
 		$usuario['DatosCliente'] = $this->modelCliente->DatosCliente($Id_Negociacion, $Id); 
@@ -1209,6 +1210,7 @@ class control_Negociacion extends CI_Controller {
 		$usuario['idcliente'] = $Id; // Id Cliente
 		
 		$status = $this->modelNegociacion->StatusNegociacion($Id_Negociacion); 
+		$usuario['condiciones'] = $this->modelNegociacion->CondicionesPagos($Id_Negociacion); 
 		$usuario['Status'] = $status;
 		
 		$usuario['DatosCliente'] = $this->modelCliente->DatosClienteI($Id_Negociacion, $Id); 

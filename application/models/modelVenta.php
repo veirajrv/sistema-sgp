@@ -11,12 +11,10 @@ class ModelVenta extends CI_Model
 	function NegoGanadas()
 	{
 		$query = $this->db->query('SELECT N.Id_Negociacion
-								   FROM NEGOCIACION AS N, SEGUIMIENTO AS S, NS AS NS, VENTANEGO AS VN
+								   FROM NEGOCIACION AS N, SEGUIMIENTO AS S, NS AS NS
 								   WHERE NS.Id_Negociacion = N.Id_Negociacion
 								   AND NS.Id_Seguimiento = S.Id_Seguimiento
-								   AND VN.Id_Negociacion = N.Id_Negociacion
 								   AND S.Status = "Ganada"
-								   AND ((VN.Final <> "0") && (VN.Final <> "1"))
 								   ORDER BY N.Id_Negociacion');	
 		
 		return $query->result_array();	
@@ -75,12 +73,10 @@ class ModelVenta extends CI_Model
 	function NumNegoGanadas()
 	{
 		$query = $this->db->query('SELECT COUNT(N.Id_Negociacion) AS NumeroF
-								   FROM NEGOCIACION AS N, SEGUIMIENTO AS S, NS AS NS, VENTANEGO AS VN
+								   FROM NEGOCIACION AS N, SEGUIMIENTO AS S, NS AS NS
 								   WHERE NS.Id_Negociacion = N.Id_Negociacion
 								   AND NS.Id_Seguimiento = S.Id_Seguimiento
-								   AND VN.Id_Negociacion = N.Id_Negociacion
-								   AND S.Status = "Ganada"
-								   AND ((VN.Final <> 0) && (VN.Final <> 1))');	
+								   AND S.Status = "Ganada"');	
 		
 		foreach ($query->result_array() as $row)
 	{

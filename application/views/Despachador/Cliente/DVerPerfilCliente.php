@@ -171,6 +171,7 @@ textarea.LV_invalid_field:active {
 <div id="accordion">
 	<h3><a href="#">Ver</a></h3>
 	<div>
+		<li>- <a href="<?php echo base_url();?>index.php/Control_Venta/ver_negociacion">Negociaciones</a></li>
 		<li>- <a href="<?php echo base_url();?>index.php/Control_Venta/consultar_negociaciones">Venta</a></li>
 	</div>
 	<h3><a href="#">Herramientas</a></h3>

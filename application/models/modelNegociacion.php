@@ -125,6 +125,18 @@ class modelNegociacion extends CI_Model {
 		return $id;
     }
 	
+	function CondicionesPagos($IdNegociacion) 
+	{
+		$query = $this->db->select("CondicionesPago");
+		$query = $this->db->where("Id_Negociacion", $IdNegociacion);
+		$query = $this->db->get("Negociacion");
+		foreach ($query->result_array() as $row)
+	{
+		$condicion = $row['CondicionesPago'];
+	}
+		return $condicion;
+    }
+	
 	function BuscarVendedor2($Usuario) 
 	{
 		$query = $this->db->select("Cedula");

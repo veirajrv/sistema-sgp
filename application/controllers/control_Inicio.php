@@ -174,10 +174,10 @@ class Control_Inicio extends CI_Controller
 		
 		$usuario['Ganadas'] = $this->modelventa->NegoGanadas(); 
 		$usuario['Ganadas2'] = $this->modelventa->NumNegoGanadas(); 
-		
+				
 		$usuario['NoFacturadas'] = $this->modelventa->NoFacturadas(); 
 		$usuario['NoFacturadas2'] = $this->modelventa->NumNoFacturadas();
-		
+				
 		$usuario['SiFacturadas'] = $this->modelventa->NumFacturadas();
 		
 		$this->load->view('Despachador/DPrincipal', $usuario);	
