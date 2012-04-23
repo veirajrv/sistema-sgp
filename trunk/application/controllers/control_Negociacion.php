@@ -491,6 +491,7 @@ class control_Negociacion extends CI_Controller {
 		$usuario['Cliente'] = $_POST['Cliente'];
 		$Id_Cliente = $this->modelCliente->BuscarIdCliente($Id_Negociacion);
 		$Id_ClienteI = $this->modelNegociacion->BuscarClienteI($Id_Negociacion); // Id cliente institucion //
+		$usuario['condiciones'] = $this->modelNegociacion->CondicionesPagos($Id_Negociacion); 
 		
 		if ($Id_Cliente == NULL) // Aqui entra si el cliente es una institucion //
 		{

@@ -223,6 +223,10 @@ $(document).ready(function(){
 							     }?></td>
                   </tr>
                   <tr>
+                    <td colspan="2"><strong>Condici&oacute;n de pago: </strong>
+                <?php echo $condiciones; ?></td>
+                  </tr>
+                  <tr>
                     <td colspan="2"><hr align="left" style="width:400px;" /></td>
                   </tr>
                 </table>
