@@ -56,8 +56,16 @@ class ModelInicio extends CI_Model
 		foreach ($query->result_array() as $row)
 	{
 		$clave = $row['Clave'];
-	}
-		return $clave;
+	
+		if($clave == NULL)
+		{
+			return -1;
+		}
+		else
+		{
+			return $clave;
+		}
+	}	
 	}
 	
 	function VerificarUsuario($usuario) 
@@ -80,8 +88,16 @@ class ModelInicio extends CI_Model
 		foreach ($query->result_array() as $row)
 	{
 		$tipo = $row['Tipo_Empleado'];
+		
+		if($tipo == NULL)
+		{
+			return -1;
+		}
+		else
+		{
+			return $tipo;
+		}
 	}
-		return $tipo;
 	}
 	
 	function SinAutorizar($cedula)

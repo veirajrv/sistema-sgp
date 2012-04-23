@@ -37,6 +37,14 @@ class Control_Inicio extends CI_Controller
 		$usuario = $_POST['Nombre'];
 		$clave = $_POST['Clave'];
 		
+		$usuariofalso = $this->modelInicio->VerificarClave($usuario); 
+		
+		if($usuariofalso == -1)
+		{
+			$this->load->view('Index2');
+		}
+		else
+		{
 		$Tipo_1 = 'Administrador';
 		$Tipo_2 = 'Vendedor';
 		$Tipo_3 = 'Despachador';
@@ -111,6 +119,7 @@ class Control_Inicio extends CI_Controller
 		else 
 		{	
 			$this->load->view('Index2');
+		}
 		}
 	}
 	

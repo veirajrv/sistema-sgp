@@ -236,6 +236,7 @@ class Control_Cliente extends CI_Controller {
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario; 
 		$usuario['Vendedores'] = $this->modelCliente->Vendedores();
+		$usuario['Clientes'] = $this->modelCliente->BuscarClientesTodos();
 		
 		$this->load->view('Administrador/ACliente', $usuario);
 	}
@@ -370,6 +371,16 @@ class Control_Cliente extends CI_Controller {
 		$usuario['Datos'] = $this->modelCliente->DetalleCliente($id);
 		
 		$this->load->view('Administrador/ADetalleCliente', $usuario);
+	}
+	
+	public function ver_detalle3() 
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario; 
+		$id = $_POST['Vendedor'];
+		$usuario['Datos'] = $this->modelCliente->DetalleCliente($id);
+		
+		$this->load->view('Administrador/ADetalleCliente3', $usuario);
 	}
 	
 	public function ver_detalle2($id) 

@@ -113,15 +113,15 @@
 <!-- BEGIN center column -->
 <div id="center">
   <div id="cc">
-    <table width="106" border="0">
+    <table width="170" border="0">
       <tr>
-        <td width="100"><h2 style="font-size:30px">Manuales</h2></td>
+        <td width="164"><h2 style="font-size:30px">Manuales</h2></td>
         </tr>
       <tr>
-        <td>&nbsp;</td>
+        <td>Modulo Ventas</td>
         </tr>
       <tr>
-        <td>&nbsp;</td>
+        <td>Modulo Negociaciones</td>
         </tr>
       <tr>
         <td>&nbsp;</td>

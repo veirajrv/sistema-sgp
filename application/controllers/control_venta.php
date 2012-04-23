@@ -1320,6 +1320,7 @@ class Control_Venta extends CI_Controller
 		$usuario['idcliente'] = $Id; // Id Cliente
 		
 		$usuario['Permiso'] = $this->modelNegociacion->ConsultarPermiso($Id_Negociacion); 
+		$usuario['condiciones'] = $this->modelNegociacion->CondicionesPagos($Id_Negociacion); 
 		
 		$status = $this->modelNegociacion->StatusNegociacion($Id_Negociacion); 
 		$usuario['condiciones'] = $this->modelNegociacion->CondicionesPagos($Id_Negociacion); 
