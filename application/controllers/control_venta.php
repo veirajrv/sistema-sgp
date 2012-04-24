@@ -2172,11 +2172,12 @@ class Control_Venta extends CI_Controller
 	
 	// Funcion que nos permite ver el perfil de el cliente que nosotros 
 	// queramos dentro de el sistema. 
-	public function ver_perfil($id_cliente)
+	public function ver_perfil()
 	{
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
-		$usuario['id_cliente'] = $id_cliente;
+		$usuario['id_cliente'] = $_POST['Cliente'];
+		$id_cliente = $_POST['Cliente'];
 		$usuario['Nombre'] = $this->modelCliente->NombreCliente($id_cliente);
 		$usuario['Apellido'] = $this->modelCliente->ApellidoCliente($id_cliente);
 		$usuario['Email'] = $this->modelCliente->EmailCliente($id_cliente);

@@ -250,7 +250,7 @@ function CambiaColor(esto,borde,texto)
         <tr>
           <td width="225" valign="middle"><h2 style="font-size:30px">Mis vendedores  </h2></td>
           <td width="179" valign="middle"><h2>( <font color="#0099FF">Buscar Instituci&oacute;n</font> )</h2></td>
-          <td width="27" align="right" valign="top"><a href="<?php echo base_url();?>index.php/Control_Cliente/ver_institucion_lista"><img src="<?php echo base_url();?>files/images/List.png" alt="e" width="25" height="25" title="Lista de instituciones"/></a></td>
+          <td width="27" align="right" valign="top"><a href="<?php echo base_url();?>index.php/Control_Cliente/ver_institucion_lista"></a></td>
         </tr>
         <tr>
           <td colspan="3"><font style="font-size:12px"><a href="<?php echo base_url();?>index.php/Control_Cliente/buscar_vendedores">Cliente</a></font> | <font style="font-size:12px"><a href="<?php echo base_url();?>index.php/Control_Cliente/buscar_vendedores_i/<?php echo $Usuario ?>">Institucion</a></font></td>
@@ -318,6 +318,37 @@ function CambiaColor(esto,borde,texto)
                 </tr>
               </table>            </td>
           </tr>
+        <tr>
+          <td colspan="3"><hr align="left" style="width:435px;" /></td>
+        </tr>
+        <tr>
+          <td colspan="2"><h2 style="font-size:30px">Listado general de instituciones </h2></td>
+          <td><a href="<?php echo base_url();?>index.php/Control_Cliente/ver_institucion_lista"><img src="<?php echo base_url();?>files/images/List.png" alt="e" width="25" height="25" title="Lista de instituciones"/></a></td>
+        </tr>
+        <tr>
+          <td colspan="3"><table width="434" border="0">
+            <tr>
+              <td width="120" align="right"><font style="font-size:12px">Nombre:</font></td>
+              <td width="291"><form id="form4" method="post" action="<?php echo base_url();?>index.php/Control_Cliente/ver_detalle_i3">
+                <select name="Vendedor" id="Vendedor" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required">
+                  <option></option>
+                  <?php
+						foreach ($Instituciones as $row) {
+				  ?>
+                  <option value="<?php echo $row['Id_Institucion']; ?>" <?php echo set_select('Hola',$row['Id_Institucion']); ?> ><?php echo $row['Nombre']; ?></option>
+                  <?php
+					}
+					?>
+                </select>
+                <input type="submit" name="Submit" value="Buscar" />
+              </form></td>
+              <td width="10">&nbsp;</td>
+            </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td colspan="3">&nbsp;</td>
+        </tr>
       </table>
 </div>
   <!-- END cc -->

@@ -482,7 +482,7 @@ class ModelCliente extends CI_Model {
 	
 	function BuscarInstitucionTodos() 
 	{
-		$query = $this->db->query('SELECT DISTINCT(I.Nombre), I.Rif, I.Web, I.Telefono1, I.Telefono2
+		$query = $this->db->query('SELECT DISTINCT(I.Nombre), I.Id_Institucion, I.Rif, I.Web, I.Telefono1, I.Telefono2
 								   FROM INSTITUCION AS I
 								   ORDER BY I.Nombre ASC ');	
 		
