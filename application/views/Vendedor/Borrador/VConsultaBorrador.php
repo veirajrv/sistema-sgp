@@ -179,7 +179,7 @@ function CambiaColor(esto,borde,texto)
         <tr>
           <td width="365" valign="top"><h2 style="font-size:30px">Codigo Negociaci&oacute;n (<?php echo $Id_Negociacion; ?>)</h2>            </td>
           <td width="36" align="right" valign="top"><a href="<?php echo base_url();?>index.php/Control_Negociacion/historial_status/<?php echo $Id_Negociacion; ?>/<?php echo $Id; ?>"><img src="<?php echo base_url();?>files/images/List.png" alt="e" width="25" height="25" title="Historial negociacion"/></a></td>
-          <td width="26" align="right" valign="top"><a href="<?php echo base_url();?>index.php/Control_Negociacion/cambio_status/<?php echo $Id_Negociacion; ?>/<?php echo $Id; ?>"><img src="<?php echo base_url();?>files/images/icono_filtro.png" alt="" width="25" height="25" title="Cambio de estatus"/></a></td>
+          <td width="26" align="right" valign="top"><a href="<?php echo base_url();?>index.php/Control_Negociacion/cambio_status/<?php echo $Id_Negociacion; ?>/<?php echo $Id; ?>"><img src="<?php echo base_url();?>files/images/icono_filtro.png" alt="" width="25" height="25" title="Cambio de status"/></a></td>
         </tr>
         <tr>
           <td colspan="3" valign="top"><h4 style="color:#0066FF">PASO I </h4></td>

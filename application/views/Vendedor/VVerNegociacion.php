@@ -251,7 +251,7 @@ function CambiaColor(esto,borde,texto)
       <table width="441" border="0">
         <tr>
           <td width="380"><h2 style="font-size:30px">Mis Negociaciones</h2></td>
-          <td width="51" align="right" valign="middle"><a href="<?php echo base_url();?>index.php/Control_Negociacion"><img src="<?php echo base_url();?>files/images/agregar.png" alt="a" width="30" height="30" title="Agregar nuevo cliente" /></a></td>
+          <td width="51" align="right" valign="middle"><a href="<?php echo base_url();?>index.php/Control_Negociacion"><img src="<?php echo base_url();?>files/images/agregar.png" alt="a" width="30" height="30" title="Agregar nueva negociacion" /></a></td>
         </tr>
         <tr>
           <td colspan="2"><font style="font-size:12px"><a href="<?php echo base_url();?>index.php/Control_Negociacion/ver_negociacion">Cliente</a></font> | <font style="font-size:12px"><a href="<?php echo base_url();?>index.php/Control_Negociacion/ver_negociacion_2">Institucion</a></font></td>

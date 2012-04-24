@@ -301,7 +301,7 @@ f10.add( Validate.Length, { is: 11 } );</script>                  </td>
           <td align="right">
           <input type="hidden" name="Cliente" id="Cliente" style="width:20px" value="<?php echo $id_cliente; ?>" />
             <input type="reset" name="Submit2" value="Borrar informaci&oacute;n"/>
-            <input type="submit" name="Submit" value="Actualizar datos" onclick="return confirm('Usted desea agregar este nuevo cliente al sistema?');"/></td>
+            <input type="submit" name="Submit" value="Actualizar datos" onclick="return confirm('Usted desea actualizar los datos de este cliente?');"/></td>
           </tr>
       </table>
     </form>

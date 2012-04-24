@@ -316,7 +316,7 @@ f10.add( Validate.Length, { is: 11 } );</script>                </td>
           <td><div align="right">
 		  <input type="hidden" name="Cliente" id="Cliente" style="width:20px" value="<?php echo $id_cliente; ?>" />
             <input type="reset" name="Submit2" value="Borrar informaci&oacute;n" />
-            <input type="submit" name="Submit" value="Actualizar datos" OnClick="return confirm('Usted desea agregar esta nueva institucion al sistema?');"/>
+            <input type="submit" name="Submit" value="Actualizar datos" OnClick="return confirm('Usted desea actualizar los datos de esta institucion?');"/>
           </div></td>
         </tr>
       </table>
