@@ -246,6 +246,7 @@ class Control_Cliente extends CI_Controller {
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
 		$usuario['Vendedores'] = $this->modelCliente->Vendedores();
+		$usuario['Instituciones'] = $this->modelCliente->BuscarInstituciones();
 		
 		$this->load->view('Administrador/AInstitucion', $usuario);
 	}
@@ -350,11 +351,12 @@ class Control_Cliente extends CI_Controller {
 	
 		foreach ($Lista as $row)
 		{
+			$Id_Institucion = $row['Id_Institucion'];
 			$rif = $row['Rif'];
 			$nombre = $row['Nombre'];
 			$web = $row['Web'];
 			$telefono = $row['Telefono1'];
-			$this->table->add_row($rif, $nombre, $web, $telefono);
+			$this->table->add_row($rif, $nombre, $web, $telefono, anchor('Control_Cliente/ver_detalle_i2/'.$Id_Institucion.'','Ver Detalle'));
 		}
 			
 		$usuario['table'] = $this->table->generate();
@@ -390,6 +392,25 @@ class Control_Cliente extends CI_Controller {
 		$usuario['Datos'] = $this->modelCliente->DetalleCliente($id);
 		
 		$this->load->view('Administrador/ADetalleCliente2', $usuario);
+	}
+	
+	public function ver_detalle_i2($id) 
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario; 
+		$usuario['Datos'] = $this->modelInstitucion->DetalleInstitucion($id);
+		
+		$this->load->view('Administrador/ADetalleInstitucion2', $usuario);
+	}
+	
+	public function ver_detalle_i3() 
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario; 
+		$id = $_POST['Vendedor'];
+		$usuario['Datos'] = $this->modelInstitucion->DetalleInstitucion($id);
+		
+		$this->load->view('Administrador/ADetalleInstitucion2', $usuario);
 	}
 	
 	public function vinculaciones($id_cliente)

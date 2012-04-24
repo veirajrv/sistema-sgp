@@ -34,6 +34,13 @@ class ModelInstitucion extends CI_Model {
 		return $nombre;
 	}
 	
+	function DetalleInstitucion($Id) 
+	{
+		$query = $this->db->where("Id_Institucion", $Id);
+		$query = $this->db->get('Institucion');
+		return $query->result_array();			
+	} 
+	
 	function BuscarCodigoPI($Id)
 	{
 		$query = $this->db->select("CodigoP");
