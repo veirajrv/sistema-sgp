@@ -234,7 +234,7 @@ function CambiaColor(esto,borde,texto)
       <table width="441" border="0">
         <tr>
           <td width="328"><h2 style="font-size:30px">Mis Instituciones </h2></td>
-          <td width="103" align="right"><a href="<?php echo base_url();?>index.php/Control_Institucion/agregar_institucion"><img src="<?php echo base_url();?>files/images/agregar.png" alt="a" width="30" height="30" title="Agregar nuevo cliente" /></a></td>
+          <td width="103" align="right"><a href="<?php echo base_url();?>index.php/Control_Institucion/agregar_institucion"><img src="<?php echo base_url();?>files/images/agregar.png" alt="a" width="30" height="30" title="Agregar nueva institucion" /></a></td>
         </tr>
         <tr>
           <td colspan="2"><hr align="left" style="width:435px;" /></td>
