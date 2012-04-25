@@ -242,7 +242,7 @@ f12.add( Validate.Length, { maximum: 300 } );</script>
           </tr>
         <tr>
           <td align="right" valign="top">
-              <input name="Submit" type="image" src="<?php echo base_url();?>files/images/Actualizando.png" OnClick="return confirm('Usted desea cambiar de estatus a esta negociaci&oacute;n?');" title="Actualizar Status"/></td>
+              <input name="Submit" type="image" src="<?php echo base_url();?>files/images/Actualizando.png" OnClick="return confirm('Usted desea cambiar de status a esta negociaci&oacute;n?');" title="Actualizar Status"/></td>
           </tr>
       </table>
     </form>
