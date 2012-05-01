@@ -17,6 +17,7 @@ class Control_Perfil extends CI_Controller
 	{
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
+		$usuario['Cedula'] = $this->modelPerfil->CedulaLogeado($Usuario);
 		$usuario['Nombre'] = $this->modelPerfil->NombreLogeado($Usuario);
 		$usuario['Apellido'] = $this->modelPerfil->ApellidoLogeado($Usuario);
 		

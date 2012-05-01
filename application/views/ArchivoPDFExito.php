@@ -113,10 +113,22 @@
 <!-- BEGIN center column -->
 <div id="center">
   <div id="cc">
-    <table width="248" border="0">
+    <table width="170" border="0">
       <tr>
-        <td width="431"><h2 style="font-size:30px">Manuales</h2></td>
-      </tr>
+        <td width="164"><h2 style="font-size:30px">Manuales</h2></td>
+        </tr>
+      <tr>
+        <td><h3>Su archivo fue exitosamente subido!</h3>
+<?php echo form_open_multipart('Control_Upload/do_upload');?>
+<input type="file" name="userfile" size="20" />
+<br /><br />
+<input type="submit" value="upload" />
+</form>
+        </td>
+        </tr>
+      <tr>
+        <td>&nbsp;</td>
+        </tr>
       <tr>
         <td>&nbsp;</td>
         </tr>
