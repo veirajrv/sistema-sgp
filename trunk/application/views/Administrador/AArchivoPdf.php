@@ -57,16 +57,16 @@
 	<div id="tagline">
 		<a href="index.html" title="Home"><img src="<?php echo base_url();?>files/images/Portada/logo2.gif" alt="Your logo here" width="45" height="40" /> <span id="logo-text">YOMA</span></a>
 		<div id="userbar">
-			<a href="<?php echo base_url();?>index.php/Control_Inicio/cerrar_sesion">Cerrar Sesion </a> | <a id="tabe" href="<?php echo base_url();?>index.php/Control_Pdf">Ayuda</a>		</div>
+			<a href="<?php echo base_url();?>index.php/Control_Inicio/cerrar_sesion">Cerrar Sesion </a> | <a id="tabe" href="<?php echo base_url();?>index.php/Control_Pdf/index2">Ayuda</a>		</div>
 	</div><!-- END tagline -->
 
 <!-- BEGIN tabs -->
 <div id="navcontainer">
 	<ul id="navlist">
-		<li><a id="taba" class="active" href="<?php echo base_url();?>index.php/Control_Inicio/v_principal" title="Inicio">Inicio</a></li>
-		<li><a id="tabb" href="<?php echo base_url();?>index.php/Control_Negociacion/ver_negociacion" title="Gestionar Negociaciones">Negociaciones</a></li>
-		<li><a id="tabb" href="<?php echo base_url();?>index.php/Control_Cliente" title="Gestionar Clientes">Clientes</a></li>
-		<li><a id="tabd" href="<?php echo base_url();?>index.php/Control_Institucion" title="Gestionar Instituciones">Instituci&oacute;n</a></li>
+		<li><a id="taba" class="active" href="<?php echo base_url();?>index.php/Control_Inicio/a_principal" title="Inicio">Inicio</a></li>
+		<li><a id="tabb" href="<?php echo base_url();?>index.php/Control_Negociacion/buscar_vendedores" title="Gestionar Negociaciones">Negociaciones</a></li>
+		<li><a id="tabb" href="<?php echo base_url();?>index.php/Control_Cliente/buscar_vendedores" title="Clientes">Clientes</a></li>
+		<li><a id="tabb" href="<?php echo base_url();?>index.php/Control_Reporte" title="Visualizar Reportes">Reportes</a></li>
 	</ul>
 </div><!-- END navcontainer -->
 
@@ -86,27 +86,21 @@
 <!-- BEGIN left column -->
 <div id="left">
 <div id="lc">
-	<div class="demo">
-
-<div id="accordion">
-	<h3><a href="#">Nuevo</a></h3>
-	<div>
-		<li>- <a href="<?php echo base_url();?>index.php/Control_Cliente/agregar_cliente">Clientes</a></li>
-		<li>- <a href="<?php echo base_url();?>index.php/Control_Institucion/agregar_institucion">Institucion</a></li>
-		<li>- <a href="<?php echo base_url();?>index.php/Control_Negociacion">Negociacion</a></li>
-	</div>
-	<h3><a href="#">Ver</a></h3>
-	<div>
-		<li>- <a href="<?php echo base_url();?>index.php/Control_Negociacion/ver_negociacion">Negociacion</a></li>
-	</div>
-	<h3><a href="#">Herramientas</a></h3>
-	<div>
-    
-	</div>
-</div>
-
-</div>
-	<p>&nbsp;</p>
+  <div class="demo">
+    <div id="accordion">
+      <h3><a href="#">Nuevo</a></h3>
+      <div>
+        <li>- <a href="<?php echo base_url();?>index.php/Control_Producto">Producto</a></li>
+      </div>
+      <h3><a href="#">Ver</a></h3>
+      <div>
+        <li>- <a href="<?php echo base_url();?>index.php/Control_Negociacion/buscar_vendedores">Negociacion</a></li>
+      </div>
+      <h3><a href="#">Herramientas</a></h3>
+      <div></div>
+    </div>
+  </div>
+  <p>&nbsp;</p>
 </div><!-- END lc -->
 </div><!-- END left -->
 
@@ -115,22 +109,42 @@
   <div id="cc">
     <table width="248" border="0">
       <tr>
-        <td width="431"><h2 style="font-size:30px">Manuales</h2></td>
+        <td colspan="2"><h2 style="font-size:30px">Cargar manuales</h2></td>
+        </tr>
+      <tr>
+        <td colspan="2" align="center"><?php echo $error;?><?php echo form_open_multipart('control_Upload/do_upload');?></td>
+        </tr>
+      <tr>
+        <td width="101" align="right" valign="top"><font style="font-size:12px">Nombre del archivo:</font></td>
+        <td width="330"><input type="text" name="Nombre" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" maxlength="10" required="required"/></td>
       </tr>
       <tr>
-        <td>&nbsp;</td>
+        <td align="right" valign="top">&nbsp;</td>
+        <td width="330"><input type="file" name="userfile" size="20" />
+          <br />
+          <br />
+          <input type="submit" value="upload" /></td>
+      </tr>
+      <tr>
+        <td colspan="2"><hr align="left" style="width:435px;" /></td>
+      </tr>
+      <tr>
+        <td colspan="2"><h2 style="font-size:30px">Manuales</h2></td>
         </tr>
       <tr>
-        <td>&nbsp;</td>
+        <td colspan="2"><?php echo $table; ?></td>
         </tr>
       <tr>
-        <td>&nbsp;</td>
+        <td colspan="2">&nbsp;</td>
         </tr>
       <tr>
-        <td>&nbsp;</td>
+        <td colspan="2">&nbsp;</td>
         </tr>
       <tr>
-        <td>&nbsp;</td>
+        <td colspan="2">&nbsp;</td>
+        </tr>
+      <tr>
+        <td colspan="2">&nbsp;</td>
         </tr>
     </table>
   </div>

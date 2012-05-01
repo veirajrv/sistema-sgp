@@ -90,7 +90,7 @@ return false;
 	<div id="tagline">
 		<a href="index.html" title="Home"><img src="<?php echo base_url();?>files/images/Portada/logo2.gif" alt="Your logo here" width="45" height="40" /> <span id="logo-text">YOMA</span></a>
 		<div id="userbar">
-			<a href="<?php echo base_url();?>index.php/Control_Inicio/cerrar_sesion">Cerrar Sesion </a> | <a href="">Ayuda</a>		</div>
+			<a href="<?php echo base_url();?>index.php/Control_Inicio/cerrar_sesion">Cerrar Sesion </a> | <a href="<?php echo base_url();?>index.php/Control_Pdf/index2">Ayuda</a>		</div>
 	</div><!-- END tagline -->
 
 <!-- BEGIN tabs -->

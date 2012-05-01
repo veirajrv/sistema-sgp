@@ -9,7 +9,20 @@ class ModelCombox extends CI_Model {
 	
 	## INSERT ##
 	
+	function InsertarPdf($data) 
+	{
+		$this->db->insert('database', $data);
+	} 
+	
 	## SELECT ##
+	
+	function ConsultarDirectorio()
+	{
+		$query = $this->db->query('SELECT `Id_Database` , `Nombre` , `Directorio`
+FROM `database`');	
+		
+		return $query->result_array();	
+	}
 	
 	function VerificarTipo($usuario)
 	{

@@ -231,12 +231,13 @@ textarea.LV_invalid_field:active {
       <table width="200" border="0">
         <tr>
           <td>
-              <table width="409" border="0">
+              <table width="432" border="0">
                 <tr>
-                  <td width="106" align="right"><font style="font-size:12px">Correo:</font></td>
+                  <td width="55" align="right"><font style="font-size:12px">Correo:</font></td>
                   <td width="20" align="center">                      
-                  <input type="checkbox" name="checkbox" value="checkbox" onclick="document.getElementById('Correo').disabled = !this.checked" />                  </td><td width="269">
+                  <input type="checkbox" name="checkbox" value="checkbox" onclick="document.getElementById('Correo').disabled = !this.checked" />                  </td><td width="200">
                     <input name="Correo" type="email" id="Correo" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" value="<?php echo $Correo; ?>" required="required" disabled="disabled"/></td>
+                  <td width="139" rowspan="4"><img src="<?php echo base_url();?>files/fotos/<?php echo $Cedula; ?>.JPG" alt="" width="135" height="180" /></td>
                 </tr>
                 <tr>
                   <td align="right"><font style="font-size:12px">Telefono Casa:</font></td>
@@ -244,14 +245,14 @@ textarea.LV_invalid_field:active {
                   <td>
                     <input name="Telefono" type="text" id="Telefono" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" title="Introduzca su numero telefonico colocando el numero de area correspondiente (0212xxxxxxx, 0241xxxxxxx)" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" onkeypress="return soloNumeros(event)" value="<?php echo $Telefono1; ?>" maxlength="11" required="required" disabled="disabled"/><script>var f10 = new LiveValidation('Telefono');
 f10.add( Validate.Length, { is: 11 } );</script>                  </td>
-                </tr>
+                  </tr>
                 <tr>
                   <td align="right"><font style="font-size:12px">Telefono Oficina:</font></td>
                   <td align="center"><input type="checkbox" name="checkbox3" value="checkbox" onclick="document.getElementById('Telefono2').disabled = !this.checked" /></td>
                   <td>
                     <input name="Telefono2" type="text" id="Telefono2" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" title="Introduzca su numero telefonico colocando el numero de area correspondiente (0212xxxxxxx, 0241xxxxxxx)" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" onkeypress="return soloNumeros(event)" value="<?php echo $Telefono2; ?>" maxlength="11" required="required" disabled="disabled"/><script>var f10 = new LiveValidation('Telefono2');
 f10.add( Validate.Length, { is: 11 } );</script>                  </td>
-                </tr>
+                  </tr>
                 <tr>
                   <td align="right"><font style="font-size:12px">Telefono Celular:</font></td>
                   <td align="center"><input type="checkbox" name="checkbox4" value="checkbox" onclick="document.getElementById('Telefono3').disabled = !this.checked" /></td>
@@ -259,7 +260,7 @@ f10.add( Validate.Length, { is: 11 } );</script>                  </td>
                     <input name="Telefono3" type="text" id="Telefono3" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" title="Introduzca su numero telefonico colocando el numero de area correspondiente (0212xxxxxxx, 0241xxxxxxx)" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" onkeypress="return soloNumeros(event)" value="<?php echo $Telefono3; ?>" maxlength="11" disabled="disabled"/><script>var f10 = new LiveValidation('Telefono3');
 f10.add( Validate.Length, { is: 11 } );</script>                  
 </td>
-                </tr>
+                  </tr>
               </table>             </td>
         </tr>
         <tr>
