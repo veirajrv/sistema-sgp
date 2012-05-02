@@ -123,7 +123,7 @@
         <td width="330"><input type="file" name="userfile" size="20" />
           <br />
           <br />
-          <input type="submit" value="upload" /></td>
+          <input type="submit" value="Cargar" /></td>
       </tr>
       <tr>
         <td colspan="2"><hr align="left" style="width:435px;" /></td>
@@ -132,20 +132,19 @@
         <td colspan="2"><h2 style="font-size:30px">Manuales</h2></td>
         </tr>
       <tr>
-        <td colspan="2"><?php echo $table; ?></td>
+        <td colspan="2">
+			<table><?php if(isset($Lista))
+								{
+									foreach($Lista as $row)
+									{?><tr>
+										<td><?php echo $row['Nombre'];?></td>
+                                        <td><a href="<?php echo base_url();?>files/pdf/<?php echo $row['Nombre'];?>">Descargar</a></td></tr>
+									<?php }
+								} ?> </table></td>
         </tr>
       <tr>
         <td colspan="2">&nbsp;</td>
-        </tr>
-      <tr>
-        <td colspan="2">&nbsp;</td>
-        </tr>
-      <tr>
-        <td colspan="2">&nbsp;</td>
-        </tr>
-      <tr>
-        <td colspan="2">&nbsp;</td>
-        </tr>
+      </tr>
     </table>
   </div>
   <!-- END cc -->

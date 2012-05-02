@@ -12,7 +12,7 @@ class Control_Upload extends CI_Controller
 	
 	function do_upload()
 	{		
-		$config['upload_path'] = 'C:/Documents and Settings/JRodriguezV/Desktop/Download/';
+		$config['upload_path'] = 'C:\wamp\www\OpenSGP\files\pdf';
 		$config['allowed_types'] = 'pdf';
 		$config['file_name'] = $_POST['Nombre'];
 		
@@ -24,6 +24,9 @@ class Control_Upload extends CI_Controller
 			$config['Usuario'] = $Usuario;
 			$error = "No se puedo cargar el archivo con exito! Intente de nuevo";
 			$config['error'] = $error;
+			
+			$config['Lista'] = $this->modelCombox->ConsultarDirectorio();
+			
 			$this->load->view('Administrador/AArchivoPdf', $config);
 		}
 		else
@@ -34,8 +37,10 @@ class Control_Upload extends CI_Controller
 			$config['error'] = $error;
 			
 			$data['Nombre'] = $_POST['Nombre'].'.pdf';
-			$data['Directorio'] = "C:/Documents and Settings/JRodriguezV/Desktop/Download/";
+			$data['Directorio'] = "http://127.0.0.1/OpenSGP/files/pdf/";
 			$this->modelCombox->InsertarPdf($data);
+			
+			$config['Lista'] = $this->modelCombox->ConsultarDirectorio();
 			
 			$this->load->view('Administrador/AArchivoPdf', $config);
 		}
