@@ -6,6 +6,7 @@ class Control_Institucion extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('modelInstitucion');
+		$this->load->model('modelCliente');
 		$this->load->model('modelNegociacion');
 		$this->load->helper('form');
 	}
@@ -16,6 +17,8 @@ class Control_Institucion extends CI_Controller {
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
 		$usuario['Institucion'] = $this->modelNegociacion->BuscarInstitucion();
+		$usuario['Instituciones2'] = $this->modelCliente->BuscarInstituciones();
+		
 		$this->load->view('Vendedor/Institucion/VVerInstitucion', $usuario);
 	}
 	
@@ -133,6 +136,8 @@ class Control_Institucion extends CI_Controller {
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
 		$usuario['Institucion'] = $this->modelNegociacion->BuscarInstitucion();
+		$usuario['Instituciones2'] = $this->modelCliente->BuscarInstituciones();
+		
 		$this->load->view('Vendedor/Institucion/VVerInstitucion', $usuario);
 	}
 	

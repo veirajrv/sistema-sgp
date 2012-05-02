@@ -462,7 +462,7 @@ class ModelCliente extends CI_Model {
 	
 	function BuscarClientesTodos() 
 	{
-		$query = $this->db->query('SELECT DISTINCT(C.Nombre), C.Apellido, C.Cedula, C.Email, C.Telefono, C.Telefono2
+		$query = $this->db->query('SELECT DISTINCT(C.Nombre), C.Id_Cliente, C.Apellido, C.Cedula, C.Email, C.Telefono, C.Telefono2
 								   FROM CLIENTE AS C
 								   ORDER BY C.Nombre ASC ');	
 		
