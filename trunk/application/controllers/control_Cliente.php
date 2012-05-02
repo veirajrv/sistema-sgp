@@ -18,6 +18,8 @@ class Control_Cliente extends CI_Controller {
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
 		$usuario['Clientes'] = $this->modelNegociacion->BuscarClientes();
+		$usuario['Clientes2'] = $this->modelCliente->BuscarClientesTodos();
+		
 		$this->load->view('Vendedor/Cliente/VVerCliente', $usuario);
 	}
 	
@@ -198,6 +200,8 @@ class Control_Cliente extends CI_Controller {
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
 		$usuario['Clientes'] = $this->modelNegociacion->BuscarClientes();
+		$usuario['Clientes2'] = $this->modelCliente->BuscarClientesTodos();
+		
 		$this->load->view('Vendedor/Cliente/VVerCliente', $usuario);		
 	}
 	

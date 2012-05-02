@@ -205,24 +205,18 @@ function CambiaColor(esto,borde,texto)
 <!-- BEGIN left column -->
 <div id="left">
 <div id="lc">
-	<div class="demo">
-
-<div id="accordion">
-	<h3><a href="#">Ver</a></h3>
-	<div>
-		<li>- <a href="<?php echo base_url();?>index.php/Control_Venta/ver_negociacion">Negociaciones</a></li>
-		<li>- <a href="<?php echo base_url();?>index.php/Control_Venta/consultar_negociaciones">Venta</a></li>
-	</div>
-	<h3><a href="#">Herramientas</a></h3>
-	<div>
-		
-	</div>
-</div>
-
-</div>
-
-</div>
-	<p>&nbsp;</p>
+  <div class="demo">
+    <div id="accordion">
+      <h3><a href="#">Ver</a></h3>
+      <div>
+        <li>- <a href="<?php echo base_url();?>index.php/Control_Venta/ver_negociacion">Negociaciones</a></li>
+        <li>- <a href="<?php echo base_url();?>index.php/Control_Venta/consultar_negociaciones">Venta</a></li>
+      </div>
+      <h3><a href="#">Herramientas</a></h3>
+      <div></div>
+    </div>
+  </div>
+  <p>&nbsp;</p>
 </div><!-- END lc -->
 </div><!-- END left -->
 
@@ -238,7 +232,7 @@ function CambiaColor(esto,borde,texto)
           <td colspan="2"><hr align="left" style="width:435px;" /></td>
         </tr>
         <tr>
-          <td colspan="2"><fieldset><legend style="font-size:15px">Lista de clientes</legend>
+          <td colspan="2">
               <table width="410" border="0">
                 <tr>
                   <td align="right"><font style="font-size:12px">Buscador:</font></td>
@@ -302,9 +296,34 @@ function CambiaColor(esto,borde,texto)
                         <input type="submit" name="Submit23" value="Buscar" />
                       </form>                       </td>
                 </tr>
-              </table>
-              </fieldset></td>
+              </table></td>
           </tr>
+        <tr>
+          <td colspan="2"><hr align="left" style="width:435px;" /></td>
+        </tr>
+        <tr>
+          <td colspan="2"><h2 style="font-size:30px">Listado general de clientes</h2></td>
+        </tr>
+        <tr>
+          <td colspan="2"><table width="422" border="0">
+            <tr>
+              <td width="110" align="right"><font style="font-size:12px">Nombre y Apellido:</font></td>
+              <td width="296"><form id="form5" method="post" action="<?php echo base_url();?>index.php/Control_Venta/ver_perfil">
+                <select name="Cliente" id="Cliente" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required">
+                  <option></option>
+                  <?php
+						foreach ($Clientes2 as $row) {
+				  ?>
+                  <option value="<?php echo $row['Id_Cliente']; ?>" <?php echo set_select('Hola',$row['Id_Cliente']); ?> ><?php echo $row['Nombre']; echo " "; echo $row['Apellido'];?></option>
+                  <?php
+					}
+					?>
+                </select>
+                <input type="submit" name="Submit3" value="Buscar" />
+              </form></td>
+            </tr>
+          </table></td>
+        </tr>
       </table>
 </div>
   <!-- END cc -->

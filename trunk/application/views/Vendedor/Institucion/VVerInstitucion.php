@@ -240,7 +240,7 @@ function CambiaColor(esto,borde,texto)
           <td colspan="2"><hr align="left" style="width:435px;" /></td>
         </tr>
         <tr>
-          <td colspan="2"><fieldset><legend style="font-size:15px">Lista de Instituciones</legend>
+          <td colspan="2">
               <table width="410" border="0">
                 <tr>
                   <td width="110" align="right"><font style="font-size:12px">Nombre:</font></td>
@@ -278,9 +278,34 @@ function CambiaColor(esto,borde,texto)
                     </form>
                   </td>
                 </tr>
-              </table>
-          </fieldset></td>
+              </table></td>
           </tr>
+        <tr>
+          <td colspan="2"><hr align="left" style="width:435px;" /></td>
+        </tr>
+        <tr>
+          <td colspan="2"><h2 style="font-size:30px">Listado general de instituciones</h2></td>
+        </tr>
+        <tr>
+          <td colspan="2"><table width="416" border="0">
+            <tr>
+              <td width="110" align="right"><font style="font-size:12px">Nombre y Apellido:</font></td>
+              <td width="290"><form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Institucion/ver_perfil">
+                <select name="Cliente" id="Cliente" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required">
+                  <option></option>
+                  <?php
+						foreach ($Instituciones2 as $row) {
+				  ?>
+                  <option value="<?php echo $row['Id_Institucion']; ?>" <?php echo set_select('Hola',$row['Id_Institucion']); ?> ><?php echo $row['Nombre']; ?></option>
+                  <?php
+					}
+					?>
+                </select>
+                <input type="submit" name="Submit" value="Buscar" />
+              </form></td>
+            </tr>
+          </table></td>
+        </tr>
       </table>
 </div>
   <!-- END cc -->
