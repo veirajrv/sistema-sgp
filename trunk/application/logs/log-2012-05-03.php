@@ -220,3 +220,12 @@ ERROR - 2012-05-03 19:08:24 --> Severity: Notice  --> iconv() [<a href='function
 ERROR - 2012-05-03 19:08:32 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
 ERROR - 2012-05-03 19:09:59 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
 ERROR - 2012-05-03 19:10:00 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-05-03 19:26:46 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-05-03 19:26:46 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-05-03 19:26:46 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-05-03 19:26:46 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-05-03 19:27:07 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-05-03 19:27:07 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-05-03 19:27:08 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-05-03 19:28:22 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-05-03 19:28:23 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
