@@ -229,3 +229,30 @@ ERROR - 2012-05-03 19:27:07 --> Query error: You have an error in your SQL synta
 ERROR - 2012-05-03 19:27:08 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
 ERROR - 2012-05-03 19:28:22 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
 ERROR - 2012-05-03 19:28:23 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-05-03 20:30:28 --> Severity: Notice  --> Undefined index: idcliente2 C:\wamp\www\OpenSGP\application\controllers\control_Negociacion.php 1166
+ERROR - 2012-05-03 20:32:15 --> Severity: Notice  --> Undefined index: Negociacion2 C:\wamp\www\OpenSGP\application\controllers\control_Negociacion.php 1055
+ERROR - 2012-05-03 20:32:15 --> Severity: Notice  --> Undefined index: Negociacion2 C:\wamp\www\OpenSGP\application\controllers\control_Negociacion.php 1056
+ERROR - 2012-05-03 20:32:15 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5
+ERROR - 2012-05-03 20:33:21 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-05-03 20:33:22 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-05-03 20:37:34 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-05-03 20:37:35 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-05-03 20:39:30 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-05-03 20:39:31 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-05-03 20:40:03 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-05-03 20:40:04 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-05-03 20:40:56 --> Severity: Notice  --> Undefined index: idcliente2 C:\wamp\www\OpenSGP\application\controllers\control_Negociacion.php 1102
+ERROR - 2012-05-03 20:40:56 --> Severity: Notice  --> Undefined index: idcliente2 C:\wamp\www\OpenSGP\application\controllers\control_Negociacion.php 1103
+ERROR - 2012-05-03 20:40:56 --> Severity: Notice  --> Undefined variable: nombre C:\wamp\www\OpenSGP\application\models\modelNegociacion.php 490
+ERROR - 2012-05-03 20:40:56 --> Severity: Notice  --> Undefined variable: telefono C:\wamp\www\OpenSGP\application\models\modelNegociacion.php 502
+ERROR - 2012-05-03 20:41:36 --> Severity: Notice  --> Undefined index: idcliente2 C:\wamp\www\OpenSGP\application\controllers\control_Negociacion.php 1102
+ERROR - 2012-05-03 20:41:36 --> Severity: Notice  --> Undefined index: idcliente2 C:\wamp\www\OpenSGP\application\controllers\control_Negociacion.php 1103
+ERROR - 2012-05-03 20:41:36 --> Severity: Notice  --> Undefined variable: nombre C:\wamp\www\OpenSGP\application\models\modelNegociacion.php 490
+ERROR - 2012-05-03 20:41:36 --> Severity: Notice  --> Undefined variable: telefono C:\wamp\www\OpenSGP\application\models\modelNegociacion.php 502
+ERROR - 2012-05-03 20:42:43 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-05-03 20:42:44 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-05-03 20:42:53 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-05-03 20:43:24 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-05-03 20:43:25 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-05-03 20:43:47 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-05-03 20:43:48 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1

@@ -393,7 +393,7 @@ function CambiaColor(esto,borde,texto)
         </fieldset></td>
       </tr>
     </table>
-	<form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/paso_extra">
+	<form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/telemetria">
 	  <table width="440" border="0">
         <tr>
           <td width="434" align="right" valign="top">

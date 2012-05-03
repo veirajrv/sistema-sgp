@@ -1163,7 +1163,7 @@ class control_Negociacion extends CI_Controller {
 		$usuario['Id_Negociacion'] = $_POST['Negociacion'];
 		$Id_Negociacion = $_POST['Negociacion'];
 		$usuario['Status'] = $_POST['Status'];
-		$usuario['idcliente'] = $_POST['idcliente2'];
+		$usuario['idcliente'] = $_POST['idcliente'];
 		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Id_Negociacion); 
 		$usuario['Porcentaje'] = $porcentaje;
 		

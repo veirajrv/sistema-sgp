@@ -194,7 +194,7 @@ function CambiaColor(esto,borde,texto)
           <td valign="top"><h2 style="font-size:30px">Codigo Negociaci&oacute;n (<?php echo $Id_Negociacion; ?>)</h2></td>
           </tr>
         <tr>
-          <td valign="top"><h4 style="color:#0066FF">TELEMETRIA I</h4></td>
+          <td valign="top"><h4 style="color:#0066FF">PASO II</h4></td>
         </tr>
         <tr>
           <td><hr align="left" style="width:435px;" /></td>
@@ -292,12 +292,12 @@ function CambiaColor(esto,borde,texto)
     </table>
     <table width="437" border="0">
       <tr>
-        <td width="314" valign="top"><form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/paso_extra" style="width:200px">
+        <td width="314" valign="top"><form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/atras_paso_extrai" style="width:200px">
           
             <input name="Submit" type="image" id="Submit" src="<?php echo base_url();?>files/images/FlechaI.png" title="Paso Anterior"/>
-            <input type="hidden" name="Negociacion" id="Negociacion" style="width:20px" value="<?php echo $Id_Negociacion; ?>" />
-            <input type="hidden" name="idcliente" id="idcliente" style="width:20px" value="<?php echo $idcliente; ?>" />
-            <input type="hidden" name="Status" id="Status" style="width:20px" value="<?php echo $Status; ?>" />
+            <input type="hidden" name="Negociacion2" id="Negociacion2" style="width:20px" value="<?php echo $Id_Negociacion; ?>" />
+            <input type="hidden" name="idcliente2" id="idcliente2" style="width:20px" value="<?php echo $idcliente; ?>" />
+            <input type="hidden" name="Status2" id="Status2" style="width:20px" value="<?php echo $Status; ?>" />
            
         </form></td>
         <td width="113" align="right" valign="top"><form id="form2" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/fin_negociacion">
