@@ -211,7 +211,7 @@ return false;
           <td valign="top"><h2 style="font-size:30px">Codigo Negociaci&oacute;n (<?php echo $Id_Negociacion; ?>)</h2></td>
           </tr>
         <tr>
-          <td valign="top"><h4 style="color:#0066FF">TELEMETRIA II</h4></td>
+          <td valign="top"><h4 style="color:#0066FF">PASO III</h4></td>
         </tr>
         <tr>
           <td><hr align="left" style="width:435px;" /></td>
@@ -253,7 +253,7 @@ return false;
     </form>
     <table width="437" border="0">
       <tr>
-        <td width="314" valign="top"><form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/paso_extra" style="width:200px">
+        <td width="314" valign="top"><form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/telemetria_institucion" style="width:200px">
           
             <input name="Submit" type="image" id="Submit" src="<?php echo base_url();?>files/images/FlechaI.png" title="Paso Anterior"/>
             <input type="hidden" name="Negociacion" id="Negociacion" style="width:20px" value="<?php echo $Id_Negociacion; ?>" />
