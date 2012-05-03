@@ -120,7 +120,7 @@
       </tr>
       <tr>
         <td align="right" valign="top">&nbsp;</td>
-        <td width="330"><input type="file" name="userfile" size="20" />
+        <td width="330"><input type="file" name="userfile" size="29" />
           <br />
           <br />
           <input type="submit" value="Cargar" /></td>

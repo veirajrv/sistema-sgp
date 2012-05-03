@@ -56,6 +56,17 @@ class ModelProducto extends CI_Model {
 	
 	## SELECT ##
 	
+	function BuscarAccesorios($equipo) 
+	{
+		$query = $this->db->query('SELECT a.Id_Accesorio, a.Codigo, a.Nombre, a.Precio, a.Descripcion, a.Descripcion2
+								   FROM accesorio AS a, aequipo AS ae, equipo AS e
+								   WHERE ae.Id_Equipo = e.Id_Equipo
+								   AND e.Id_Equipo = '.$equipo.'
+								   AND ae.Id_Accesorio = a.Id_Accesorio');	
+		
+		return $query->result_array();		
+	} 
+	
 	function BuscarDatosEquipo($Id) 
 	{
 		$query = $this->db->where("Id_Equipo", $Id);
