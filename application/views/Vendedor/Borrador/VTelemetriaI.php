@@ -194,7 +194,7 @@ function CambiaColor(esto,borde,texto)
           <td valign="top"><h2 style="font-size:30px">Codigo Negociaci&oacute;n (<?php echo $Id_Negociacion; ?>)</h2></td>
           </tr>
         <tr>
-          <td valign="top"><h4 style="color:#0066FF">PASO II</h4></td>
+          <td valign="top"><h4 style="color:#0066FF">TELEMETRIA I</h4></td>
         </tr>
         <tr>
           <td><hr align="left" style="width:435px;" /></td>
@@ -207,7 +207,7 @@ function CambiaColor(esto,borde,texto)
         </tr>
       </table>
     </form>
-    <form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/agregar_otro_accesorios2/<?php echo $Id_Negociacion?>/<?php echo $Status; ?>/<?php echo $idcliente; ?>">
+    <form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/telemetria_accesorios_institucion/<?php echo $Id_Negociacion?>/<?php echo $Status; ?>/<?php echo $idcliente; ?>">
       <table width="440" border="0">
         <tr>
           <td width="434"><fieldset><legend style="font-size:15px"><b>Accesorio de un equipo</b></legend>
@@ -238,97 +238,73 @@ function CambiaColor(esto,borde,texto)
     </select></td>
   </tr>
   <tr>
-    <td align="right"><font style="font-size:12px">Accesorio:</font></td>
-    <td width="200"><select name="Accesorio" id="Accesorio" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')">
-      <option value=" " <?php echo set_select('Accesorio',' ', TRUE); ?> >Seleccione un accesorio</option>
-    </select></td>
+    <td align="right">&nbsp;</td>
+    <td width="200" align="right"><input type="submit" name="Buscar" id="Buscar" value="Buscar Accesorios" OnClick="return confirm('Usted desea buscar los accesorios de este equipo?');"/></td>
     <td width="76">&nbsp;</td>
   </tr>
   <tr>
-    <td align="right"><font style="font-size:12px">Cantidad:</font></td>
-    <td align="right"><input name="Cantidad" type="text" id="Cantidad" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required"/></td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td align="right">&nbsp;</td>
-    <td align="right"><input type="submit" name="Buscar" id="Buscar" value="Agregar" OnClick="return confirm('Usted desea agregar este accesorio a la lista de compras?');"/></td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td colspan="3"><cite>Nota: Esta opcion es solo para agregar accesorios de un equipo en particular</cite></td>
+    <td colspan="3">&nbsp;</td>
     </tr>
 </table>
 
           </fieldset></td>
         </tr>
       </table>
-      </form>
-      <table width="440" border="0">
-        <tr>
-          <td width="430" align="center"><form id="form4" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/telemetria">
-            <input type="submit" name="button" id="button" value="Telemetria" style="height:50px; width:150px; font-size:25px;" />
-            <span style="width:200px">
-            <input type="hidden" name="Negociacion" id="Negociacion" style="width:20px" value="<?php echo $Id_Negociacion; ?>" />
-            <input type="hidden" name="idcliente2" id="idcliente2" style="width:20px" value="<?php echo $idcliente; ?>" />
-            <input type="hidden" name="Status" id="Status" style="width:20px" value="<?php echo $Status; ?>" />
-            </span>
-          </form></td>
-        </tr>
-      </table>
-      <br />
-      <table width="441" border="0">
-        <tr>
-        <td width="435"><fieldset><legend style="font-size:15px"><b>Accesorios</b></legend>
-            <table width="410" border="0">
-              <tr>
-                <td>Codigo/Nombre</td>
-                <td>Descripcion</td>
-                <td>Cantidad</td>
-                <td>&nbsp;</td>
-              </tr>
-              <tr>
-                <td width="114"><?php $j=0; foreach ($Lista as $row){
+    </form>
+    <table width="441" border="0">
+      <tr>
+        <td><fieldset>
+          <legend style="font-size:15px"><b>Accesorios</b></legend>
+          <table width="410" border="0">
+            <tr>
+              <td>Codigo/Nombre</td>
+              <td>Descripcion</td>
+              <td>Cantidad</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td><?php $j=0; foreach ($Lista as $row){
 							
 							echo $row['Id_Accesorio']; echo '&nbsp;'; echo $row['Nombre']; echo '</br>';
 							
 							$j++;}?></td>
-                <td><?php $j=0; foreach ($Lista as $row){
+              <td><?php $j=0; foreach ($Lista as $row){
 							
 							echo $row['Descripcion']; echo '</br>';
 							
 							$j++;}?></td>
-                <td width="51"><?php $j=0; foreach ($Lista as $row){
+              <td><?php $j=0; foreach ($Lista as $row){
 							
 							echo $row['Cantidad']; echo '</br>';
 							
 							$j++;}?></td>
-                <td width="20"><a href="sdfsdf">
-                  <?php $j=0; foreach ($Lista as $row){
+              <td><a href="sdfsdf">
+                <?php $j=0; foreach ($Lista as $row){
 							
 							echo '<a href="'.base_url().'index.php/Control_Negociacion/eliminar_producto/'.$row['Id_HistorialNP'].'/'.$idcliente.'/'.$Id_Negociacion.'">ELIMINAR</a>'; echo '</br>';
 							
 							$j++;}?>
-                </a></td>
-              </tr>
-            </table>
-            </fieldset></td>
+              </a></td>
+            </tr>
+          </table>
+        </fieldset></td>
       </tr>
-</table>
-	<table width="437" border="0">
+    </table>
+    <table width="437" border="0">
       <tr>
-        <td width="314" valign="top"><form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/atras_paso_extra" style="width:200px">
+        <td width="314" valign="top"><form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/paso_extra" style="width:200px">
           
             <input name="Submit" type="image" id="Submit" src="<?php echo base_url();?>files/images/FlechaI.png" title="Paso Anterior"/>
-            <input type="hidden" name="Negociacion2" id="Negociacion2" style="width:20px" value="<?php echo $Id_Negociacion; ?>" />
+            <input type="hidden" name="Negociacion" id="Negociacion" style="width:20px" value="<?php echo $Id_Negociacion; ?>" />
             <input type="hidden" name="idcliente" id="idcliente" style="width:20px" value="<?php echo $idcliente; ?>" />
-            <input type="hidden" name="Status2" id="Status2" style="width:20px" value="<?php echo $Status; ?>" />
+            <input type="hidden" name="Status" id="Status" style="width:20px" value="<?php echo $Status; ?>" />
            
         </form></td>
         <td width="113" align="right" valign="top"><form id="form2" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/fin_negociacion">
           <input type="submit" name="Submit2" value="Finalizar" onclick="return confirm('Al finalizar esta negociaci&oacute;n la misma sera enviada a la lista de negociaciones por aprobar');"/>
         </form></td>
       </tr>
-    </table>
+</table>
     <p>&nbsp;</p>
   </div>
   <!-- END cc -->

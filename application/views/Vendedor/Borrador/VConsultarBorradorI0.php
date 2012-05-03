@@ -262,8 +262,21 @@ function CambiaColor(esto,borde,texto)
         </tr>
       </table>
     </form>
+	<table width="438" border="0">
+	  <tr>
+	    <td width="428" align="center"><form id="form4" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/telemetria_institucion">
+	      <input type="submit" name="button" id="button" value="Telemetria" style="height:50px; width:150px; font-size:25px;" />
+	      <span style="width:200px">
+	        <input type="hidden" name="Negociacion" id="Negociacion" style="width:20px" value="<?php echo $Id_Negociacion; ?>" />
+	        <input type="hidden" name="idcliente" id="idcliente" style="width:20px" value="<?php echo $idcliente; ?>" />
+	        <input type="hidden" name="Status" id="Status" style="width:20px" value="<?php echo $Status; ?>" />
+	        </span>
+	      </form></td>
+	    </tr>
+	  </table>
+	<br />
 	<table width="441" border="0">
-      <tr>
+	  <tr>
         <td width="435"><fieldset>
           <legend style="font-size:15px"><b>Accesorios</b></legend>
           <table width="410" border="0">
@@ -292,7 +305,7 @@ function CambiaColor(esto,borde,texto)
               <td width="20"><a href="sdfsdf">
                 <?php $j=0; foreach ($Lista as $row){
 							
-							echo '<a href="http://elp21.no-ip.info:4085/SGP/index.php/Control_Negociacion/eliminar_producto_i/'.$row['Id_HistorialNP'].'/'.$idcliente.'/'.$Id_Negociacion.'">ELIMINAR</a>'; echo '</br>';
+							echo '<a href="'.base_url().'index.php/Control_Negociacion/eliminar_producto_i/'.$row['Id_HistorialNP'].'/'.$idcliente.'/'.$Id_Negociacion.'">ELIMINAR</a>'; echo '</br>';
 							
 							$j++;}?>
               </a></td>
@@ -300,7 +313,7 @@ function CambiaColor(esto,borde,texto)
           </table>
         </fieldset></td>
       </tr>
-    </table>
+</table>
 	<table width="437" border="0">
       <tr>
         <td width="313" valign="top"><form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/atras_paso_extrai" style="width:200px">

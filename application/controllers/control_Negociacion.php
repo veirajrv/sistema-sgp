@@ -1155,6 +1155,40 @@ class control_Negociacion extends CI_Controller {
 		$this->load->view('Vendedor/Borrador/VConsultaBorrador0', $usuario);
 	}
 	
+	// Funcion que nos lleva a un paso antes de la insercion de accesorios a la factura //
+	public function telemetria() 
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario; // Id Negociacion //
+		$usuario['Id_Negociacion'] = $_POST['Negociacion'];
+		$Id_Negociacion = $_POST['Negociacion'];
+		$usuario['Status'] = $_POST['Status'];
+		$usuario['idcliente'] = $_POST['idcliente2'];
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Id_Negociacion); 
+		$usuario['Porcentaje'] = $porcentaje;
+		
+		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Id_Negociacion);
+		$this->load->view('Vendedor/Borrador/VTelemetria', $usuario);
+	}
+	
+	// Funcion que nos lleva a un paso antes de la insercion de accesorios a la factura //
+	public function telemetria_institucion() 
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario; // Id Negociacion //
+		$usuario['Id_Negociacion'] = $_POST['Negociacion'];
+		$Id_Negociacion = $_POST['Negociacion'];
+		$usuario['Status'] = $_POST['Status'];
+		$usuario['idcliente'] = $_POST['idcliente'];
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Id_Negociacion); 
+		$usuario['Porcentaje'] = $porcentaje;
+		
+		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Id_Negociacion);
+		$this->load->view('Vendedor/Borrador/VTelemetriaI', $usuario);
+	}
+	
 	public function paso_extra_i()
 	{
 		$Usuario = $this->session->userdata('Usuario');
@@ -1790,6 +1824,60 @@ class control_Negociacion extends CI_Controller {
 		$this->load->view('Vendedor/Borrador/VConsultarBorradorI0', $usuario);
 	}
 	
+	public function agregar_accesorio_telemetria($Negociacion, $Status, $Cliente) 
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		
+		foreach($_POST['checkbox'] as $row)
+		{
+			$HistorialNP['Id_Accesorio'] = $row;
+			$HistorialNP['Id_Negociacion'] = $Negociacion;
+			$HistorialNP['Cantidad'] = $_POST[$row];	
+			
+			$this->modelProducto->AgregarAccesorio($HistorialNP);
+		}
+		
+		$usuario['Id_Negociacion'] = $Negociacion;
+		$usuario['Status'] = $Status;
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Negociacion); 
+		$usuario['Porcentaje'] = $porcentaje;
+		
+		$usuario['idcliente'] = $Cliente;
+		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Negociacion);
+
+		$this->load->view('Vendedor/Borrador/VTelemetria', $usuario);
+
+	}
+	
+	public function agregar_accesorio_telemetria_I($Negociacion, $Status, $Cliente) 
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		
+		foreach($_POST['checkbox'] as $row)
+		{
+			$HistorialNP['Id_Accesorio'] = $row;
+			$HistorialNP['Id_Negociacion'] = $Negociacion;
+			$HistorialNP['Cantidad'] = $_POST[$row];	
+			
+			$this->modelProducto->AgregarAccesorio($HistorialNP);
+		}
+		
+		$usuario['Id_Negociacion'] = $Negociacion;
+		$usuario['Status'] = $Status;
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Negociacion); 
+		$usuario['Porcentaje'] = $porcentaje;
+		
+		$usuario['idcliente'] = $Cliente;
+		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Negociacion);
+
+		$this->load->view('Vendedor/Borrador/VTelemetriaI', $usuario);
+
+	}
+	
 	public function agregar_otro_accesorios2($Negociacion, $Status, $Cliente) 
 	{
 		$Usuario = $this->session->userdata('Usuario');
@@ -1814,6 +1902,42 @@ class control_Negociacion extends CI_Controller {
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 		
 		$this->load->view('Vendedor/Borrador/VConsultaBorrador0', $usuario);
+	}
+	
+	public function telemetria_accesorios($Negociacion, $Status, $Cliente) 
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$usuario['Id_Negociacion'] = $Negociacion;
+		$usuario['Status'] = $Status;
+		$equipo = $_POST['equipo'];
+		$usuario['Lista2'] = $this->modelProducto->BuscarAccesorios($equipo); 
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Negociacion); 
+		$usuario['Porcentaje'] = $porcentaje;
+		$usuario['idcliente'] = $Cliente;
+		
+		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Negociacion);
+		
+		$this->load->view('Vendedor/Borrador/VTelemetria2', $usuario);
+	}
+	
+	public function telemetria_accesorios_institucion($Negociacion, $Status, $Cliente) 
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$usuario['Id_Negociacion'] = $Negociacion;
+		$usuario['Status'] = $Status;
+		$equipo = $_POST['equipo'];
+		$usuario['Lista2'] = $this->modelProducto->BuscarAccesorios($equipo); 
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Negociacion); 
+		$usuario['Porcentaje'] = $porcentaje;
+		$usuario['idcliente'] = $Cliente;
+		
+		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Negociacion);
+		
+		$this->load->view('Vendedor/Borrador/VTelemetriaI2', $usuario);
 	}
 	
 	public function atras_agregar_otro_accesorios4() 
