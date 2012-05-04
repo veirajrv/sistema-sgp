@@ -785,6 +785,7 @@ class control_Negociacion extends CI_Controller {
 		$stado = $this->modelNegociacion->BuscarEstado($Id_Negociacion2);
 		if (($Id_Negociacion == NULL) || ($stado == 2) || ($vendedor <> $vendedor2))
 		{
+			$usuario['condiciones'] = $this->modelNegociacion->CondicionesPagos($Id_Negociacion);
 			$cedula = $this->modelCliente->BuscarId($Usuario);
 			$usuario['SinAutorizar'] = $this->modelInicio->SinAutorizar($cedula);
 			$usuario['Rechazadas'] = $this->modelInicio->Rechazadas($cedula);
@@ -799,10 +800,11 @@ class control_Negociacion extends CI_Controller {
 		}
 		else
 		{
-		$Cliente = $this->modelNegociacion->BuscarCliente($Id_Negociacion); // Id cliente persona //
-		$ClienteI = $this->modelNegociacion->BuscarClienteI($Id_Negociacion); // Id cliente institucion //
+			$Cliente = $this->modelNegociacion->BuscarCliente($Id_Negociacion); // Id cliente persona //
+			$ClienteI = $this->modelNegociacion->BuscarClienteI($Id_Negociacion); // Id cliente institucion //
 		if ($ClienteI == NULL) // Si entre en el if significa que el empleado es una persona //
 		{
+			$usuario['condiciones'] = $this->modelNegociacion->CondicionesPagos($Id_Negociacion);
 			$usuario['idcliente'] = $Cliente; // Id Cliente
 			$usuario['Permiso'] = $this->modelNegociacion->ConsultarPermiso($Id_Negociacion); 
 			
@@ -830,6 +832,7 @@ class control_Negociacion extends CI_Controller {
 		}
 		else // Si entre en el else significa que el empleado es una institucion //
 		{
+			$usuario['condiciones'] = $this->modelNegociacion->CondicionesPagos($Id_Negociacion);
 			$usuario['idcliente'] = $ClienteI; // Id Cliente
 			
 			$datos['ID2'] = $Id_Negociacion;	
