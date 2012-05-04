@@ -209,13 +209,9 @@ return false;
                   </tr>
                   <tr>
                     <td colspan="2"><strong>Web: </strong>
-                    <?php foreach ($DatosCliente as $row){
+                      <?php foreach ($DatosCliente as $row){
 							echo $row['Web']; 
 							     }?></td>
-                  </tr>
-                  <tr>
-                    <td colspan="2"><strong>Condici&oacute;n de pago: </strong>
-                <?php echo $condiciones; ?></td>
                   </tr>
                   <tr>
                     <td colspan="2"><strong>Atenci&oacute;n: </strong></td>

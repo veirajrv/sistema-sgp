@@ -96,10 +96,6 @@ window.open('<?php echo base_url();?>files/pdf/<?php echo $condiciones;?>.pdf', 
 							     }?></td>
           </tr>
           <tr>
-            <td colspan="2"><strong>Condici&oacute;n de pago: </strong>
-                <?php echo $condiciones; ?></td>
-          </tr>
-          <tr>
             <td colspan="2"><strong>Atenci&oacute;n: </strong><input type="text" name="textfield" style="border:none" /></td>
           </tr>
           <tr>
