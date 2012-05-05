@@ -23,7 +23,7 @@
     <td width="380"><form id="form1" name="form1" method="post" action="<?php echo base_url();?>index.php/Control_Inicio/d_principal">
       <input type="submit" name="Submit" value="Salir" />
     </form></td>
-    <td width="297"><form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Venta/atras_vista_previai2">
+    <td width="308"><form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Venta/atras_vista_previai2">
       <div align="right">
         <input type="hidden" name="Negociacion" id="Negociacion" style="width:20px" value="<?php echo $Id_Negociacion; ?>" />
         <input type="hidden" name="idcliente" id="idcliente" style="width:20px" value="<?php echo $idcliente; ?>" />
@@ -32,12 +32,8 @@
       </div>
     </form></td>
     <td align="left">
-      <input type="submit" value="IMPRIMIR" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Negociacion/imprimir_cliente/<?php echo $Id_Negociacion; ?>/<?php echo $idcliente; ?>', 'noimporta', 'width=850, height=500, scrollbars=NO')">
+      <input type="submit" title="Imprimir" name="Imprimir" value="Imprimir" href="javascript:void(0);" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Negociacion/imprimir_cliente/<?php echo $Id_Negociacion; ?>/<?php echo $idcliente; ?>/<?php echo $condiciones; ?>', '_blank')"/>
     </td>
-  </tr>
-  <tr>
-    <td colspan="2">&nbsp;</td>
-    <td><a href="<?php echo base_url();?>files/pdf/<?php echo $condiciones;?>.pdf">Condición de pago</a></td>
   </tr>
   <tr>
     <td colspan="3"><hr align="left" style="width:810px;" /></td>
@@ -185,7 +181,7 @@
   </tr>
   <tr>
     <td colspan="2">&nbsp;</td>
-  <td width="160">  
+  <td width="149">  
   </tr>
 </table>
 </body>

@@ -2537,12 +2537,13 @@ class control_Negociacion extends CI_Controller {
 		}		
 	}
 	
-	public function imprimir_persona($Id_Negociacion, $Id) 
+	public function imprimir_persona($Id_Negociacion, $Id, $condiciones) 
 	{
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario; // Id Usuario //
 		$usuario['Id_Negociacion'] = $Id_Negociacion; // Id Negociacion //
 		$usuario['idcliente'] = $Id; // Id Cliente
+		$usuario['condiciones'] = $condiciones; // Id Cliente
 		
 		$usuario['Permiso'] = $this->modelNegociacion->ConsultarPermiso($Id_Negociacion); 
 		
@@ -2567,12 +2568,13 @@ class control_Negociacion extends CI_Controller {
 		$this->load->view('Vendedor/Borrador/VImprecion', $usuario);
 	}
 	
-	public function imprimir_cliente($Id_Negociacion, $Id) // Vendedor //
+	public function imprimir_cliente($Id_Negociacion, $Id, $condiciones) // Vendedor //
 	{
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario; // Id Usuario //
 		$usuario['Id_Negociacion'] = $Id_Negociacion; // Id Negociacion //
 		$usuario['idcliente'] = $Id; // Id Cliente
+		$usuario['condiciones'] = $condiciones; // Id Cliente
 		
 		$status = $this->modelNegociacion->StatusNegociacion($Id_Negociacion); 
 		$usuario['Status'] = $status;

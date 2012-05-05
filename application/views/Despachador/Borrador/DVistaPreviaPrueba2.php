@@ -28,7 +28,7 @@
       <input type="submit" name="Submit" value="Salir" />
     
     </form>    </td>
-    <td width="208"><form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Venta/atras_vista_previa2">
+    <td width="218"><form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Venta/atras_vista_previa2">
       <div align="right">
         <input type="hidden" name="Status" id="Status" style="width:20px" value="<?php echo $Status; ?>" />
         <input type="hidden" name="idcliente" id="idcliente" style="width:20px" value="<?php echo $idcliente; ?>" />
@@ -36,12 +36,7 @@
         <input name="submit" type="submit" value="Ir Negociaci&oacute;n" />
       </div>
     </form></td>
-    <td align="left"><input type="submit" value="IMPRIMIR" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Negociacion/imprimir_persona/<?php echo $Id_Negociacion; ?>/<?php echo $idcliente; ?>', 'noimporta', 'width=850, height=500, scrollbars=NO')"></td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td><a href="<?php echo base_url();?>files/pdf/<?php echo $condiciones;?>.pdf">Condición de pago</a></td>
+    <td align="left"><input type="submit" title="Imprimir" name="Imprimir" value="Imprimir" href="javascript:void(0);" onclick="javascript:window.open('<?php echo base_url();?>index.php/Control_Negociacion/imprimir_persona/<?php echo $Id_Negociacion; ?>/<?php echo $idcliente; ?>/<?php echo $condiciones; ?>', '_blank')"/></td>
   </tr>
   <tr>
     <td colspan="3"><hr align="left" style="width:810px;" /></td>
@@ -193,7 +188,7 @@
   </tr>
   <tr>
     <td colspan="2">&nbsp;</td>
-  <td width="155">  
+  <td width="145">  
   </tr>
 </table>
 </body>
