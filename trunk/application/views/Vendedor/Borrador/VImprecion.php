@@ -22,6 +22,32 @@
 </head>
 
 <body onload="window.print()">
+<table width="846" border="0">
+  <tr>
+    <td width="404"><img src="<?php echo base_url();?>files/images/Condiciones_Yoma/<?php echo $condiciones; ?>.jpg"/></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
 <table width="851" border="0">
   <tr>
     <td colspan="2">
