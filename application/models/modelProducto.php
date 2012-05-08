@@ -185,7 +185,7 @@ class ModelProducto extends CI_Model {
 	
 	function ConsultarLista($Negociacion) 
 	{
-		$query = $this->db->query('SELECT H.Id_HistorialNP, A.Nombre, A.Descripcion, A.Precio, H.Cantidad, (
+		$query = $this->db->query('SELECT H.Id_HistorialNP, A.Nombre, A.Descripcion2, A.Precio, H.Cantidad, (
 A.Precio * H.Cantidad) AS Monto
 								   FROM Accesorio AS A, HistorialNP AS H, Negociacion AS N
 								   WHERE H.Id_Accesorio = A.Id_Accesorio
@@ -198,7 +198,7 @@ A.Precio * H.Cantidad) AS Monto
 	
 	function ConsultarLista2($Negociacion) 
 	{
-		$query = $this->db->query('SELECT H.Id_HistorialNP2, E.Nombre, E.Descripcion, E.Precio, H.Cantidad, (
+		$query = $this->db->query('SELECT H.Id_HistorialNP2, E.Nombre, E.Descripcion2, E.Precio, H.Cantidad, (
 E.Precio * H.Cantidad) AS Monto
 								   FROM Equipo AS E, HistorialNP2 AS H, Negociacion AS N
 								   WHERE H.Id_Equipo = E.Id_Equipo

@@ -141,13 +141,13 @@
 							$j++;}?></td>
             <td colspan="3"><?php $j=0; foreach ($Lista2 as $row){
 			
-							echo $row['Descripcion']; 
+							echo substr($row['Descripcion2'],0,95); echo "...";
 							echo "</br>";
 							
 							$j++;}?>
               <?php $j=0; foreach ($Lista as $row){
 			
-							echo $row['Descripcion'];
+							echo substr($row['Descripcion2'],0,95); echo "...";
 							echo "</br>";
 							
 							$j++;}?></td>
