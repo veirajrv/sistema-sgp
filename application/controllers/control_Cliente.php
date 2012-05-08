@@ -71,8 +71,20 @@ class Control_Cliente extends CI_Controller {
 		$Cliente['Direccion'] = $_POST['Direccion'];
 		$Cliente['Direccion2'] = $_POST['Direccion2'];
 		$Cliente['Direccion3'] = $_POST['Direccion3'];
+				
+		$Cedula = $tipo.'-'.$_POST['Cedula'];
+		$Cedula2 = $this->modelCliente->BuscarIdCliente2($Cedula);
+		
+		if($Cedula2 == false)
+		{
+			$usuario['Mensaje'] = 'Se agrego el cliente con &eacute;xito!';
 			
-		$this->modelCliente->InsertarCliente($Cliente);
+			$this->modelCliente->InsertarCliente($Cliente);
+		}
+		else
+		{
+			$usuario['Mensaje2'] = 'Ya existe este cliente en el sistema!';
+		}
 			
 		$maxcliente = $this->modelCliente->BuscarMaxId();
 			
@@ -95,8 +107,6 @@ class Control_Cliente extends CI_Controller {
 		}
 			
 		$usuario['Institucion'] = $this->modelInstitucion->BuscarInstituciones();
-			
-		$usuario['Mensaje'] = 'Se agrego el cliente con &eacute;xito!';
 			
 		$this->load->view('Vendedor/Cliente/VCliente', $usuario);	
 	}

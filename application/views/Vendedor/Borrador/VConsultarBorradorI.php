@@ -216,7 +216,18 @@ function CambiaColor(esto,borde,texto)
         <tr>
           <td colspan="3"><fieldset><legend style="font-size:15px"><b>Datos Negociacion</b></legend>
             <table width="410" border="0">
-
+              <tr>
+                <td align="right"><font style="font-size:12px">Condiciones de pago <b><font color="#FF0000">(OBLIGATORIO):</font></b></font></td>
+                <td align="center"><input type="checkbox" name="checkbox6" value="checkbox" onclick="document.getElementById('CondicionesPago').disabled = !this.checked"/></td>
+                <td><select name="CondicionesPago" id="CondicionesPago" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" disabled="disabled">
+                  <option value="-1"><?php echo $CondicionesPago ?></option>
+                  <option>Pago Contado - Entrega Inmediata</option>
+                  <option>Financiamiento Yoma</option>
+                  <option>Financiamiento Yoma Stock</option>
+                  <option>Pago 30-70 Bco - Entrega 180 Dias</option>
+                  <option>Pago Contado - Entrega 180 Dias</option>
+                </select></td>
+              </tr>
               <tr>
                 <td width="121" align="right"><font style="font-size:12px">Fecha presupuesto:</font></td>
                 <td width="20" align="center"><input type="checkbox" name="checkbox" value="checkbox" onclick="document.getElementById('FechaP').disabled = !this.checked"/></td>
@@ -246,19 +257,6 @@ function CambiaColor(esto,borde,texto)
                 <td align="center"><input type="checkbox" name="checkbox5" value="checkbox" onclick="document.getElementById('PagoInicial').disabled = !this.checked"/></td>
                 <td>
                   <input name="PagoInicial" type="text" id="PagoInicial" disabled="disabled" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" maxlength="10" value="<?php echo $PagoInicial ?>"/>                </td>
-              </tr>
-              <tr>
-                <td align="right"><font style="font-size:12px">Condiciones de pago <b><font color="#FF0000">(OBLIGATORIO):</font></b></font></td>
-                <td align="center"><input type="checkbox" name="checkbox6" value="checkbox" onclick="document.getElementById('CondicionesPago').disabled = !this.checked"/></td>
-                <td>
-                  <select name="CondicionesPago" id="CondicionesPago" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" disabled="disabled">
-                    <option value="-1"><?php echo $CondicionesPago ?></option>
-                    <option>Pago Contado - Entrega Inmediata</option>
-                  	<option>Financiamiento Yoma</option>
-                    <option>Financiamiento Yoma Stock</option>
-                    <option>Pago 30-70 Bco - Entrega 180 Dias</option>
-                    <option>Pago Contado - Entrega 180 Dias</option>
-                  </select></td>
               </tr>
               <tr>
                 <td align="right"><font style="font-size:12px">Fecha de pago:</font></td>
