@@ -211,6 +211,10 @@ textarea.LV_invalid_field:active {
         <td colspan="2" align="center"><?php if(isset($Mensaje))
 		{
 			echo '<font color="#00FF00" style="font-size:20px;"><b>'.$Mensaje.'</b></font>';
+		}?>
+        <?php if(isset($Mensaje2))
+		{
+			echo '<font color="#F00" style="font-size:20px;"><b>'.$Mensaje2.'</b></font>';
 		}?></td>
         </tr>
       <tr>

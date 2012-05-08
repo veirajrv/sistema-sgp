@@ -16,6 +16,25 @@ class ModelInstitucion extends CI_Model {
 	
 	## SELECT ##
 	
+	function BuscarRifCliente($Rif) 
+	{
+		$query = $this->db->select("Id_Institucion");
+		$query = $this->db->where("Rif", $Rif);
+		$query = $this->db->get("Institucion");
+		foreach ($query->result_array() as $row)
+		{
+			$id = $row['Id_Institucion'];
+			if($id == NULL)
+			{
+				return false;
+			}
+			else
+			{
+				return $id;
+			}	
+		}	
+	}
+	
 	function BuscarInstituciones() 
 	{
 		$query =  $this->db->get('Institucion');
