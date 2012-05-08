@@ -21,3 +21,6 @@ ERROR - 2012-05-08 18:00:19 --> Query error: You have an error in your SQL synta
 ERROR - 2012-05-08 18:00:20 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
 ERROR - 2012-05-08 18:00:20 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
 ERROR - 2012-05-08 18:00:35 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
+ERROR - 2012-05-08 20:49:51 --> Severity: Warning  --> Missing argument 3 for control_Negociacion::imprimir_persona() C:\wamp\www\OpenSGP\application\controllers\control_Negociacion.php 2540
+ERROR - 2012-05-08 20:49:51 --> Severity: Notice  --> Undefined variable: condiciones C:\wamp\www\OpenSGP\application\controllers\control_Negociacion.php 2546
+ERROR - 2012-05-08 20:51:28 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
