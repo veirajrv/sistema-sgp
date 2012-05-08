@@ -63,10 +63,20 @@ class Control_Institucion extends CI_Controller {
 		$Institucion['Direccion2'] = $_POST['Direccion2'];
 		$Institucion['Direccion3'] = $_POST['Direccion3'];
 		
-		$this->modelInstitucion->InsertarInstitucion($Institucion);
+		$Rif = $letra.'-'.$_POST['Rif'];
+		$Rif2 = $this->modelInstitucion->BuscarRifCliente($Rif);
 		
-		$usuario['Mensaje'] = 'Se agrego la instituci&oacute;n con &eacute;xito!';
-		
+		if($Rif2 == false)
+		{
+			$usuario['Mensaje'] = 'Se agrego la instituci&oacute;n con &eacute;xito!';
+			
+			$this->modelInstitucion->InsertarInstitucion($Institucion);
+		}
+		else
+		{
+			$usuario['Mensaje2'] = 'Ya existe este cliente en el sistema!';
+		}
+				
 		$usuario['Pais'] = $this->modelInstitucion->BuscarPais();
 		
 		$this->load->view('Vendedor/Institucion/VInstitucion', $usuario);
