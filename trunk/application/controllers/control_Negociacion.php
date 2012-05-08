@@ -2568,6 +2568,17 @@ class control_Negociacion extends CI_Controller {
 		$this->load->view('Vendedor/Borrador/VImprecion', $usuario);
 	}
 	
+	public function atencion($Id_Negociacion, $Id, $condiciones) 
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario; // Id Usuario //
+		$usuario['Id_Negociacion'] = $Id_Negociacion; // Id Negociacion //
+		$usuario['idcliente'] = $Id; // Id Cliente
+		$usuario['condiciones'] = $condiciones; // Id Cliente
+		
+		$this->load->view('Vendedor/Borrador/VAtencion', $usuario);
+	}
+	
 	public function imprimir_cliente($Id_Negociacion, $Id, $condiciones) // Vendedor //
 	{
 		$Usuario = $this->session->userdata('Usuario');

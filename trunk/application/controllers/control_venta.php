@@ -2116,7 +2116,19 @@ class Control_Venta extends CI_Controller
 		$Cliente['Direccion2'] = $_POST['Direccion2'];
 		$Cliente['Direccion3'] = $_POST['Direccion3'];
 			
-		$this->modelCliente->InsertarCliente($Cliente);
+		$Cedula = $tipo.'-'.$_POST['Cedula'];
+		$Cedula2 = $this->modelCliente->BuscarIdCliente2($Cedula);
+		
+		if($Cedula2 == false)
+		{
+			$usuario['Mensaje'] = 'Se agrego el cliente con &eacute;xito!';
+			
+			$this->modelCliente->InsertarCliente($Cliente);
+		}
+		else
+		{
+			$usuario['Mensaje2'] = 'Ya existe este cliente en el sistema!';
+		}
 			
 		$maxcliente = $this->modelCliente->BuscarMaxId();
 			
@@ -2139,8 +2151,6 @@ class Control_Venta extends CI_Controller
 			}
 			
 		$usuario['Institucion'] = $this->modelInstitucion->BuscarInstituciones();
-			
-		$usuario['Mensaje'] = 'Se agrego el cliente con &eacute;xito!';
 			
 		$this->load->view('Despachador/Cliente/DCliente', $usuario);	
 	}
