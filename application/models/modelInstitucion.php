@@ -40,6 +40,18 @@ class ModelInstitucion extends CI_Model {
 		$query =  $this->db->get('Institucion');
 		return $query->result_array();		
 	} 
+	
+	function BuscarRIFI($Id)
+	{
+		$query = $this->db->select("Rif");
+		$query = $this->db->where("Id_Institucion", $Id);
+		$query = $this->db->get("Institucion");
+		foreach ($query->result_array() as $row)
+	{
+		$rif = $row['Rif'];
+	}
+		return $rif;
+	}
 
 	function BuscarNombreI($Id)
 	{
@@ -303,6 +315,11 @@ class ModelInstitucion extends CI_Model {
 		if(isset($_POST['checkbox11']))
 		{
 			$institucion->Direccion3 = $_POST['Direccion3'];
+		}
+		
+		if(isset($_POST['checkbox12']))
+		{
+			$institucion->Nombre = $_POST['Nombre'];
 		}
 		
 		$id_cliente = $datos['ID2'];

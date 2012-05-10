@@ -216,6 +216,20 @@ textarea.LV_invalid_field:active {
           <td>
               <table width="409" border="0">
                 <tr>
+                  <td colspan="2" align="right"><font style="font-size:12px">Cedula:</font></td>
+                  <td><input name="Cedula" type="text" id="Cedula" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" title="Coloque la direccion web en caso de tener una (http://www.ejemplo.com)" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" value="<?php echo $Cedula; ?>" maxlength="200" disabled="disabled"/></td>
+                </tr>
+                <tr>
+                  <td align="right"><font style="font-size:12px">Nombre:</font></td>
+                  <td align="center"><input type="checkbox" name="checkbox13" value="checkbox" onclick="document.getElementById('Nombre').disabled = !this.checked" /></td>
+                  <td><input name="Nombre" type="text" id="Nombre" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" title="Coloque la direccion web en caso de tener una (http://www.ejemplo.com)" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" value="<?php echo $Nombre; ?>" maxlength="200" disabled="disabled"/></td>
+                </tr>
+                <tr>
+                  <td align="right"><font style="font-size:12px">Apellido:</font></td>
+                  <td align="center"><input type="checkbox" name="checkbox14" value="checkbox" onclick="document.getElementById('Apellido').disabled = !this.checked" /></td>
+                  <td><input name="Apellido" type="text" id="Apellido" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" title="Coloque la direccion web en caso de tener una (http://www.ejemplo.com)" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" value="<?php echo $Apellido; ?>" maxlength="200" disabled="disabled"/></td>
+                </tr>
+                <tr>
                   <td width="106" align="right"><font style="font-size:12px">EMail:</font></td>
                   <td width="20" align="center">                      
                   <input type="checkbox" name="checkbox" value="checkbox" onclick="document.getElementById('Email').disabled = !this.checked" />                  </td><td width="269">

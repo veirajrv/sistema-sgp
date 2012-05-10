@@ -119,6 +119,7 @@ class Control_Cliente extends CI_Controller {
 		$usuario['Usuario'] = $Usuario;
 		$id_cliente = $_POST['Cliente'];
 		$usuario['id_cliente'] = $id_cliente;
+		$usuario['Cedula'] = $this->modelCliente->CedulaCliente($id_cliente);
 		$usuario['Nombre'] = $this->modelCliente->NombreCliente($id_cliente);
 		$usuario['Apellido'] = $this->modelCliente->ApellidoCliente($id_cliente);
 		$usuario['Email'] = $this->modelCliente->EmailCliente($id_cliente);
@@ -146,6 +147,7 @@ class Control_Cliente extends CI_Controller {
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
 		$usuario['id_cliente'] = $cliente;
+		$usuario['Cedula'] = $this->modelCliente->CedulaCliente($cliente);
 		$usuario['Nombre'] = $this->modelCliente->NombreCliente($cliente);
 		$usuario['Apellido'] = $this->modelCliente->ApellidoCliente($cliente);
 		$usuario['Email'] = $this->modelCliente->EmailCliente($cliente);
@@ -179,6 +181,7 @@ class Control_Cliente extends CI_Controller {
 		$this->modelCliente->ModificarCliente($cliente, $datos);
 		
 		$usuario['id_cliente'] = $id_cliente;
+		$usuario['Cedula'] = $this->modelCliente->CedulaCliente($id_cliente);
 		$usuario['Nombre'] = $this->modelCliente->NombreCliente($id_cliente);
 		$usuario['Apellido'] = $this->modelCliente->ApellidoCliente($id_cliente);
 		$usuario['Email'] = $this->modelCliente->EmailCliente($id_cliente);

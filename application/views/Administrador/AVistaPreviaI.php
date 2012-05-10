@@ -225,17 +225,8 @@ return false;
               <form name="MyForm" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/aprobar">
                 <table width="410" border="0">
                   <tr>
-                    <td><b>Nombre</b></td>
-                    <td><b>Cantidad</b></td>
-                    <td colspan="2"><b>Descripci&oacute;n</b></td>
-                  </tr>
-                  <tr>
-                    <td><?php $j=0; foreach ($Lista as $row){ echo $row['Nombre']; echo "<br />"; $j++;}?> <?php $j=0; foreach ($Lista2 as $row){ echo $row['Nombre']; echo "<br />"; $j++;}?></td>
-                    <td><?php $j=0; foreach ($Lista as $row){ echo $row['Cantidad']; echo "<br />"; $j++;}?>
-                  <?php $j=0; foreach ($Lista2 as $row){ echo $row['Cantidad']; echo "<br />"; $j++;}?></td>
-                    <td colspan="2"><?php $j=0; foreach ($Lista as $row){ echo $row['Descripcion']; echo "<br />"; $j++;}?>
-                  <?php $j=0; foreach ($Lista2 as $row){ echo $row['Descripcion']; echo "<br />"; $j++;}?></td>
-                  </tr>
+                    <td colspan="4"><?php echo $table; ?></td>
+                    </tr>
                   <tr>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>

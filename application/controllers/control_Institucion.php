@@ -89,6 +89,7 @@ class Control_Institucion extends CI_Controller {
 		$usuario['Usuario'] = $Usuario;
 		$id_cliente = $_POST['Cliente'];
 		$usuario['id_cliente'] = $id_cliente;
+		$usuario['RIF'] = $this->modelInstitucion->BuscarRIFI($id_cliente);
 		$usuario['Nombre'] = $this->modelInstitucion->BuscarNombreI($id_cliente);
 		$usuario['CodigoP'] = $this->modelInstitucion->BuscarCodigoPI($id_cliente);
 		$usuario['Web'] = $this->modelInstitucion->BuscarWebI($id_cliente);
@@ -119,6 +120,7 @@ class Control_Institucion extends CI_Controller {
 		$this->modelInstitucion->ModificarCliente($institucion, $datos);
 		
 		$usuario['id_cliente'] = $id_cliente;
+		$usuario['RIF'] = $this->modelInstitucion->BuscarRIFI($id_cliente);
 		$usuario['Nombre'] = $this->modelInstitucion->BuscarNombreI($id_cliente);
 		$usuario['CodigoP'] = $this->modelInstitucion->BuscarCodigoPI($id_cliente);
 		$usuario['Web'] = $this->modelInstitucion->BuscarWebI($id_cliente);
