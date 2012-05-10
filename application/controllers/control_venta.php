@@ -2220,7 +2220,7 @@ class Control_Venta extends CI_Controller
 			$apellido = $row['Apellido'];
 			$email = $row['Email'];
 			$telefono = $row['Telefono'];
-			$this->table->add_row($nombre, $apellido, $email, $telefono, anchor('Control_Venta/ver_perfil/'.$id.'','Ver Detalle'));
+			$this->table->add_row($nombre, $apellido, $email, $telefono, anchor('Control_Venta/ver_perfil_2/'.$id.'','Ver Detalle'));
 		}
 			
 		$usuario['table'] = $this->table->generate();
@@ -2236,6 +2236,7 @@ class Control_Venta extends CI_Controller
 		$usuario['Usuario'] = $Usuario;
 		$usuario['id_cliente'] = $_POST['Cliente'];
 		$id_cliente = $_POST['Cliente'];
+		$usuario['Cedula'] = $this->modelCliente->CedulaCliente($id_cliente);
 		$usuario['Nombre'] = $this->modelCliente->NombreCliente($id_cliente);
 		$usuario['Apellido'] = $this->modelCliente->ApellidoCliente($id_cliente);
 		$usuario['Email'] = $this->modelCliente->EmailCliente($id_cliente);
@@ -2256,6 +2257,32 @@ class Control_Venta extends CI_Controller
 		$this->load->view('Despachador/Cliente/DVerPerfilCliente', $usuario);
 	}
 	
+	public function ver_perfil_2($cliente)
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$usuario['id_cliente'] = $cliente;
+		$usuario['Cedula'] = $this->modelCliente->CedulaCliente($cliente);
+		$usuario['Nombre'] = $this->modelCliente->NombreCliente($cliente);
+		$usuario['Apellido'] = $this->modelCliente->ApellidoCliente($cliente);
+		$usuario['Email'] = $this->modelCliente->EmailCliente($cliente);
+		$usuario['Telefono1'] = $this->modelCliente->TelfCliente($cliente);
+		$usuario['Telefono2'] = $this->modelCliente->Telf2Cliente($cliente);
+		$usuario['Telefono3'] = $this->modelCliente->Telf3Cliente($cliente);
+		$usuario['Web'] = $this->modelCliente->WebCliente($cliente);
+		$usuario['Departamento'] = $this->modelCliente->DepartamentoCliente($cliente);
+			
+		$usuario['Twitter'] = $this->modelCliente->TwitterCliente($cliente);
+		$usuario['Facebook'] = $this->modelCliente->FacebookCliente($cliente);
+		$usuario['Google'] = $this->modelCliente->GoogleplusCliente($cliente);
+			
+		$usuario['Direccion1'] = $this->modelCliente->DireccionCliente($cliente);
+		$usuario['Direccion2'] = $this->modelCliente->Direccion2Cliente($cliente);
+		$usuario['Direccion3'] = $this->modelCliente->Direccion3Cliente($cliente);
+		
+		$this->load->view('Despachador/Cliente/DVerPerfilCliente', $usuario);
+	}
+	
 	// Funcion que nos lleva a la pantalla en donde nosotros cambiaremos
 	// los datos que queramos cambiar de un cliente. 
 	public function modificar_perfil()
@@ -2269,6 +2296,7 @@ class Control_Venta extends CI_Controller
 		$this->modelCliente->ModificarCliente($cliente, $datos);
 			
 		$usuario['id_cliente'] = $id_cliente;
+		$usuario['Cedula'] = $this->modelCliente->CedulaCliente($id_cliente);
 		$usuario['Nombre'] = $this->modelCliente->NombreCliente($id_cliente);
 		$usuario['Apellido'] = $this->modelCliente->ApellidoCliente($id_cliente);
 		$usuario['Email'] = $this->modelCliente->EmailCliente($id_cliente);
