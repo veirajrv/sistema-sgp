@@ -377,8 +377,30 @@ class control_Negociacion extends CI_Controller {
 				$Vendedor = $this->modelCliente->BuscarVendedor($Id_Negociacion); 
 				
 				$usuario['DatosVendedor'] = $this->modelCliente->DatosVendedorI2($Id_Negociacion, $Vendedor); 
-				$usuario['Lista'] = $this->modelProducto->ConsultarLista($Id_Negociacion);
-				$usuario['Lista2'] = $this->modelProducto->ConsultarLista2($Id_Negociacion);
+				$Lista = $this->modelProducto->ConsultarLista($Id_Negociacion);
+				$Lista2 = $this->modelProducto->ConsultarLista2($Id_Negociacion);
+				
+				$this->load->library('table');
+				$this->table->set_empty("&nbsp;");
+				$this->table->set_heading('<font style="font-size:12px" color="#369"><b>NOMBRE</b></font>', '<font style="font-size:12px" color="#369"><b>CANTIDAD</b></font>', '<font style="font-size:12px" color="#369"><b>DESCRIPCI&Oacute;N</b></font>');
+					
+				foreach ($Lista as $row)
+				{
+					$nombre = $row['Nombre'];
+					$cantidad = $row['Cantidad'];
+					$descripcion = $row['Descripcion2'];
+					$this->table->add_row($nombre, $cantidad, $descripcion);
+				}
+					
+				foreach ($Lista2 as $row)
+				{
+					$nombre2 = $row['Nombre'];
+					$cantidad2 = $row['Cantidad'];
+					$descripcion2 = $row['Descripcion2'];
+					$this->table->add_row($nombre2, $cantidad2, $descripcion2);
+				}
+						
+				$usuario['table'] = $this->table->generate();
 				
 				$usuario['Descuento'] = $this->modelProducto->ConsultarDescuento($Id_Negociacion);
 				$Neto = $this->modelProducto->Neto($Id_Negociacion);
@@ -402,8 +424,30 @@ class control_Negociacion extends CI_Controller {
 				$Vendedor = $this->modelCliente->BuscarVendedor($Id_Negociacion); 
 			
 				$usuario['DatosVendedor'] = $this->modelCliente->DatosVendedor2($Id_Negociacion, $Vendedor); 
-				$usuario['Lista'] = $this->modelProducto->ConsultarLista($Id_Negociacion);
-				$usuario['Lista2'] = $this->modelProducto->ConsultarLista2($Id_Negociacion);
+				$Lista = $this->modelProducto->ConsultarLista($Id_Negociacion);
+				$Lista2 = $this->modelProducto->ConsultarLista2($Id_Negociacion);
+				
+				$this->load->library('table');
+				$this->table->set_empty("&nbsp;");
+				$this->table->set_heading('<font style="font-size:12px" color="#369"><b>NOMBRE</b></font>', '<font style="font-size:12px" color="#369"><b>CANTIDAD</b></font>', '<font style="font-size:12px" color="#369"><b>DESCRIPCI&Oacute;N</b></font>');
+					
+				foreach ($Lista as $row)
+				{
+					$nombre = $row['Nombre'];
+					$cantidad = $row['Cantidad'];
+					$descripcion = $row['Descripcion2'];
+					$this->table->add_row($nombre, $cantidad, $descripcion);
+				}
+					
+				foreach ($Lista2 as $row)
+				{
+					$nombre2 = $row['Nombre'];
+					$cantidad2 = $row['Cantidad'];
+					$descripcion2 = $row['Descripcion2'];
+					$this->table->add_row($nombre2, $cantidad2, $descripcion2);
+				}
+						
+				$usuario['table'] = $this->table->generate();
 				
 				$usuario['Descuento'] = $this->modelProducto->ConsultarDescuento($Id_Negociacion);
 				$Neto = $this->modelProducto->Neto($Id_Negociacion);
@@ -907,8 +951,30 @@ class control_Negociacion extends CI_Controller {
 			$usuario['DatosCliente'] = $this->modelCliente->DatosCliente($Id_Negociacion, $Cliente); 
 			$cedula = $this->modelCliente->BuscarId($Usuario); 
 			$usuario['DatosVendedor'] = $this->modelCliente->DatosVendedor($Id_Negociacion, $cedula); 
-			$usuario['Lista'] = $this->modelProducto->ConsultarLista($Id_Negociacion);
-			$usuario['Lista2'] = $this->modelProducto->ConsultarLista2($Id_Negociacion);
+			$Lista = $this->modelProducto->ConsultarLista($Id_Negociacion);
+			$Lista2 = $this->modelProducto->ConsultarLista2($Id_Negociacion);
+			
+			$this->load->library('table');
+			$this->table->set_empty("&nbsp;");
+			$this->table->set_heading('<font style="font-size:12px" color="#369"><b>NOMBRE</b></font>', '<font style="font-size:12px" color="#369"><b>CANTIDAD</b></font>', '<font style="font-size:12px" color="#369"><b>DESCRIPCI&Oacute;N</b></font>');
+				
+			foreach ($Lista as $row)
+			{
+				$nombre = $row['Nombre'];
+				$cantidad = $row['Cantidad'];
+				$descripcion = $row['Descripcion2'];
+				$this->table->add_row($nombre, $cantidad, $descripcion);
+			}
+				
+			foreach ($Lista2 as $row)
+			{
+				$nombre2 = $row['Nombre'];
+				$cantidad2 = $row['Cantidad'];
+				$descripcion2 = $row['Descripcion2'];
+				$this->table->add_row($nombre2, $cantidad2, $descripcion2);
+			}
+					
+			$usuario['table'] = $this->table->generate();
 
 			$usuario['Descuento'] = $this->modelProducto->ConsultarDescuento($Id_Negociacion);
 			$Neto = $this->modelProducto->Neto($Id_Negociacion);
@@ -934,8 +1000,30 @@ class control_Negociacion extends CI_Controller {
 			$usuario['DatosCliente'] = $this->modelCliente->DatosClienteI($Id_Negociacion, $ClienteI); 
 			$cedula = $this->modelCliente->BuscarId($Usuario); 
 			$usuario['DatosVendedor'] = $this->modelCliente->DatosVendedorI($Id_Negociacion, $cedula); 
-			$usuario['Lista'] = $this->modelProducto->ConsultarLista($Id_Negociacion);
-			$usuario['Lista2'] = $this->modelProducto->ConsultarLista2($Id_Negociacion);
+			$Lista = $this->modelProducto->ConsultarLista($Id_Negociacion);
+			$Lista2 = $this->modelProducto->ConsultarLista2($Id_Negociacion);
+			
+			$this->load->library('table');
+			$this->table->set_empty("&nbsp;");
+			$this->table->set_heading('<font style="font-size:12px" color="#369"><b>NOMBRE</b></font>', '<font style="font-size:12px" color="#369"><b>CANTIDAD</b></font>', '<font style="font-size:12px" color="#369"><b>DESCRIPCI&Oacute;N</b></font>');
+				
+			foreach ($Lista as $row)
+			{
+				$nombre = $row['Nombre'];
+				$cantidad = $row['Cantidad'];
+				$descripcion = $row['Descripcion2'];
+				$this->table->add_row($nombre, $cantidad, $descripcion);
+			}
+				
+			foreach ($Lista2 as $row)
+			{
+				$nombre2 = $row['Nombre'];
+				$cantidad2 = $row['Cantidad'];
+				$descripcion2 = $row['Descripcion2'];
+				$this->table->add_row($nombre2, $cantidad2, $descripcion2);
+			}
+					
+			$usuario['table'] = $this->table->generate();
 
 			$usuario['Descuento'] = $this->modelProducto->ConsultarDescuento($Id_Negociacion);
 			$Neto = $this->modelProducto->Neto($Id_Negociacion);
@@ -981,6 +1069,7 @@ class control_Negociacion extends CI_Controller {
 		{
 			$usuario['idcliente'] = $Cliente; // Id Cliente
 			$usuario['Permiso'] = $this->modelNegociacion->ConsultarPermiso($Id_Negociacion); 
+			$usuario['condiciones'] = $this->modelNegociacion->CondicionesPagos($Id_Negociacion);
 			
 			$datos['ID2'] = $Id_Negociacion;	
 			$negociacion = new ModelNegociacion;
@@ -992,8 +1081,30 @@ class control_Negociacion extends CI_Controller {
 			$usuario['DatosCliente'] = $this->modelCliente->DatosCliente($Id_Negociacion, $Cliente); 
 			$cedula = $this->modelCliente->BuscarId($Usuario); 
 			$usuario['DatosVendedor'] = $this->modelCliente->DatosVendedor($Id_Negociacion, $cedula); 
-			$usuario['Lista'] = $this->modelProducto->ConsultarLista($Id_Negociacion);
-			$usuario['Lista2'] = $this->modelProducto->ConsultarLista2($Id_Negociacion);
+			$Lista = $this->modelProducto->ConsultarLista($Id_Negociacion);
+			$Lista2 = $this->modelProducto->ConsultarLista2($Id_Negociacion);
+			
+			$this->load->library('table');
+			$this->table->set_empty("&nbsp;");
+			$this->table->set_heading('<font style="font-size:12px" color="#369"><b>NOMBRE</b></font>', '<font style="font-size:12px" color="#369"><b>CANTIDAD</b></font>', '<font style="font-size:12px" color="#369"><b>DESCRIPCI&Oacute;N</b></font>');
+				
+			foreach ($Lista as $row)
+			{
+				$nombre = $row['Nombre'];
+				$cantidad = $row['Cantidad'];
+				$descripcion = $row['Descripcion2'];
+				$this->table->add_row($nombre, $cantidad, $descripcion);
+			}
+				
+			foreach ($Lista2 as $row)
+			{
+				$nombre2 = $row['Nombre'];
+				$cantidad2 = $row['Cantidad'];
+				$descripcion2 = $row['Descripcion2'];
+				$this->table->add_row($nombre2, $cantidad2, $descripcion2);
+			}
+					
+			$usuario['table'] = $this->table->generate();
 
 			$usuario['Descuento'] = $this->modelProducto->ConsultarDescuento($Id_Negociacion);
 			$Neto = $this->modelProducto->Neto($Id_Negociacion);
@@ -1009,6 +1120,7 @@ class control_Negociacion extends CI_Controller {
 		else // Si entre en el else significa que el empleado es una institucion //
 		{
 			$usuario['idcliente'] = $ClienteI; // Id Cliente
+			$usuario['condiciones'] = $this->modelNegociacion->CondicionesPagos($Id_Negociacion);
 			
 			$datos['ID2'] = $Id_Negociacion;	
 			$negociacion = new ModelNegociacion;
@@ -1020,8 +1132,30 @@ class control_Negociacion extends CI_Controller {
 			$usuario['DatosCliente'] = $this->modelCliente->DatosClienteI($Id_Negociacion, $ClienteI); 
 			$cedula = $this->modelCliente->BuscarId($Usuario); 
 			$usuario['DatosVendedor'] = $this->modelCliente->DatosVendedorI($Id_Negociacion, $cedula); 
-			$usuario['Lista'] = $this->modelProducto->ConsultarLista($Id_Negociacion);
-			$usuario['Lista2'] = $this->modelProducto->ConsultarLista2($Id_Negociacion);
+			$Lista = $this->modelProducto->ConsultarLista($Id_Negociacion);
+			$Lista2 = $this->modelProducto->ConsultarLista2($Id_Negociacion);
+			
+			$this->load->library('table');
+			$this->table->set_empty("&nbsp;");
+			$this->table->set_heading('<font style="font-size:12px" color="#369"><b>NOMBRE</b></font>', '<font style="font-size:12px" color="#369"><b>CANTIDAD</b></font>', '<font style="font-size:12px" color="#369"><b>DESCRIPCI&Oacute;N</b></font>');
+				
+			foreach ($Lista as $row)
+			{
+				$nombre = $row['Nombre'];
+				$cantidad = $row['Cantidad'];
+				$descripcion = $row['Descripcion2'];
+				$this->table->add_row($nombre, $cantidad, $descripcion);
+			}
+				
+			foreach ($Lista2 as $row)
+			{
+				$nombre2 = $row['Nombre'];
+				$cantidad2 = $row['Cantidad'];
+				$descripcion2 = $row['Descripcion2'];
+				$this->table->add_row($nombre2, $cantidad2, $descripcion2);
+			}
+					
+			$usuario['table'] = $this->table->generate();
 
 			$usuario['Descuento'] = $this->modelProducto->ConsultarDescuento($Id_Negociacion);
 			$Neto = $this->modelProducto->Neto($Id_Negociacion);

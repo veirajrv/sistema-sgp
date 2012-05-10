@@ -188,3 +188,28 @@ ERROR - 2012-05-10 14:14:43 --> Severity: Notice  --> Undefined variable: direcc
 ERROR - 2012-05-10 14:14:43 --> Severity: Notice  --> Undefined variable: direccion C:\wamp\www\OpenSGP\application\models\modelCliente.php 245
 ERROR - 2012-05-10 14:14:43 --> Severity: Notice  --> Undefined variable: direccion C:\wamp\www\OpenSGP\application\models\modelCliente.php 257
 ERROR - 2012-05-10 14:16:23 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: MySQL server has gone away C:\wamp\www\OpenSGP\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2012-05-10 18:28:52 --> Severity: Notice  --> Undefined variable: table C:\wamp\www\OpenSGP\application\views\Vendedor\Borrador\VVistaPreviaPrueba.php 112
+ERROR - 2012-05-10 18:29:12 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
+ERROR - 2012-05-10 18:29:50 --> Severity: Notice  --> Undefined variable: table C:\wamp\www\OpenSGP\application\views\Vendedor\Borrador\VVistaPreviaPrueba.php 112
+ERROR - 2012-05-10 18:34:54 --> Severity: Notice  --> Undefined variable: ConAlerta C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-05-10 18:34:54 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-05-10 18:34:59 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Administrador\AVistaPrevia2.php 13
+ERROR - 2012-05-10 18:34:59 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\AVistaPrevia2.php 13
+ERROR - 2012-05-10 18:34:59 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Administrador\AVistaPrevia2.php 14
+ERROR - 2012-05-10 18:34:59 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\AVistaPrevia2.php 14
+ERROR - 2012-05-10 18:34:59 --> Severity: Notice  --> Undefined variable: table C:\wamp\www\OpenSGP\application\views\Administrador\AVistaPrevia2.php 232
+ERROR - 2012-05-10 18:35:54 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Administrador\AVistaPrevia2.php 13
+ERROR - 2012-05-10 18:35:54 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\AVistaPrevia2.php 13
+ERROR - 2012-05-10 18:35:54 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Administrador\AVistaPrevia2.php 14
+ERROR - 2012-05-10 18:35:54 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\AVistaPrevia2.php 14
+ERROR - 2012-05-10 18:36:08 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-05-10 18:36:08 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-05-10 18:36:08 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-05-10 18:36:08 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-05-10 18:36:15 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-05-10 18:36:15 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-05-10 18:36:15 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-05-10 18:36:15 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-05-10 18:36:23 --> Severity: Notice  --> Undefined variable: condiciones C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DVistaPreviaPrueba2.php 39
+ERROR - 2012-05-10 18:36:23 --> Severity: Notice  --> Undefined variable: table C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DVistaPreviaPrueba2.php 112
+ERROR - 2012-05-10 18:37:40 --> Severity: Notice  --> Undefined variable: condiciones C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DVistaPreviaPrueba2.php 39
