@@ -102,54 +102,13 @@
           </tr>
         </table>
         <table width="811" border="0" cellspacing="0">
-          <tr bgcolor="#CFCFCF">
-            <td width="100">CANTIDAD</td>
-            <td width="151">CODIGO</td>
-            <td width="339">DESCRIPCI&Oacute;N</td>
-            <td colspan="2">&nbsp;</td>
-          </tr>
           <tr bgcolor="#F2F2F2">
-            <td><?php $j=0; foreach ($Lista2 as $row){
-			
-							echo $row['Cantidad']; 
-							echo "</br>";
-							
-							$j++;}?>
-              <?php $j=0; foreach ($Lista as $row){
-			
-							echo $row['Cantidad']; 
-							echo "</br>";
-							
-							$j++;}?></td>
-            <td><?php $j=0; foreach ($Lista2 as $row){
-			
-							echo $row['Nombre']; 
-							echo "</br>";
-							
-							$j++;}?>
-              <?php $j=0; foreach ($Lista as $row){
-			
-							echo $row['Nombre'];
-							echo "</br>";
-							
-							$j++;}?></td>
-            <td colspan="3"><?php $j=0; foreach ($Lista2 as $row){
-			
-							echo substr($row['Descripcion2'],0,90); echo "...";
-							echo "</br>";
-							
-							$j++;}?>
-              <?php $j=0; foreach ($Lista as $row){
-			
-							echo substr($row['Descripcion2'],0,90); echo "...";
-							echo "</br>";
-							
-							$j++;}?></td>
+            <td colspan="5"><?php echo $table; ?></td>
           </tr>
           <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td width="100">&nbsp;</td>
+            <td width="151">&nbsp;</td>
+            <td width="339">&nbsp;</td>
             <td width="173" align="right"><?php if($Total <> NULL){ echo "<b>Neto:</b>"; 
 							     }?></td>
             <td width="38"><?php if($Total <> NULL){ echo $Neto; }?></td>

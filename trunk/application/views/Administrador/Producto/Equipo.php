@@ -4,6 +4,7 @@
 
 <script src="<?php echo base_url();?>files/js/jquery-1.6.2.min.js" type="text/javascript"></script>
 <script src="<?php echo base_url();?>files/js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+<script src="<?php echo base_url();?>files/js/livevalidation_standalone.js" type="text/javascript"></script>
 
 <head>
 
@@ -83,6 +84,37 @@ function CambiaColor(esto,borde,texto)
 	esto.style.color=texto;
  }
 </script>
+
+<style type="text/css">
+.LV_validation_message{
+    font-weight:bold;
+    margin:0 0 0 5px;
+}
+
+.LV_valid {
+    color:#1fa0dc;
+}
+	
+.LV_invalid {
+    color:#CC0000;
+}
+    
+.LV_valid_field,
+input.LV_valid_field:hover, 
+input.LV_valid_field:active,
+textarea.LV_valid_field:hover, 
+textarea.LV_valid_field:active {
+    border: 1px solid #1fa0dc;
+}
+    
+.LV_invalid_field, 
+input.LV_invalid_field:hover, 
+input.LV_invalid_field:active,
+textarea.LV_invalid_field:hover, 
+textarea.LV_invalid_field:active {
+    border: 1px solid #CC0000;
+}
+</style>
 	
 <!-- meta tags begin -->
 	<!-- vital meta tags -->
@@ -223,7 +255,8 @@ function CambiaColor(esto,borde,texto)
       </tr>
       <tr>
         <td align="right"><font style="font-size:12px">Descripci&oacute;n larga:</font></td>
-        <td align="right"><textarea name="Descripcion2" id="Descripcion2" cols="45" rows="5" style="width:300px; font-size-adjust:inherit; height:100px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')"></textarea></td>
+        <td align="right"><textarea name="Descripcion2" id="Descripcion2" cols="45" rows="5" style="width:300px; font-size-adjust:inherit; height:100px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')"></textarea><script>var f12 = new LiveValidation('Descripcion2');
+f12.add( Validate.Length, { maximum: 500 } );</script></td>
         <td align="right">&nbsp;</td>
       </tr>
       <tr>

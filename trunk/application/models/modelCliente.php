@@ -185,6 +185,18 @@ class ModelCliente extends CI_Model {
 		return $id;
 	}
 	
+	function CedulaCliente($Id_Cliente)
+	{
+		$query = $this->db->select("Cedula");
+		$query = $this->db->where("Id_Cliente", $Id_Cliente);
+		$query = $this->db->get("cliente");
+		foreach ($query->result_array() as $row)
+	{
+		$cedula = $row['Cedula'];
+	}
+		return $cedula;
+	}
+	
 	function NombreCliente($Id_Cliente)
 	{
 		$query = $this->db->select("Nombre");
@@ -570,6 +582,16 @@ class ModelCliente extends CI_Model {
 		if(isset($_POST['checkbox12']))
 		{
 			$cliente->Direccion3 = $_POST['Direccion3'];
+		}
+		
+		if(isset($_POST['checkbox13']))
+		{
+			$cliente->Nombre = $_POST['Nombre'];
+		}
+		
+		if(isset($_POST['checkbox14']))
+		{
+			$cliente->Apellido = $_POST['Apellido'];
 		}
 		
 		$id_cliente = $datos['ID2'];

@@ -247,19 +247,10 @@ return false;
               <form name="MyForm" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/aprobar">
 			  <table width="410" border="0">
   <tr>
-    <td width="110"><b>Nombre</b></td>
-    <td width="60"><b>Cantidad</b></td>
-    <td colspan="2"><b>Descripci&oacute;n</b></td>
+    <td colspan="4"><?php echo $table;?></td>
     </tr>
   <tr>
-    <td><?php $j=0; foreach ($Lista as $row){ echo $row['Nombre']; echo "<br />"; $j++;}?> <?php $j=0; foreach ($Lista2 as $row){ echo $row['Nombre']; echo "<br />"; $j++;}?></td>
-    <td width="60"><?php $j=0; foreach ($Lista as $row){ echo $row['Cantidad']; echo "<br />"; $j++;}?>
-                  <?php $j=0; foreach ($Lista2 as $row){ echo $row['Cantidad']; echo "<br />"; $j++;}?></td>
-    <td colspan="2"><?php $j=0; foreach ($Lista as $row){ echo $row['Descripcion']; echo "<br />"; $j++;}?>
-                  <?php $j=0; foreach ($Lista2 as $row){ echo $row['Descripcion']; echo "<br />"; $j++;}?></td>
-    </tr>
-  <tr>
-    <td>&nbsp;</td>
+    <td width="110">&nbsp;</td>
     <td width="60">&nbsp;</td>
     <td width="167" align="right"><b>Neto:</b></td>
     <td width="55"><?php echo $Neto; ?></td>
