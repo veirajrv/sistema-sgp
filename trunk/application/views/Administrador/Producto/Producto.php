@@ -4,6 +4,7 @@
 
 <script src="<?php echo base_url();?>files/js/jquery-1.6.2.min.js" type="text/javascript"></script>
 <script src="<?php echo base_url();?>files/js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+<script src="<?php echo base_url();?>files/js/livevalidation_standalone.js" type="text/javascript"></script>
 
 <head>
 
