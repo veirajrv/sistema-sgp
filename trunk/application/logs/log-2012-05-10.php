@@ -213,3 +213,4 @@ ERROR - 2012-05-10 18:36:15 --> Severity: Warning  --> Invalid argument supplied
 ERROR - 2012-05-10 18:36:23 --> Severity: Notice  --> Undefined variable: condiciones C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DVistaPreviaPrueba2.php 39
 ERROR - 2012-05-10 18:36:23 --> Severity: Notice  --> Undefined variable: table C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DVistaPreviaPrueba2.php 112
 ERROR - 2012-05-10 18:37:40 --> Severity: Notice  --> Undefined variable: condiciones C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DVistaPreviaPrueba2.php 39
+ERROR - 2012-05-10 19:25:16 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
