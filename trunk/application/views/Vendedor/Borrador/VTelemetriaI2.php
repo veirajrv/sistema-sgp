@@ -237,7 +237,7 @@ return false;
 							<td><?php echo $row['Codigo'];?></td>
 							<td><?php echo $row['Nombre'];?></td>
 							<td><?php echo $row['Descripcion'];?></td>
-                            <td><input type="text" name="<?php echo $row['Id_Accesorio'];?>" id="cantidad" style="width:40px;" onkeypress="return soloNumeros(event)" maxlength="5"/></td>
+                            <td><input type="text" name="<?php echo $row['Id_Accesorio'];?>" id="cantidad" style="width:40px;" onkeypress="return soloNumeros(event)" maxlength="5" required="required"/></td>
                             </tr><?php 
 						}?></table>
       </td>
