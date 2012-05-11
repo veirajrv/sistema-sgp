@@ -1187,7 +1187,7 @@ class control_Negociacion extends CI_Controller {
 		
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Id_Negociacion);
-		$this->load->view('Vendedor/Borrador/VConsultaBorrador0', $usuario);
+		$this->load->view('Vendedor/Borrador/VTelemetria', $usuario);
 	}
 	
 	public function eliminar_producto_2($Equipo, $cliente, $Id_Negociacion) 
@@ -1409,6 +1409,24 @@ class control_Negociacion extends CI_Controller {
 		$usuario['idcliente'] = $_POST['idcliente'];
 		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Id_Negociacion); 
 		$usuario['Porcentaje'] = $porcentaje;
+		
+		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Id_Negociacion);
+		$this->load->view('Vendedor/Borrador/VTelemetriaI', $usuario);
+	}
+	
+		public function eliminar_producto2($Equipo, $cliente, $Id_Negociacion)
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario; // Id Negociacion //
+		$usuario['Id_Negociacion'] = $Id_Negociacion;
+		$status = $this->modelNegociacion->StatusNegociacion($Id_Negociacion); 
+		$usuario['Status'] = $status;
+		$usuario['idcliente'] = $cliente;
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Id_Negociacion); 
+		$usuario['Porcentaje'] = $porcentaje;
+		
+		$this->modelNegociacion->EliminarP2($Equipo);
 		
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Id_Negociacion);

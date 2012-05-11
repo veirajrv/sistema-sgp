@@ -219,7 +219,7 @@ function CambiaColor(esto,borde,texto)
       <?php
 						foreach ($Marca as $row) {
 				  ?>
-      <option value="<?php echo $row['Id_Marca']; ?>" <?php echo set_select('Hola',$row['Id_Marca']); ?> ><?php echo $row['Nombre']; ?></option>
+      <option value="<?php echo $row['Id_Marca']; ?>" <?php echo set_select('Hola',$row['Id_Marca']); ?>><?php echo $row['Nombre']; ?></option>
       <?php
 					}
 					?>
