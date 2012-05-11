@@ -191,19 +191,11 @@ $(document).ready(function(){
               </form>
               <table width="410" border="0">
                 <tr>
-                  <td><b>Nombre</b></td>
-                  <td><b>Cantidad</b></td>
-                  <td width="227"><b>Descripci&oacute;n</b></td>
-                </tr>
+                  <td width="369"><?php echo $table; ?></td>
+                  <td width="31">&nbsp;</td>
+                  </tr>
                 <tr>
-                  <td width="105"><?php $j=0; foreach ($Lista as $row){ echo $row['Nombre']; echo "<br />"; $j++;}?> <?php $j=0; foreach ($Lista2 as $row){ echo $row['Nombre']; echo "<br />"; $j++;}?></td>
-                  <td width="60"><?php $j=0; foreach ($Lista as $row){ echo $row['Cantidad']; echo "<br />"; $j++;}?>
-                  <?php $j=0; foreach ($Lista2 as $row){ echo $row['Cantidad']; echo "<br />"; $j++;}?></td>
-                  <td><?php $j=0; foreach ($Lista as $row){ echo $row['Descripcion']; echo "<br />"; $j++;}?>
-                  <?php $j=0; foreach ($Lista2 as $row){ echo $row['Descripcion']; echo "<br />"; $j++;}?></td>
-                </tr>
-                <tr>
-                  <td colspan="3" align="right"><form id="form2" method="post" action="<?php echo base_url();?>index.php/Control_Venta/mandar_facturar/<?php echo $Id_Negociacion; ?>">
+                  <td colspan="2" align="right"><form id="form2" method="post" action="<?php echo base_url();?>index.php/Control_Venta/mandar_facturar/<?php echo $Id_Negociacion; ?>">
                     <input type="image" src="<?php echo base_url();?>files/images/aprobar.png" title="Aprobar Negociación" onclick="return confirm('Usted desea mandar a facturar esta negociaci&oacute;n?');" />
                   </form></td>
                   </tr>

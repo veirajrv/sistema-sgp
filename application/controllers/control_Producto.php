@@ -72,7 +72,7 @@ class Control_Producto extends CI_Controller {
 	
 		foreach ($Lista as $row)
 		{
-			$id = $row['Id_Equipo'];
+			$id = $row['Codigo'];
 			$marca = $row['Marca'];
 			$equipo = $row['Equipo'];
 			$precio = $row['Precio'];
@@ -99,7 +99,7 @@ class Control_Producto extends CI_Controller {
 	
 		foreach ($Lista as $row)
 		{
-			$id = $row['Id_Accesorio'];
+			$id = $row['Codigo'];
 			$equipo = $row['Equipo'];
 			$accesorio = $row['Accesorio'];
 			$precio = $row['Precio'];
