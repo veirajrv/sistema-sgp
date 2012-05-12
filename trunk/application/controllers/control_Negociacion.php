@@ -1983,12 +1983,6 @@ class control_Negociacion extends CI_Controller {
 		$usuario['Porcentaje'] = $porcentaje;
 		$usuario['Status'] = $status;
 		
-		// PRODUCTO //
-		$Equipo = $_POST['equipo'];
-		$HistorialNP2['Id_Equipo'] = $Equipo; // Id Accesorio //
-		$HistorialNP2['Id_Negociacion'] = $_POST['Negociacion3'];
-		$HistorialNP2['Cantidad'] = $_POST['Cantidad'];
-		
 		// DATOS DE LA NEGOCIACION //
 		$usuario['FechaP'] = $this->modelNegociacion->FechaPresupuesto($IdNegoBorrador);
 		$usuario['NumeroODC'] = $this->modelNegociacion->NumeroOrdenDC($IdNegoBorrador);
@@ -2003,13 +1997,30 @@ class control_Negociacion extends CI_Controller {
 		$cliente = $_POST['idcliente2'];
 		$usuario['NombreI'] = $this->modelNegociacion->NombreInstitucion($cliente);
 		$usuario['TelefonoI'] = $this->modelNegociacion->TelefonoInstitucion($cliente);
+		$Equipo = $_POST['equipo'];
 		
-		$this->modelProducto->AgregarEquipo($HistorialNP2);
-		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
-		$usuario['Lista'] = $this->modelProducto->ConsultarListaA($IdNegoBorrador);
-		
-		$this->load->view('Vendedor/Borrador/VConsultarBorradorI', $usuario);
-		
+		if($Equipo == " ")
+		{
+			$usuario['Error'] = "Por favor seleccione un equipo!";
+			$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+			$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Negociacion);
+			$this->load->view('Vendedor/Borrador/VConsultarBorradorI', $usuario);
+		}
+		else
+		{
+			// PRODUCTO //
+			$Equipo = $_POST['equipo'];
+			$HistorialNP2['Id_Equipo'] = $Equipo; // Id Accesorio //
+			$HistorialNP2['Id_Negociacion'] = $_POST['Negociacion3'];
+			$HistorialNP2['Cantidad'] = $_POST['Cantidad'];
+			
+			$this->modelProducto->AgregarEquipo($HistorialNP2);
+			
+			$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+			$usuario['Lista'] = $this->modelProducto->ConsultarListaA($IdNegoBorrador);
+			
+			$this->load->view('Vendedor/Borrador/VConsultarBorradorI', $usuario);
+		}		
 	}
 	
 	public function agregar_equipo() 
@@ -2023,13 +2034,6 @@ class control_Negociacion extends CI_Controller {
 		$usuario['Porcentaje'] = $porcentaje;
 		$usuario['Status'] = $status;
 		
-		// PRODUCTO //
-		$Equipo = $_POST['equipo'];
-		$HistorialNP2['Id_Equipo'] = $Equipo; // Id Accesorio //
-		$HistorialNP2['Id_Negociacion'] = $_POST['Negociacion22'];
-		$HistorialNP2['Cantidad'] = $_POST['Cantidad'];
-		
-		// DATOS DE LA NEGOCIACION //
 		$usuario['FechaP'] = $this->modelNegociacion->FechaPresupuesto($Negociacion);
 		$usuario['NumeroODC'] = $this->modelNegociacion->NumeroOrdenDC($Negociacion);
 		$usuario['FechaODC'] = $this->modelNegociacion->FechaOrdenDC($Negociacion);
@@ -2045,13 +2049,30 @@ class control_Negociacion extends CI_Controller {
 		$usuario['ApellidoC'] = $this->modelNegociacion->ApellidoCliente($cliente);
 		$usuario['EMailC'] = $this->modelNegociacion->MailCliente($cliente);
 		$usuario['TelefonoC'] = $this->modelNegociacion->TelefonoCliente($cliente);
+		$Equipo = $_POST['equipo'];
+		
+		if($Equipo == " ")
+		{
+			$usuario['Error'] = "Por favor seleccione un equipo!";
+			$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+			$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Negociacion);
+			$this->load->view('Vendedor/Borrador/VConsultaBorrador', $usuario);
+		}
+		else
+		{
+			// PRODUCTO //
+		$Equipo = $_POST['equipo'];
+		$HistorialNP2['Id_Equipo'] = $Equipo; // Id Accesorio //
+		$HistorialNP2['Id_Negociacion'] = $_POST['Negociacion22'];
+		$HistorialNP2['Cantidad'] = $_POST['Cantidad'];		
 		
 		$this->modelProducto->AgregarEquipo($HistorialNP2);
+		
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Negociacion);
 		
 		$this->load->view('Vendedor/Borrador/VConsultaBorrador', $usuario);
-		
+		}
 	}
 	
 	public function agregar_otro_accesorios3() 
