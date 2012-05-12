@@ -177,6 +177,12 @@ function CambiaColor(esto,borde,texto)
     <form id="form1" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/actualizar_datos_i/<?php echo $Id; ?>">
       <table width="441" border="0">
         <tr>
+          <td colspan="3"><?php if(isset($Error))
+		{
+			echo '<font color="#F00" style="font-size:12px;"><b>'.$Error.'</b></font>';
+		}?></td>
+          </tr>
+        <tr>
           <td width="366"><h2 style="font-size:30px">Codigo Negociaci&oacute;n (<?php echo $Id_Negociacion; ?>)</h2>                        </td>
           <td width="35" align="right" valign="top"><a href="<?php echo base_url();?>index.php/Control_Negociacion/historial_status/<?php echo $Id_Negociacion; ?>/<?php echo $Id; ?>"><img src="<?php echo base_url();?>files/images/List.png" alt="e" width="25" height="25" title="Historial negociacion"/></a></td>
           <td width="26" align="right" valign="top"><a href="<?php echo base_url();?>index.php/Control_Negociacion/cambio_status_3/<?php echo $Id_Negociacion; ?>/<?php echo $Id; ?>"><img src="<?php echo base_url();?>files/images/icono_filtro.png" alt="" width="25" height="25" title="Cambio de estatus" /></a></td>
