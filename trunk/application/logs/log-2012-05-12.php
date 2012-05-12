@@ -35,3 +35,5 @@ ERROR - 2012-05-12 17:14:17 --> Query error: You have an error in your SQL synta
 ERROR - 2012-05-12 17:14:18 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
 ERROR - 2012-05-12 17:14:31 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
 ERROR - 2012-05-12 17:14:32 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-05-12 17:16:39 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-05-12 17:22:44 --> Query error: Cannot add or update a child row: a foreign key constraint fails (`gyoma`.`historialnp2`, CONSTRAINT `HistorialNP2_fk` FOREIGN KEY (`Id_Equipo`) REFERENCES `equipo` (`Id_Equipo`))

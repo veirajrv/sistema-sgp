@@ -314,7 +314,7 @@ function CambiaColor(esto,borde,texto)
               <tr>
                 <td align="right"><font style="font-size:12px">Cantidad:</font></td>
                 <td colspan="2">
-                  <input name="Cantidad" type="text" id="Cantidad" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" maxlength="5"/>
+                  <input name="Cantidad" type="text" id="Cantidad" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" maxlength="5" required="required"/>
                </td>
               </tr>
               <tr>
