@@ -2200,15 +2200,22 @@ class control_Negociacion extends CI_Controller {
 		$usuario['Id_Negociacion'] = $Negociacion;
 		$usuario['Status'] = $Status;
 		$equipo = $_POST['equipo'];
-		$usuario['Lista2'] = $this->modelProducto->BuscarAccesorios($equipo); 
+		$usuario['idcliente'] = $Cliente;
 		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Negociacion); 
 		$usuario['Porcentaje'] = $porcentaje;
-		$usuario['idcliente'] = $Cliente;
-		
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Negociacion);
+		if($equipo == " ")
+		{
+			$usuario['Error'] = "Por favor seleccione un equipo para poder buscar su respectivo accesorio!";
+			$this->load->view('Vendedor/Borrador/VTelemetria', $usuario);
+		}
+		else
+		{
+			$usuario['Lista2'] = $this->modelProducto->BuscarAccesorios($equipo); 		
+			$this->load->view('Vendedor/Borrador/VTelemetria2', $usuario);
+		}
 		
-		$this->load->view('Vendedor/Borrador/VTelemetria2', $usuario);
 	}
 	
 	public function telemetria_accesorios_institucion($Negociacion, $Status, $Cliente) 
@@ -2218,15 +2225,21 @@ class control_Negociacion extends CI_Controller {
 		$usuario['Id_Negociacion'] = $Negociacion;
 		$usuario['Status'] = $Status;
 		$equipo = $_POST['equipo'];
-		$usuario['Lista2'] = $this->modelProducto->BuscarAccesorios($equipo); 
 		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Negociacion); 
 		$usuario['Porcentaje'] = $porcentaje;
 		$usuario['idcliente'] = $Cliente;
-		
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Negociacion);
-		
-		$this->load->view('Vendedor/Borrador/VTelemetriaI2', $usuario);
+		if($equipo == " ")
+		{
+			$usuario['Error'] = "Por favor seleccione un equipo para poder buscar su respectivo accesorio!";
+			$this->load->view('Vendedor/Borrador/VTelemetriaI', $usuario);
+		}
+		else
+		{
+			$usuario['Lista2'] = $this->modelProducto->BuscarAccesorios($equipo); 
+			$this->load->view('Vendedor/Borrador/VTelemetriaI2', $usuario);
+		}
 	}
 	
 	public function atras_agregar_otro_accesorios4() 

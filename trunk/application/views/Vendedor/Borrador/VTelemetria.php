@@ -191,6 +191,12 @@ function CambiaColor(esto,borde,texto)
     <form id="form1" method="post" action="">
       <table width="441" border="0">
         <tr>
+          <td valign="top"><?php if(isset($Error))
+		{
+			echo '<font color="#F00" style="font-size:12px;"><b>'.$Error.'</b></font>';
+		}?></td>
+        </tr>
+        <tr>
           <td valign="top"><h2 style="font-size:30px">Codigo Negociaci&oacute;n (<?php echo $Id_Negociacion; ?>)</h2></td>
           </tr>
         <tr>
