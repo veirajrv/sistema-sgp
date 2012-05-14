@@ -90,7 +90,7 @@ class ModelProducto extends CI_Model {
 		$equipo->Descripcion2 = $_POST['Descripcion2'];
 			
 		$id = $datos['ID2'];
-		$this->db->where("Id_Equipo", $id);
+		$this->db->where("Codigo", $id);
 		$this->db->update('Equipo', $equipo);
 	}
 	
@@ -103,7 +103,7 @@ class ModelProducto extends CI_Model {
 		$accesorio->Descripcion2 = $_POST['Descripcion2'];
 			
 		$id = $datos['ID2'];
-		$this->db->where("Id_Accesorio", $id);
+		$this->db->where("Codigo", $id);
 		$this->db->update('Accesorio', $accesorio);
 	}
 	

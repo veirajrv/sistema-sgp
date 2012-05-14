@@ -66,3 +66,5 @@ ERROR - 2012-05-14 19:07:01 --> Severity: Notice  --> Undefined variable: id C:\
 ERROR - 2012-05-14 19:08:06 --> Severity: Notice  --> Undefined variable: id C:\wamp\www\OpenSGP\application\models\modelInstitucion.php 234
 ERROR - 2012-05-14 19:08:07 --> Severity: Notice  --> Undefined variable: id C:\wamp\www\OpenSGP\application\models\modelInstitucion.php 252
 ERROR - 2012-05-14 19:08:13 --> Severity: Notice  --> Undefined variable: id C:\wamp\www\OpenSGP\application\models\modelInstitucion.php 252
+ERROR - 2012-05-14 19:35:09 --> Severity: Notice  --> Undefined variable: ConAlerta C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-05-14 19:35:09 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
