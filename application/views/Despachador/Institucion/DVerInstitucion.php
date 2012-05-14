@@ -20,7 +20,7 @@ function CambiaColor(esto,borde,texto)
 	esto.style.color=texto;
  }
 </script>
-
+	
 <script>
 	$(function() {
 		$( "#accordion" ).accordion({
@@ -141,14 +141,13 @@ function CambiaColor(esto,borde,texto)
 	})( jQuery );
 
 	$(function() {
-		$( "#Cliente, #Cliente2, #Cliente3" ).combobox();
+		$( "#Cliente, #Cliente2" ).combobox();
 		$( "#toggle" ).click(function() {
-			$( "#Cliente, #Cliente2, #Cliente3" ).toggle();
+			$( "#Cliente, #Cliente2" ).toggle();
 		});
 	});
 </script>
 
-	
 <!-- meta tags begin -->
 	<!-- vital meta tags -->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -181,13 +180,14 @@ function CambiaColor(esto,borde,texto)
 
 <!-- BEGIN tabs -->
 <div id="navcontainer">
-	<ul id="navlist">
-		<li><a id="taba" class="active" href="<?php echo base_url();?>index.php/Control_Inicio/d_principal" title="Inicio">Inicio</a></li>
-		<li><a id="tabb" href="<?php echo base_url();?>index.php/Control_Venta/consultar_negociaciones" title="Gestionar Ventas">Ventas</a></li>
-		<li><a id="tabb" href="<?php echo base_url();?>index.php/Control_Venta/ver_negociacion" title="Gestionar Negociaciones">Negociaciones</a></li>
-		<li><a id="tabb" href="<?php echo base_url();?>index.php/Control_Venta/clientes" title="Gestionar Clientes">Clientes</a></li>
-	</ul>
-</div><!-- END navcontainer -->
+  <ul id="navlist">
+    <li><a id="taba" class="active" href="<?php echo base_url();?>index.php/Control_Inicio/d_principal" title="Inicio">Inicio</a></li>
+    <li><a id="tabb" href="<?php echo base_url();?>index.php/Control_Venta/consultar_negociaciones" title="Gestionar Ventas">Ventas</a></li>
+    <li><a id="tabb" href="<?php echo base_url();?>index.php/Control_Venta/ver_negociacion" title="Gestionar Negociaciones">Negociaciones</a></li>
+    <li><a id="tabb" href="<?php echo base_url();?>index.php/Control_Venta/clientes" title="Gestionar Clientes">Clientes</a></li>
+  </ul>
+</div>
+<!-- END navcontainer -->
 
 <div id="tabbar"></div>
 <!-- END header -->
@@ -225,12 +225,12 @@ function CambiaColor(esto,borde,texto)
   <div id="cc">
       <table width="441" border="0">
         <tr>
-          <td width="378"><h2 style="font-size:30px">Mis Clientes </h2></td>
-          <td width="53" align="right" valign="middle"><a href="<?php echo base_url();?>index.php/Control_Venta/agregar_cliente"><img src="<?php echo base_url();?>files/images/agregar.png" alt="a" width="30" height="30" title="Agregar nuevo cliente" /></a></td>
+          <td width="328"><h2 style="font-size:30px">Mis Instituciones </h2></td>
+          <td width="103" align="right"><a href="<?php echo base_url();?>index.php/Control_Venta/agregar_institucion2"><img src="<?php echo base_url();?>files/images/agregar.png" alt="a" width="30" height="30" title="Agregar nueva institucion" /></a></td>
         </tr>
         <tr>
           <td><font style="font-size:12px"><a href="<?php echo base_url();?>index.php/Control_Venta/clientes">Cliente</a></font> | <font style="font-size:12px"><a href="<?php echo base_url();?>index.php/Control_Venta/agregar_institucion">Institucion</a></font></td>
-          <td width="53" align="right" valign="middle">&nbsp;</td>
+          <td width="103" align="right">&nbsp;</td>
         </tr>
         <tr>
           <td colspan="2"><hr align="left" style="width:435px;" /></td>
@@ -239,66 +239,40 @@ function CambiaColor(esto,borde,texto)
           <td colspan="2">
               <table width="410" border="0">
                 <tr>
-                  <td align="right"><font style="font-size:12px">Buscador:</font></td>
-                  <td><form id="form4" method="post" action="<?php echo base_url();?>index.php/Control_Venta/buscar_cualquiera">
-                        <input name="Buscar" type="text" id="Buscar" onkeypress="return validar(event)" style="width:195px; font-size-adjust:inherit; height:30px; font-size:15px;" maxlength="150" required="required" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" placeholder="Nombre / Apellido Cliente"/>    
-                        <input type="submit" name="Submit" value="Buscar" />
-                  </form>                  
-				  </td>
-                </tr>
-                <tr>
                   <td width="110" align="right"><font style="font-size:12px">Nombre:</font></td>
                   <td width="284">
-                    <form id="form1" method="post" action="<?php echo base_url();?>index.php/Control_Venta/ver_perfil">
-                      
-					  <select name="Cliente" id="Cliente" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required">
+                    <form id="form1" method="post" action="<?php echo base_url();?>index.php/Control_Venta/ver_perfil_3">
+                      <select name="Cliente" id="Cliente" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required">
                         <option></option>
                         <?php
-						foreach ($Clientes as $row) {
+						foreach ($Institucion as $row) {
 				  ?>
-                        <option value="<?php echo $row['Id_Cliente']; ?>" <?php echo set_select('Hola',$row['Id_Cliente']); ?> ><?php echo $row['Nombre']; ?></option>
+                        <option value="<?php echo $row['Id_Institucion']; ?>" <?php echo set_select('Hola',$row['Id_Institucion']); ?> ><?php echo $row['Nombre']; ?></option>
                         <?php
 					}
 					?>
                       </select>
-					  <input type="submit" name="Submit2" value="Buscar" />
-                    </form>                   </td>
+                      <input type="submit" name="Submit2" value="Buscar" />
+                    </form>
+                     </td>
                 </tr>
                 <tr>
-                  <td width="110" align="right"><font style="font-size:12px">Apellido:</font></td>
-                  <td>
-                    
-                      <form id="form2" method="post" action="<?php echo base_url();?>index.php/Control_Venta/ver_perfil">
-                        <select name="Cliente" id="Cliente2" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required">
-                          <option></option>
-                          <?php
-						foreach ($Clientes as $row) {
+                  <td align="right"><font style="font-size:12px">R.I.F:</font></td>
+                  <td width="284">
+                    <form id="form2" method="post" action="<?php echo base_url();?>index.php/Control_Venta/ver_perfil_3">
+                      <select name="Cliente" id="Cliente2" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required">
+                        <option></option>
+                        <?php
+						foreach ($Institucion as $row) {
 				  ?>
-                          <option value="<?php echo $row['Id_Cliente']; ?>" <?php echo set_select('Hola',$row['Id_Cliente']); ?> ><?php echo $row['Apellido']; ?></option>
-                          <?php
+                        <option value="<?php echo $row['Id_Institucion']; ?>" <?php echo set_select('Hola',$row['Id_Institucion']); ?> ><?php echo $row['Rif']; ?></option>
+                        <?php
 					}
 					?>
-                        </select>
-                        <input type="submit" name="Submit22" value="Buscar" />
-                      </form>                       </td>
-                </tr>
-                <tr>
-                  <td width="110" align="right"><font style="font-size:12px">Cedula:</font></td>
-                  <td>
-                    
-                      <form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Venta/ver_perfil">
-                        <select name="Cliente" id="Cliente3" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required">
-                          <option></option>
-                          <?php
-						foreach ($Clientes as $row) {
-				  ?>
-                          <option value="<?php echo $row['Id_Cliente']; ?>" <?php echo set_select('Hola',$row['Id_Cliente']); ?> ><?php echo $row['Cedula']; ?></option>
-                          <?php
-					}
-					?>
-                        </select>
-                        <input type="submit" name="Submit23" value="Buscar" />
-                      </form>                       </td>
+                      </select>
+                      <input type="submit" name="Submit22" value="Buscar" />
+                    </form>
+                  </td>
                 </tr>
               </table></td>
           </tr>
@@ -306,24 +280,24 @@ function CambiaColor(esto,borde,texto)
           <td colspan="2"><hr align="left" style="width:435px;" /></td>
         </tr>
         <tr>
-          <td colspan="2"><h2 style="font-size:30px">Listado general de clientes</h2></td>
+          <td colspan="2"><h2 style="font-size:30px">Listado general de instituciones</h2></td>
         </tr>
         <tr>
-          <td colspan="2"><table width="422" border="0">
+          <td colspan="2"><table width="416" border="0">
             <tr>
               <td width="110" align="right"><font style="font-size:12px">Nombre y Apellido:</font></td>
-              <td width="296"><form id="form5" method="post" action="<?php echo base_url();?>index.php/Control_Venta/ver_perfil">
+              <td width="290"><form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Venta/ver_perfil_3">
                 <select name="Cliente" id="Cliente" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required">
                   <option></option>
                   <?php
-						foreach ($Clientes2 as $row) {
+						foreach ($Instituciones2 as $row) {
 				  ?>
-                  <option value="<?php echo $row['Id_Cliente']; ?>" <?php echo set_select('Hola',$row['Id_Cliente']); ?> ><?php echo $row['Nombre']; echo " "; echo $row['Apellido'];?></option>
+                  <option value="<?php echo $row['Id_Institucion']; ?>" <?php echo set_select('Hola',$row['Id_Institucion']); ?> ><?php echo $row['Nombre']; ?></option>
                   <?php
 					}
 					?>
                 </select>
-                <input type="submit" name="Submit3" value="Buscar" />
+                <input type="submit" name="Submit" value="Buscar" />
               </form></td>
             </tr>
           </table></td>
