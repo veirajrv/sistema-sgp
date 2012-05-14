@@ -68,3 +68,13 @@ ERROR - 2012-05-14 19:08:07 --> Severity: Notice  --> Undefined variable: id C:\
 ERROR - 2012-05-14 19:08:13 --> Severity: Notice  --> Undefined variable: id C:\wamp\www\OpenSGP\application\models\modelInstitucion.php 252
 ERROR - 2012-05-14 19:35:09 --> Severity: Notice  --> Undefined variable: ConAlerta C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
 ERROR - 2012-05-14 19:35:09 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-05-14 20:12:10 --> Severity: Notice  --> Undefined variable: ConAlerta C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-05-14 20:12:10 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-05-14 20:16:48 --> Severity: Notice  --> Undefined variable: ConAlerta C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-05-14 20:16:48 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\APrincipal.php 221
+ERROR - 2012-05-14 20:17:01 --> Severity: Warning  --> Missing argument 1 for Control_Producto::modificar_equipo() C:\wamp\www\OpenSGP\application\controllers\control_Producto.php 118
+ERROR - 2012-05-14 20:17:01 --> Severity: Notice  --> Undefined variable: id C:\wamp\www\OpenSGP\application\controllers\control_Producto.php 122
+ERROR - 2012-05-14 20:17:01 --> Severity: Notice  --> Undefined variable: id C:\wamp\www\OpenSGP\application\controllers\control_Producto.php 123
+ERROR - 2012-05-14 20:17:11 --> Severity: Warning  --> Missing argument 1 for Control_Producto::modificar_equipo() C:\wamp\www\OpenSGP\application\controllers\control_Producto.php 118
+ERROR - 2012-05-14 20:17:11 --> Severity: Notice  --> Undefined variable: id C:\wamp\www\OpenSGP\application\controllers\control_Producto.php 122
+ERROR - 2012-05-14 20:17:11 --> Severity: Notice  --> Undefined variable: id C:\wamp\www\OpenSGP\application\controllers\control_Producto.php 123
