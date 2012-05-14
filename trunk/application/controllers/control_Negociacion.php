@@ -998,27 +998,28 @@ class control_Negociacion extends CI_Controller {
 			$usuario['DatosCliente'] = $this->modelCliente->DatosCliente($Id_Negociacion, $Cliente); 
 			$cedula = $this->modelCliente->BuscarId($Usuario); 
 			$usuario['DatosVendedor'] = $this->modelCliente->DatosVendedor($Id_Negociacion, $cedula); 
-			$Lista = $this->modelProducto->ConsultarLista($Id_Negociacion);
+			
 			$Lista2 = $this->modelProducto->ConsultarLista2($Id_Negociacion);
+			$Lista = $this->modelProducto->ConsultarLista($Id_Negociacion);
 			
 			$this->load->library('table');
 			$this->table->set_empty("&nbsp;");
 			$this->table->set_heading('<font style="font-size:12px" color="#369"><b>CODIGO</b></font>', '<font style="font-size:12px" color="#369"><b>CANTIDAD</b></font>', '<font style="font-size:12px" color="#369"><b>DESCRIPCI&Oacute;N</b></font>');
-				
-			foreach ($Lista as $row)
-			{
-				$codigo = $row['Codigo'];
-				$cantidad = $row['Cantidad'];
-				$descripcion = $row['Descripcion2'];
-				$this->table->add_row($codigo, $cantidad, $descripcion);
-			}
-				
+					
 			foreach ($Lista2 as $row)
 			{
 				$codigo2 = $row['Codigo'];
 				$cantidad2 = $row['Cantidad'];
 				$descripcion2 = $row['Descripcion2'];
 				$this->table->add_row($codigo2, $cantidad2, $descripcion2);
+			}
+			
+			foreach ($Lista as $row)
+			{
+				$codigo = $row['Codigo'];
+				$cantidad = $row['Cantidad'];
+				$descripcion = $row['Descripcion2'];
+				$this->table->add_row($codigo, $cantidad, $descripcion);
 			}
 					
 			$usuario['table'] = $this->table->generate();
@@ -1047,27 +1048,28 @@ class control_Negociacion extends CI_Controller {
 			$usuario['DatosCliente'] = $this->modelCliente->DatosClienteI($Id_Negociacion, $ClienteI); 
 			$cedula = $this->modelCliente->BuscarId($Usuario); 
 			$usuario['DatosVendedor'] = $this->modelCliente->DatosVendedorI($Id_Negociacion, $cedula); 
-			$Lista = $this->modelProducto->ConsultarLista($Id_Negociacion);
+			
 			$Lista2 = $this->modelProducto->ConsultarLista2($Id_Negociacion);
+			$Lista = $this->modelProducto->ConsultarLista($Id_Negociacion);
 			
 			$this->load->library('table');
 			$this->table->set_empty("&nbsp;");
 			$this->table->set_heading('<font style="font-size:12px" color="#369"><b>CODIGO</b></font>', '<font style="font-size:12px" color="#369"><b>CANTIDAD</b></font>', '<font style="font-size:12px" color="#369"><b>DESCRIPCI&Oacute;N</b></font>');
-				
-			foreach ($Lista as $row)
-			{
-				$codigo = $row['Codigo'];
-				$cantidad = $row['Cantidad'];
-				$descripcion = $row['Descripcion2'];
-				$this->table->add_row($codigo, $cantidad, $descripcion);
-			}
-				
+					
 			foreach ($Lista2 as $row)
 			{
 				$codigo2 = $row['Codigo'];
 				$cantidad2 = $row['Cantidad'];
 				$descripcion2 = $row['Descripcion2'];
 				$this->table->add_row($codigo2, $cantidad2, $descripcion2);
+			}
+			
+			foreach ($Lista as $row)
+			{
+				$codigo = $row['Codigo'];
+				$cantidad = $row['Cantidad'];
+				$descripcion = $row['Descripcion2'];
+				$this->table->add_row($codigo, $cantidad, $descripcion);
 			}
 					
 			$usuario['table'] = $this->table->generate();
