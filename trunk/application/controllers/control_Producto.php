@@ -72,11 +72,12 @@ class Control_Producto extends CI_Controller {
 	
 		foreach ($Lista as $row)
 		{
+			$id2 = $row['Id_Equipo'];
 			$id = $row['Codigo'];
 			$marca = $row['Marca'];
 			$equipo = $row['Equipo'];
 			$precio = $row['Precio'];
-			$this->table->add_row($id, $marca, $equipo, $precio, anchor('Control_Producto/modificar_equipo/'.$id.'','Ver Detalle'));
+			$this->table->add_row($id, $marca, $equipo, $precio, anchor('Control_Producto/modificar_equipo/'.$id2.'','Ver Detalle'));
 		}
 			
 		$usuario['table'] = $this->table->generate();
@@ -99,11 +100,12 @@ class Control_Producto extends CI_Controller {
 	
 		foreach ($Lista as $row)
 		{
+			$id2 = $row['Id_Accesorio'];
 			$id = $row['Codigo'];
 			$equipo = $row['Equipo'];
 			$accesorio = $row['Accesorio'];
 			$precio = $row['Precio'];
-			$this->table->add_row($id, $equipo, $accesorio, $precio, anchor('Control_Producto/modificar_accesorio/'.$id.'','Ver Detalle'));
+			$this->table->add_row($id, $equipo, $accesorio, $precio, anchor('Control_Producto/modificar_accesorio/'.$id2.'','Ver Detalle'));
 		}
 			
 		$usuario['table'] = $this->table->generate();
@@ -128,7 +130,7 @@ class Control_Producto extends CI_Controller {
 	{
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
-		$id = $_POST['Codigo'];
+		$id = $_POST['CBD'];
 		
 		$datos['ID2'] = $id;
 		$equipo = new ModelProducto;
@@ -155,7 +157,7 @@ class Control_Producto extends CI_Controller {
 	{
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
-		$id = $_POST['Codigo'];
+		$id = $_POST['CBD'];
 		
 		$datos['ID2'] = $id;
 		$accesorio = new ModelProducto;
