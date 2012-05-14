@@ -269,7 +269,7 @@ textarea.LV_invalid_field:active {
 							$j++;}?>
         </textarea>
         <script>var f12 = new LiveValidation('Descripcion2');
-f12.add( Validate.Length, { maximum: 500 } );</script></td>
+f12.add( Validate.Length, { maximum: 1000 } );</script></td>
         <td align="right">&nbsp;</td>
       </tr>
       <tr>

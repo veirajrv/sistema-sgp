@@ -1006,7 +1006,7 @@ class modelNegociacion extends CI_Model {
 		
 		$id = $datos['ID2'];
 		$this->db->where("Id_Negociacion", $id);
-		$this->db->update('Negociacion', $negociacion);
+		$this->db->update('Negociacion', $negociacion);	
 	}
 	
 	function ModificarEstatus($negociacion, $datos) 

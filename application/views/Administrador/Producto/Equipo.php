@@ -256,7 +256,7 @@ textarea.LV_invalid_field:active {
       <tr>
         <td align="right"><font style="font-size:12px">Descripci&oacute;n larga:</font></td>
         <td align="right"><textarea name="Descripcion2" id="Descripcion2" cols="45" rows="5" style="width:300px; font-size-adjust:inherit; height:100px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')"></textarea><script>var f12 = new LiveValidation('Descripcion2');
-f12.add( Validate.Length, { maximum: 500 } );</script></td>
+f12.add( Validate.Length, { maximum: 1000 } );</script></td>
         <td align="right">&nbsp;</td>
       </tr>
       <tr>

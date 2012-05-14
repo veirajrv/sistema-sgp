@@ -191,7 +191,8 @@ A.Precio * H.Cantidad) AS Monto
 								   WHERE H.Id_Accesorio = A.Id_Accesorio
 								   AND H.Id_Negociacion = N.Id_Negociacion
 								   AND H.Id_Negociacion = '.$Negociacion.'
-								   GROUP BY H.Id_HistorialNP');	
+								   GROUP BY H.Id_HistorialNP
+								   ORDER BY H.Id_HistorialNP ASC');	
 		
 		return $query->result_array();		
 	} 
@@ -204,7 +205,8 @@ E.Precio * H.Cantidad) AS Monto
 								   WHERE H.Id_Equipo = E.Id_Equipo
 								   AND H.Id_Negociacion = N.Id_Negociacion
 								   AND H.Id_Negociacion = '.$Negociacion.'
-								   GROUP BY H.Id_HistorialNP2');	
+								   GROUP BY H.Id_HistorialNP2
+								   ORDER BY H.Id_HistorialNP2 ASC');	
 		
 		return $query->result_array();		
 	} 
