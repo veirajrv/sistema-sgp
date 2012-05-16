@@ -2136,7 +2136,7 @@ class Control_Venta extends CI_Controller
 			$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Negociacion);
 			
 			$usuario['Marca'] = $this->modelProducto->MarcaProducto();
-			$this->load->view('Vendedor/Cerrada/VConsultaCerradaI', $usuario);
+			$this->load->view('Despachador/Cerrada/DConsultaCerradaI', $usuario);
 		}
 		else
 		{
