@@ -148,19 +148,20 @@ return false;
 		<a href="../index.html" title="Home"><img src="<?php echo base_url();?>files/images/Portada/logo2.gif" alt="Your logo here" width="45" height="40" /> <span id="logo-text">YOMA
 		</span></a>
 		<div id="userbar">
-			<a href="<?php echo base_url();?>index.php/Control_Inicio/cerrar_sesion/">Cerrar Sesion </a> | <a id="tabe" href="<?php echo base_url();?>index.php/Control_Pdf">Ayuda</a>		</div>
+			<a href="<?php echo base_url();?>index.php/Control_Inicio/cerrar_sesion/">Cerrar Sesion </a> | <a id="tabe" href="">Ayuda</a>		</div>
   </div>
 	<!-- END tagline -->
 
 <!-- BEGIN tabs -->
 <div id="navcontainer">
-	<ul id="navlist">
-		<li><a id="tabb" href="<?php echo base_url();?>index.php/Control_Inicio/v_principal" title="Inicio">Inicio</a></li>
-		<li><a id="taba" class="active" href="<?php echo base_url();?>index.php/Control_Negociacion/ver_negociacion" title="Gestionar Negociaciones">Negociaciones</a></li>
-		<li><a id="tabb" href="<?php echo base_url();?>index.php/Control_Cliente" title="Gestionar Clientes">Clientes</a></li>
-		<li><a id="tabd" href="<?php echo base_url();?>index.php/Control_Institucion" title="Gestionar Instituciones">Instituci&oacute;n</a></li>
-	</ul>
-</div><!-- END navcontainer -->
+  <ul id="navlist">
+    <li><a id="taba" class="active" href="<?php echo base_url();?>index.php/Control_Inicio/d_principal" title="Inicio">Inicio</a></li>
+    <li><a id="tabb" href="<?php echo base_url();?>index.php/Control_Venta/consultar_negociaciones" title="Gestionar Ventas">Ventas</a></li>
+    <li><a id="tabb" href="<?php echo base_url();?>index.php/Control_Venta/ver_negociacion" title="Gestionar Negociaciones">Negociaciones</a></li>
+    <li><a id="tabb" href="<?php echo base_url();?>index.php/Control_Venta/clientes" title="Gestionar Clientes">Clientes</a></li>
+  </ul>
+</div>
+<!-- END navcontainer -->
 
 <div id="tabbar"></div>
 <!-- END header -->
@@ -176,31 +177,29 @@ return false;
 <!-- BEGIN container -->
 <div id="container">
 <!-- BEGIN left column -->
-<div id="left">
-<div id="lc">
-	<div class="demo">
-
-<div id="accordion">
-	<h3><a href="#">Nuevo</a></h3>
-	<div>
-		<li>- <a href="<?php echo base_url();?>index.php/Control_Cliente/agregar_cliente">Clientes</a></li>
-		<li>- <a href="<?php echo base_url();?>index.php/Control_Institucion/agregar_institucion">Institucion</a></li>
-		<li>- <a href="<?php echo base_url();?>index.php/Control_Negociacion">Negociacion</a></li>
-	</div>
-	<h3><a href="#">Ver</a></h3>
-	<div>
-		<li>- <a href="<?php echo base_url();?>index.php/Control_Negociacion/ver_negociacion">Negociacion</a></li>
-	</div>
-	<h3><a href="#">Herramientas</a></h3>
-	<div>
-    
-	</div>
+<div id="container2">
+  <!-- BEGIN left column -->
+  <div id="left">
+    <div id="lc">
+      <div class="demo">
+        <div id="accordion">
+          <h3><a href="#">Ver</a></h3>
+          <div>
+            <li>- <a href="<?php echo base_url();?>index.php/Control_Venta/ver_negociacion">Negociaciones</a></li>
+            <li>- <a href="<?php echo base_url();?>index.php/Control_Venta/consultar_negociaciones">Venta</a></li>
+          </div>
+          <h3><a href="#">Herramientas</a></h3>
+          <div>
+            <li>- <a href="">Calendario</a></li>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>&nbsp;</p>
+  </div>
+  <!-- END lc -->
 </div>
-
-</div>
-	<p>&nbsp;</p>
-</div><!-- END lc -->
-</div><!-- END left -->
+<!-- END left -->
 
 <!-- BEGIN center column -->
 <div id="center">
@@ -275,7 +274,7 @@ return false;
 <div id="right">
 <div id="rc">
   <h2>Bienvenido</h2>
-	<p><font style="font-size:12px;"><a href="<?php echo base_url();?>index.php/Control_Perfil"><?php echo $Usuario ?></a></font></p>
+	<p><font style="font-size:12px;"><?php echo $Usuario ?></font></p>
 </div><!-- END rc -->
 </div><!-- END right -->
 
