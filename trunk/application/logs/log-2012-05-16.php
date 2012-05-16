@@ -286,3 +286,16 @@ ERROR - 2012-05-16 04:14:12 --> Severity: Notice  --> Undefined variable: idclie
 ERROR - 2012-05-16 04:14:37 --> Severity: Notice  --> Undefined variable: idcliente C:\wamp\www\OpenSGP\application\views\Despachador\Borrador\DConsultarBorrador3.php 260
 ERROR - 2012-05-16 04:14:55 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
 ERROR - 2012-05-16 04:14:56 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-05-16 17:52:09 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: MySQL server has gone away C:\wamp\www\OpenSGP\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2012-05-16 17:52:21 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
+ERROR - 2012-05-16 17:56:06 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
+ERROR - 2012-05-16 17:56:22 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
+ERROR - 2012-05-16 17:56:27 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
+ERROR - 2012-05-16 17:56:58 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
+ERROR - 2012-05-16 17:57:09 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-05-16 17:57:09 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 13
+ERROR - 2012-05-16 17:57:09 --> Severity: Notice  --> Undefined variable: Total C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-05-16 17:57:09 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Despachador\DConsultaEstado.php 14
+ERROR - 2012-05-16 17:57:55 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: MySQL server has gone away C:\wamp\www\OpenSGP\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2012-05-16 17:58:09 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
+ERROR - 2012-05-16 17:58:15 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
