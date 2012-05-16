@@ -188,6 +188,12 @@ function CambiaColor(esto,borde,texto)
     <form id="form1" method="post" action="<?php echo base_url();?>index.php/Control_Venta/actualizar_datos_c2/<?php echo $Id; ?>">
       <table width="441" border="0">
         <tr>
+          <td colspan="3" valign="top"><?php if(isset($Error))
+		{
+			echo '<font color="#F00" style="font-size:12px;"><b>'.$Error.'</b></font>';
+		}?></td>
+          </tr>
+        <tr>
           <td width="365" valign="top"><h2 style="font-size:30px">Codigo Negociaci&oacute;n (<?php echo $Id_Negociacion; ?>)</h2>            </td>
           <td width="36" align="right" valign="top"><a href="<?php echo base_url();?>index.php/Control_Venta/historial_status2/<?php echo $Id_Negociacion; ?>/<?php echo $Id; ?>"><img src="<?php echo base_url();?>files/images/List.png" alt="e" width="25" height="25" title="Historial negociacion"/></a></td>
           <td width="26" align="right" valign="top"><a href="<?php echo base_url();?>index.php/Control_Venta/cambio_status2/<?php echo $Id_Negociacion; ?>/<?php echo $Id; ?>"><img src="<?php echo base_url();?>files/images/icono_filtro.png" alt="" width="25" height="25" title="Cambio de estatus"/></a></td>
@@ -334,25 +340,14 @@ function CambiaColor(esto,borde,texto)
                 <td align="right"><font style="font-size:12px">Equipo:</font></td>
                 <td colspan="2"><select name="equipo" id="equipo" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')">
                   <option value=" " <?php echo set_select('equipo',' ', TRUE); ?> >Seleccione un equipo</option>
-                </select></td>
-              </tr>
-              <tr>
-                <td align="right"><font style="font-size:12px">Accesorio:</font></td>
-                <td width="200"><select name="Accesorio" id="Accesorio" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')">
-                  <option value=" " <?php echo set_select('Accesorio',' ', TRUE); ?> >Seleccione un accesorio</option>
-                </select></td>
-                <td width="66">&nbsp;</td>
-              </tr>
-              <tr>
-                <td align="right"><font style="font-size:12px">Cantidad:</font></td>
-                <td align="left"><input name="Cantidad" type="text" id="Cantidad" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required"/></td>
-                <td><input type="hidden" name="idcliente2" id="idcliente2" style="width:20px" value="<?php echo $Id; ?>" />
-                  <input type="hidden" name="Negociacion22" id="Negociacion22" style="width:20px" value="<?php echo $Id_Negociacion; ?>" /></td>
+                </select>
+                  <input type="hidden" name="Negociacion22" id="Negociacion22" style="width:20px" value="<?php echo $Id_Negociacion; ?>" />
+                  <input type="hidden" name="idcliente2" id="idcliente2" style="width:20px" value="<?php echo $Id; ?>" /></td>
               </tr>
               <tr>
                 <td align="right">&nbsp;</td>
-                <td align="right"><input type="submit" name="Buscar" id="Buscar" value="Agregar" onclick="return confirm('Usted desea agregar este accesorio a la lista de compras?');"/></td>
-                <td>&nbsp;</td>
+                <td width="200" align="right"><input type="submit" name="Buscar" id="Buscar" value="Agregar" onclick="return confirm('Usted desea agregar este accesorio a la lista de compras?');"/></td>
+                <td width="66">&nbsp;</td>
               </tr>
               <tr>
                 <td colspan="3"><cite>Nota: Esta opcion es solo para agregar accesorios de un equipo en particular</cite></td>
