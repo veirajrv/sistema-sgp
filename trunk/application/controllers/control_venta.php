@@ -1524,13 +1524,6 @@ class Control_Venta extends CI_Controller
 		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Negociacion); 
 		$usuario['Porcentaje'] = $porcentaje;
 		
-		// PRODUCTO //
-		$HistorialNP['Id_Accesorio'] = $_POST['Accesorio']; // Id Accesorio //
-		$HistorialNP['Id_Negociacion'] = $Negociacion;
-		$HistorialNP['Cantidad'] = $_POST['Cantidad'];
-		
-		$this->modelProducto->AgregarAccesorio($HistorialNP);
-		
 		// DATOS DE LA NEGOCIACION //
 		$usuario['FechaP'] = $this->modelNegociacion->FechaPresupuesto($Negociacion);
 		$usuario['NumeroODC'] = $this->modelNegociacion->NumeroOrdenDC($Negociacion);
@@ -1552,8 +1545,160 @@ class Control_Venta extends CI_Controller
 		
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Negociacion);
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+		$equipo = $_POST['equipo'];
 		
+		if($equipo == " ")
+		{
+			$usuario['Error'] = "Por favor seleccione un equipo para poder buscar su respectivo accesorio!";
+			$this->load->view('Despachador/Borrador/DConsultarBorrador2', $usuario);
+		}
+		else
+		{
+			$usuario['Lista2'] = $this->modelProducto->BuscarAccesorios($equipo); 		
+			$this->load->view('Despachador/Borrador/DConsultarBorrador3', $usuario);
+		}
+	}
+	
+	public function atras_paso_extrai() 
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$Negociacion = $_POST['Negociacion'];
+		$usuario['Id_Negociacion'] = $_POST['Negociacion'];
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Negociacion); 
+		$usuario['Porcentaje'] = $porcentaje;
+		$usuario['Status'] = $_POST['Status'];
+		
+		$usuario['FechaP'] = $this->modelNegociacion->FechaPresupuesto($Negociacion);
+		$usuario['NumeroODC'] = $this->modelNegociacion->NumeroOrdenDC($Negociacion);
+		$usuario['FechaODC'] = $this->modelNegociacion->FechaOrdenDC($Negociacion);
+		$usuario['Banco'] = $this->modelNegociacion->Banco($Negociacion);
+		$usuario['PagoInicial'] = $this->modelNegociacion->PagoInicial($Negociacion);
+		$usuario['CondicionesPago'] = $this->modelNegociacion->CondicionesPago($Negociacion);
+		$usuario['FechaPago'] = $this->modelNegociacion->FechaDePago($Negociacion);
+		$usuario['NDeposito'] = $this->modelNegociacion->NumeroDeposito($Negociacion);
+		
+		$usuario['Id'] = $_POST['idcliente'];
+		$cliente = $_POST['idcliente'];
+		$usuario['NombreC'] = $this->modelNegociacion->NombreCliente($cliente);
+		$usuario['ApellidoC'] = $this->modelNegociacion->ApellidoCliente($cliente);
+		$usuario['EMailC'] = $this->modelNegociacion->MailCliente($cliente);
+		$usuario['TelefonoC'] = $this->modelNegociacion->TelefonoCliente($cliente);
+		
+		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Negociacion);
 		$this->load->view('Despachador/Borrador/DConsultarBorrador2', $usuario);
+	}
+	
+	public function atras_paso_extrai2() 
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$Negociacion = $_POST['Negociacion'];
+		$usuario['Id_Negociacion'] = $_POST['Negociacion'];
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Negociacion); 
+		$usuario['Porcentaje'] = $porcentaje;
+		$usuario['Status'] = $_POST['Status'];
+		
+		$usuario['FechaP'] = $this->modelNegociacion->FechaPresupuesto($Negociacion);
+		$usuario['NumeroODC'] = $this->modelNegociacion->NumeroOrdenDC($Negociacion);
+		$usuario['FechaODC'] = $this->modelNegociacion->FechaOrdenDC($Negociacion);
+		$usuario['Banco'] = $this->modelNegociacion->Banco($Negociacion);
+		$usuario['PagoInicial'] = $this->modelNegociacion->PagoInicial($Negociacion);
+		$usuario['CondicionesPago'] = $this->modelNegociacion->CondicionesPago($Negociacion);
+		$usuario['FechaPago'] = $this->modelNegociacion->FechaDePago($Negociacion);
+		$usuario['NDeposito'] = $this->modelNegociacion->NumeroDeposito($Negociacion);
+		
+		$usuario['Id'] = $_POST['idcliente'];
+		$cliente = $_POST['idcliente'];
+		$usuario['NombreI'] = $this->modelNegociacion->NombreInstitucion($cliente);
+		$usuario['TelefonoI'] = $this->modelNegociacion->TelefonoInstitucion($cliente);
+		
+		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Negociacion);
+		
+		$this->load->view('Despachador/Borrador/DConsultarBorradorI2', $usuario);
+	}
+	
+	public function agregar_accesorio_telemetria_I($Negociacion, $Status, $Cliente) 
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		
+		foreach($_POST['checkbox'] as $row)
+		{
+			$HistorialNP['Id_Accesorio'] = $row;
+			$HistorialNP['Id_Negociacion'] = $Negociacion;
+			$HistorialNP['Cantidad'] = $_POST[$row];	
+			
+			$this->modelProducto->AgregarAccesorio($HistorialNP);
+		}
+		
+		$usuario['Id_Negociacion'] = $Negociacion;
+		$usuario['Status'] = $Status;
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Negociacion); 
+		$usuario['Porcentaje'] = $porcentaje;
+		
+		$usuario['FechaP'] = $this->modelNegociacion->FechaPresupuesto($Negociacion);
+		$usuario['NumeroODC'] = $this->modelNegociacion->NumeroOrdenDC($Negociacion);
+		$usuario['FechaODC'] = $this->modelNegociacion->FechaOrdenDC($Negociacion);
+		$usuario['Banco'] = $this->modelNegociacion->Banco($Negociacion);
+		$usuario['PagoInicial'] = $this->modelNegociacion->PagoInicial($Negociacion);
+		$usuario['CondicionesPago'] = $this->modelNegociacion->CondicionesPago($Negociacion);
+		$usuario['FechaPago'] = $this->modelNegociacion->FechaDePago($Negociacion);
+		$usuario['NDeposito'] = $this->modelNegociacion->NumeroDeposito($Negociacion);
+		
+		$usuario['Id'] = $Cliente;
+		$usuario['NombreI'] = $this->modelNegociacion->NombreInstitucion($Cliente);
+		$usuario['TelefonoI'] = $this->modelNegociacion->TelefonoInstitucion($Cliente);
+		
+		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Negociacion);
+
+		$this->load->view('Despachador/Borrador/DConsultarBorradorI2', $usuario);
+
+	}
+	
+	public function agregar_accesorio_telemetria($Negociacion, $Status, $Cliente) 
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		
+		if(isset($_POST['checkbox']))
+		foreach($_POST['checkbox'] as $row)
+		{
+			$HistorialNP['Id_Accesorio'] = $row;
+			$HistorialNP['Id_Negociacion'] = $Negociacion;
+			$HistorialNP['Cantidad'] = $_POST[$row];	
+			
+			$this->modelProducto->AgregarAccesorio($HistorialNP);
+		}
+		
+		$usuario['Id_Negociacion'] = $Negociacion;
+		$usuario['Status'] = $Status;
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Negociacion); 
+		$usuario['Porcentaje'] = $porcentaje;
+		
+		$usuario['FechaP'] = $this->modelNegociacion->FechaPresupuesto($Negociacion);
+		$usuario['NumeroODC'] = $this->modelNegociacion->NumeroOrdenDC($Negociacion);
+		$usuario['FechaODC'] = $this->modelNegociacion->FechaOrdenDC($Negociacion);
+		$usuario['Banco'] = $this->modelNegociacion->Banco($Negociacion);
+		$usuario['PagoInicial'] = $this->modelNegociacion->PagoInicial($Negociacion);
+		$usuario['CondicionesPago'] = $this->modelNegociacion->CondicionesPago($Negociacion);
+		$usuario['FechaPago'] = $this->modelNegociacion->FechaDePago($Negociacion);
+		$usuario['NDeposito'] = $this->modelNegociacion->NumeroDeposito($Negociacion);
+		
+		$usuario['Id'] = $Cliente;
+		$usuario['NombreC'] = $this->modelNegociacion->NombreCliente($Cliente);
+		$usuario['ApellidoC'] = $this->modelNegociacion->ApellidoCliente($Cliente);
+		$usuario['EMailC'] = $this->modelNegociacion->MailCliente($Cliente);
+		$usuario['TelefonoC'] = $this->modelNegociacion->TelefonoCliente($Cliente);
+		
+		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Negociacion);
+
+		$this->load->view('Despachador/Borrador/DConsultarBorrador2', $usuario);
+
 	}
 	
 	public function eliminar_producto_2($Equipo, $cliente, $Id_Negociacion) 
@@ -1761,13 +1906,6 @@ class Control_Venta extends CI_Controller
 		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Negociacion); 
 		$usuario['Porcentaje'] = $porcentaje;
 		
-		// PRODUCTO //
-		$HistorialNP['Id_Accesorio'] = $_POST['Accesorio']; // Id Accesorio //
-		$HistorialNP['Id_Negociacion'] = $Negociacion;
-		$HistorialNP['Cantidad'] = $_POST['Cantidad'];
-		
-		$this->modelProducto->AgregarAccesorio($HistorialNP);
-		
 		// DATOS DE LA NEGOCIACION //
 		$usuario['FechaP'] = $this->modelNegociacion->FechaPresupuesto($Negociacion);
 		$usuario['NumeroODC'] = $this->modelNegociacion->NumeroOrdenDC($Negociacion);
@@ -1777,6 +1915,7 @@ class Control_Venta extends CI_Controller
 		$usuario['CondicionesPago'] = $this->modelNegociacion->CondicionesPago($Negociacion);
 		$usuario['FechaPago'] = $this->modelNegociacion->FechaDePago($Negociacion);
 		$usuario['NDeposito'] = $this->modelNegociacion->NumeroDeposito($Negociacion);
+		$equipo = $_POST['equipo'];
 		
 		$usuario['Id'] = $_POST['idcliente2'];
 		$cliente = $_POST['idcliente2'];
@@ -1787,7 +1926,16 @@ class Control_Venta extends CI_Controller
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Negociacion);
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 		
-		$this->load->view('Despachador/Borrador/DConsultarBorradorI2', $usuario);
+		if($equipo == " ")
+		{
+			$usuario['Error'] = "Por favor seleccione un equipo para poder buscar su respectivo accesorio!";
+			$this->load->view('Despachador/Borrador/DConsultarBorradorI2', $usuario);
+		}
+		else
+		{
+			$usuario['Lista2'] = $this->modelProducto->BuscarAccesorios($equipo); 
+			$this->load->view('Despachador/Borrador/DConsultarBorradorI3', $usuario);
+		}
 	}
 	
 	public function eliminar_producto_i2($Equipo, $cliente, $Id_Negociacion) 
@@ -1811,14 +1959,14 @@ class Control_Venta extends CI_Controller
 		$usuario['FechaPago'] = $this->modelNegociacion->FechaDePago($Id_Negociacion);
 		$usuario['NDeposito'] = $this->modelNegociacion->NumeroDeposito($Id_Negociacion);
 		
-		$this->modelNegociacion->EliminarP($Equipo);
+		$this->modelNegociacion->EliminarP2($Equipo);
 		
 		$usuario['NombreI'] = $this->modelNegociacion->NombreInstitucion($cliente);
 		$usuario['TelefonoI'] = $this->modelNegociacion->TelefonoInstitucion($cliente);
 		
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
-		$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Id_Negociacion);
-		$this->load->view('Despachador/Borrador/DConsultarBorradorI', $usuario);
+		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Id_Negociacion);
+		$this->load->view('Despachador/Borrador/DConsultarBorradorI2', $usuario);
 	}
 	
 	public function vista_previa_i($Id_Negociacion, $Id) // Vendedor //
