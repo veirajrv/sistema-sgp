@@ -210,7 +210,7 @@ return false;
           <td valign="top"><h2 style="font-size:30px">Codigo Negociaci&oacute;n (<?php echo $Id_Negociacion; ?>)</h2></td>
           </tr>
         <tr>
-          <td valign="top"><h4 style="color:#0066FF">PASO III</h4></td>
+          <td valign="top"><h4 style="color:#0066FF">PASO II</h4></td>
         </tr>
         <tr>
           <td><hr align="left" style="width:435px;" /></td>
