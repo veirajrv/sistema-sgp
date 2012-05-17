@@ -256,7 +256,7 @@ return false;
     </form>
     <table width="437" border="0">
       <tr>
-        <td width="314" valign="top"><form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Venta/atras_paso_extrai2" style="width:200px">
+        <td width="273" valign="top"><form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Venta/atras_paso_extrai2" style="width:200px">
           
             <input name="Submit" type="image" id="Submit" src="<?php echo base_url();?>files/images/FlechaI.png" title="Paso Anterior"/>
             <input type="hidden" name="Negociacion" id="Negociacion" style="width:20px" value="<?php echo $Id_Negociacion; ?>" />
@@ -264,7 +264,12 @@ return false;
             <input type="hidden" name="Status" id="Status" style="width:20px" value="<?php echo $Status; ?>" />
            
         </form></td>
-        <td width="113" align="right" valign="top"><form id="form2" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/fin_negociacion">
+        <td width="154" align="right" valign="top"><form id="form2" method="post" action="<?php echo base_url();?>index.php/Control_Inicio/d_principal">
+          <span style="width:200px">
+          <input type="hidden" name="Negociacion2" id="Negociacion2" style="width:20px" value="<?php echo $Id_Negociacion; ?>" />
+          <input type="hidden" name="idcliente2" id="idcliente2" style="width:20px" value="<?php echo $Id; ?>" />
+          <input type="hidden" name="Status2" id="Status2" style="width:20px" value="<?php echo $Status; ?>" />
+          </span>
           <input type="submit" name="Submit2" value="Finalizar" onclick="return confirm('Al finalizar esta negociaci&oacute;n la misma sera enviada a la lista de negociaciones por aprobar');"/>
         </form></td>
       </tr>
