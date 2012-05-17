@@ -2217,6 +2217,7 @@ class control_Negociacion extends CI_Controller {
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
 		
+		if(isset($_POST['checkbox']))
 		foreach($_POST['checkbox'] as $row)
 		{
 			$HistorialNP['Id_Accesorio'] = $row;
