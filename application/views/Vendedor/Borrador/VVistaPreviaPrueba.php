@@ -146,7 +146,7 @@
             <td>&nbsp;</td>
             <td align="right"><b>TOTAL:</b></td>
             <td bgcolor="#FFFF00"><?php foreach ($Descuento as $row){
-							echo substr($row['Total'] + ($row['Total']*0.12),0,8); 
+							echo substr($row['Total'] + ($row['Total']*0.12),0,9); 
 							     }?></td>
           </tr>
           <tr>

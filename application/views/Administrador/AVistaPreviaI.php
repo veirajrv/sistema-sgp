@@ -244,7 +244,7 @@ return false;
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td align="right"><b>TOTAL:</b></td>
-                    <td><input name="resultado2" type="text" id="resultado2" style="border:none; width:50px; text-align:left" maxlength="6" readonly="readonly" value="<?php echo $Neto; ?>" /></td>
+                    <td><input name="resultado2" type="text" id="resultado2" style="border:none; width:50px; text-align:left" maxlength="10" readonly="readonly" value="<?php echo $Neto; ?>" /></td>
                   </tr>
                   <tr>
                     <td>&nbsp;</td>
