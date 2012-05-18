@@ -236,7 +236,7 @@ class ModelInstitucion extends CI_Model {
 	
 	function BuscarEstado($Id) 
 	{
-		$query = $this->db->query('SELECT DISTINCT Id_Estado, Nombre FROM Estado WHERE Id_Pais = '.$Id.' ORDER BY Nombre');	
+		$query = $this->db->query('SELECT Id_Estado, Nombre FROM Estado WHERE Id_Pais = '.$Id.' ORDER BY Nombre');	
 		return $query->result_array();	
 	} 
 	
@@ -254,7 +254,7 @@ class ModelInstitucion extends CI_Model {
 	
 	function BuscarCiudad($Id) 
 	{
-		$query = $this->db->query('SELECT DISTINCT Id_Ciudad, Nombre FROM Ciudad WHERE Id_Estado = '.$Id.' ORDER BY Nombre');	
+		$query = $this->db->query('SELECT Id_Ciudad, Nombre FROM Ciudad WHERE Id_Estado = '.$Id.' ORDER BY Nombre');	
 		return $query->result_array();	
 	} 
 	
