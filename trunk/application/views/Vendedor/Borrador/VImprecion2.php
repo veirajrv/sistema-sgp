@@ -118,7 +118,7 @@
             <td width="339">&nbsp;</td>
             <td width="173" align="right"><?php if($Total <> NULL){ echo "<b>Neto:</b>"; 
 							     }?></td>
-            <td width="38"><?php if($Total <> NULL){ echo $Neto; }?></td>
+            <td width="38"><?php if($Total <> NULL){ echo number_format($Neto,2,',','.'); }?></td>
           </tr>
           <tr>
             <td>&nbsp;</td>
@@ -127,8 +127,7 @@
             <td align="right"><?php if($Total <> NULL){ echo "<b>I.V.A. 12%:</b>"; 
 							     }?></td>
             <td><?php if($Total <> NULL){foreach ($Descuento as $row){
-							echo substr($row['Total']*0.12,0,8); 
-							     }}?></td>
+							echo number_format($row['Total']*0.12,2,',','.');}}?></td>
           </tr>
           <tr>
             <td>&nbsp;</td>
@@ -147,8 +146,7 @@
             <td>&nbsp;</td>
             <td align="right"><b>TOTAL:</b></td>
             <td bgcolor="#FFFF00"><?php foreach ($Descuento as $row){
-							echo substr($row['Total'] + ($row['Total']*0.12),0,9); 
-							     }?></td>
+							echo number_format($row['Total'] + ($row['Total']*0.12),2,',','.');}?></td>
           </tr>
           <tr>
             <td colspan="5">&nbsp;</td>
