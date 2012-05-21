@@ -11,7 +11,7 @@ class ModelProducto extends CI_Model {
 	
 	function AgregarEquipo($datos) 
 	{
-		$this->db->insert('HistorialNP2', $datos);
+		$this->db->insert('Historial_Np', $datos);
 	}
 	
 	function InsertarMarca($Marca) 
@@ -51,7 +51,7 @@ class ModelProducto extends CI_Model {
 	
 	function AgregarAccesorio($datos) 
 	{
-		$this->db->insert('HistorialNP', $datos);
+		$this->db->insert('Historial_Np', $datos);
 	}
 	
 	## SELECT ##
@@ -161,38 +161,38 @@ class ModelProducto extends CI_Model {
 
 	function ConsultarListaA($Negociacion) 
 	{
-		$query = $this->db->query('SELECT DISTINCT(H.Id_HistorialNP2), E.Id_Equipo, E.Nombre, E.Descripcion, E.Precio, H.Cantidad
-								   FROM Equipo AS E, HistorialNP2 AS H, Negociacion AS N
+		$query = $this->db->query('SELECT DISTINCT (H.Id_Historial_Np), E.Id_Equipo, E.Nombre, E.Descripcion, H.Cantidad
+								   FROM Equipo AS E, Historial_Np AS H, Negociacion AS N
 								   WHERE E.Id_Equipo = H.Id_Equipo
 								   AND H.Id_Negociacion = N.Id_Negociacion
-								   AND H.Id_Negociacion =  '.$Negociacion.'
-								   ORDER BY H.Id_HistorialNP2 ASC');	
+								   AND H.Id_Negociacion = '.$Negociacion.'
+								   ORDER BY H.Id_Historial_Np ASC');	
 		
 		return $query->result_array();		
 	} 
 	
 	function ConsultarListaB($Negociacion) 
 	{
-		$query = $this->db->query('SELECT DISTINCT(H.Id_HistorialNP), A.Id_Accesorio, A.Nombre, A.Descripcion, A.Precio, H.Cantidad
-								   FROM Accesorio AS A, HistorialNP AS H, Negociacion AS N
+		$query = $this->db->query('SELECT DISTINCT(H.Id_Historial_Np), A.Id_Accesorio, A.Nombre, A.Descripcion, H.Cantidad
+								   FROM Accesorio AS A, Historial_Np AS H, Negociacion AS N
 								   WHERE A.Id_Accesorio = H.Id_Accesorio
 								   AND H.Id_Negociacion = N.Id_Negociacion
-								   AND H.Id_Negociacion =  '.$Negociacion.'
-								   ORDER BY H.Id_HistorialNP ASC');	
+								   AND H.Id_Negociacion = '.$Negociacion.'
+								   ORDER BY H.Id_Historial_Np ASC');	
 		
 		return $query->result_array();		
 	} 
 	
 	function ConsultarLista($Negociacion) 
 	{
-		$query = $this->db->query('SELECT H.Id_HistorialNP, A.Codigo, A.Nombre, A.Descripcion2, A.Precio, H.Cantidad, (
-A.Precio * H.Cantidad) AS Monto
-								   FROM Accesorio AS A, HistorialNP AS H, Negociacion AS N
-								   WHERE H.Id_Accesorio = A.Id_Accesorio
+		$query = $this->db->query('SELECT H.Id_Historial_Np, A.Codigo AS CodigoA, E.Codigo AS CodigoE, H.Id_Equipo, H.Id_Accesorio, A.Nombre, A.Descripcion2 AS DescripcionA, A.Precio, H.Cantidad, (A.Precio * H.Cantidad) AS MontoAccesorio,  E.Nombre, E.Descripcion2 AS DescripcionE, E.Precio, H.Cantidad, (
+E.Precio * H.Cantidad) AS MontoEquipo
+								   FROM Accesorio AS A, Historial_Np AS H, Negociacion AS N, Equipo AS E
+								   WHERE (H.Id_Accesorio = A.Id_Accesorio
+								   OR H.Id_Equipo = E.Id_Equipo)
 								   AND H.Id_Negociacion = N.Id_Negociacion
 								   AND H.Id_Negociacion = '.$Negociacion.'
-								   GROUP BY H.Id_HistorialNP
-								   ORDER BY H.Id_HistorialNP ASC');	
+								   GROUP BY H.Id_Historial_Np, H.Id_Equipo, H.Id_Accesorio');	
 		
 		return $query->result_array();		
 	} 
@@ -237,32 +237,32 @@ A.Precio * H.Cantidad) AS Monto
 	
 	function Neto($Negociacion) 
 	{
-		$query = $this->db->query('SELECT SUM( A.Precio * H.Cantidad ) AS Total
-								   FROM Accesorio AS A, HistorialNP AS H, Negociacion AS N
+		$query = $this->db->query('SELECT SUM( A.Precio * H.Cantidad ) AS TotalA
+								   FROM Accesorio AS A, Historial_Np AS H, Negociacion AS N
 								   WHERE H.Id_Accesorio = A.Id_Accesorio
 								   AND H.Id_Negociacion = N.Id_Negociacion
 								   AND H.Id_Negociacion = '.$Negociacion.'');	
 		
 		foreach ($query->result_array() as $row)
 	{
-		$total = $row['Total'];
+		$totala = $row['TotalA'];
 	}
-		return $total;
+		return $totala;
 	} 
 	
 	function Neto2($Negociacion) 
 	{
-		$query = $this->db->query('SELECT SUM( E.Precio * H.Cantidad ) AS Total
-								   FROM Equipo AS E, HistorialNP2 AS H, Negociacion AS N
+		$query = $this->db->query('SELECT SUM( E.Precio * H.Cantidad ) AS TotalE
+								   FROM Equipo AS E, Historial_NP AS H, Negociacion AS N
 								   WHERE H.Id_Equipo = E.Id_Equipo
 								   AND H.Id_Negociacion = N.Id_Negociacion
 								   AND H.Id_Negociacion = '.$Negociacion.'');	
 		
 		foreach ($query->result_array() as $row)
 	{
-		$total = $row['Total'];
+		$totale = $row['TotalE'];
 	}
-		return $total;
+		return $totale;
 	} 
 	
 	function ConsultarDescuento($Negociacion) 
