@@ -1004,14 +1004,14 @@ class control_Negociacion extends CI_Controller {
 			
 			$this->load->library('table');
 			$this->table->set_empty("&nbsp;");
-			$this->table->set_heading('<font style="font-size:12px" color="#369"><b>CODIGO</b></font>', '<font style="font-size:12px" color="#369"><b>CANTIDAD</b></font>', '<font style="font-size:12px" color="#369"><b>DESCRIPCI&Oacute;N</b></font>');
+			$this->table->set_heading('<font style="font-size:12px" color="#369"><b>CANTIDAD</b></font>', '<font style="font-size:12px" color="#369"><b>CODIGO</b></font>', '<font style="font-size:12px" color="#369"><b>DESCRIPCI&Oacute;N</b></font>');
 					
 			foreach ($Lista2 as $row)
 			{
 				$codigo2 = $row['Codigo'];
 				$cantidad2 = $row['Cantidad'];
 				$descripcion2 = $row['Descripcion2'];
-				$this->table->add_row($codigo2, $cantidad2, $descripcion2);
+				$this->table->add_row($cantidad2, $codigo2, $descripcion2);
 			}
 			
 			foreach ($Lista as $row)
@@ -1019,7 +1019,7 @@ class control_Negociacion extends CI_Controller {
 				$codigo = $row['Codigo'];
 				$cantidad = $row['Cantidad'];
 				$descripcion = $row['Descripcion2'];
-				$this->table->add_row($codigo, $cantidad, $descripcion);
+				$this->table->add_row($cantidad, $codigo, $descripcion);
 			}
 					
 			$usuario['table'] = $this->table->generate();
@@ -1054,14 +1054,14 @@ class control_Negociacion extends CI_Controller {
 			
 			$this->load->library('table');
 			$this->table->set_empty("&nbsp;");
-			$this->table->set_heading('<font style="font-size:12px" color="#369"><b>CODIGO</b></font>', '<font style="font-size:12px" color="#369"><b>CANTIDAD</b></font>', '<font style="font-size:12px" color="#369"><b>DESCRIPCI&Oacute;N</b></font>');
+			$this->table->set_heading('<font style="font-size:12px" color="#369"><b>CANTIDAD</b></font>', '<font style="font-size:12px" color="#369"><b>CODIGO</b></font>', '<font style="font-size:12px" color="#369"><b>DESCRIPCI&Oacute;N</b></font>');
 					
 			foreach ($Lista2 as $row)
 			{
 				$codigo2 = $row['Codigo'];
 				$cantidad2 = $row['Cantidad'];
 				$descripcion2 = $row['Descripcion2'];
-				$this->table->add_row($codigo2, $cantidad2, $descripcion2);
+				$this->table->add_row($cantidad2, $codigo2, $descripcion2);
 			}
 			
 			foreach ($Lista as $row)
@@ -1069,7 +1069,7 @@ class control_Negociacion extends CI_Controller {
 				$codigo = $row['Codigo'];
 				$cantidad = $row['Cantidad'];
 				$descripcion = $row['Descripcion2'];
-				$this->table->add_row($codigo, $cantidad, $descripcion);
+				$this->table->add_row($cantidad, $codigo, $descripcion);
 			}
 					
 			$usuario['table'] = $this->table->generate();
@@ -1521,14 +1521,14 @@ class control_Negociacion extends CI_Controller {
 		
 		$this->load->library('table');
 		$this->table->set_empty("&nbsp;");
-		$this->table->set_heading('<font style="font-size:12px" color="#369"><b>CODIGO</b></font>', '<font style="font-size:12px" color="#369"><b>CANTIDAD</b></font>', '<font style="font-size:12px" color="#369"><b>DESCRIPCI&Oacute;N</b></font>');
+		$this->table->set_heading('<font style="font-size:12px" color="#369"><b>CANTIDAD</b></font>', '<font style="font-size:12px" color="#369"><b>CODIGO</b></font>', '<font style="font-size:12px" color="#369"><b>DESCRIPCI&Oacute;N</b></font>');
 				
 		foreach ($Lista2 as $row)
 		{
 			$codigo2 = $row['Codigo'];
 			$cantidad2 = $row['Cantidad'];
 			$descripcion2 = $row['Descripcion2'];
-			$this->table->add_row($codigo2, $cantidad2, $descripcion2);
+			$this->table->add_row($cantidad2, $codigo2, $descripcion2);
 		}
 		
 		foreach ($Lista as $row)
@@ -1536,7 +1536,7 @@ class control_Negociacion extends CI_Controller {
 			$codigo = $row['Codigo'];
 			$cantidad = $row['Cantidad'];
 			$descripcion = $row['Descripcion2'];
-			$this->table->add_row($codigo, $cantidad, $descripcion);
+			$this->table->add_row($cantidad, $codigo, $descripcion);
 		}
 				
 		$usuario['table'] = $this->table->generate();
@@ -1573,14 +1573,14 @@ class control_Negociacion extends CI_Controller {
 		
 		$this->load->library('table');
 		$this->table->set_empty("&nbsp;");
-		$this->table->set_heading('<font style="font-size:12px" color="#369"><b>CODIGO</b></font>', '<font style="font-size:12px" color="#369"><b>CANTIDAD</b></font>', '<font style="font-size:12px" color="#369"><b>DESCRIPCI&Oacute;N</b></font>');
+		$this->table->set_heading('<font style="font-size:12px" color="#369"><b>CANTIDAD</b></font>', '<font style="font-size:12px" color="#369"><b>CODIGO</b></font>', '<font style="font-size:12px" color="#369"><b>DESCRIPCI&Oacute;N</b></font>');
 			
 		foreach ($Lista2 as $row)
 		{
 			$codigo2 = $row['Codigo'];
 			$cantidad2 = $row['Cantidad'];
 			$descripcion2 = $row['Descripcion2'];
-			$this->table->add_row($codigo2, $cantidad2, $descripcion2);
+			$this->table->add_row($cantidad2, $codigo2, $descripcion2);
 		}
 		
 		foreach ($Lista as $row)
@@ -1588,7 +1588,7 @@ class control_Negociacion extends CI_Controller {
 			$codigo = $row['Codigo'];
 			$cantidad = $row['Cantidad'];
 			$descripcion = $row['Descripcion2'];
-			$this->table->add_row($codigo, $cantidad, $descripcion);
+			$this->table->add_row($cantidad, $codigo, $descripcion);
 		}
 				
 		$usuario['table'] = $this->table->generate();
