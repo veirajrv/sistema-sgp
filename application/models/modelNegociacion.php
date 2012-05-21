@@ -119,10 +119,17 @@ class modelNegociacion extends CI_Model {
 		$query = $this->db->where("Id_Negociacion", $IdNegociacion);
 		$query = $this->db->get("Negociacion");
 		foreach ($query->result_array() as $row)
-	{
-		$id = $row['Id_Empleado'];
-	}
-		return $id;
+		{
+			$id = $row['Id_Empleado'];
+			if($id == NULL)
+				{
+					return false;
+				}
+				else
+				{
+					return $id;
+				}	
+		}
     }
 	
 	function CondicionesPagos($IdNegociacion) 
@@ -131,10 +138,17 @@ class modelNegociacion extends CI_Model {
 		$query = $this->db->where("Id_Negociacion", $IdNegociacion);
 		$query = $this->db->get("Negociacion");
 		foreach ($query->result_array() as $row)
-	{
-		$condicion = $row['CondicionesPago'];
-	}
-		return $condicion;
+		{
+			$condicion = $row['CondicionesPago'];
+			if($condicion == NULL)
+				{
+					return false;
+				}
+				else
+				{
+					return $condicion;
+				}	
+		}
     }
 	
 	function BuscarVendedor2($Usuario) 
@@ -849,10 +863,17 @@ class modelNegociacion extends CI_Model {
 		$query = $this->db->where("Id_Negociacion", $IdNegoBorrador);
 		$query = $this->db->get("Negociacion");
 		foreach ($query->result_array() as $row)
-	{
-		$status = $row['Status'];
-	}
-		return $status;
+		{
+			$status = $row['Status'];
+			if($status == NULL)
+				{
+					return false;
+				}
+				else
+				{
+					return $status;
+				}	
+		}
     }
 	
 	function BuscarExiste($Id_Negociacion2) 
@@ -1077,14 +1098,14 @@ class modelNegociacion extends CI_Model {
 	
 	function EliminarP($Equipo) 
 	{
-		$this->db->where("Id_HistorialNP2", $Equipo);
-		$this->db->delete("historialnp2");				
+		$this->db->where("Id_Historial_Np", $Equipo);
+		$this->db->delete("Historial_Np");				
 	}
 	
 	function EliminarP2($Equipo) 
 	{
-		$this->db->where("Id_HistorialNP", $Equipo);
-		$this->db->delete("historialnp");				
+		$this->db->where("Id_Historial_Np", $Equipo);
+		$this->db->delete("Historial_Np");				
 	}
 	
 }

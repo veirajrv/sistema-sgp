@@ -287,7 +287,7 @@ function CambiaColor(esto,borde,texto)
               <td><a href="sdfsdf">
                 <?php $j=0; foreach ($Lista as $row){
 							
-							echo '<a href="'.base_url().'index.php/Control_Negociacion/eliminar_producto2/'.$row['Id_HistorialNP'].'/'.$idcliente.'/'.$Id_Negociacion.'">ELIMINAR</a>'; echo '</br>';
+							echo '<a href="'.base_url().'index.php/Control_Negociacion/eliminar_producto2/'.$row['Id_Historial_Np'].'/'.$idcliente.'/'.$Id_Negociacion.'">ELIMINAR</a>'; echo '</br>';
 							
 							$j++;}?>
               </a></td>

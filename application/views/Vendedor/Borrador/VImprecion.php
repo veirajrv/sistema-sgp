@@ -17,7 +17,9 @@
 	});
 </script>
 
-
+<STYLE> 
+H1.SaltoDePagina { PAGE-BREAK-AFTER: always } 
+</STYLE>
 
 </head>
 
@@ -154,9 +156,6 @@
             <td align="right"><b>TOTAL BsF:</b></td>
             <td bgcolor="#FFFF00"><?php foreach ($Descuento as $row){
 							echo number_format($row['Total'] + ($row['Total']*0.12),2,',','.');}?></td>
-          </tr>
-          <tr>
-            <td colspan="5">&nbsp;</td>
           </tr>
           <tr>
             <td colspan="5" align="center">&nbsp;</td>
