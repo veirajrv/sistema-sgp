@@ -109,24 +109,15 @@
         </table>
         <table width="810" border="0" cellspacing="0">
           <tr bgcolor="#F2F2F2">
-            <td colspan="5" bgcolor="#F2F2F2"><?php echo $table; ?></td>
+            <td colspan="5" bgcolor="#F2F2F2" align="justify"><?php echo $table; ?></td>
           </tr>
           <tr>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td width="339">&nbsp;</td>
-            <td width="175" align="right"><?php if($Total <> NULL){ echo "<b>Neto:</b>"; 
+            <td width="175" align="right"><?php if($Total <> NULL){ echo "<b>SUB TOTAL:</b>"; 
 							     }?></td>
             <td width="35"><?php if($Total <> NULL){ echo number_format($Neto,2,',','.'); }?></td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td align="right"><?php if($Total <> NULL){ echo "<b>I.V.A. 12%:</b>"; 
-							     }?></td>
-            <td><?php if($Total <> NULL){foreach ($Descuento as $row){
-							echo number_format($row['Total']*0.12,2,',','.');}}?></td>
           </tr>
           <tr>
             <td>&nbsp;</td>
@@ -140,10 +131,19 @@
 							     }}?></td>
           </tr>
           <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td align="right"><?php if($Total <> NULL){ echo "<b>I.V.A. 12%:</b>"; 
+							     }?></td>
+            <td><?php if($Total <> NULL){foreach ($Descuento as $row){
+							echo number_format($row['Total']*0.12,2,',','.');}}?></td>
+          </tr>
+          <tr>
             <td width="100">&nbsp;</td>
             <td width="151">&nbsp;</td>
             <td>&nbsp;</td>
-            <td align="right"><b>TOTAL:</b></td>
+            <td align="right"><b>TOTAL BsF:</b></td>
             <td bgcolor="#FFFF00"><?php foreach ($Descuento as $row){
 							echo number_format($row['Total'] + ($row['Total']*0.12),2,',','.');}?></td>
           </tr>

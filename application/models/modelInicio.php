@@ -355,11 +355,12 @@ class ModelInicio extends CI_Model
 		return $query->result_array();		
 	} 
 	
-	function Rechazadas()
+	function Rechazadas($cedula)
 	{
 		$query = $this->db->query('SELECT N.Id_Negociacion
 							   FROM NEGOCIACION AS N
 							   WHERE N.Status = 4
+							   AND Id_Empleado = '.$cedula.'
 							   ORDER BY N.Id_Negociacion ASC');	
 		
 		return $query->result_array();	
@@ -384,19 +385,20 @@ class ModelInicio extends CI_Model
 		return $tipo;
 	}
 	
-	function NumeroRechazadas()
+	function NumeroRechazadas($cedula)
 	{
 		$query = $this->db->query('SELECT Count(N.Id_Negociacion) AS Numero
 							   FROM NEGOCIACION AS N, SEGUIMIENTO AS S, NS AS NS
 							   WHERE N.Id_Negociacion = NS.Id_Negociacion
 							   AND NS.Id_Seguimiento = S.Id_Seguimiento
-							   AND N.Status = 4');	
+							   AND N.Status = 4
+							   AND N.Id_Empleado = '.$cedula.'');	
 		
 		foreach ($query->result_array() as $row)
 	{
-		$tipo = $row['Numero'];
+		$numero = $row['Numero'];
 	}
-		return $tipo;
+		return $numero;
 	}
 	
 }
