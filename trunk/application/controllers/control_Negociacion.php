@@ -2866,6 +2866,7 @@ class control_Negociacion extends CI_Controller {
 		$usuario['Id_Negociacion'] = $Id_Negociacion; // Id Negociacion //
 		$usuario['idcliente'] = $Id; // Id Cliente
 		$usuario['Permiso'] = $this->modelNegociacion->ConsultarPermiso($Id_Negociacion); 
+		$usuario['condiciones'] = $condiciones; // Id Cliente
 		
 		$status = $this->modelNegociacion->StatusNegociacion($Id_Negociacion); 
 		$usuario['Status'] = $status;
