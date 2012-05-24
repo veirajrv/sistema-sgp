@@ -35,3 +35,7 @@ ERROR - 2012-05-24 03:27:12 --> Severity: Notice  --> iconv() [<a href='function
 ERROR - 2012-05-24 03:27:15 --> Severity: Warning  --> Missing argument 3 for control_Negociacion::imprimir_persona() C:\wamp\www\OpenSGP\application\controllers\control_Negociacion.php 2862
 ERROR - 2012-05-24 03:27:15 --> Severity: Notice  --> Undefined variable: condiciones C:\wamp\www\OpenSGP\application\views\Vendedor\Borrador\VImprecion.php 29
 ERROR - 2012-05-24 03:27:53 --> Severity: Notice  --> Undefined variable: condiciones C:\wamp\www\OpenSGP\application\views\Vendedor\Borrador\VImprecion.php 29
+ERROR - 2012-05-24 03:29:57 --> Severity: Notice  --> Undefined variable: condiciones C:\wamp\www\OpenSGP\application\views\Vendedor\Borrador\VImprecion.php 29
+ERROR - 2012-05-24 03:30:04 --> Severity: Notice  --> Undefined variable: condiciones C:\wamp\www\OpenSGP\application\views\Vendedor\Borrador\VImprecion.php 29
+ERROR - 2012-05-24 03:30:38 --> Severity: Notice  --> Undefined variable: condiciones C:\wamp\www\OpenSGP\application\views\Vendedor\Borrador\VImprecion.php 29
+ERROR - 2012-05-24 03:31:44 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
