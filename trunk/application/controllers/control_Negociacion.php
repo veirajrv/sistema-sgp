@@ -2325,6 +2325,7 @@ class control_Negociacion extends CI_Controller {
 		
 		$Negociacion['Id_Empleado'] =  $this->modelCliente->BuscarId($user); // Id Vendedor //
 		$Negociacion['FechaP'] = date("d/m/Y");
+		$Negociacion['CondicionesPago'] = "Condicion_de_Pago";
 		$Negociacion['Status'] = 1;
 		
 		$this->modelNegociacion->NuevaNegociacion($Negociacion);
@@ -2675,6 +2676,7 @@ class control_Negociacion extends CI_Controller {
 		$Negociacion['Id_Cliente'] = $_POST['select2']; // Id Cliente //
 		$Negociacion['Id_Empleado'] =  $this->modelCliente->BuscarId($user); // Id Vendedor //
 		$Negociacion['FechaP'] = date("d/m/Y");
+		$Negociacion['CondicionesPago'] = "Condicion_de_Pago";
 		$Negociacion['Status'] = 1;
 		
 		$this->modelNegociacion->NuevaNegociacion($Negociacion);
@@ -2798,7 +2800,7 @@ class control_Negociacion extends CI_Controller {
 		$usuario['ConAlerta'] = $this->modelInicio->ConAlerta($cedula); 
 		
 		$usuario['NumeroPorAprobar'] = $this->modelInicio->NumeroPorAprobar2($cedula);
-		$usuario['NumeroRechazadas'] = $this->modelInicio->NumeroRechazadas();
+		$usuario['NumeroRechazadas'] = $this->modelInicio->NumeroRechazadas($cedula);
 		
 		$this->load->view('Vendedor/VPrincipal', $usuario);
 	}
@@ -2863,8 +2865,6 @@ class control_Negociacion extends CI_Controller {
 		$usuario['Usuario'] = $Usuario; // Id Usuario //
 		$usuario['Id_Negociacion'] = $Id_Negociacion; // Id Negociacion //
 		$usuario['idcliente'] = $Id; // Id Cliente
-		$usuario['condiciones'] = $condiciones; // Id Cliente
-		
 		$usuario['Permiso'] = $this->modelNegociacion->ConsultarPermiso($Id_Negociacion); 
 		
 		$status = $this->modelNegociacion->StatusNegociacion($Id_Negociacion); 
@@ -2901,7 +2901,6 @@ class control_Negociacion extends CI_Controller {
 		$usuario['Neto'] = $Neto3;
 		
 		$usuario['Total'] = $this->modelProducto->ConsultarTotal($Id_Negociacion);
-		
 		$this->load->view('Vendedor/Borrador/VImprecion', $usuario);
 	}
 	
