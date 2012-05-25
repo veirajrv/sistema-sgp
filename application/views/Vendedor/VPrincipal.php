@@ -236,7 +236,7 @@ return false;
       </form></td>
     </tr>
   </table>
-  <p>&nbsp;</p>
+  <p><a href="<?php echo base_url();?>index.php/control_Pdf/Header">pdf</a></p>
   <p>
 </p>
   <p>&nbsp;</p>
