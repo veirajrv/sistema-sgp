@@ -5,6 +5,7 @@ class Control_Pdf extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
+		$this->load->library('fpdf');
 		$this->load->helper('form');
 		$this->load->model('modelCombox');
 	}
@@ -32,5 +33,15 @@ class Control_Pdf extends CI_Controller {
 		$this->load->view('Administrador/AArchivoPdf', $usuario);
 	}
 	
+	function Header()
+	{
+   		$this->fpdf->Open();
+		$this->fpdf->AddPage();
+		//dibuja rectangulo
+		$this->fpdf->Rect(20,10,180,137,'D');
+		//finaliza y muestra en pantalla pdf
+		$this->fpdf->Output();
+	}
 	
 }
+
