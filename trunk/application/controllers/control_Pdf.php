@@ -1,4 +1,4 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed'); 
 
 class Control_Pdf extends CI_Controller {
 
@@ -35,13 +35,15 @@ class Control_Pdf extends CI_Controller {
 	
 	function Header()
 	{
-   		$this->fpdf->Open();
-		$this->fpdf->AddPage();
-		//dibuja rectangulo
-		$this->fpdf->Rect(20,10,180,137,'D');
-		//finaliza y muestra en pantalla pdf
-		$this->fpdf->Output();
+$this->load->library('fpdf');
+define('FPDF_FONTPATH',BASEPATH."application/libraries/font/");
+//inicializa pagina pdf
+$this->fpdf->Open();
+$this->fpdf->AddPage();
+//dibuja rectangulo
+$this->fpdf->Rect(20,10,180,137,'D');
+//finaliza y muestra en pantalla pdf
+$this->fpdf->Output();
 	}
-	
 }
 
