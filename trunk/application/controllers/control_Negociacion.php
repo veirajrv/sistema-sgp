@@ -2891,8 +2891,8 @@ class control_Negociacion extends CI_Controller {
 			$descripcion2 = $row['DescripcionE'];
 			$descripcion3 = $descripcion1.$descripcion2;
 			$this->table->add_row($cantidad, $codigo3, $descripcion3);
-		}
-				
+		} 
+		
 		$usuario['table'] = $this->table->generate();
 		
 		$usuario['Descuento'] = $this->modelProducto->ConsultarDescuento($Id_Negociacion);
@@ -2903,6 +2903,7 @@ class control_Negociacion extends CI_Controller {
 		
 		$usuario['Total'] = $this->modelProducto->ConsultarTotal($Id_Negociacion);
 		$this->load->view('Vendedor/Borrador/VImprecion', $usuario);
+		
 	}
 	
 	public function atencion($Id_Negociacion, $Id, $condiciones) 
