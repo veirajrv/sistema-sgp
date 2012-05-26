@@ -1,0 +1,25 @@
+
+  body{
+  margin:0;
+  padding:100px 0 0 0;
+}
+#header{
+  width: 100%;
+background: #CCC;
+position: absolute;
+bottom: 0 !important;
+bottom: -1px;
+height: 40px;
+}
+ @media screen{
+  body>div#header{
+   position: fixed;
+  }
+ }
+ * html body{
+  overflow:hidden;
+ } 
+ * html div#content{
+  height:100%;
+  overflow:auto;
+ }
