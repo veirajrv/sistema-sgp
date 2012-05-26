@@ -35,15 +35,22 @@ class Control_Pdf extends CI_Controller {
 	
 	function Header()
 	{
-$this->load->library('fpdf');
-define('FPDF_FONTPATH',BASEPATH."application/libraries/font/");
-//inicializa pagina pdf
-$this->fpdf->Open();
-$this->fpdf->AddPage();
-//dibuja rectangulo
-$this->fpdf->Rect(20,10,180,137,'D');
-//finaliza y muestra en pantalla pdf
-$this->fpdf->Output();
+		$this->load->library('fpdf');
+		define('FPDF_FONTPATH',BASEPATH."application/libraries/font/");
+		//inicializa pagina pdf
+		$this->fpdf->Open();
+		$this->fpdf->AddPage();
+		//dibuja rectangulo
+		$this->fpdf->SetY(55);
+		//Color de fondo
+		$this->fpdf->SetFillColor(200,220,255);
+		$this->fpdf->Cell(0,6,"Hola mundo",0,1,'L',true);
+		$title = 'Mostramos un archivo txt';
+		$this->fpdf->SetTitle($title);
+
+		$this->fpdf->Rect(20,10,180,137,'D');
+		//finaliza y muestra en pantalla pdf
+		$this->fpdf->Output();
 	}
 }
 
