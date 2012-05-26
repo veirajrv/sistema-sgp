@@ -9,6 +9,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Imprimir Negociacion</title>
 <link href="<?php echo base_url();?>files/css/flick/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>files/css/prueb.css" media="print" />
+
 
 <script>
 	$(function() {
@@ -37,18 +39,6 @@ H1.SaltoDePagina { PAGE-BREAK-AFTER: always }
   <tr>
     <td>&nbsp;</td>
   </tr>
-  <tr>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-  </tr>
 </table>
 <table width="851" border="0">
   <tr>
@@ -56,7 +46,10 @@ H1.SaltoDePagina { PAGE-BREAK-AFTER: always }
       <form id="form4" method="post">
         <table width="808" border="0">
           <tr>
-            <td width="518" rowspan="2"><img src="<?php echo base_url();?>files/images/Logo_Formato.png" alt="a" width="147" height="69" /></td>
+            <td width="518" rowspan="3"><img src="<?php echo base_url();?>files/images/Logo_Formato.png" alt="a" width="147" height="69" /></td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
             <td width="280"><div align="right"><strong>R.I.F.</strong> J-00190554-5</div></td>
           </tr>
           <tr>

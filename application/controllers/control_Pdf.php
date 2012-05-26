@@ -6,6 +6,7 @@ class Control_Pdf extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->library('fpdf');
+		$this->load->library('PDF_Generator');
 		$this->load->helper('form');
 		$this->load->model('modelCombox');
 	}
@@ -33,24 +34,14 @@ class Control_Pdf extends CI_Controller {
 		$this->load->view('Administrador/AArchivoPdf', $usuario);
 	}
 	
-	function Header()
+	function printPDF()
 	{
-		$this->load->library('fpdf');
-		define('FPDF_FONTPATH',BASEPATH."application/libraries/font/");
-		//inicializa pagina pdf
-		$this->fpdf->Open();
-		$this->fpdf->AddPage();
-		//dibuja rectangulo
-		$this->fpdf->SetY(55);
-		//Color de fondo
-		$this->fpdf->SetFillColor(200,220,255);
-		$this->fpdf->Cell(0,6,"Hola mundo",0,1,'L',true);
-		$title = 'Mostramos un archivo txt';
-		$this->fpdf->SetTitle($title);
 
-		$this->fpdf->Rect(20,10,180,137,'D');
-		//finaliza y muestra en pantalla pdf
-		$this->fpdf->Output();
-	}
+         $data = 0;
+		$this->load->plugin('to_pdf');
+$html = $this->load->view( 'welcome_message' , $data , true );
+
+pdf_create ($html,'pruebas');
+        }
 }
 
