@@ -239,7 +239,7 @@ return false;
   <p>&nbsp;</p>
   <p>
 </p>
-  <p><a href="<?php echo base_url();?>index.php/Control_Pdf/genera_pdf">PDF</a></p>
+  <p>&nbsp;</p>
   <p>
     <label></label>
   </p>

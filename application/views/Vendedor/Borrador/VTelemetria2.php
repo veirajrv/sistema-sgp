@@ -239,8 +239,7 @@ return false;
 							<td><?php echo $row['Descripcion'];?></td>
                             <td><input type="text" name="<?php echo $row['Id_Accesorio'];?>" id="<?php echo $row['Id_Accesorio'];?>" style="width:40px;" onkeypress="return soloNumeros(event)" maxlength="5" disabled="disabled" required="required"/></td>
                             </tr><?php 
-						}?></table>
-      </td>
+						}?></table></td>
   </tr>
   <tr>
     <td><input type="submit" name="button" id="button" value="Agregar" /></td>
