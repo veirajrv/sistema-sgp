@@ -10,6 +10,8 @@ class Control_Pdf extends CI_Controller {
 		$this->load->helper('pdf_helper');
 		$this->load->model('modelCombox');
 		$this->load->library('cezpdf');
+		$this->load->library('PHPExcel');
+        $this->load->library('PHPExcel/IOFactory');
 	}
 	
 	// Funcion que nos lleva a la pantalla en donde encontraremos
@@ -35,13 +37,34 @@ class Control_Pdf extends CI_Controller {
 		$this->load->view('Administrador/AArchivoPdf', $usuario);
 	}
 	
+	public function Prueb() 
+	{	
+		$objPHPExcel = new PHPExcel();
+            $objPHPExcel->getProperties()->setTitle("title")
+                        ->setDescription("description");
+
+            // Assign cell values
+            $objPHPExcel->setActiveSheetIndex(0);
+            $objPHPExcel->getActiveSheet()->setCellValue("A1", "cell value here 111");
+
+            $objPHPExcel->createSheet();
+            $objPHPExcel->setActiveSheetIndex(1);
+            $objPHPExcel->getActiveSheet()->setCellValue("A1", "cell value here 222");
+            // Save it as an excel 2003 file
+            $objWriter = IOFactory::createWriter($objPHPExcel, "Excel5");
+            $objWriter->save("nameoffile.xls");
+	}
+	
 	public function genera_pdf(){
             /*load library cezpdf*/
             
-            prep_pdf();
+            prep_pdf();ob_start(); // al inicio
+
 			$hola = "Hola mundo";
 			$imagen = base_url()."file/images/logo.jpg";
+			
 			$this->cezpdf->addJpegFromFile($imagen,0,0,595); //coloca la imagen
+			ob_end_flush(); // al final
             $this->cezpdf->ezText('<b>Cliente No.:</b> '.$hola.'');
             $this->cezpdf->ezText('<b>Cliente:</b> Abraham Zenteno Sanchez');
             $this->cezpdf->ezText('<b>Tienda:</b>  Plaza Dorada');

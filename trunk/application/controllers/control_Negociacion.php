@@ -13,6 +13,8 @@ class control_Negociacion extends CI_Controller {
 		$this->load->model('modelventa');
 		$this->load->helper('form');
 		$this->load->library('email');
+		$this->load->helper('pdf_helper');
+		$this->load->library('cezpdf');
 	}
 	
 	public function index()
@@ -305,13 +307,9 @@ class control_Negociacion extends CI_Controller {
 				
 			foreach ($Lista as $row)
 			{
-				$codigo1 = $row['CodigoA'];
-				$codigo2 = $row['CodigoE'];
-				$codigo3 = $codigo1.$codigo2;
+				$codigo3 = $row['Codigo'];
 				$cantidad = $row['Cantidad'];
-				$descripcion1 = $row['DescripcionA'];
-				$descripcion2 = $row['DescripcionE'];
-				$descripcion3 = $descripcion1.$descripcion2;
+				$descripcion3 = $row['Descripcion'];
 				$this->table->add_row($cantidad, $codigo3, $descripcion3);
 			}
 					
@@ -346,13 +344,9 @@ class control_Negociacion extends CI_Controller {
 				
 			foreach ($Lista as $row)
 			{
-				$codigo1 = $row['CodigoA'];
-				$codigo2 = $row['CodigoE'];
-				$codigo3 = $codigo1.$codigo2;
+				$codigo3 = $row['Codigo'];
 				$cantidad = $row['Cantidad'];
-				$descripcion1 = $row['DescripcionA'];
-				$descripcion2 = $row['DescripcionE'];
-				$descripcion3 = $descripcion1.$descripcion2;
+				$descripcion3 = $row['Descripcion'];
 				$this->table->add_row($cantidad, $codigo3, $descripcion3);
 			}
 					
@@ -419,13 +413,9 @@ class control_Negociacion extends CI_Controller {
 					
 				foreach ($Lista as $row)
 				{
-					$codigo1 = $row['CodigoA'];
-					$codigo2 = $row['CodigoE'];
-					$codigo3 = $codigo1.$codigo2;
+					$codigo3 = $row['Codigo'];
 					$cantidad = $row['Cantidad'];
-					$descripcion1 = $row['DescripcionA'];
-					$descripcion2 = $row['DescripcionE'];
-					$descripcion3 = $descripcion1.$descripcion2;
+					$descripcion3 = $row['Descripcion'];
 					$this->table->add_row($cantidad, $codigo3, $descripcion3);
 				}
 						
@@ -462,13 +452,9 @@ class control_Negociacion extends CI_Controller {
 					
 				foreach ($Lista as $row)
 				{
-					$codigo1 = $row['CodigoA'];
-					$codigo2 = $row['CodigoE'];
-					$codigo3 = $codigo1.$codigo2;
+					$codigo3 = $row['Codigo'];
 					$cantidad = $row['Cantidad'];
-					$descripcion1 = $row['DescripcionA'];
-					$descripcion2 = $row['DescripcionE'];
-					$descripcion3 = $descripcion1.$descripcion2;
+					$descripcion3 = $row['Descripcion'];
 					$this->table->add_row($cantidad, $codigo3, $descripcion3);
 				}
 						
@@ -627,13 +613,9 @@ class control_Negociacion extends CI_Controller {
 				
 			foreach ($Lista as $row)
 			{
-				$codigo1 = $row['CodigoA'];
-				$codigo2 = $row['CodigoE'];
-				$codigo3 = $codigo1.$codigo2;
+				$codigo3 = $row['Codigo'];
 				$cantidad = $row['Cantidad'];
-				$descripcion1 = $row['DescripcionA'];
-				$descripcion2 = $row['DescripcionE'];
-				$descripcion3 = $descripcion1.$descripcion2;
+				$descripcion3 = $row['Descripcion'];
 				$this->table->add_row($cantidad, $codigo3, $descripcion3);
 			}
 					
@@ -669,13 +651,9 @@ class control_Negociacion extends CI_Controller {
 								
 			foreach ($Lista as $row)
 			{
-				$codigo1 = $row['CodigoA'];
-				$codigo2 = $row['CodigoE'];
-				$codigo3 = $codigo1.$codigo2;
+				$codigo3 = $row['Codigo'];
 				$cantidad = $row['Cantidad'];
-				$descripcion1 = $row['DescripcionA'];
-				$descripcion2 = $row['DescripcionE'];
-				$descripcion3 = $descripcion1.$descripcion2;
+				$descripcion3 = $row['Descripcion'];
 				$this->table->add_row($cantidad, $codigo3, $descripcion3);
 			}
 					
@@ -974,13 +952,9 @@ class control_Negociacion extends CI_Controller {
 					
 			foreach ($Lista as $row)
 			{
-				$codigo1 = $row['CodigoA'];
-				$codigo2 = $row['CodigoE'];
-				$codigo3 = $codigo1.$codigo2;
+				$codigo3 = $row['Codigo'];
 				$cantidad = $row['Cantidad'];
-				$descripcion1 = $row['DescripcionA'];
-				$descripcion2 = $row['DescripcionE'];
-				$descripcion3 = $descripcion1.$descripcion2;
+				$descripcion3 = $row['Descripcion'];
 				$this->table->add_row($cantidad, $codigo3, $descripcion3);
 			}
 					
@@ -1019,13 +993,9 @@ class control_Negociacion extends CI_Controller {
 					
 			foreach ($Lista as $row)
 			{
-				$codigo1 = $row['CodigoA'];
-				$codigo2 = $row['CodigoE'];
-				$codigo3 = $codigo1.$codigo2;
+				$codigo3 = $row['Codigo'];
 				$cantidad = $row['Cantidad'];
-				$descripcion1 = $row['DescripcionA'];
-				$descripcion2 = $row['DescripcionE'];
-				$descripcion3 = $descripcion1.$descripcion2;
+				$descripcion3 = $row['Descripcion'];
 				$this->table->add_row($cantidad, $codigo3, $descripcion3);
 			}
 					
@@ -1481,13 +1451,9 @@ class control_Negociacion extends CI_Controller {
 		
 		foreach ($Lista as $row)
 		{
-			$codigo1 = $row['CodigoA'];
-			$codigo2 = $row['CodigoE'];
-			$codigo3 = $codigo1.$codigo2;
+			$codigo3 = $row['Codigo'];
 			$cantidad = $row['Cantidad'];
-			$descripcion1 = $row['DescripcionA'];
-			$descripcion2 = $row['DescripcionE'];
-			$descripcion3 = $descripcion1.$descripcion2;
+			$descripcion3 = $row['Descripcion'];
 			$this->table->add_row($cantidad, $codigo3, $descripcion3);
 		}
 				
@@ -1527,13 +1493,9 @@ class control_Negociacion extends CI_Controller {
 			
 		foreach ($Lista as $row)
 		{
-			$codigo1 = $row['CodigoA'];
-			$codigo2 = $row['CodigoE'];
-			$codigo3 = $codigo1.$codigo2;
+			$codigo3 = $row['Codigo'];
 			$cantidad = $row['Cantidad'];
-			$descripcion1 = $row['DescripcionA'];
-			$descripcion2 = $row['DescripcionE'];
-			$descripcion3 = $descripcion1.$descripcion2;
+			$descripcion3 = $row['Descripcion'];
 			$this->table->add_row($cantidad, $codigo3, $descripcion3);
 		}
 				
@@ -2006,12 +1968,19 @@ class control_Negociacion extends CI_Controller {
 		else
 		{
 			// PRODUCTO //
+			$Codigo = $this->modelProducto->ConsultarCodigoE($Equipo);	
+			$Nombre = $this->modelProducto->ConsultarNombreE($Equipo);
+			$Descripcion = $this->modelProducto->ConsultarDescripcionE($Equipo);
 			$Equipo = $_POST['equipo'];
-			$HistorialNP2['Id_Equipo'] = $Equipo; // Id Accesorio //
-			$HistorialNP2['Id_Negociacion'] = $_POST['Negociacion3'];
-			$HistorialNP2['Cantidad'] = $_POST['Cantidad'];
-			
-			$this->modelProducto->AgregarEquipo($HistorialNP2);
+			$HistorialNP['Id_Equipo'] = $Equipo; // Id Accesorio //
+			$HistorialNP['Id_Accesorio'] = NULL; // Id Accesorio //
+			$HistorialNP['Id_Negociacion'] = $_POST['Negociacion3'];
+			$HistorialNP['Codigo'] = $Codigo;
+			$HistorialNP['Nombre'] = $Nombre;
+			$HistorialNP['Descripcion'] = $Descripcion;
+			$HistorialNP['Cantidad'] = $_POST['Cantidad'];		
+		
+			$this->modelProducto->AgregarEquipo($HistorialNP);
 			
 			$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 			$usuario['Lista'] = $this->modelProducto->ConsultarListaA($IdNegoBorrador);
@@ -2058,10 +2027,16 @@ class control_Negociacion extends CI_Controller {
 		else
 		{
 			// PRODUCTO //
+		$Codigo = $this->modelProducto->ConsultarCodigoE($Equipo);	
+		$Nombre = $this->modelProducto->ConsultarNombreE($Equipo);
+		$Descripcion = $this->modelProducto->ConsultarDescripcionE($Equipo);
 		$Equipo = $_POST['equipo'];
 		$HistorialNP['Id_Equipo'] = $Equipo; // Id Accesorio //
 		$HistorialNP['Id_Accesorio'] = NULL; // Id Accesorio //
 		$HistorialNP['Id_Negociacion'] = $_POST['Negociacion22'];
+		$HistorialNP['Codigo'] = $Codigo;
+		$HistorialNP['Nombre'] = $Nombre;
+		$HistorialNP['Descripcion'] = $Descripcion;
 		$HistorialNP['Cantidad'] = $_POST['Cantidad'];		
 		
 		$this->modelProducto->AgregarEquipo($HistorialNP);
@@ -2139,13 +2114,21 @@ class control_Negociacion extends CI_Controller {
 		if(isset($_POST['checkbox']))
 		foreach($_POST['checkbox'] as $row)
 		{
+			$Codigo = $this->modelProducto->ConsultarNombreA($row);
+			$Codigo = $Codigo[0];
+			
 			$HistorialNP['Id_Equipo'] = NULL;
 			$HistorialNP['Id_Accesorio'] = $row;
 			$HistorialNP['Id_Negociacion'] = $Negociacion;
+			$HistorialNP['Codigo'] = $Codigo['Codigo'];
+			$HistorialNP['Nombre'] = $Codigo['Nombre'];
+			$HistorialNP['Descripcion'] = $Codigo['Descripcion2'];
 			$HistorialNP['Cantidad'] = $_POST[$row];	
 			
 			$this->modelProducto->AgregarAccesorio($HistorialNP);
 		}
+		
+		
 		
 		$usuario['Id_Negociacion'] = $Negociacion;
 		$usuario['Status'] = $Status;
@@ -2168,8 +2151,15 @@ class control_Negociacion extends CI_Controller {
 		if(isset($_POST['checkbox']))
 		foreach($_POST['checkbox'] as $row)
 		{
+			$Codigo = $this->modelProducto->ConsultarNombreA($row);
+			$Codigo = $Codigo[0];
+			
+			$HistorialNP['Id_Equipo'] = NULL;
 			$HistorialNP['Id_Accesorio'] = $row;
 			$HistorialNP['Id_Negociacion'] = $Negociacion;
+			$HistorialNP['Codigo'] = $Codigo['Codigo'];
+			$HistorialNP['Nombre'] = $Codigo['Nombre'];
+			$HistorialNP['Descripcion'] = $Codigo['Descripcion2'];
 			$HistorialNP['Cantidad'] = $_POST[$row];	
 			
 			$this->modelProducto->AgregarAccesorio($HistorialNP);
@@ -2861,6 +2851,7 @@ class control_Negociacion extends CI_Controller {
 	
 	public function imprimir_persona($Id_Negociacion, $Id, $condiciones) 
 	{
+		prep_pdf();
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario; // Id Usuario //
 		$usuario['Id_Negociacion'] = $Id_Negociacion; // Id Negociacion //
@@ -2871,39 +2862,79 @@ class control_Negociacion extends CI_Controller {
 		$status = $this->modelNegociacion->StatusNegociacion($Id_Negociacion); 
 		$usuario['Status'] = $status;
 		
-		$usuario['DatosCliente'] = $this->modelCliente->DatosCliente($Id_Negociacion, $Id); 
 		$cedula = $this->modelCliente->BuscarId($Usuario); 
-		$usuario['DatosVendedor'] = $this->modelCliente->DatosVendedor($Id_Negociacion, $cedula); 
 		
-		$Lista = $this->modelProducto->ConsultarLista($Id_Negociacion);
-		
-		$this->load->library('table');
-		$this->table->set_empty("&nbsp;");
-		$this->table->set_heading('<font style="font-size:12px" color="#369"><b>CODIGO</b></font>', '<font style="font-size:12px" color="#369"><b>CANTIDAD</b></font>', '<font style="font-size:12px" color="#369"><b>DESCRIPCI&Oacute;N</b></font>');
-				
-		foreach ($Lista as $row)
+		$DatosVendedor = $this->modelCliente->DatosVendedor($Id_Negociacion, $cedula); 
+		foreach ($DatosVendedor as $row)
 		{
-			$codigo1 = $row['CodigoA'];
-			$codigo2 = $row['CodigoE'];
-			$codigo3 = $codigo1.$codigo2;
-			$cantidad = $row['Cantidad'];
-			$descripcion1 = $row['DescripcionA'];
-			$descripcion2 = $row['DescripcionE'];
-			$descripcion3 = $descripcion1.$descripcion2;
-			$this->table->add_row($cantidad, $codigo3, $descripcion3);
+			$NombreE = $row['Nombre_1'];
+			$ApellidoE = $row['Apellido_1'];
+			$Apellido2E = $row['Apellido_2'];
+			$Fecha = $row['FechaP'];
+		} 
+			
+		$DatosCliente = $this->modelCliente->DatosCliente($Id_Negociacion, $Id); 
+		foreach ($DatosCliente as $row)
+		{
+			$Nombre = $row['Nombre'];
+			$Apellido = $row['Apellido'];
+			$Direccion = $row['Direccion'];
+			$Rif = $row['Rif'];
+			$Telefono = $row['Telefono'];
+			$Telefono2 = $row['Telefono2'];
+			$Telefono3 = $row['Telefono3'];
+			$Email = $row['Email'];
 		} 
 		
-		$usuario['table'] = $this->table->generate();
-		
-		$usuario['Descuento'] = $this->modelProducto->ConsultarDescuento($Id_Negociacion);
+		$Descuento = $this->modelProducto->ConsultarDescuento($Id_Negociacion);
 		$Neto = $this->modelProducto->Neto($Id_Negociacion);
 		$Neto2 = $this->modelProducto->Neto2($Id_Negociacion);
 		$Neto3 = $Neto+$Neto2;
 		$usuario['Neto'] = $Neto3;
 		
-		$usuario['Total'] = $this->modelProducto->ConsultarTotal($Id_Negociacion);
-		$this->load->view('Vendedor/Borrador/VImprecion', $usuario);
+		$Total = $this->modelProducto->ConsultarTotal($Id_Negociacion);
 		
+		$this->cezpdf->ezText('');
+		$this->cezpdf->ezImage(base_url().'files/images/Condiciones_Yoma/'.$condiciones.'.jpg',-5, 530, 'none', 'left',''); //coloca la imagen
+		$this->cezpdf->addText(120,825,8,'<b>Cliente:</b> '.$Nombre.' '.$Apellido.'');
+		$this->cezpdf->addText(410,825,8,'<b>Cotizacion:</b> NEGO'.$Id_Negociacion.'');
+		$this->cezpdf->addText(120,815,8,'<b>Direccion:</b> '.$Direccion.'');
+		$this->cezpdf->addText(410,815,8,'<b>Ejecutivo de ventas:</b> '.$NombreE.' '.$ApellidoE.'');
+		$this->cezpdf->addText(120,805,8,'<b>R.I.F:</b> '.$Rif.'');
+		$this->cezpdf->addText(410,805,8,'<b>Fecha y hora de impresion:</b> '.date('d-m-Y').'');
+		$this->cezpdf->addText(120,795,8,'<b>Telefonos:</b> '.$Telefono.' / '.$Telefono2.'');
+		$this->cezpdf->addText(120,785,8,'<b>FAX:</b> '.$Telefono3.'');
+		$this->cezpdf->addText(120,775,8,'<b>Email:</b> '.$Email.'');
+		$this->cezpdf->line(20,765,578,765);
+		
+		
+		$Lista = $this->modelProducto->ConsultarLista($Id_Negociacion);
+		foreach($Lista as $row2)
+		{
+			$db_data[] = array('CAN' => $row2['Cantidad'],'COD' => $row2['Codigo'],'DES' => $row2['Descripcion']);
+		}
+			$col_names = array('CAN' => 'Cantidad','COD' => 'Codigo','DES' => 'Descripcion');
+			$this->cezpdf->ezTable($db_data, $col_names, ' ', array('width'=>550)); 
+			
+			$this->cezpdf->ezText('');
+			if($Total <> NULL){ 
+			$this->cezpdf->ezText('<b>SUB TOTAL: </b>'.number_format($Neto,2,',','.'),10);
+			}
+			if($Total <> NULL) { 
+			foreach($Descuento as $row){ 
+			$this->cezpdf->ezText('<b>Descuento: </b>'.$row['Descuento'].' %',10);
+			}
+			}
+			if($Total <> NULL){ 
+			foreach ($Descuento as $row){
+			$this->cezpdf->ezText('<b>I.V.A. 12%: </b>'.number_format($row['Total']*0.12,2,',','.'),10);
+			}}
+			foreach ($Descuento as $row){
+			$this->cezpdf->ezText('<b>TOTAL: </b>'.number_format($row['Total'] + ($row['Total']*0.12),2,',','.'),10);
+			}
+			
+           	ob_end_clean();
+        	$this->cezpdf->ezStream();		
 	}
 	
 	public function atencion($Id_Negociacion, $Id, $condiciones) 
@@ -2919,6 +2950,7 @@ class control_Negociacion extends CI_Controller {
 	
 	public function imprimir_cliente($Id_Negociacion, $Id, $condiciones) // Vendedor //
 	{
+		prep_pdf();
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario; // Id Usuario //
 		$usuario['Id_Negociacion'] = $Id_Negociacion; // Id Negociacion //
@@ -2928,46 +2960,78 @@ class control_Negociacion extends CI_Controller {
 		$status = $this->modelNegociacion->StatusNegociacion($Id_Negociacion); 
 		$usuario['Status'] = $status;
 		
-		$usuario['DatosCliente'] = $this->modelCliente->DatosClienteI($Id_Negociacion, $Id); 
+		
 		$cedula = $this->modelCliente->BuscarId($Usuario); 
-		$usuario['DatosVendedor'] = $this->modelCliente->DatosVendedorI($Id_Negociacion, $cedula); 
-		
-		$Lista2 = $this->modelProducto->ConsultarLista2($Id_Negociacion);
-		$Lista = $this->modelProducto->ConsultarLista($Id_Negociacion);
-		
-		$this->load->library('table');
-		$this->table->set_empty("&nbsp;");
-		$this->table->set_heading('<font style="font-size:12px" color="#369"><b>CODIGO</b></font>', '<font style="font-size:12px" color="#369"><b>CANTIDAD</b></font>', '<font style="font-size:12px" color="#369"><b>DESCRIPCI&Oacute;N</b></font>');
-				
-		foreach ($Lista2 as $row)
+		$DatosVendedor = $this->modelCliente->DatosVendedorI($Id_Negociacion, $cedula);
+		foreach ($DatosVendedor as $row)
 		{
-			$codigo2 = $row['Codigo'];
-			$cantidad2 = $row['Cantidad'];
-			$descripcion2 = $row['Descripcion2'];
-			$this->table->add_row($codigo2, $cantidad2, $descripcion2);
-		}
+			$NombreE = $row['Nombre_1'];
+			$ApellidoE = $row['Apellido_1'];
+			$Apellido2E = $row['Apellido_2'];
+			$Fecha = $row['FechaP'];
+		} 
 		
-		foreach ($Lista as $row)
+		$DatosCliente = $this->modelCliente->DatosClienteI($Id_Negociacion, $Id); 
+		foreach ($DatosCliente as $row)
 		{
-			$codigo = $row['Codigo'];
-			$cantidad = $row['Cantidad'];
-			$descripcion = $row['Descripcion2'];
-			$this->table->add_row($codigo, $cantidad, $descripcion);
-		}
-				
-		$usuario['table'] = $this->table->generate();
+			$Nombre = $row['Nombre'];
+			$Rif = $row['Rif'];
+			$Telefono1 = $row['Telefono1'];
+			$Telefono2 = $row['Telefono2'];
+			$Telefono3 = $row['Telefono3'];
+			$Web = $row['Web'];
+			$Direccion1 = $row['Direccion1'];
+		} 
 		
-		$usuario['Descuento'] = $this->modelProducto->ConsultarDescuento($Id_Negociacion);
+		$this->cezpdf->ezText('');
+		$this->cezpdf->ezImage(base_url().'files/images/Condiciones_Yoma/'.$condiciones.'.jpg',-5, 530, 'none', 'left',''); //coloca la imagen
+		$this->cezpdf->addText(120,825,8,'<b>Cliente:</b> '.$Nombre.'');
+		$this->cezpdf->addText(410,825,8,'<b>Cotizacion:</b> NEGO'.$Id_Negociacion.'');
+		$this->cezpdf->addText(120,815,8,'<b>Direccion:</b> '.$Direccion1.'');
+		$this->cezpdf->addText(410,815,8,'<b>Ejecutivo de ventas:</b> '.$NombreE.' '.$ApellidoE.'');
+		$this->cezpdf->addText(120,805,8,'<b>R.I.F:</b> '.$Rif.'');
+		$this->cezpdf->addText(410,805,8,'<b>Fecha y hora de impresion:</b> '.date('d-m-Y').'');
+		$this->cezpdf->addText(120,795,8,'<b>Telefonos:</b> '.$Telefono1.' / '.$Telefono2.'');
+		$this->cezpdf->addText(120,785,8,'<b>FAX:</b> '.$Telefono3.'');
+		$this->cezpdf->addText(120,775,8,'<b>Web:</b> '.$Web.'');
+		$this->cezpdf->line(20,765,578,765);
+		
+		$Descuento = $this->modelProducto->ConsultarDescuento($Id_Negociacion);
 		$Neto = $this->modelProducto->Neto($Id_Negociacion);
 		$Neto2 = $this->modelProducto->Neto2($Id_Negociacion);
 		$Neto3 = $Neto+$Neto2;
 		$usuario['Neto'] = $Neto3;
-		$usuario['Iva'] = $Neto3*0.12;
+		$Total = $this->modelProducto->ConsultarTotal($Id_Negociacion);
 		
-		$usuario['Total'] = $this->modelProducto->ConsultarTotal($Id_Negociacion);
-		
-		$this->load->view('Vendedor/Borrador/VImprecion2', $usuario);
-	}
+		$Lista = $this->modelProducto->ConsultarLista($Id_Negociacion);
+		foreach($Lista as $row2)
+		{
+			$db_data[] = array('CAN' => $row2['Cantidad'],'COD' => $row2['Codigo'],'DES' => $row2['Descripcion']);
+		}
+			
+			$col_names = array('CAN' => 'Cantidad','COD' => 'Codigo','DES' => 'Descripcion');
+			$this->cezpdf->ezTable($db_data, $col_names, ' ', array('width'=>550)); 
+			
+			$this->cezpdf->ezText('');
+			if($Total <> NULL){ 
+			$this->cezpdf->ezText('<b>SUB TOTAL: </b>'.number_format($Neto,2,',','.'),10);
+			}
+			if($Total <> NULL) { 
+			foreach($Descuento as $row){ 
+			$this->cezpdf->ezText('<b>Descuento: </b>'.$row['Descuento'].' %',10);
+			}
+			}
+			if($Total <> NULL){ 
+			foreach ($Descuento as $row){
+			$this->cezpdf->ezText('<b>I.V.A. 12%: </b>'.number_format($row['Total']*0.12,2,',','.'),10);
+			}}
+			foreach ($Descuento as $row){
+			$this->cezpdf->ezText('<b>TOTAL: </b>'.number_format($row['Total'] + ($row['Total']*0.12),2,',','.'),10);
+			}
+			
+           	ob_end_clean();
+        	$this->cezpdf->ezStream();
+		}
 
-}
+	}
 

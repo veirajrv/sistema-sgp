@@ -55,6 +55,13 @@ class ModelProducto extends CI_Model {
 	}
 	
 	## SELECT ##
+
+	function ConsultarNombreA($row) 
+	{
+		$query = $this->db->where("Id_Accesorio", $row);
+		$query = $this->db->get('Accesorio');
+		return $query->result_array();			
+	} 
 	
 	function BuscarAccesorios($equipo) 
 	{
@@ -126,6 +133,42 @@ class ModelProducto extends CI_Model {
 		return $id;
 	}
 	
+	function ConsultarCodigoE($Equipo) 
+	{
+		$query = $this->db->select("Codigo");
+		$query = $this->db->where("Id_Equipo", $Equipo);
+		$query = $this->db->get("Equipo");
+		foreach ($query->result_array() as $row)
+	{
+		$Codigo = $row['Codigo'];
+	}
+		return $Codigo;
+	}
+	
+	function ConsultarNombreE($Equipo) 
+	{
+		$query = $this->db->select("Nombre");
+		$query = $this->db->where("Id_Equipo", $Equipo);
+		$query = $this->db->get("Equipo");
+		foreach ($query->result_array() as $row)
+	{
+		$Nombre = $row['Nombre'];
+	}
+		return $Nombre;
+	}
+	
+	function ConsultarDescripcionE($Equipo) 
+	{
+		$query = $this->db->select("Descripcion2");
+		$query = $this->db->where("Id_Equipo", $Equipo);
+		$query = $this->db->get("Equipo");
+		foreach ($query->result_array() as $row)
+	{
+		$Descripcion = $row['Descripcion2'];
+	}
+		return $Descripcion;
+	}
+	
 	function UltimaLinea() 
 	{
 		$this->db->select_max('Id_Linea'); 
@@ -185,17 +228,23 @@ class ModelProducto extends CI_Model {
 	
 	function ConsultarLista($Negociacion) 
 	{
-		$query = $this->db->query('SELECT H.Id_Historial_Np, A.Codigo AS CodigoA, E.Codigo AS CodigoE, H.Id_Equipo, H.Id_Accesorio, A.Nombre, A.Descripcion2 AS DescripcionA, A.Precio, H.Cantidad, (A.Precio * H.Cantidad) AS MontoAccesorio,  E.Nombre, E.Descripcion2 AS DescripcionE, E.Precio, H.Cantidad, (
-E.Precio * H.Cantidad) AS MontoEquipo
-								   FROM Accesorio AS A, Historial_Np AS H, Negociacion AS N, Equipo AS E
-								   WHERE (H.Id_Accesorio = A.Id_Accesorio
-								   OR H.Id_Equipo = E.Id_Equipo)
-								   AND H.Id_Negociacion = N.Id_Negociacion
-								   AND H.Id_Negociacion = '.$Negociacion.'
-								   GROUP BY H.Id_Historial_Np, H.Id_Equipo, H.Id_Accesorio');	
+		$query = $this->db->query('SELECT Id_Historial_Np, Codigo, Nombre, Descripcion, Cantidad
+								   FROM historial_np
+								   WHERE Id_Negociacion = '.$Negociacion.'');	
 		
 		return $query->result_array();		
 	} 
+	
+	function NumeroRegistros($Negociacion) 
+	{
+		$query = $this->db->query('SELECT COUNT( Id_Historial_Np ) FROM historial_np WHERE Id_Negociacion = '.$Negociacion.'');	
+		
+		foreach ($query->result_array() as $row)
+	{
+		$id = $row['Id_Historial_Np'];
+	}
+		return $id;
+    }
 	
 	function ConsultarLista2($Negociacion) 
 	{

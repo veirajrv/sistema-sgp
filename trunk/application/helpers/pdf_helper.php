@@ -10,7 +10,11 @@ function prep_pdf($orientation = 'portrait'){
     $CI->cezpdf->saveState();
     $CI->cezpdf->setStrokeColor(0,0,0,1);
     if($orientation == 'portrait') {
-        $CI->cezpdf->ezSetMargins(20,70,20,20);
+		//ob_start(); // al inicio
+		$CI->cezpdf->ezImage(base_url().'files/images/Logo_Formato.png',-10, 90, 'none', 'left',''); //coloca la imagen
+		$CI->cezpdf->addText(20,775,8,'<b>R.I.F:</b> J-00190554-5');
+		//ob_end_flush(); // al final
+        $CI->cezpdf->ezSetMargins(80,70,20,20);
         $CI->cezpdf->ezStartPageNumbers(570,28,8,'','{PAGENUM}',1);
         $CI->cezpdf->line(20,40,578,40);
         $CI->cezpdf->addText(25,32,8,'Impreso ' . date('m/d/Y h:i:s a'));
