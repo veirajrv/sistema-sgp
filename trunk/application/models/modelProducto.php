@@ -69,7 +69,8 @@ class ModelProducto extends CI_Model {
 								   FROM accesorio AS a, aequipo AS ae, equipo AS e
 								   WHERE ae.Id_Equipo = e.Id_Equipo
 								   AND e.Id_Equipo = '.$equipo.'
-								   AND ae.Id_Accesorio = a.Id_Accesorio');	
+								   AND ae.Id_Accesorio = a.Id_Accesorio
+								   ORDER BY a.Codigo');	
 		
 		return $query->result_array();		
 	} 
@@ -410,13 +411,13 @@ A.Precio * H.Cantidad) AS Monto
 	
 	function ConsultarEquipos()
 	{
-		$query = $this->db->query('SELECT DISTINCT(E.Id_Equipo), E.Codigo, E.Nombre AS Equipo, E.Precio, E.Descripcion, M.Nombre AS Marca 				FROM Equipo AS E, Marca_Linea AS ML, ML_Equipo AS ME, Marca AS M WHERE M.Id_Marca = ML.Id_Marca AND ME.Id_Marca_Linea = 		ML.Id_Marca_Linea AND ME.Id_Equipo = E.Id_Equipo ORDER BY Marca');		
+		$query = $this->db->query('SELECT DISTINCT(E.Id_Equipo), E.Codigo, E.Nombre AS Equipo, E.Precio, E.Descripcion, M.Nombre AS Marca 				FROM Equipo AS E, Marca_Linea AS ML, ML_Equipo AS ME, Marca AS M WHERE M.Id_Marca = ML.Id_Marca AND ME.Id_Marca_Linea = 		ML.Id_Marca_Linea AND ME.Id_Equipo = E.Id_Equipo ORDER BY E.Codigo');		
 		return $query->result_array();
 	}
 	
 	function ConsultarAcce()
 	{
-		$query = $this->db->query('SELECT DISTINCT(A.Id_Accesorio), A.Codigo, A.Nombre AS Accesorio, A.Precio, A.Descripcion, E.Nombre AS Equipo FROM Equipo AS E, ACCESORIO AS A, AEQUIPO AS AE WHERE AE.Id_Accesorio = A.Id_Accesorio AND E.Id_Equipo = AE.Id_Equipo ORDER BY Equipo');		
+		$query = $this->db->query('SELECT DISTINCT(A.Id_Accesorio), A.Codigo, A.Nombre AS Accesorio, A.Precio, A.Descripcion, E.Nombre AS Equipo FROM Equipo AS E, ACCESORIO AS A, AEQUIPO AS AE WHERE AE.Id_Accesorio = A.Id_Accesorio AND E.Id_Equipo = AE.Id_Equipo ORDER BY A.Codigo');		
 		return $query->result_array();
 	}
 	
