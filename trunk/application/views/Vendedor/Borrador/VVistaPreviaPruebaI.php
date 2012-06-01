@@ -137,7 +137,7 @@
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
-            <td align="right"><b>TOTAL BsF:</b></td>
+            <td align="right"><b>TOTAL:</b></td>
             <td bgcolor="#FFFF00"><?php foreach ($Descuento as $row){
 							echo number_format($row['Total'] + ($row['Total']*0.12),2,',','.');}?></td>
           </tr>
