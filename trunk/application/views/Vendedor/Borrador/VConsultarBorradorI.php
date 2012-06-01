@@ -232,6 +232,8 @@ function CambiaColor(esto,borde,texto)
                   <option>Financiamiento Yoma Stock</option>
                   <option>Pago 30-70 Bco - Entrega 180 Dias</option>
                   <option>Pago Contado - Entrega 180 Dias</option>
+                  <option>Accesorios Entrega Inmediata</option>
+                  <option>Accesorios Entrega 10-12 semanas</option>
                 </select></td>
               </tr>
               <tr>
