@@ -43,8 +43,8 @@
       
       <table width="810" border="0">
           <tr>
-            <td width="518" rowspan="2"><img src="<?php echo base_url();?>files/images/Logo_Formato.png" alt="a" width="147" height="69" /></td>
-            <td width="282"><div align="right"><strong>R.I.F.</strong> J-00190554-5</div></td>
+            <td width="466" rowspan="2"><img src="<?php echo base_url();?>files/images/Logo_Formato.png" alt="a" width="147" height="69" /></td>
+            <td width="340"><div align="right"><strong>R.I.F.</strong> J-00190554-5</div></td>
           </tr>
           <tr>
             <td>&nbsp;</td>
