@@ -343,17 +343,17 @@ function CambiaColor(esto,borde,texto)
       <tr>
         <td width="431"><fieldset><legend style="font-size:15px"><b>Vista previa</b></legend>
           <form id="form4" method="post" action="">
-            <table width="410" border="0">
+            <table width="429" border="0">
               <tr>
-                <td width="114">Codigo/Nombre</td>
-                <td>Descripcion</td>
+                <td width="100">Nombre</td>
+                <td width="160">Descripcion</td>
                 <td>Cantidad</td>
-                <td align="right">&nbsp;</td>
+                <td align="right"><?php echo '<a href="'.base_url().'index.php/Control_Negociacion/eliminar_todoi/'.$Id.'/'.$Id_Negociacion.'">ELIMINAR TODO</a>'; echo '</br>';?></td>
               </tr>
               <tr>
                 <td><?php $j=0; foreach ($Lista as $row){
 							
-							echo $row['Id_Equipo']; echo '&nbsp;'; echo $row['Nombre']; echo '</br>';
+							echo $row['Nombre']; echo '</br>';
 							
 							$j++;}?>                </td>
                 <td><?php $j=0; foreach ($Lista as $row){
@@ -361,12 +361,12 @@ function CambiaColor(esto,borde,texto)
 							echo $row['Descripcion']; echo '</br>';
 							
 							$j++;}?></td>
-                <td width="51"><?php $j=0; foreach ($Lista as $row){
+                <td width="55"><?php $j=0; foreach ($Lista as $row){
 							
 							echo $row['Cantidad']; echo '</br>';
 							
 							$j++;}?></td>
-                <td width="20" align="right"><a href="sdfsdf">
+                <td width="96" align="right"><a href="sdfsdf">
                   <?php $j=0; foreach ($Lista as $row){
 							
 							echo '<a href="'.base_url().'index.php/Control_Negociacion/eliminar_producto_i2/'.$row['Id_Historial_Np'].'/'.$Id.'/'.$Id_Negociacion.'">ELIMINAR</a>'; echo '</br>';

@@ -1166,6 +1166,24 @@ class control_Negociacion extends CI_Controller {
 		$this->load->view('Vendedor/Borrador/VTelemetria', $usuario);
 	}
 	
+	public function eliminar_todo_telemetria($cliente, $Id_Negociacion)
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario; // Id Negociacion //
+		$usuario['Id_Negociacion'] = $Id_Negociacion;
+		$usuario['idcliente'] = $cliente;
+		$status = $this->modelNegociacion->StatusNegociacion($Id_Negociacion); 
+		$usuario['Status'] = $status;
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Id_Negociacion); 
+		$usuario['Porcentaje'] = $porcentaje;
+		
+		$this->modelNegociacion->EliminarTodo2($Id_Negociacion);
+		
+		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Id_Negociacion);
+		$this->load->view('Vendedor/Borrador/VTelemetria', $usuario);
+	}
+	
 	public function eliminar_producto_2($Equipo, $cliente, $Id_Negociacion) 
 	{
 		$Usuario = $this->session->userdata('Usuario');
@@ -1198,6 +1216,72 @@ class control_Negociacion extends CI_Controller {
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Id_Negociacion);
 		
 		$this->load->view('Vendedor/Borrador/VConsultaBorrador', $usuario);
+	}
+	
+	public function eliminar_todo($cliente, $Id_Negociacion) 
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario; // Id Negociacion //
+		$usuario['Id_Negociacion'] = $Id_Negociacion;
+		$usuario['idcliente'] = $cliente;
+		$usuario['Id'] = $cliente;
+		$status = $this->modelNegociacion->StatusNegociacion($Id_Negociacion); 
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Id_Negociacion); 
+		$usuario['Porcentaje'] = $porcentaje;
+		$usuario['Status'] = $status;
+		
+		$usuario['NombreC'] = $this->modelNegociacion->NombreCliente($cliente);
+		$usuario['ApellidoC'] = $this->modelNegociacion->ApellidoCliente($cliente);
+		$usuario['EMailC'] = $this->modelNegociacion->MailCliente($cliente);
+		$usuario['TelefonoC'] = $this->modelNegociacion->TelefonoCliente($cliente);
+		
+		$usuario['FechaP'] = $this->modelNegociacion->FechaPresupuesto($Id_Negociacion);
+		$usuario['NumeroODC'] = $this->modelNegociacion->NumeroOrdenDC($Id_Negociacion);
+		$usuario['FechaODC'] = $this->modelNegociacion->FechaOrdenDC($Id_Negociacion);
+		$usuario['Banco'] = $this->modelNegociacion->Banco($Id_Negociacion);
+		$usuario['PagoInicial'] = $this->modelNegociacion->PagoInicial($Id_Negociacion);
+		$usuario['CondicionesPago'] = $this->modelNegociacion->CondicionesPago($Id_Negociacion);
+		$usuario['FechaPago'] = $this->modelNegociacion->FechaDePago($Id_Negociacion);
+		$usuario['NDeposito'] = $this->modelNegociacion->NumeroDeposito($Id_Negociacion);
+		
+		$this->modelNegociacion->EliminarTodo($Id_Negociacion);
+		
+		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+		$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Id_Negociacion);
+		
+		$this->load->view('Vendedor/Borrador/VConsultaBorrador', $usuario);
+	}
+	
+	public function eliminar_todoi($cliente, $Id_Negociacion) 
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario; // Id Negociacion //
+		$usuario['Id_Negociacion'] = $Id_Negociacion;
+		$usuario['idcliente'] = $cliente;
+		$usuario['Id'] = $cliente;
+		$status = $this->modelNegociacion->StatusNegociacion($Id_Negociacion); 
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Id_Negociacion); 
+		$usuario['Porcentaje'] = $porcentaje;
+		$usuario['Status'] = $status;
+		
+		$usuario['NombreI'] = $this->modelNegociacion->NombreInstitucion($cliente);
+		$usuario['TelefonoI'] = $this->modelNegociacion->TelefonoInstitucion($cliente);
+		
+		$usuario['FechaP'] = $this->modelNegociacion->FechaPresupuesto($Id_Negociacion);
+		$usuario['NumeroODC'] = $this->modelNegociacion->NumeroOrdenDC($Id_Negociacion);
+		$usuario['FechaODC'] = $this->modelNegociacion->FechaOrdenDC($Id_Negociacion);
+		$usuario['Banco'] = $this->modelNegociacion->Banco($Id_Negociacion);
+		$usuario['PagoInicial'] = $this->modelNegociacion->PagoInicial($Id_Negociacion);
+		$usuario['CondicionesPago'] = $this->modelNegociacion->CondicionesPago($Id_Negociacion);
+		$usuario['FechaPago'] = $this->modelNegociacion->FechaDePago($Id_Negociacion);
+		$usuario['NDeposito'] = $this->modelNegociacion->NumeroDeposito($Id_Negociacion);
+		
+		$this->modelNegociacion->EliminarTodo($Id_Negociacion);
+		
+		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+		$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Id_Negociacion);
+		
+		$this->load->view('Vendedor/Borrador/VConsultarBorradorI', $usuario);
 	}
 	
 	public function eliminar_producto_i($Equipo, $cliente, $Id_Negociacion)
@@ -1403,6 +1487,24 @@ class control_Negociacion extends CI_Controller {
 		$usuario['Porcentaje'] = $porcentaje;
 		
 		$this->modelNegociacion->EliminarP2($Equipo);
+		
+		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Id_Negociacion);
+		$this->load->view('Vendedor/Borrador/VTelemetriaI', $usuario);
+	}
+	
+	public function eliminar_todo_telemetriai($cliente, $Id_Negociacion)
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario; // Id Negociacion //
+		$usuario['Id_Negociacion'] = $Id_Negociacion;
+		$status = $this->modelNegociacion->StatusNegociacion($Id_Negociacion); 
+		$usuario['Status'] = $status;
+		$usuario['idcliente'] = $cliente;
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Id_Negociacion); 
+		$usuario['Porcentaje'] = $porcentaje;
+		
+		$this->modelNegociacion->EliminarTodo2($Id_Negociacion);
 		
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Id_Negociacion);
@@ -2911,7 +3013,7 @@ class control_Negociacion extends CI_Controller {
 		//$this->cezpdf->addText(120,815,8,'<b>Direccion:</b> '.$Direccion.'');
 		$this->cezpdf->addText(380,739,10,'<b>Ejecutivo de ventas:</b> '.$NombreE.' '.$ApellidoE.'');
 		//$this->cezpdf->addText(120,805,8,'<b>R.I.F:</b> '.$Rif.'');
-		$this->cezpdf->addText(380,728,10,'<b>Fecha y hora de impresion:</b> '.date('d-m-Y').'');
+		$this->cezpdf->addText(380,728,10,'<b>Fecha:</b> '.date('d-m-Y').'');
 		//$this->cezpdf->addText(120,795,8,'<b>Telefonos:</b> '.$Telefono.' / '.$Telefono2.'');
 		//$this->cezpdf->addText(120,785,8,'<b>FAX:</b> '.$Telefono3.'');
 		//$this->cezpdf->addText(120,775,8,'<b>Email:</b> '.$Email.'');
@@ -2925,8 +3027,7 @@ class control_Negociacion extends CI_Controller {
 		}
 			$col_names = array('CAN' => 'CANTIDAD','COD' => 'CODIGO','DES' => 'DESCRIPCION');
 			
-			$this->cezpdf->ezTable($db_data, $col_names, ' ', array('width'=>550,'cols'=>array(  
-                'CAN'=>array('justification'=>'center')))); 
+			$this->cezpdf->ezTable($db_data, $col_names, ' ', array('width'=>550,'cols'=>array('CAN'=>array('justification'=>'center'),'COD'=>array('justification'=>'center')))); 
 			
 			$this->cezpdf->ezText('');
 			if($Total <> NULL){ 
@@ -2946,7 +3047,7 @@ class control_Negociacion extends CI_Controller {
 			}
 			
            	ob_end_clean();
-        	$this->cezpdf->ezStream();		
+        	$this->cezpdf->ezStream(array('Content-Disposition'=> 'NEGO'.$Id_Negociacion.'.pdf'));
 	}
 	
 	public function atencion($Id_Negociacion, $Id, $condiciones) 
@@ -3012,7 +3113,7 @@ class control_Negociacion extends CI_Controller {
 		//$this->cezpdf->addText(120,815,8,'<b>Direccion:</b> '.$Direccion1.'');
 		$this->cezpdf->addText(380,739,10,'<b>Ejecutivo de ventas:</b> '.$NombreE.' '.$ApellidoE.'');
 		//$this->cezpdf->addText(120,805,8,'<b>R.I.F:</b> '.$Rif.'');
-		$this->cezpdf->addText(380,728,10,'<b>Fecha y hora de impresion:</b> '.date('d-m-Y').'');
+		$this->cezpdf->addText(380,728,10,'<b>Fecha:</b> '.date('d-m-Y').'');
 		//$this->cezpdf->addText(120,795,8,'<b>Telefonos:</b> '.$Telefono1.' / '.$Telefono2.'');
 		//$this->cezpdf->addText(120,785,8,'<b>FAX:</b> '.$Telefono3.'');
 		//$this->cezpdf->addText(120,775,8,'<b>Web:</b> '.$Web.'');
@@ -3032,7 +3133,7 @@ class control_Negociacion extends CI_Controller {
 		}
 			
 			$col_names = array('CAN' => 'CANTIDAD','COD' => 'CODIGO','DES' => 'DESCRIPCION');
-			$this->cezpdf->ezTable($db_data, $col_names, ' ', array('width'=>550,'cols'=>array('CAN'=>array('justification'=>'center')))); 
+			$this->cezpdf->ezTable($db_data, $col_names, ' ', array('width'=>550,'cols'=>array('CAN'=>array('justification'=>'center'),'COD'=>array('justification'=>'center')))); 
 			
 			$this->cezpdf->ezText('');
 			if($Total <> NULL){ 
@@ -3052,7 +3153,7 @@ class control_Negociacion extends CI_Controller {
 			}
 			
            	ob_end_clean();
-        	$this->cezpdf->ezStream();
+        	$this->cezpdf->ezStream(array('Content-Disposition'=> 'NEGO'.$Id_Negociacion.'.pdf'));
 		}
 
 	}
