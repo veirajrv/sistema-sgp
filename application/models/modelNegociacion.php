@@ -1102,6 +1102,20 @@ class modelNegociacion extends CI_Model {
 		$this->db->delete("Historial_Np");				
 	}
 	
+	function EliminarTodo($Id_Negociacion) 
+	{
+		$this->db->where("Id_Negociacion", $Id_Negociacion);
+		$this->db->where("Id_Accesorio", NULL);
+		$this->db->delete("Historial_Np");				
+	}
+	
+	function EliminarTodo2($Id_Negociacion) 
+	{
+		$this->db->where("Id_Negociacion", $Id_Negociacion);
+		$this->db->where("Id_Equipo", NULL);
+		$this->db->delete("Historial_Np");				
+	}
+	
 	function EliminarP2($Equipo) 
 	{
 		$this->db->where("Id_Historial_Np", $Equipo);

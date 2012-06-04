@@ -261,17 +261,17 @@ function CambiaColor(esto,borde,texto)
       <tr>
         <td><fieldset>
           <legend style="font-size:15px"><b>Accesorios</b></legend>
-          <table width="410" border="0">
+          <table width="430" border="0">
             <tr>
-              <td>Codigo/Nombre</td>
-              <td>Descripcion</td>
-              <td>Cantidad</td>
-              <td>&nbsp;</td>
+              <td width="100">Nombre</td>
+              <td width="160">Descripcion</td>
+              <td width="55">Cantidad</td>
+              <td width="97" align="right"><?php echo '<a href="'.base_url().'index.php/Control_Negociacion/eliminar_todo_telemetria/'.$idcliente.'/'.$Id_Negociacion.'">ELIMINAR TODO</a>'; echo '</br>';?></td>
             </tr>
             <tr>
               <td><?php $j=0; foreach ($Lista as $row){
 							
-							echo $row['Id_Accesorio']; echo '&nbsp;'; echo $row['Nombre']; echo '</br>';
+							echo $row['Nombre']; echo '</br>';
 							
 							$j++;}?></td>
               <td><?php $j=0; foreach ($Lista as $row){
@@ -284,7 +284,7 @@ function CambiaColor(esto,borde,texto)
 							echo $row['Cantidad']; echo '</br>';
 							
 							$j++;}?></td>
-              <td><a href="sdfsdf">
+              <td align="right"><a href="sdfsdf">
                 <?php $j=0; foreach ($Lista as $row){
 							
 							echo '<a href="'.base_url().'index.php/Control_Negociacion/eliminar_producto/'.$row['Id_Historial_Np'].'/'.$idcliente.'/'.$Id_Negociacion.'">ELIMINAR</a>'; echo '</br>';
