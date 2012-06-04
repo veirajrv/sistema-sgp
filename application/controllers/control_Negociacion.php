@@ -2899,19 +2899,19 @@ class control_Negociacion extends CI_Controller {
 		
 		$this->cezpdf->ezNewPage();
 		$this->cezpdf->ezText('<b>Cliente: </b>'.$Nombre.' '.$Apellido.'');
-		$this->cezpdf->ezText('<b>Direccion:</b> '.$Direccion.'');
 		$this->cezpdf->ezText('<b>R.I.F:</b> '.$Rif.'');
 		$this->cezpdf->ezText('<b>Telefonos:</b> '.$Telefono.' / '.$Telefono2.'');
 		$this->cezpdf->ezText('<b>FAX:</b> '.$Telefono3.'');
 		$this->cezpdf->ezText('<b>Email:</b> '.$Email.'');
+		$this->cezpdf->ezText('<b>Direccion:</b> '.$Direccion.'');
 		$this->cezpdf->ezText('');
 		
 		//$this->cezpdf->addText(120,825,8,'<b>Cliente:</b> '.$Nombre.' '.$Apellido.'');
-		$this->cezpdf->addText(380,825,10,'<b>Cotizacion:</b> NEGO'.$Id_Negociacion.'');
+		$this->cezpdf->addText(380,750,10,'<b>Cotizacion:</b> NEGO'.$Id_Negociacion.'');
 		//$this->cezpdf->addText(120,815,8,'<b>Direccion:</b> '.$Direccion.'');
-		$this->cezpdf->addText(380,814,10,'<b>Ejecutivo de ventas:</b> '.$NombreE.' '.$ApellidoE.'');
+		$this->cezpdf->addText(380,739,10,'<b>Ejecutivo de ventas:</b> '.$NombreE.' '.$ApellidoE.'');
 		//$this->cezpdf->addText(120,805,8,'<b>R.I.F:</b> '.$Rif.'');
-		$this->cezpdf->addText(380,803,10,'<b>Fecha y hora de impresion:</b> '.date('d-m-Y').'');
+		$this->cezpdf->addText(380,728,10,'<b>Fecha y hora de impresion:</b> '.date('d-m-Y').'');
 		//$this->cezpdf->addText(120,795,8,'<b>Telefonos:</b> '.$Telefono.' / '.$Telefono2.'');
 		//$this->cezpdf->addText(120,785,8,'<b>FAX:</b> '.$Telefono3.'');
 		//$this->cezpdf->addText(120,775,8,'<b>Email:</b> '.$Email.'');
@@ -2924,23 +2924,25 @@ class control_Negociacion extends CI_Controller {
 			$db_data[] = array('CAN' => $row2['Cantidad'],'COD' => $row2['Codigo'],'DES' => $row2['Descripcion']);
 		}
 			$col_names = array('CAN' => 'CANTIDAD','COD' => 'CODIGO','DES' => 'DESCRIPCION');
-			$this->cezpdf->ezTable($db_data, $col_names, ' ', array('width'=>550)); 
+			
+			$this->cezpdf->ezTable($db_data, $col_names, ' ', array('width'=>550,'cols'=>array(  
+                'CAN'=>array('justification'=>'center')))); 
 			
 			$this->cezpdf->ezText('');
 			if($Total <> NULL){ 
-			$this->cezpdf->ezText('<b>SUB TOTAL: </b>'.number_format($Neto,2,',','.'),10);
+			$this->cezpdf->ezText('<b>SUB TOTAL: </b>'.number_format($Neto,2,',','.'),10,array('justification'=>'right'));
 			}
 			if($Total <> NULL) { 
 			foreach($Descuento as $row){ 
-			$this->cezpdf->ezText('<b>Descuento: </b>'.$row['Descuento'].' %',10);
+			$this->cezpdf->ezText('<b>Descuento: </b>'.$row['Descuento'].' %',10,array('justification'=>'right'));
 			}
 			}
 			if($Total <> NULL){ 
 			foreach ($Descuento as $row){
-			$this->cezpdf->ezText('<b>I.V.A. 12%: </b>'.number_format($row['Total']*0.12,2,',','.'),10);
+			$this->cezpdf->ezText('<b>I.V.A. 12%: </b>'.number_format($row['Total']*0.12,2,',','.'),10,array('justification'=>'right'));
 			}}
 			foreach ($Descuento as $row){
-			$this->cezpdf->ezText('<b>TOTAL: </b>'.number_format($row['Total'] + ($row['Total']*0.12),2,',','.'),10);
+			$this->cezpdf->ezText('<b>TOTAL: </b>'.number_format($row['Total'] + ($row['Total']*0.12),2,',','.'),10,array('justification'=>'right'));
 			}
 			
            	ob_end_clean();
@@ -2998,19 +3000,19 @@ class control_Negociacion extends CI_Controller {
 		$this->cezpdf->ezNewPage();
 		
 		$this->cezpdf->ezText('<b>Cliente:</b> '.$Nombre.'');
-		$this->cezpdf->ezText('<b>Direccion:</b> '.$Direccion1.'');
 		$this->cezpdf->ezText('<b>R.I.F:</b> '.$Rif.'');
 		$this->cezpdf->ezText('<b>Telefonos:</b> '.$Telefono1.' / '.$Telefono2.'');
 		$this->cezpdf->ezText('<b>FAX:</b> '.$Telefono3.'');
 		$this->cezpdf->ezText('<b>Web:</b> '.$Web.'');
+		$this->cezpdf->ezText('<b>Direccion:</b> '.$Direccion1.'');
 		$this->cezpdf->ezText('');
 		
 		//$this->cezpdf->addText(120,825,8,'<b>Cliente:</b> '.$Nombre.'');
-		$this->cezpdf->addText(380,825,10,'<b>Cotizacion:</b> NEGO'.$Id_Negociacion.'');
+		$this->cezpdf->addText(380,750,10,'<b>Cotizacion:</b> NEGO'.$Id_Negociacion.'');
 		//$this->cezpdf->addText(120,815,8,'<b>Direccion:</b> '.$Direccion1.'');
-		$this->cezpdf->addText(380,814,10,'<b>Ejecutivo de ventas:</b> '.$NombreE.' '.$ApellidoE.'');
+		$this->cezpdf->addText(380,739,10,'<b>Ejecutivo de ventas:</b> '.$NombreE.' '.$ApellidoE.'');
 		//$this->cezpdf->addText(120,805,8,'<b>R.I.F:</b> '.$Rif.'');
-		$this->cezpdf->addText(380,803,10,'<b>Fecha y hora de impresion:</b> '.date('d-m-Y').'');
+		$this->cezpdf->addText(380,728,10,'<b>Fecha y hora de impresion:</b> '.date('d-m-Y').'');
 		//$this->cezpdf->addText(120,795,8,'<b>Telefonos:</b> '.$Telefono1.' / '.$Telefono2.'');
 		//$this->cezpdf->addText(120,785,8,'<b>FAX:</b> '.$Telefono3.'');
 		//$this->cezpdf->addText(120,775,8,'<b>Web:</b> '.$Web.'');
@@ -3030,23 +3032,23 @@ class control_Negociacion extends CI_Controller {
 		}
 			
 			$col_names = array('CAN' => 'CANTIDAD','COD' => 'CODIGO','DES' => 'DESCRIPCION');
-			$this->cezpdf->ezTable($db_data, $col_names, ' ', array('width'=>550)); 
+			$this->cezpdf->ezTable($db_data, $col_names, ' ', array('width'=>550,'cols'=>array('CAN'=>array('justification'=>'center')))); 
 			
 			$this->cezpdf->ezText('');
 			if($Total <> NULL){ 
-			$this->cezpdf->ezText('<b>SUB TOTAL: </b>'.number_format($Neto,2,',','.'),10);
+			$this->cezpdf->ezText('<b>SUB TOTAL: </b>'.number_format($Neto,2,',','.'),10,array('justification'=>'right'));
 			}
 			if($Total <> NULL) { 
 			foreach($Descuento as $row){ 
-			$this->cezpdf->ezText('<b>Descuento: </b>'.$row['Descuento'].' %',10);
+			$this->cezpdf->ezText('<b>Descuento: </b>'.$row['Descuento'].' %',10,array('justification'=>'right'));
 			}
 			}
 			if($Total <> NULL){ 
 			foreach ($Descuento as $row){
-			$this->cezpdf->ezText('<b>I.V.A. 12%: </b>'.number_format($row['Total']*0.12,2,',','.'),10);
+			$this->cezpdf->ezText('<b>I.V.A. 12%: </b>'.number_format($row['Total']*0.12,2,',','.'),10,array('justification'=>'right'));
 			}}
 			foreach ($Descuento as $row){
-			$this->cezpdf->ezText('<b>TOTAL: </b>'.number_format($row['Total'] + ($row['Total']*0.12),2,',','.'),10);
+			$this->cezpdf->ezText('<b>TOTAL: </b>'.number_format($row['Total'] + ($row['Total']*0.12),2,',','.'),10,array('justification'=>'right'));
 			}
 			
            	ob_end_clean();
