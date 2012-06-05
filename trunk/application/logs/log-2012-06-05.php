@@ -105,3 +105,33 @@ ERROR - 2012-06-05 13:43:36 --> Severity: Notice  --> Undefined variable: Datos 
 ERROR - 2012-06-05 13:43:36 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\Producto\ModPrecioAccesorio.php 255
 ERROR - 2012-06-05 13:43:36 --> Severity: Notice  --> Undefined variable: Datos C:\wamp\www\OpenSGP\application\views\Administrador\Producto\ModPrecioAccesorio.php 265
 ERROR - 2012-06-05 13:43:36 --> Severity: Warning  --> Invalid argument supplied for foreach() C:\wamp\www\OpenSGP\application\views\Administrador\Producto\ModPrecioAccesorio.php 265
+ERROR - 2012-06-05 13:51:56 --> Severity: Notice  --> Undefined variable: cont C:\wamp\www\OpenSGP\application\libraries\cezpdf.php 1308
+ERROR - 2012-06-05 13:51:56 --> Severity: 8192  --> Function set_magic_quotes_runtime() is deprecated C:\wamp\www\OpenSGP\application\libraries\class.pdf.php 2641
+ERROR - 2012-06-05 13:51:56 --> Severity: 8192  --> Function set_magic_quotes_runtime() is deprecated C:\wamp\www\OpenSGP\application\libraries\class.pdf.php 2653
+ERROR - 2012-06-05 13:51:56 --> Severity: Notice  --> Undefined variable: cont C:\wamp\www\OpenSGP\application\libraries\cezpdf.php 1308
+ERROR - 2012-06-05 13:51:56 --> Severity: 8192  --> Function set_magic_quotes_runtime() is deprecated C:\wamp\www\OpenSGP\application\libraries\class.pdf.php 2856
+ERROR - 2012-06-05 13:51:56 --> Severity: 8192  --> Function set_magic_quotes_runtime() is deprecated C:\wamp\www\OpenSGP\application\libraries\class.pdf.php 2858
+ERROR - 2012-06-05 13:53:14 --> Severity: Notice  --> Undefined variable: cont C:\wamp\www\OpenSGP\application\libraries\cezpdf.php 1308
+ERROR - 2012-06-05 13:53:14 --> Severity: 8192  --> Function set_magic_quotes_runtime() is deprecated C:\wamp\www\OpenSGP\application\libraries\class.pdf.php 2641
+ERROR - 2012-06-05 13:53:14 --> Severity: 8192  --> Function set_magic_quotes_runtime() is deprecated C:\wamp\www\OpenSGP\application\libraries\class.pdf.php 2653
+ERROR - 2012-06-05 13:53:14 --> Severity: Notice  --> Undefined variable: cont C:\wamp\www\OpenSGP\application\libraries\cezpdf.php 1308
+ERROR - 2012-06-05 13:53:14 --> Severity: 8192  --> Function set_magic_quotes_runtime() is deprecated C:\wamp\www\OpenSGP\application\libraries\class.pdf.php 2856
+ERROR - 2012-06-05 13:53:14 --> Severity: 8192  --> Function set_magic_quotes_runtime() is deprecated C:\wamp\www\OpenSGP\application\libraries\class.pdf.php 2858
+ERROR - 2012-06-05 13:53:36 --> Severity: Notice  --> Undefined variable: cont C:\wamp\www\OpenSGP\application\libraries\cezpdf.php 1308
+ERROR - 2012-06-05 13:53:36 --> Severity: 8192  --> Function set_magic_quotes_runtime() is deprecated C:\wamp\www\OpenSGP\application\libraries\class.pdf.php 2641
+ERROR - 2012-06-05 13:53:36 --> Severity: 8192  --> Function set_magic_quotes_runtime() is deprecated C:\wamp\www\OpenSGP\application\libraries\class.pdf.php 2653
+ERROR - 2012-06-05 13:53:36 --> Severity: Notice  --> Undefined variable: cont C:\wamp\www\OpenSGP\application\libraries\cezpdf.php 1308
+ERROR - 2012-06-05 13:53:36 --> Severity: 8192  --> Function set_magic_quotes_runtime() is deprecated C:\wamp\www\OpenSGP\application\libraries\class.pdf.php 2856
+ERROR - 2012-06-05 13:53:36 --> Severity: 8192  --> Function set_magic_quotes_runtime() is deprecated C:\wamp\www\OpenSGP\application\libraries\class.pdf.php 2858
+ERROR - 2012-06-05 13:54:00 --> Severity: Notice  --> Undefined variable: cont C:\wamp\www\OpenSGP\application\libraries\cezpdf.php 1308
+ERROR - 2012-06-05 13:54:00 --> Severity: 8192  --> Function set_magic_quotes_runtime() is deprecated C:\wamp\www\OpenSGP\application\libraries\class.pdf.php 2641
+ERROR - 2012-06-05 13:54:00 --> Severity: 8192  --> Function set_magic_quotes_runtime() is deprecated C:\wamp\www\OpenSGP\application\libraries\class.pdf.php 2653
+ERROR - 2012-06-05 13:54:00 --> Severity: Notice  --> Undefined variable: cont C:\wamp\www\OpenSGP\application\libraries\cezpdf.php 1308
+ERROR - 2012-06-05 13:54:00 --> Severity: 8192  --> Function set_magic_quotes_runtime() is deprecated C:\wamp\www\OpenSGP\application\libraries\class.pdf.php 2856
+ERROR - 2012-06-05 13:54:00 --> Severity: 8192  --> Function set_magic_quotes_runtime() is deprecated C:\wamp\www\OpenSGP\application\libraries\class.pdf.php 2858
+ERROR - 2012-06-05 13:54:11 --> Severity: Notice  --> Undefined variable: cont C:\wamp\www\OpenSGP\application\libraries\cezpdf.php 1308
+ERROR - 2012-06-05 13:54:11 --> Severity: 8192  --> Function set_magic_quotes_runtime() is deprecated C:\wamp\www\OpenSGP\application\libraries\class.pdf.php 2641
+ERROR - 2012-06-05 13:54:11 --> Severity: 8192  --> Function set_magic_quotes_runtime() is deprecated C:\wamp\www\OpenSGP\application\libraries\class.pdf.php 2653
+ERROR - 2012-06-05 13:54:11 --> Severity: Notice  --> Undefined variable: cont C:\wamp\www\OpenSGP\application\libraries\cezpdf.php 1308
+ERROR - 2012-06-05 13:54:11 --> Severity: 8192  --> Function set_magic_quotes_runtime() is deprecated C:\wamp\www\OpenSGP\application\libraries\class.pdf.php 2856
+ERROR - 2012-06-05 13:54:11 --> Severity: 8192  --> Function set_magic_quotes_runtime() is deprecated C:\wamp\www\OpenSGP\application\libraries\class.pdf.php 2858
