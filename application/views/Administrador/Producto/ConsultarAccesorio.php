@@ -119,7 +119,7 @@
 <!-- BEGIN center column -->
 <div id="center">
   <div id="cc">
-    <form id="form1" method="post" action="">
+    <form id="form1" method="post" action="<?php echo base_url();?>index.php/Control_Producto/buscar_accesorio">
       <table width="441" border="0">
         <tr>
           <td width="49"><h2 style="font-size:30px">Productos</h2></td>
@@ -130,8 +130,19 @@
           <td colspan="3"><a href="<?php echo base_url();?>index.php/Control_Producto">Marca</a> | <a href="<?php echo base_url();?>index.php/Control_Producto/index2">Linea</a> | <a href="<?php echo base_url();?>index.php/Control_Producto/index3">Equipo</a> | <a href="<?php echo base_url();?>index.php/Control_Producto/index4">Accesorio</a></td>
           </tr>
         <tr>
-          <td colspan="3"><hr align="left" style="width:435px;"></hr></td>
-          </tr>
+          <td colspan="3"><hr align="left" style="width:435px;" /></td>
+        </tr>
+        <tr>
+          <td colspan="3"><table width="427" border="0">
+            <tr>
+              <td width="100" align="right"><input name="Buscar" type="text" id="Buscar" style="width:150px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" placeholder="Buscar accesorio" required="required" onkeypress="return soloNumeros(event)"/></td>
+              <td width="317"><input name="image" type="image" value="Buscar" src="<?php echo base_url();?>files/images/lupa-32x32.png"/></td>
+            </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td colspan="3"><hr align="left" style="width:435px;" /></td>
+        </tr>
         <tr>
           <td colspan="3"><div id="div_demo" style="overflow:scroll; width:425px; height:200px;"><?php echo $table; ?></div></td>
           </tr>
