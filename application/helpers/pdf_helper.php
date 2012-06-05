@@ -17,12 +17,12 @@ function prep_pdf($orientation = 'portrait'){
         $CI->cezpdf->ezSetMargins(80,70,20,20);
         $CI->cezpdf->ezStartPageNumbers(570,28,8,'','{PAGENUM}',1);
         $CI->cezpdf->line(20,40,578,40);
-        $CI->cezpdf->addText(25,32,8,'Impreso ' . date('m/d/Y h:i:s a'));
+        $CI->cezpdf->addText(25,32,8,'Impreso ' . date('d/m/Y'));
     }
     else {
         $CI->cezpdf->ezStartPageNumbers(750,28,8,'','{PAGENUM}',1);
         $CI->cezpdf->line(20,40,800,40);
-        $CI->cezpdf->addText(25,32,8,'Impreso '.date('m/d/Y h:i:s a'));
+        $CI->cezpdf->addText(25,32,8,'Impreso '.date('d/m/Y'));
     }
     $CI->cezpdf->restoreState();
     $CI->cezpdf->closeObject();
