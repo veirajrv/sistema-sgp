@@ -116,6 +116,27 @@ class Control_Producto extends CI_Controller {
 		$this->load->view('Administrador/Producto/ConsultarAccesorio', $usuario);
 	}
 	
+	public function buscar_accesorio()
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$usuario['accesorio'] = $_POST['Buscar'];
+		$codigoA = $_POST['Buscar'];
+		$usuario['Datos'] = $this->modelProducto->BuscarDatosAccesorio2($codigoA);
+		
+		$this->load->view('Administrador/Producto/ModPrecioAccesorio', $usuario);
+	}
+	
+	public function buscar_equipo()
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$usuario['Equipo'] = $_POST['Buscar'];
+		$codigoE = $_POST['Buscar'];
+		$usuario['Datos'] = $this->modelProducto->BuscarDatosEquipo2($codigoE);
+		$this->load->view('Administrador/Producto/ModPrecioEquipo', $usuario);
+	}
+	
 	// Funcion que nos permite modificar el nombre o precio de un equipo dentro del sistema.
 	public function modificar_equipo($id)
 	{

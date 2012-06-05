@@ -82,6 +82,13 @@ class ModelProducto extends CI_Model {
 		return $query->result_array();			
 	} 
 	
+	function BuscarDatosEquipo2($codigoE) 
+	{
+		$query = $this->db->where("Codigo", $codigoE);
+		$query = $this->db->get('equipo');
+		return $query->result_array();			
+	} 
+	
 	function BuscarDatosAccesorio($Id) 
 	{
 		$query = $this->db->where("Id_Accesorio", $Id);
@@ -89,6 +96,13 @@ class ModelProducto extends CI_Model {
 		return $query->result_array();			
 	} 
 	
+	function BuscarDatosAccesorio2($codigoA) 
+	{
+		$query = $this->db->where("Codigo", $codigoA);
+		$query = $this->db->get('accesorio');
+		return $query->result_array();			
+	}
+		
 	function CambiarDatosEquipo($equipo, $datos) 
 	{	
 		$equipo->Codigo = $_POST['Codigo'];
