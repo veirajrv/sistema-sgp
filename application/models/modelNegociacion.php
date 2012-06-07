@@ -974,6 +974,13 @@ class modelNegociacion extends CI_Model {
 		$this->db->update('Negociacion', $Negociacion);
 	}
 	
+	function ReseteoTotal($equipo, $datos) 
+	{				
+		$id = $datos['ID2'];
+		$this->db->where("Id_Negociacion", $id);
+		$this->db->update('Negociacion', $equipo);
+	}
+	
 	function Desbloqueo($Negociacion, $datos) 
 	{
 		$Negociacion->Status = 1;

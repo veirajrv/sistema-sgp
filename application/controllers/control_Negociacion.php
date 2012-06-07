@@ -2087,6 +2087,13 @@ class control_Negociacion extends CI_Controller {
 			$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 			$usuario['Lista'] = $this->modelProducto->ConsultarListaA($IdNegoBorrador);
 			
+			$id = $_POST['Negociacion3'];
+			$datos['ID2'] = $id;
+			$equipo['Descuento'] = 0;
+			$equipo['Total'] = 0;
+		
+			$this->modelNegociacion->ReseteoTotal($equipo, $datos);
+			
 			$this->load->view('Vendedor/Borrador/VConsultarBorradorI', $usuario);
 		}		
 	}
@@ -2145,6 +2152,14 @@ class control_Negociacion extends CI_Controller {
 		
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Negociacion);
+		
+		// Recetear el Total de la negociacion por motivo de modificacion de la misma //
+		$id = $_POST['Negociacion22'];
+		$datos['ID2'] = $id;
+		$equipo['Descuento'] = 0;
+		$equipo['Total'] = 0;
+		
+		$this->modelNegociacion->ReseteoTotal($equipo, $datos);
 		
 		$this->load->view('Vendedor/Borrador/VConsultaBorrador', $usuario);
 		}
@@ -2240,6 +2255,15 @@ class control_Negociacion extends CI_Controller {
 		$usuario['idcliente'] = $Cliente;
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Negociacion);
+		
+		// Recetear el Total de la negociacion por motivo de modificacion de la misma //
+		$id = $usuario['Id_Negociacion'];
+		
+		$datos['ID2'] = $id;
+		$equipo['Descuento'] = 0;
+		$equipo['Total'] = 0;
+		
+		$this->modelNegociacion->ReseteoTotal($equipo, $datos);
 
 		$this->load->view('Vendedor/Borrador/VTelemetria', $usuario);
 
@@ -2275,6 +2299,12 @@ class control_Negociacion extends CI_Controller {
 		$usuario['idcliente'] = $Cliente;
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Negociacion);
+		
+		$datos['ID2'] = $Negociacion;
+		$equipo['Descuento'] = 0;
+		$equipo['Total'] = 0;
+		
+		$this->modelNegociacion->ReseteoTotal($equipo, $datos);
 
 		$this->load->view('Vendedor/Borrador/VTelemetriaI', $usuario);
 
@@ -2988,14 +3018,6 @@ class control_Negociacion extends CI_Controller {
 			$Email = $row['Email'];
 		} 
 		
-		$Descuento = $this->modelProducto->ConsultarDescuento($Id_Negociacion);
-		$Neto = $this->modelProducto->Neto($Id_Negociacion);
-		$Neto2 = $this->modelProducto->Neto2($Id_Negociacion);
-		$Neto3 = $Neto+$Neto2;
-		$usuario['Neto'] = $Neto3;
-		
-		$Total = $this->modelProducto->ConsultarTotal($Id_Negociacion);
-		
 		//$this->cezpdf->ezText('');
 		$this->cezpdf->ezImage(base_url().'files/images/Condiciones_Yoma/'.$condiciones.'.jpg',-30,580, 'none', 'left',''); //coloca la imagen
 		
@@ -3019,6 +3041,13 @@ class control_Negociacion extends CI_Controller {
 		//$this->cezpdf->addText(120,775,8,'<b>Email:</b> '.$Email.'');
 		//$this->cezpdf->line(20,670,565,670);
 		
+		$Descuento = $this->modelProducto->ConsultarDescuento($Id_Negociacion);
+		$Neto = $this->modelProducto->Neto($Id_Negociacion);
+		$Neto2 = $this->modelProducto->Neto2($Id_Negociacion);
+		$Neto3 = $Neto+$Neto2;
+		$usuario['Neto'] = $Neto3;
+		
+		$Total = $this->modelProducto->ConsultarTotal($Id_Negociacion);
 		
 		$Lista = $this->modelProducto->ConsultarLista($Id_Negociacion);
 		foreach($Lista as $row2)
@@ -3031,13 +3060,12 @@ class control_Negociacion extends CI_Controller {
 			
 			$this->cezpdf->ezText('');
 			if($Total <> NULL){ 
-			$this->cezpdf->ezText('<b>SUB TOTAL: </b>'.number_format($Neto,2,',','.'),10,array('justification'=>'right'));
+			$this->cezpdf->ezText('<b>SUB TOTAL: </b>'.number_format($Neto3,2,',','.'),10,array('justification'=>'right'));
 			}
 			if($Total <> NULL) { 
 			foreach($Descuento as $row){ 
 			$this->cezpdf->ezText('<b>Descuento: </b>'.$row['Descuento'].' %',10,array('justification'=>'right'));
-			}
-			}
+			}}
 			if($Total <> NULL){ 
 			foreach ($Descuento as $row){
 			$this->cezpdf->ezText('<b>I.V.A. 12%: </b>'.number_format($row['Total']*0.12,2,',','.'),10,array('justification'=>'right'));
@@ -3137,7 +3165,7 @@ class control_Negociacion extends CI_Controller {
 			
 			$this->cezpdf->ezText('');
 			if($Total <> NULL){ 
-			$this->cezpdf->ezText('<b>SUB TOTAL: </b>'.number_format($Neto,2,',','.'),10,array('justification'=>'right'));
+			$this->cezpdf->ezText('<b>SUB TOTAL: </b>'.number_format($Neto3,2,',','.'),10,array('justification'=>'right'));
 			}
 			if($Total <> NULL) { 
 			foreach($Descuento as $row){ 
