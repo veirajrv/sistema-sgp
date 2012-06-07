@@ -104,29 +104,31 @@ class ModelProducto extends CI_Model {
 	}
 		
 	function CambiarDatosEquipo($equipo, $datos) 
-	{	
-		$equipo->Codigo = $_POST['Codigo'];
-		$equipo->Nombre = $_POST['Nombre'];
-		$equipo->Precio = $_POST['Precio'];
-		$equipo->Descripcion = $_POST['Descripcion'];
-		$equipo->Descripcion2 = $_POST['Descripcion2'];
-			
+	{				
 		$id = $datos['ID2'];
 		$this->db->where("Id_Equipo", $id);
 		$this->db->update('Equipo', $equipo);
 	}
 	
-	function CambiarDatosAccesorio($accesorio, $datos) 
+	function CambiarDatosEquipo2($equipo2, $datos2) 
 	{	
-		$accesorio->Codigo = $_POST['Codigo'];
-		$accesorio->Nombre = $_POST['Nombre'];
-		$accesorio->Precio = $_POST['Precio'];
-		$accesorio->Descripcion = $_POST['Descripcion'];
-		$accesorio->Descripcion2 = $_POST['Descripcion2'];
-			
+		$id2 = $datos2['ID2'];
+		$this->db->where("Id_Equipo", $id2);
+		$this->db->update('historial_np', $equipo2);
+	}
+	
+	function CambiarDatosAccesorio($accesorio, $datos) 
+	{				
 		$id = $datos['ID2'];
 		$this->db->where("Id_Accesorio", $id);
 		$this->db->update('Accesorio', $accesorio);
+	}
+	
+	function CambiarDatosAccesorio2($accesorio2, $datos2) 
+	{				
+		$id2 = $datos2['ID2'];
+		$this->db->where("Id_Accesorio", $id2);
+		$this->db->update('historial_np', $accesorio2);
 	}
 	
 	function ConsultarAccesorio($Equipo) 
