@@ -152,13 +152,25 @@ class Control_Producto extends CI_Controller {
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
 		$id = $_POST['CBD'];
+		$id2 = $_POST['CBD'];
 		
+		// Modifica en el maestro de productos //
 		$datos['ID2'] = $id;
-		$equipo = new ModelProducto;
+		$equipo['Codigo'] = $_POST['Codigo'];
+		$equipo['Nombre'] = $_POST['Nombre'];
+		$equipo['Precio'] = $_POST['Precio'];
+		$equipo['Descripcion'] = $_POST['Descripcion'];
+		$equipo['Descripcion2'] = $_POST['Descripcion2'];
 		$this->modelProducto->CambiarDatosEquipo($equipo, $datos);
 		
-		$usuario['Datos'] = $this->modelProducto->BuscarDatosEquipo($id);
+		// Modifica en el historial de productos que se venden //
+		$datos2['ID2'] = $id2;
+		$equipo2['Codigo'] = $_POST['Codigo'];
+		$equipo2['Nombre'] = $_POST['Nombre'];
+		$equipo2['Descripcion'] = $_POST['Descripcion2'];
+		$this->modelProducto->CambiarDatosEquipo2($equipo2, $datos2);
 		
+		$usuario['Datos'] = $this->modelProducto->BuscarDatosEquipo($id);
 		$usuario['Mensaje'] = 'Se modificaron los datos del equipo con &eacute;xito!';
 		
 		$this->load->view('Administrador/Producto/ModPrecioEquipo', $usuario);
@@ -179,13 +191,25 @@ class Control_Producto extends CI_Controller {
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
 		$id = $_POST['CBD'];
+		$id2 = $_POST['CBD'];
 		
+		// Modifica en el historial de productos que se venden //
 		$datos['ID2'] = $id;
-		$accesorio = new ModelProducto;
+		$accesorio['Codigo'] = $_POST['Codigo'];
+		$accesorio['Nombre'] = $_POST['Nombre'];
+		$accesorio['Precio'] = $_POST['Precio'];
+		$accesorio['Descripcion'] = $_POST['Descripcion'];
+		$accesorio['Descripcion2'] = $_POST['Descripcion2'];
 		$this->modelProducto->CambiarDatosAccesorio($accesorio, $datos);
 		
-		$usuario['Datos'] = $this->modelProducto->BuscarDatosAccesorio($id);
+		// Modifica en el historial de productos que se venden //
+		$datos2['ID2'] = $id2;
+		$accesorio2['Codigo'] = $_POST['Codigo'];
+		$accesorio2['Nombre'] = $_POST['Nombre'];
+		$accesorio2['Descripcion'] = $_POST['Descripcion2'];
+		$this->modelProducto->CambiarDatosAccesorio2($accesorio2, $datos2);
 		
+		$usuario['Datos'] = $this->modelProducto->BuscarDatosAccesorio($id);
 		$usuario['Mensaje'] = 'Se modificaron los datos del accesorio con &eacute;xito!';
 		
 		$this->load->view('Administrador/Producto/ModPrecioAccesorio', $usuario);
