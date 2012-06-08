@@ -136,7 +136,11 @@
           <td colspan="3"><table width="424" border="0">
             <tr>
               <td width="150" align="right"><input name="Buscar" type="text" id="Buscar" style="width:150px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" placeholder="Buscar equipo" required="required" onkeypress="return soloNumeros(event)"/></td>
-              <td width="264"><input name="image" type="image" value="Buscar" src="<?php echo base_url();?>files/images/lupa-32x32.png"/></td>
+              <td width="32"><input name="image" type="image" value="Buscar" src="<?php echo base_url();?>files/images/lupa-32x32.png"/></td>
+              <td width="228"><?php if(isset($Mensaje))
+		{
+			echo '<font color="#0099FF" style="font-size:20px;"><b>'.$Mensaje.'</b></font>';
+		}?></td>
             </tr>
           </table></td>
         </tr>
