@@ -1163,6 +1163,14 @@ class control_Negociacion extends CI_Controller {
 		
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Id_Negociacion);
+		
+		// Recetear el Total de la negociacion por motivo de modificacion de la misma //
+		$datos['ID2'] = $Id_Negociacion;
+		$equipo['Descuento'] = 0;
+		$equipo['Total'] = 0;
+		
+		$this->modelNegociacion->ReseteoTotal($equipo, $datos);
+		
 		$this->load->view('Vendedor/Borrador/VTelemetria', $usuario);
 	}
 	
@@ -1181,6 +1189,14 @@ class control_Negociacion extends CI_Controller {
 		
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Id_Negociacion);
+		
+		// Recetear el Total de la negociacion por motivo de modificacion de la misma //
+		$datos['ID2'] = $Id_Negociacion;
+		$equipo['Descuento'] = 0;
+		$equipo['Total'] = 0;
+		
+		$this->modelNegociacion->ReseteoTotal($equipo, $datos);
+		
 		$this->load->view('Vendedor/Borrador/VTelemetria', $usuario);
 	}
 	
@@ -1215,6 +1231,13 @@ class control_Negociacion extends CI_Controller {
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Id_Negociacion);
 		
+		// Recetear el Total de la negociacion por motivo de modificacion de la misma //
+		$datos['ID2'] = $Id_Negociacion;
+		$equipo['Descuento'] = 0;
+		$equipo['Total'] = 0;
+		
+		$this->modelNegociacion->ReseteoTotal($equipo, $datos);
+		
 		$this->load->view('Vendedor/Borrador/VConsultaBorrador', $usuario);
 	}
 	
@@ -1248,6 +1271,13 @@ class control_Negociacion extends CI_Controller {
 		
 		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Id_Negociacion);
+		
+		// Recetear el Total de la negociacion por motivo de modificacion de la misma //
+		$datos['ID2'] = $Id_Negociacion;
+		$equipo['Descuento'] = 0;
+		$equipo['Total'] = 0;
+		
+		$this->modelNegociacion->ReseteoTotal($equipo, $datos);
 		
 		$this->load->view('Vendedor/Borrador/VConsultaBorrador', $usuario);
 	}
