@@ -3064,7 +3064,14 @@ class control_Negociacion extends CI_Controller {
 			}
 			if($Total <> NULL) { 
 			foreach($Descuento as $row){ 
+			if($row['Descuento'] <= 0)
+			{
+			//$this->cezpdf->ezText(' ',10,array('justification'=>'right'));
+			}
+			else
+			{
 			$this->cezpdf->ezText('<b>Descuento: </b>'.$row['Descuento'].' %',10,array('justification'=>'right'));
+			}
 			}}
 			if($Total <> NULL){ 
 			foreach ($Descuento as $row){
@@ -3169,9 +3176,15 @@ class control_Negociacion extends CI_Controller {
 			}
 			if($Total <> NULL) { 
 			foreach($Descuento as $row){ 
+			if($row['Descuento'] <= 0)
+			{
+			//$this->cezpdf->ezText(' ',10,array('justification'=>'right'));
+			}
+			else
+			{
 			$this->cezpdf->ezText('<b>Descuento: </b>'.$row['Descuento'].' %',10,array('justification'=>'right'));
 			}
-			}
+			}}
 			if($Total <> NULL){ 
 			foreach ($Descuento as $row){
 			$this->cezpdf->ezText('<b>I.V.A. 12%: </b>'.number_format($row['Total']*0.12,2,',','.'),10,array('justification'=>'right'));

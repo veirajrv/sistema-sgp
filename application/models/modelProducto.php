@@ -82,6 +82,44 @@ class ModelProducto extends CI_Model {
 		return $query->result_array();			
 	} 
 	
+	function BuscarIdEquipo($codigoE) 
+	{
+		$query = $this->db->select("Id_Equipo");
+		$query = $this->db->where("Codigo", $codigoE);
+		$query = $this->db->get("Equipo");
+		foreach ($query->result_array() as $row)
+		{
+			$id = $row['Id_Equipo'];
+			if($id == NULL)
+			{
+				return false;
+			}
+			else
+			{
+				return $id;
+			}	
+		}	
+	}
+	
+	function BuscarIdAccesorio($codigoA) 
+	{
+		$query = $this->db->select("Id_Accesorio");
+		$query = $this->db->where("Codigo", $codigoA);
+		$query = $this->db->get("Accesorio");
+		foreach ($query->result_array() as $row)
+		{
+			$id = $row['Id_Accesorio'];
+			if($id == NULL)
+			{
+				return false;
+			}
+			else
+			{
+				return $id;
+			}	
+		}	
+	}
+	
 	function BuscarDatosEquipo2($codigoE) 
 	{
 		$query = $this->db->where("Codigo", $codigoE);

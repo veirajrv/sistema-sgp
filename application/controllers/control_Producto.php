@@ -122,9 +122,35 @@ class Control_Producto extends CI_Controller {
 		$usuario['Usuario'] = $Usuario;
 		$usuario['accesorio'] = $_POST['Buscar'];
 		$codigoA = $_POST['Buscar'];
-		$usuario['Datos'] = $this->modelProducto->BuscarDatosAccesorio2($codigoA);
+		$id = $this->modelProducto->BuscarIdAccesorio($codigoA);
+		if($id == FALSE)
+		{
+			$Lista = $this->modelProducto->ConsultarAcce();
 		
-		$this->load->view('Administrador/Producto/ModPrecioAccesorio', $usuario);
+			$this->load->library('table');
+			$this->table->set_empty("&nbsp;");
+			$this->table->set_heading('<font style="font-size:12px" color="#369"><b>Codigo</b></font>', '<font style="font-size:12px" color="#369"><b>Equipo</b></font>', '<font style="font-size:12px" color="#369"><b>Accesorio</b></font>', '<font style="font-size:12px" color="#369"><b>Precio Bs.F</b></font>');
+		
+			foreach ($Lista as $row)
+			{
+				$id2 = $row['Id_Accesorio'];
+				$id = $row['Codigo'];
+				$equipo = $row['Equipo'];
+				$accesorio = $row['Accesorio'];
+				$precio = $row['Precio'];
+				$this->table->add_row($id, $equipo, $accesorio, $precio, anchor('Control_Producto/modificar_accesorio/'.$id2.'','Ver Detalle'));
+			}
+				
+			$usuario['table'] = $this->table->generate();
+			$usuario['Mensaje'] = "El codigo no existe!";
+			
+			$this->load->view('Administrador/Producto/ConsultarAccesorio', $usuario);
+		}
+		else
+		{
+			$usuario['Datos'] = $this->modelProducto->BuscarDatosAccesorio2($codigoA);
+			$this->load->view('Administrador/Producto/ModPrecioAccesorio', $usuario);
+		}
 	}
 	
 	public function buscar_equipo()
@@ -133,8 +159,35 @@ class Control_Producto extends CI_Controller {
 		$usuario['Usuario'] = $Usuario;
 		$usuario['Equipo'] = $_POST['Buscar'];
 		$codigoE = $_POST['Buscar'];
+		$id = $this->modelProducto->BuscarIdEquipo($codigoE);
+		if($id == FALSE)
+		{
+			$Lista = $this->modelProducto->ConsultarEquipos();
+		
+			$this->load->library('table');
+			$this->table->set_empty("&nbsp;");
+			$this->table->set_heading('<font style="font-size:12px" color="#369"><b>Codigo</b></font>', '<font style="font-size:12px" color="#369"><b>Marca</b></font>', '<font style="font-size:12px" color="#369"><b>Equipo</b></font>', '<font style="font-size:12px" color="#369"><b>Precio Bs.F</b></font>');
+		
+			foreach ($Lista as $row)
+			{
+				$id2 = $row['Id_Equipo'];
+				$id = $row['Codigo'];
+				$marca = $row['Marca'];
+				$equipo = $row['Equipo'];
+				$precio = $row['Precio'];
+				$this->table->add_row($id, $marca, $equipo, $precio, anchor('Control_Producto/modificar_equipo/'.$id2.'','Ver Detalle'));
+			}
+				
+			$usuario['table'] = $this->table->generate();
+			$usuario['Mensaje'] = "El codigo no existe!";
+			
+			$this->load->view('Administrador/Producto/ConsultarEquipo', $usuario);
+		}
+		else
+		{
 		$usuario['Datos'] = $this->modelProducto->BuscarDatosEquipo2($codigoE);
 		$this->load->view('Administrador/Producto/ModPrecioEquipo', $usuario);
+		}
 	}
 	
 	// Funcion que nos permite modificar el nombre o precio de un equipo dentro del sistema.
