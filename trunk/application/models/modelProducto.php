@@ -285,7 +285,7 @@ class ModelProducto extends CI_Model {
 	{
 		$query = $this->db->query('SELECT Id_Historial_Np, Codigo, Nombre, Descripcion, Cantidad
 								   FROM historial_np
-								   WHERE Id_Negociacion = '.$Negociacion.'');	
+								   WHERE Id_Negociacion = '.$Negociacion.' ORDER BY Id_Historial_Np ASC');	
 		
 		return $query->result_array();		
 	} 
