@@ -65,6 +65,7 @@ class Control_Producto extends CI_Controller {
 	public function index3()
 	{
 		$Lista = $this->modelProducto->ConsultarEquipos();
+		$usuario['Equipos'] = $this->modelProducto->ConsultarEquipos();
 		
 		$this->load->library('table');
 		$this->table->set_empty("&nbsp;");
@@ -82,8 +83,11 @@ class Control_Producto extends CI_Controller {
 			
 		$usuario['table'] = $this->table->generate();
 		
+		
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
+		$usuario['Codigo'] = $id;
+		$usuario['Marca'] = $marca;
 		
 		$this->load->view('Administrador/Producto/ConsultarEquipo', $usuario);
 	}	
@@ -93,6 +97,7 @@ class Control_Producto extends CI_Controller {
 	public function index4()
 	{
 		$Lista = $this->modelProducto->ConsultarAcce();
+		$usuario['Equipos'] = $this->modelProducto->ConsultarAcce();
 		
 		$this->load->library('table');
 		$this->table->set_empty("&nbsp;");
@@ -120,8 +125,8 @@ class Control_Producto extends CI_Controller {
 	{
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
-		$usuario['accesorio'] = $_POST['Buscar'];
-		$codigoA = $_POST['Buscar'];
+		$usuario['accesorio'] = $_POST['Vendedor'];
+		$codigoA = $_POST['Vendedor'];
 		$id = $this->modelProducto->BuscarIdAccesorio($codigoA);
 		if($id == FALSE)
 		{
@@ -157,8 +162,8 @@ class Control_Producto extends CI_Controller {
 	{
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
-		$usuario['Equipo'] = $_POST['Buscar'];
-		$codigoE = $_POST['Buscar'];
+		$usuario['Equipo'] = $_POST['Vendedor'];
+		$codigoE = $_POST['Vendedor'];
 		$id = $this->modelProducto->BuscarIdEquipo($codigoE);
 		if($id == FALSE)
 		{
