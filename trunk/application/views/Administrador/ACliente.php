@@ -248,9 +248,9 @@ function CambiaColor(esto,borde,texto)
   <div id="cc">
       <table width="424" border="0">
         <tr>
-          <td width="225" valign="middle"><h2 style="font-size:30px">Mis vendedores</h2> </td>
-          <td width="173" valign="middle"><h2>( <font color="#0099FF">Buscar Cliente</font> )</h2></td>
-          <td width="33" align="right" valign="top">&nbsp;</td>
+          <td width="228" valign="middle"><h2 style="font-size:30px">Mis vendedores</h2> </td>
+          <td width="176" valign="middle"><h2>( <font color="#0099FF">Buscar Cliente</font> )</h2></td>
+          <td width="29" align="right" valign="top">&nbsp;</td>
         </tr>
         <tr>
           <td colspan="3"><font style="font-size:12px"><a href="<?php echo base_url();?>index.php/Control_Cliente/buscar_vendedores">Cliente</a></font> | <font style="font-size:12px"><a href="<?php echo base_url();?>index.php/Control_Cliente/buscar_vendedores_i/<?php echo $Usuario ?>">Institucion</a></font></td>
