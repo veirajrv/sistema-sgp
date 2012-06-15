@@ -961,10 +961,14 @@ class control_Negociacion extends CI_Controller {
 			$usuario['table'] = $this->table->generate();
 
 			$usuario['Descuento'] = $this->modelProducto->ConsultarDescuento($Id_Negociacion);
+			$descuento = $this->modelProducto->ConsultarDescuento2($Id_Negociacion);
+			$Descuento2 = $descuento/100;
+			
 			$Neto = $this->modelProducto->Neto($Id_Negociacion);
 			$Neto2 = $this->modelProducto->Neto2($Id_Negociacion);
 			$Neto3 = $Neto+$Neto2;
 			$usuario['Neto'] = $Neto3;
+			$usuario['Descuento2'] = $Neto3 * $Descuento2;
 			$usuario['Total'] = $this->modelProducto->ConsultarTotal($Id_Negociacion);
 			
 			$this->load->view('Vendedor/Borrador/VVistaPreviaPrueba', $usuario);
@@ -1002,10 +1006,14 @@ class control_Negociacion extends CI_Controller {
 			$usuario['table'] = $this->table->generate();
 
 			$usuario['Descuento'] = $this->modelProducto->ConsultarDescuento($Id_Negociacion);
+			$descuento = $this->modelProducto->ConsultarDescuento2($Id_Negociacion);
+			$Descuento2 = $descuento/100;
+		
 			$Neto = $this->modelProducto->Neto($Id_Negociacion);
 			$Neto2 = $this->modelProducto->Neto2($Id_Negociacion);
 			$Neto3 = $Neto+$Neto2;
 			$usuario['Neto'] = $Neto3;
+			$usuario['Descuento2'] = $Neto3 * $Descuento2;
 			$usuario['Total'] = $this->modelProducto->ConsultarTotal($Id_Negociacion);
 			
 			$this->load->view('Vendedor/Borrador/VVistaPreviaPruebaI', $usuario);
@@ -1592,13 +1600,17 @@ class control_Negociacion extends CI_Controller {
 		$usuario['table'] = $this->table->generate();
 		
 		$usuario['Descuento'] = $this->modelProducto->ConsultarDescuento($Id_Negociacion);
+		$descuento = $this->modelProducto->ConsultarDescuento2($Id_Negociacion);
+		$Descuento2 = $descuento/100;
+	
 		$usuario['Total'] = $this->modelProducto->ConsultarTotal($Id_Negociacion);
 		
 		$Neto = $this->modelProducto->Neto($Id_Negociacion);
 		$Neto2 = $this->modelProducto->Neto2($Id_Negociacion);
 		$Neto3 = $Neto + $Neto2;
 		$usuario['Neto'] = $Neto3;
-		
+		$usuario['Descuento2'] = $Neto3 * $Descuento2;
+			
 		$this->load->view('Vendedor/Borrador/VVistaPreviaPrueba', $usuario);
 	}
 	
@@ -1634,10 +1646,14 @@ class control_Negociacion extends CI_Controller {
 		$usuario['table'] = $this->table->generate();
 		
 		$usuario['Descuento'] = $this->modelProducto->ConsultarDescuento($Id_Negociacion);
+		$descuento = $this->modelProducto->ConsultarDescuento2($Id_Negociacion);
+		$Descuento2 = $descuento/100;
+		
 		$Neto = $this->modelProducto->Neto($Id_Negociacion);
 		$Neto2 = $this->modelProducto->Neto2($Id_Negociacion);
 		$Neto3 = $Neto+$Neto2;
 		$usuario['Neto'] = $Neto3;
+		$usuario['Descuento2'] = $Neto3 * $Descuento2;
 		$usuario['Total'] = $this->modelProducto->ConsultarTotal($Id_Negociacion);
 		
 		$this->load->view('Vendedor/Borrador/VVistaPreviaPruebaI', $usuario);

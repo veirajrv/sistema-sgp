@@ -224,6 +224,18 @@ class ModelProducto extends CI_Model {
 		return $Descripcion;
 	}
 	
+	function ConsultarDescuento2($Id_Negociacion) 
+	{
+		$query = $this->db->select("Descuento");
+		$query = $this->db->where("Id_Negociacion", $Id_Negociacion);
+		$query = $this->db->get("Negociacion");
+		foreach ($query->result_array() as $row)
+		{
+			$Descuento = $row['Descuento'];
+		}
+		return $Descuento;
+	}
+	
 	function UltimaLinea() 
 	{
 		$this->db->select_max('Id_Linea'); 

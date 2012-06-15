@@ -126,11 +126,11 @@ H1.SaltoDePagina { PAGE-BREAK-AFTER: always }
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td align="right"><?php if($Total <> NULL) { foreach ($Descuento as $row){
-							echo "<b>Descuento:</b>"; 
+							echo "<b>Descuento </b>"; 
+							     }}?><?php if($Total <> NULL) { foreach ($Descuento as $row){
+							echo "<b>"; echo $row['Descuento']; echo "</b>"; echo "<b>%:</b>";
 							     }}?></td>
-            <td><?php if($Total <> NULL) { foreach ($Descuento as $row){
-							echo $row['Descuento']; echo "%";
-							     }}?></td>
+            <td><?php if($Total <> NULL) { echo number_format($Descuento2,2,',','.');}?></td>
           </tr>
           <tr>
             <td>&nbsp;</td>
