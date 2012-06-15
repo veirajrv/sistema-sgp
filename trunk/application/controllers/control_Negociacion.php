@@ -3088,10 +3088,14 @@ class control_Negociacion extends CI_Controller {
 		//$this->cezpdf->line(20,670,565,670);
 		
 		$Descuento = $this->modelProducto->ConsultarDescuento($Id_Negociacion);
+		$descuento = $this->modelProducto->ConsultarDescuento2($Id_Negociacion);
+		$descuento2 = $descuento/100;
+		
 		$Neto = $this->modelProducto->Neto($Id_Negociacion);
 		$Neto2 = $this->modelProducto->Neto2($Id_Negociacion);
 		$Neto3 = $Neto+$Neto2;
 		$usuario['Neto'] = $Neto3;
+		$descuento3 = $Neto3 * $descuento2;
 		
 		$Total = $this->modelProducto->ConsultarTotal($Id_Negociacion);
 		
@@ -3116,7 +3120,7 @@ class control_Negociacion extends CI_Controller {
 			}
 			else
 			{
-			$this->cezpdf->ezText('<b>Descuento: </b>'.$row['Descuento'].' %',10,array('justification'=>'right'));
+			$this->cezpdf->ezText('<b>Descuento </b><b>'.$row['Descuento'].' %:</b> '.number_format($descuento3,2,',','.').'',10,array('justification'=>'right'));
 			}
 			}}
 			if($Total <> NULL){ 
@@ -3201,10 +3205,15 @@ class control_Negociacion extends CI_Controller {
 		//$this->cezpdf->line(20,680,565,680);
 		
 		$Descuento = $this->modelProducto->ConsultarDescuento($Id_Negociacion);
+		$descuento = $this->modelProducto->ConsultarDescuento2($Id_Negociacion);
+		$descuento2 = $descuento/100;
+		
 		$Neto = $this->modelProducto->Neto($Id_Negociacion);
 		$Neto2 = $this->modelProducto->Neto2($Id_Negociacion);
 		$Neto3 = $Neto+$Neto2;
 		$usuario['Neto'] = $Neto3;
+		$descuento3 = $Neto3 * $descuento2;
+		
 		$Total = $this->modelProducto->ConsultarTotal($Id_Negociacion);
 		
 		$Lista = $this->modelProducto->ConsultarLista($Id_Negociacion);
@@ -3228,7 +3237,7 @@ class control_Negociacion extends CI_Controller {
 			}
 			else
 			{
-			$this->cezpdf->ezText('<b>Descuento: </b>'.$row['Descuento'].' %',10,array('justification'=>'right'));
+			$this->cezpdf->ezText('<b>Descuento </b><b>'.$row['Descuento'].' %:</b> '.number_format($descuento3,2,',','.').'',10,array('justification'=>'right'));
 			}
 			}}
 			if($Total <> NULL){ 
