@@ -99,3 +99,30 @@ ERROR - 2012-06-27 17:24:56 --> Query error: You have an error in your SQL synta
 ERROR - 2012-06-27 17:33:01 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
 ERROR - 2012-06-27 17:33:07 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
 ERROR - 2012-06-27 17:33:08 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-06-27 17:35:20 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
+ERROR - 2012-06-27 17:35:25 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-06-27 17:35:25 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-06-27 17:36:06 --> Severity: Notice  --> Undefined variable: cont C:\wamp\www\OpenSGP\application\libraries\cezpdf.php 1308
+ERROR - 2012-06-27 17:36:06 --> Severity: 8192  --> Function set_magic_quotes_runtime() is deprecated C:\wamp\www\OpenSGP\application\libraries\class.pdf.php 2641
+ERROR - 2012-06-27 17:36:06 --> Severity: 8192  --> Function set_magic_quotes_runtime() is deprecated C:\wamp\www\OpenSGP\application\libraries\class.pdf.php 2653
+ERROR - 2012-06-27 17:36:06 --> Severity: Notice  --> Undefined variable: cont C:\wamp\www\OpenSGP\application\libraries\cezpdf.php 1308
+ERROR - 2012-06-27 17:36:06 --> Severity: 8192  --> Function set_magic_quotes_runtime() is deprecated C:\wamp\www\OpenSGP\application\libraries\class.pdf.php 2856
+ERROR - 2012-06-27 17:36:06 --> Severity: 8192  --> Function set_magic_quotes_runtime() is deprecated C:\wamp\www\OpenSGP\application\libraries\class.pdf.php 2858
+ERROR - 2012-06-27 17:36:06 --> Severity: Notice  --> Undefined variable: Nombre C:\wamp\www\OpenSGP\application\controllers\control_Negociacion.php 3069
+ERROR - 2012-06-27 17:36:06 --> Severity: Notice  --> Undefined variable: Apellido C:\wamp\www\OpenSGP\application\controllers\control_Negociacion.php 3069
+ERROR - 2012-06-27 17:36:06 --> Severity: Notice  --> Undefined variable: Rif C:\wamp\www\OpenSGP\application\controllers\control_Negociacion.php 3070
+ERROR - 2012-06-27 17:36:06 --> Severity: Notice  --> Undefined variable: Telefono C:\wamp\www\OpenSGP\application\controllers\control_Negociacion.php 3071
+ERROR - 2012-06-27 17:36:06 --> Severity: Notice  --> Undefined variable: Telefono2 C:\wamp\www\OpenSGP\application\controllers\control_Negociacion.php 3071
+ERROR - 2012-06-27 17:36:06 --> Severity: Notice  --> Undefined variable: Telefono3 C:\wamp\www\OpenSGP\application\controllers\control_Negociacion.php 3072
+ERROR - 2012-06-27 17:36:06 --> Severity: Notice  --> Undefined variable: Email C:\wamp\www\OpenSGP\application\controllers\control_Negociacion.php 3073
+ERROR - 2012-06-27 17:36:06 --> Severity: Notice  --> Undefined variable: Direccion C:\wamp\www\OpenSGP\application\controllers\control_Negociacion.php 3074
+ERROR - 2012-06-27 20:36:12 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
+ERROR - 2012-06-27 20:36:17 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-06-27 20:36:17 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-06-27 20:40:50 --> Severity: Notice  --> iconv() [<a href='function.iconv'>function.iconv</a>]: Detected an incomplete multibyte character in input string C:\wamp\www\OpenSGP\system\core\Utf8.php 89
+ERROR - 2012-06-27 20:40:56 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-06-27 20:40:56 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-06-27 20:41:29 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-06-27 20:41:29 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ERROR - 2012-06-27 20:42:25 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6
+ERROR - 2012-06-27 20:42:26 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
