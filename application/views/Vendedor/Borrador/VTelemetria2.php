@@ -154,7 +154,7 @@
         <?php }?>
         <table width="200" border="0">
           <tr>
-            <td><input type="submit" name="button" id="button" value="Agregar accesorios" /></td>
+            <td><input type="submit" name="button" id="button" value="Agregar accesorios" OnClick="return confirm('Seguro que quiere ordenar estos accesorios de esta manera?');"/></td>
           </tr>
         </table>
         <p>&nbsp;</p>
