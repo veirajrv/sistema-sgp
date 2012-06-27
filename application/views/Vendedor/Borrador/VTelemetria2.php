@@ -6,14 +6,6 @@
 <script src="<?php echo base_url();?>files/js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
 
 <head>
-
-<script type="text/javascript">
-function CambiaColor(esto,borde,texto)
- {
-    esto.style.borderColor=borde;
-	esto.style.color=texto;
- }
-</script>
 	
 <script>
 	$(function() {
@@ -25,102 +17,26 @@ function CambiaColor(esto,borde,texto)
 </script>
 
 <script>
-	// increase the default animation speed to exaggerate the effect
-	$.fx.speeds._default = 1000;
-	$(function() {
-		$( "#dialog" ).dialog({
-			autoOpen: false,
-			show: "blind",
-			hide: "explode"
-		});
-
-		$( "#opener" ).click(function() {
-			$( "#dialog" ).dialog( "open" );
-			return false;
-		});
-	});
-</script>
-
-<script>
 	$(function() {
 		$( "input:submit").button();
 		$( "a", ".demoo" ).click(function() { return false; });
 	});
 </script>
 
-<script type="text/javascript">
-	 $(document).ready(function(){
-            $("#subgroup").click(function () {
-			var id = $('#subgroup').val();
-			console.log(id);
-                $.ajax({
-                    type: "GET",
-                    url: "<?php echo base_url().'index.php/Control_Combox/ajax_get_accounts/'?>" + id,
-					dataType: 'html',
-					success: function(data)
-					{
-					$('#account').replaceWith("<select name='account' id='account' style='width:200px; font-size-adjust:inherit; height:30px; font-size:15px;' onfocus='CambiaColor(this,'#FFCC00','#000000')' onblur='CambiaColor(this,'','#000000')'>" + data + "</select>");
-					}
-                });
-            });
-			
-			$("#account").live("click", function () {
-			var id = $('#account').val();
-			console.log(id);
-                $.ajax({
-                    type: "GET",
-                    url: "<?php echo base_url().'index.php/Control_Combox/ajax_get_accounts2/'?>" + id,
-					dataType: 'html',
-					success: function(data)
-					{
-					$('#equipo').replaceWith("<select name='equipo' id='equipo' style='width:200px; font-size-adjust:inherit; height:30px; font-size:15px;' onfocus='CambiaColor(this,'#FFCC00','#000000')' onblur='CambiaColor(this,'','#000000')'>" + data + "</select>");
-					}
-                });
-            });
-			
-			$("#equipo").live("click", function () {
-			var id = $('#equipo').val();
-			console.log(id);
-                $.ajax({
-                    type: "GET",
-                    url: "<?php echo base_url().'index.php/Control_Combox/ajax_get_accounts3/'?>" + id,
-					dataType: 'html',
-					success: function(data)
-					{
-					$('#Accesorio').replaceWith("<select name='Accesorio' id='Accesorio' style='width:200px; font-size-adjust:inherit; height:30px; font-size:15px;' onfocus='CambiaColor(this,'#FFCC00','#000000')' onblur='CambiaColor(this,'','#000000')'>" + data + "</select>");
-					}
-                });
-            });
-        });
-</script>
-	
-<script>
-			$(function() {
-				$( "#FechaODC, #FechaPago, #FechaP" ).datepicker({
-					changeMonth: true,
-					changeYear: true,
-					yearRange: "-0:+0"
-				});		
-				
-			});			
-</script>
-
-<script>
-function soloNumeros(evt){
-//asignamos el valor de la tecla a keynum
-if(window.event){// IE
-keynum = evt.keyCode;
-}else{
-keynum = evt.which;
-}
-//comprobamos si se encuentra en el rango
-if(keynum>7 && keynum<58){
-return true;
-}else{
-return false;
-}
-}
-</script>
+<style>
+	#sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+	#sortable li { margin: 0 5px 5px 5px; padding: 5px; font-size: 1.2em; height: 1.5em; }
+	html>body #sortable li { height: 1.5em; line-height: 1.2em; }
+	.ui-state-highlight { height: 1.5em; line-height: 1.2em; }
+	</style>
+	<script>
+	$(function() {
+		$( "#sortable" ).sortable({
+			placeholder: "ui-state-highlight"
+		});
+		$( "#sortable" ).disableSelection();
+	});
+	</script>
 
 <!-- meta tags begin -->
 	<!-- vital meta tags -->
@@ -205,7 +121,6 @@ return false;
 <!-- BEGIN center column -->
 <div id="center">
   <div id="cc">
-    <form id="form1" method="post" action="">
       <table width="441" border="0">
         <tr>
           <td valign="top"><h2 style="font-size:30px">Codigo Negociaci&oacute;n (<?php echo $Id_Negociacion; ?>)</h2></td>
@@ -223,33 +138,28 @@ return false;
           <td><hr align="left" style="width:435px;" /></td>
         </tr>
       </table>
-    </form>
     <form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/agregar_accesorio_telemetria/<?php echo $Id_Negociacion?>/<?php echo $Status; ?>/<?php echo $idcliente; ?>">
-      <table width="440" border="0">
-        <tr>
-          <td width="434"><fieldset><legend style="font-size:15px"><b>Accesorio de un equipo</b></legend>
-            <table width="430" border="0">
-  <tr>
-    <td width="424"><table><?php foreach($Lista2 as $row)
-						{?>
-							<tr>
-							  <td><input type="checkbox" name="checkbox[]" id="checkbox" value="<?php echo $row['Id_Accesorio'];?>" onclick="document.getElementById('<?php echo $row['Id_Accesorio'];?>').disabled = !this.checked"/></td>
-							<td><?php echo $row['Codigo'];?></td>
-							<td><?php echo $row['Nombre'];?></td>
-							<td><?php echo $row['Descripcion'];?></td>
-                            <td><input type="text" name="<?php echo $row['Id_Accesorio'];?>" id="<?php echo $row['Id_Accesorio'];?>" style="width:40px;" onkeypress="return soloNumeros(event)" maxlength="5" disabled="disabled" required="required"/></td>
-                            </tr><?php 
-						}?></table></td>
-  </tr>
-  <tr>
-    <td><input type="submit" name="button" id="button" value="Agregar" /></td>
-  </tr>
-            </table>
-
-          </fieldset></td>
-        </tr>
-      </table>
-    </form>
+    <ul id="sortable">
+      <?php foreach($Lista2 as $row){?>
+      <li class="ui-state-default" style="width:400px">
+        <table width="319" border="0">
+          <tr>
+            <td width="20"><input type="checkbox" name="checkbox[]" id="checkbox" value="<?php echo $row['Id_Accesorio'];?>" onclick="document.getElementById('<?php echo $row['Id_Accesorio'];?>').disabled = !this.checked"/></td>
+            <td width="20"><input type="text" name="<?php echo $row['Id_Accesorio'];?>" id="<?php echo $row['Id_Accesorio'];?>" style="width:40px; height:12px" onkeypress="return soloNumeros(event)" maxlength="5" disabled="disabled" required="required"/></td>
+            <td width="100"><?php echo $row['Codigo'];?></td>
+            <td><?php echo $row['Descripcion'];?></td>
+            </tr>
+        </table>
+      </li>
+        <?php }?>
+        <table width="200" border="0">
+          <tr>
+            <td><input type="submit" name="button" id="button" value="Agregar accesorios" /></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+    </ul>
+</form>
     <table width="437" border="0">
       <tr>
         <td width="314" valign="top"><form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/telemetria" style="width:200px">

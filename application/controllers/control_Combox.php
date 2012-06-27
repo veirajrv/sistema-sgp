@@ -6,6 +6,7 @@ class Control_Combox extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('modelCombox');
+		$this->load->model('modelProducto');
 		$this->load->helper('form');
 		$this->load->helper('url');
 	}
