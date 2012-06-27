@@ -2291,8 +2291,6 @@ class control_Negociacion extends CI_Controller {
 			$this->modelProducto->AgregarAccesorio($HistorialNP);
 		}
 		
-		
-		
 		$usuario['Id_Negociacion'] = $Negociacion;
 		$usuario['Status'] = $Status;
 		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Negociacion); 
