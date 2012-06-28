@@ -17,6 +17,23 @@
 </script>
 
 <script>
+function soloNumeros(evt){
+//asignamos el valor de la tecla a keynum
+if(window.event){// IE
+keynum = evt.keyCode;
+}else{
+keynum = evt.which;
+}
+//comprobamos si se encuentra en el rango
+if(keynum>7 && keynum<58){
+return true;
+}else{
+return false;
+}
+}
+</script>
+
+<script>
 	$(function() {
 		$( "input:submit").button();
 		$( "a", ".demoo" ).click(function() { return false; });
