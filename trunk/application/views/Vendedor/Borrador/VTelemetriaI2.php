@@ -51,7 +51,7 @@ return false;
 		$( "#sortable" ).sortable({
 			placeholder: "ui-state-highlight"
 		});
-		$( "#sortable" ).disableSelection();
+		$( "#sortable" ).Selection();
 	});
 	</script>
 
