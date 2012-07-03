@@ -54,12 +54,24 @@ class ModelProducto extends CI_Model {
 		$this->db->insert('Historial_Np', $datos);
 	}
 	
+	function AgregarNuevoOrden($datos) 
+	{
+		$this->db->insert('Historial_Np_Final', $datos);
+	}
+	
 	## SELECT ##
 
 	function ConsultarNombreA($row) 
 	{
 		$query = $this->db->where("Id_Accesorio", $row);
 		$query = $this->db->get('Accesorio');
+		return $query->result_array();			
+	} 
+	
+	function ConsultarNombreO($row) 
+	{
+		$query = $this->db->where("Id_Historial_Np", $row);
+		$query = $this->db->get('historial_np');
 		return $query->result_array();			
 	} 
 	
@@ -295,6 +307,15 @@ class ModelProducto extends CI_Model {
 	
 	function ConsultarLista($Negociacion) 
 	{
+		$query = $this->db->query('SELECT Id_Historial_Fnp, Codigo, Nombre, Descripcion, Cantidad
+								   FROM historial_np_final
+								   WHERE Id_Negociacion = '.$Negociacion.' ORDER BY Id_Historial_Fnp ASC');	
+		
+		return $query->result_array();		
+	} 
+	
+	function ConsultarListaAprobacion($Negociacion) 
+	{
 		$query = $this->db->query('SELECT Id_Historial_Np, Codigo, Nombre, Descripcion, Cantidad
 								   FROM historial_np
 								   WHERE Id_Negociacion = '.$Negociacion.' ORDER BY Id_Historial_Np ASC');	
@@ -497,6 +518,12 @@ A.Precio * H.Cantidad) AS Monto
 		$total = $row['Total'];
 	}
 		return $total;
+	}
+	
+	function BorrarOrden($Negociacion) 
+	{
+		$this->db->where("Id_Negociacion", $Negociacion);
+		$this->db->delete("Historial_Np_Final");				
 	}
 	
 }
