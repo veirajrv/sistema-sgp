@@ -7,6 +7,15 @@
 
 <head>
 
+<script language="JavaScript" type="text/javascript">
+<!--
+function PopWindow()
+{
+window.open('<?php echo base_url();?>index.php/Control_Negociacion/aprobar_orden/<?php echo $Id_Negociacion; ?>','Aprobar','width=450,height=500,menubar=yes,scrollbars=yes,toolbar=yes,location=yes,directories=yes,resizable=yes,top=0,left=0');
+}
+//-->
+</script>
+
 <script type="text/javascript">
 function CambiaColor(esto,borde,texto)
  {
@@ -207,15 +216,27 @@ function CambiaColor(esto,borde,texto)
                   <td width="60" align="right"><font style="font-size:12px">Institucion:</font></td>
                   <td width="216">
                     <input name="Cliente" type="text" id="Cliente" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" value="<?php echo $NombreI; ?>" readonly="readonly" />                    </td>
-                  <td width="120" rowspan="2"><div align="center"><a href="<?php echo base_url();?>index.php/Control_Negociacion/vista_previa_i/<?php echo $Id_Negociacion; ?>/<?php echo $Id; ?>"><img src="<?php echo base_url();?>files/images/698634678.png" alt="" width="42" height="42" title="Vista previa" /></a><br />
-                    Vista Previa </div></td>
+                  <td width="120" rowspan="3"><table width="137" border="0">
+                    <tr>
+                      <td width="127" align="center"><a href="JavaScript:PopWindow()"><img src="<?php echo base_url();?>files/images/icon-check.png" alt="" width="42" height="42" title="Vista previa" /><br />
+                      </a>Aprobar orden</td>
+                    </tr>
+                    <tr>
+                      <td align="center"><a href="<?php echo base_url();?>index.php/Control_Negociacion/vista_previa_i/<?php echo $Id_Negociacion; ?>/<?php echo $Id; ?>"><img src="<?php echo base_url();?>files/images/698634678.png" alt="" width="42" height="42" title="Vista previa" /></a><br />
+Vista Previa</td>
+                    </tr>
+                  </table></td>
                 </tr>
                 <tr>
                   <td align="right"><font style="font-size:12px">Telefono:</font></td>
                   <td>
-                    <input name="Telefono" type="text" id="Telefono" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" value="<?php echo $TelefonoI; ?>" readonly="readonly" />
-                    <input type="hidden" name="Negociacion2" id="Negociacion2" style="width:20px" value="<?php echo $Id_Negociacion; ?>" /><input type="hidden" name="idcliente3" id="idcliente3" style="width:20px" value="<?php echo $Id; ?>" />                  </td>
+                    <input name="Telefono" type="text" id="Telefono" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" value="<?php echo $TelefonoI; ?>" readonly="readonly" /></td>
                   </tr>
+                <tr>
+                  <td align="right">&nbsp;</td>
+                  <td><input type="hidden" name="Negociacion2" id="Negociacion2" style="width:20px" value="<?php echo $Id_Negociacion; ?>" />
+                    <input type="hidden" name="idcliente3" id="idcliente3" style="width:20px" value="<?php echo $Id; ?>" /></td>
+                </tr>
               </table>
               </fieldset></td>
           </tr>

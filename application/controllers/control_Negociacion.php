@@ -1614,6 +1614,17 @@ class control_Negociacion extends CI_Controller {
 		$this->load->view('Vendedor/Borrador/VVistaPreviaPrueba', $usuario);
 	}
 	
+	public function aprobar_orden($Id_Negociacion) 
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario; // Id Usuario //
+		$usuario['Id_Negociacion'] = $Id_Negociacion; // Id Negociacion //
+		
+		$usuario['Lista'] = $this->modelProducto->ConsultarListaAprobacion($Id_Negociacion);
+			
+		$this->load->view('Vendedor/Borrador/VOrdenar', $usuario);
+	}
+	
 	public function vista_previa_i($Id_Negociacion, $Id) // Vendedor //
 	{
 		$Usuario = $this->session->userdata('Usuario');
@@ -2310,6 +2321,32 @@ class control_Negociacion extends CI_Controller {
 		$this->modelNegociacion->ReseteoTotal($equipo, $datos);
 
 		$this->load->view('Vendedor/Borrador/VTelemetria', $usuario);
+
+	}
+	
+	public function agregar_orden($Negociacion) 
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		
+		$this->modelProducto->BorrarOrden($Negociacion);
+		
+		if(isset($_POST['checkbox']))
+		foreach($_POST['checkbox'] as $row)
+		{
+			$Codigo = $this->modelProducto->ConsultarNombreO($row);
+			$Codigo = $Codigo[0];
+			
+			$HistorialNP['Id_Negociacion'] = $Negociacion;
+			$HistorialNP['Codigo'] = $Codigo['Codigo'];
+			$HistorialNP['Nombre'] = $Codigo['Nombre'];
+			$HistorialNP['Descripcion'] = $Codigo['Descripcion'];
+			$HistorialNP['Cantidad'] = $Codigo['Cantidad'];
+			
+			$this->modelProducto->AgregarNuevoOrden($HistorialNP);
+		}
+
+		$this->load->view('Vendedor/Borrador/VOrdenarFin', $usuario);
 
 	}
 	
