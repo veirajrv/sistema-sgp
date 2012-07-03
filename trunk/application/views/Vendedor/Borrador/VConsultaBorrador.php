@@ -11,7 +11,7 @@
 <!--
 function PopWindow()
 {
-window.open('<?php echo base_url();?>index.php/Control_Negociacion/aprobar_orden/<?php echo $Id_Negociacion; ?>','Aprobar','width=450,height=500,menubar=yes,scrollbars=yes,toolbar=yes,location=yes,directories=yes,resizable=yes,top=0,left=0');
+window.open('<?php echo base_url();?>index.php/Control_Negociacion/aprobar_orden/<?php echo $Id_Negociacion; ?>','Aprobar','width=450,height=500,menubar=no,scrollbars=yes,toolbar=no,location=no,directories=no,resizable=no,top=50,left=50');
 }
 //-->
 </script>
