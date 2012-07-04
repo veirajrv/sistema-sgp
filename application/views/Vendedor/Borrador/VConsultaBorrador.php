@@ -218,12 +218,12 @@ function CambiaColor(esto,borde,texto)
                   </td>
                   <td width="120" rowspan="4"><table width="154" border="0">
                     <tr>
-                      <td width="144" align="center"><a href="JavaScript:PopWindow()"><img src="<?php echo base_url();?>files/images/icon-check.png" alt="" width="42" height="42" title="Vista previa" /><br />
+                      <td width="144" align="center"><a href="JavaScript:PopWindow()"><img src="<?php echo base_url();?>files/images/icon-check.png" alt="" width="42" height="42" title="Editar Vista Previa" /><br />
                         
-                      </a>Aprobar orden</td>
+                      </a>Editar Vista Previa</td>
                     </tr>
                     <tr>
-                      <td align="center"><a href="<?php echo base_url();?>index.php/Control_Negociacion/vista_previa/<?php echo $Id_Negociacion; ?>/<?php echo $Id; ?>"><img src="<?php echo base_url();?>files/images/698634678.png" alt="" width="42" height="42" title="Vista previa" /></a> <br />
+                      <td align="center"><a href="<?php echo base_url();?>index.php/Control_Negociacion/vista_previa/<?php echo $Id_Negociacion; ?>/<?php echo $Id; ?>"><img src="<?php echo base_url();?>files/images/698634678.png" alt="" width="42" height="42" title="Primero editar la vista previa antes de que esta pueda ser pre visualizada" /></a> <br />
 Vista Previa</td>
                     </tr>
                   </table></td>
