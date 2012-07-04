@@ -218,11 +218,11 @@ function CambiaColor(esto,borde,texto)
                     <input name="Cliente" type="text" id="Cliente" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" value="<?php echo $NombreI; ?>" readonly="readonly" />                    </td>
                   <td width="120" rowspan="3"><table width="137" border="0">
                     <tr>
-                      <td width="127" align="center"><a href="JavaScript:PopWindow()"><img src="<?php echo base_url();?>files/images/icon-check.png" alt="" width="42" height="42" title="Vista previa" /><br />
-                      </a>Aprobar orden</td>
+                      <td width="127" align="center"><a href="JavaScript:PopWindow()"><img src="<?php echo base_url();?>files/images/icon-check.png" alt="" width="42" height="42" title="Editar Vista Previa" /><br />
+                      </a>Editar Vista Previa</td>
                     </tr>
                     <tr>
-                      <td align="center"><a href="<?php echo base_url();?>index.php/Control_Negociacion/vista_previa_i/<?php echo $Id_Negociacion; ?>/<?php echo $Id; ?>"><img src="<?php echo base_url();?>files/images/698634678.png" alt="" width="42" height="42" title="Vista previa" /></a><br />
+                      <td align="center"><a href="<?php echo base_url();?>index.php/Control_Negociacion/vista_previa_i/<?php echo $Id_Negociacion; ?>/<?php echo $Id; ?>"><img src="<?php echo base_url();?>files/images/698634678.png" alt="" width="42" height="42" title="Primero editar la vista previa antes de que esta pueda ser pre visualizada" /></a><br />
 Vista Previa</td>
                     </tr>
                   </table></td>
