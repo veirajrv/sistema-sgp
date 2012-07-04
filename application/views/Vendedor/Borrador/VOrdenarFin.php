@@ -27,7 +27,7 @@ parent.close();
 <body>
 <table width="430" border="0">
   <tr>
-    <td align="center"><b>Listo! Ya fueron ordenados sus productos exitosamente presione <a href="#" onclick="javascript:cerrar();">Aquí </a> Para cerrar esta ventana</b></td>
+    <td align="center"><b>Listo! Ya fueron ordenados sus productos exitosamente presione <a href="#" onclick="javascript:cerrar();">Aqui </a> Para cerrar esta ventana</b></td>
   </tr>
 </table>
 </body>
