@@ -47,7 +47,7 @@
         <?php }?>
         <table width="400px" border="0">
           <tr>
-            <td><input type="submit" name="button" id="button" value="Aceptar Modificación" style="width:400px; height:50px; font-size:20px" OnClick="return confirm('Seguro que quiere ordenar estos Productos de esta manera?')"/></td>
+            <td><input type="submit" name="button" id="button" value="Aceptar Modificacion" style="width:400px; height:50px; font-size:20px" OnClick="return confirm('Seguro que quiere ordenar estos Productos de esta manera?')"/></td>
           </tr>
         </table>
   </ul>
