@@ -2256,6 +2256,14 @@ class control_Negociacion extends CI_Controller {
 		$this->load->view('Vendedor/Borrador/VConsultaBorrador2', $usuario);
 	}
 	
+	public function modificar_cantidad()
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		
+		$this->load->view('Vendedor/Borrador/VModCantidad', $usuario);
+	}
+	
 	public function agregar_otro_accesorios4($Negociacion, $Status, $Cliente) 
 	{
 		$Usuario = $this->session->userdata('Usuario');
