@@ -16,6 +16,15 @@ window.open('<?php echo base_url();?>index.php/Control_Negociacion/aprobar_orden
 //-->
 </script>
 
+<script language="JavaScript" type="text/javascript">
+<!--
+function PopWindow2()
+{
+window.open('<?php echo base_url();?>index.php/Control_Negociacion/modificar_cantidad','Aprobar','width=250,height=100,menubar=no,scrollbars=yes,toolbar=no,location=no,directories=no,resizable=no,top=50,left=50');
+}
+//-->
+</script>
+
 <script type="text/javascript">
 function CambiaColor(esto,borde,texto)
  {
@@ -369,7 +378,7 @@ Vista Previa</td>
                 <td width="100">Nombre</td>
                 <td width="160">Descripcion</td>
                 <td>Cantidad</td>
-                <td align="right"><?php echo '<a href="'.base_url().'index.php/Control_Negociacion/eliminar_todoi/'.$Id.'/'.$Id_Negociacion.'">ELIMINAR TODO</a>'; echo '</br>';?></td>
+                <td colspan="2" align="right"><?php echo '<a href="'.base_url().'index.php/Control_Negociacion/eliminar_todoi/'.$Id.'/'.$Id_Negociacion.'">ELIMINAR TODO</a>'; echo '</br>';?></td>
               </tr>
               <tr>
                 <td><?php $j=0; foreach ($Lista as $row){
@@ -387,16 +396,20 @@ Vista Previa</td>
 							echo $row['Cantidad']; echo '</br>';
 							
 							$j++;}?></td>
-                <td width="96" align="right"><a href="sdfsdf">
+                <td width="47" align="right"><a href="sdfsdf">
+                  <?php $j=0; foreach ($Lista as $row){?>
+                  <a href="JavaScript:PopWindow2()">Modificar</a>
+                  <?php $j++;}?></td>
+                <td width="47" align="right"><a href="sdfsdf">
                   <?php $j=0; foreach ($Lista as $row){
 							
-							echo '<a href="'.base_url().'index.php/Control_Negociacion/eliminar_producto_i2/'.$row['Id_Historial_Np'].'/'.$Id.'/'.$Id_Negociacion.'">ELIMINAR</a>'; echo '</br>';
+							echo '<a href="'.base_url().'index.php/Control_Negociacion/eliminar_producto_i2/'.$row['Id_Historial_Np'].'/'.$Id.'/'.$Id_Negociacion.'">Eliminar</a>'; echo '</br>';
 							
 							$j++;}?>
                 </a></td>
               </tr>
               <tr>
-                <td colspan="4" align="right">&nbsp;</td>
+                <td colspan="5" align="right">&nbsp;</td>
               </tr>
             </table>
           </form>
