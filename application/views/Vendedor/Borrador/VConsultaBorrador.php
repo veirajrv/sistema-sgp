@@ -20,7 +20,7 @@ window.open('<?php echo base_url();?>index.php/Control_Negociacion/aprobar_orden
 <!--
 function PopWindow2()
 {
-window.open('<?php echo base_url();?>index.php/Control_Negociacion/modificar_cantidad','Aprobar','width=250,height=100,menubar=no,scrollbars=yes,toolbar=no,location=no,directories=no,resizable=no,top=50,left=50');
+window.open('<?php echo base_url();?>index.php/Control_Negociacion/modificar_cantidad','Aprobar','width=230,height=130,menubar=no,scrollbars=yes,toolbar=no,location=no,directories=no,resizable=no,top=50,left=50');
 }
 //-->
 </script>
