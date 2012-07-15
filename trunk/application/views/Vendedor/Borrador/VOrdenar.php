@@ -38,7 +38,7 @@
       <li class="ui-state-default" style="width:400px">
         <table border="0">
           <tr>
-            <td><input type="checkbox" name="checkbox[]" id="checkbox" value="<?php echo $row['Id_Historial_Np'];?>" checked/></td>
+            <td><input type="checkbox" name="checkbox[]" id="checkbox" value="<?php echo $row['Id_Producto'];?>" checked/></td>
             <td><?php echo $row['Codigo'];?></td>
             <td><?php echo " ( "; echo $row['Nombre']; echo " )";?></td>
           </tr>

@@ -56,7 +56,7 @@ class ModelProducto extends CI_Model {
 	
 	function AgregarNuevoOrden($datos) 
 	{
-		$this->db->insert('Historial_Np_Final', $datos);
+		$this->db->insert('Historial_Npf', $datos);
 	}
 	
 	## SELECT ##
@@ -70,8 +70,14 @@ class ModelProducto extends CI_Model {
 	
 	function ConsultarNombreO($row) 
 	{
-		$query = $this->db->where("Id_Historial_Np", $row);
+		$query = $this->db->where("Id_Producto", $row);
 		$query = $this->db->get('historial_np');
+		return $query->result_array();			
+	} 
+	
+	function SeleccionarH($Negociacion) 
+	{
+		$query = $this->db->query('SELECT Id_Producto, Id_Negociacion, Codigo, Nombre, Descripcion, Cantidad FROM  historial_npf WHERE Id_Negociacion = '.$Negociacion.'');	
 		return $query->result_array();			
 	} 
 	
@@ -80,7 +86,7 @@ class ModelProducto extends CI_Model {
 		$query = $this->db->query('SELECT a.Id_Accesorio, a.Codigo, a.Nombre, a.Precio, a.Descripcion, a.Descripcion2
 								   FROM accesorio AS a, aequipo AS ae, equipo AS e
 								   WHERE ae.Id_Equipo = e.Id_Equipo
-								   AND e.Id_Equipo = '.$equipo.'
+								   AND e.Id_Equipo = "'.$equipo.'"
 								   AND ae.Id_Accesorio = a.Id_Accesorio
 								   ORDER BY a.Codigo');	
 		
@@ -163,7 +169,7 @@ class ModelProducto extends CI_Model {
 	function CambiarDatosEquipo2($equipo2, $datos2) 
 	{	
 		$id2 = $datos2['ID2'];
-		$this->db->where("Id_Equipo", $id2);
+		$this->db->where("Id_Producto", $id2);
 		$this->db->update('historial_np', $equipo2);
 	}
 	
@@ -177,7 +183,7 @@ class ModelProducto extends CI_Model {
 	function CambiarDatosAccesorio2($accesorio2, $datos2) 
 	{				
 		$id2 = $datos2['ID2'];
-		$this->db->where("Id_Accesorio", $id2);
+		$this->db->where("Id_Producto", $id2);
 		$this->db->update('historial_np', $accesorio2);
 	}
 	
@@ -285,7 +291,7 @@ class ModelProducto extends CI_Model {
 	{
 		$query = $this->db->query('SELECT DISTINCT (H.Id_Historial_Np), E.Id_Equipo, E.Nombre, E.Descripcion, H.Cantidad
 								   FROM Equipo AS E, Historial_Np AS H, Negociacion AS N
-								   WHERE E.Id_Equipo = H.Id_Equipo
+								   WHERE E.Id_Equipo = H.Id_Producto
 								   AND H.Id_Negociacion = N.Id_Negociacion
 								   AND H.Id_Negociacion = '.$Negociacion.'
 								   ORDER BY H.Id_Historial_Np ASC');	
@@ -297,7 +303,7 @@ class ModelProducto extends CI_Model {
 	{
 		$query = $this->db->query('SELECT DISTINCT(H.Id_Historial_Np), A.Id_Accesorio, A.Nombre, A.Descripcion, H.Cantidad
 								   FROM Accesorio AS A, Historial_Np AS H, Negociacion AS N
-								   WHERE A.Id_Accesorio = H.Id_Accesorio
+								   WHERE A.Id_Accesorio = H.Id_Producto
 								   AND H.Id_Negociacion = N.Id_Negociacion
 								   AND H.Id_Negociacion = '.$Negociacion.'
 								   ORDER BY H.Id_Historial_Np ASC');	
@@ -307,16 +313,16 @@ class ModelProducto extends CI_Model {
 	
 	function ConsultarLista($Negociacion) 
 	{
-		$query = $this->db->query('SELECT Id_Historial_Fnp, Codigo, Nombre, Descripcion, Cantidad
-								   FROM historial_np_final
-								   WHERE Id_Negociacion = '.$Negociacion.' ORDER BY Id_Historial_Fnp ASC');	
+		$query = $this->db->query('SELECT Id_Historial_Np, Codigo, Nombre, Descripcion, Cantidad
+								   FROM historial_np
+								   WHERE Id_Negociacion = '.$Negociacion.' ORDER BY Id_Historial_Np ASC');	
 		
 		return $query->result_array();		
 	} 
 	
 	function ConsultarListaAprobacion($Negociacion) 
 	{
-		$query = $this->db->query('SELECT Id_Historial_Np, Codigo, Nombre, Descripcion, Cantidad
+		$query = $this->db->query('SELECT Id_Historial_Np, Id_Producto, Codigo, Nombre, Descripcion, Cantidad
 								   FROM historial_np
 								   WHERE Id_Negociacion = '.$Negociacion.' ORDER BY Id_Historial_Np ASC');	
 		
@@ -376,7 +382,7 @@ A.Precio * H.Cantidad) AS Monto
 	{
 		$query = $this->db->query('SELECT SUM( A.Precio * H.Cantidad ) AS TotalA
 								   FROM Accesorio AS A, Historial_Np AS H, Negociacion AS N
-								   WHERE H.Id_Accesorio = A.Id_Accesorio
+								   WHERE H.Id_Producto = A.Id_Accesorio
 								   AND H.Id_Negociacion = N.Id_Negociacion
 								   AND H.Id_Negociacion = '.$Negociacion.'');	
 		
@@ -391,7 +397,7 @@ A.Precio * H.Cantidad) AS Monto
 	{
 		$query = $this->db->query('SELECT SUM( E.Precio * H.Cantidad ) AS TotalE
 								   FROM Equipo AS E, Historial_NP AS H, Negociacion AS N
-								   WHERE H.Id_Equipo = E.Id_Equipo
+								   WHERE H.Id_Producto = E.Id_Equipo
 								   AND H.Id_Negociacion = N.Id_Negociacion
 								   AND H.Id_Negociacion = '.$Negociacion.'');	
 		
@@ -523,7 +529,13 @@ A.Precio * H.Cantidad) AS Monto
 	function BorrarOrden($Negociacion) 
 	{
 		$this->db->where("Id_Negociacion", $Negociacion);
-		$this->db->delete("Historial_Np_Final");				
+		$this->db->delete("Historial_Np");				
+	}
+	
+	function BorrarOrden2($Negociacion) 
+	{
+		$this->db->where("Id_Negociacion", $Negociacion);
+		$this->db->delete("Historial_Npf");				
 	}
 	
 }

@@ -2131,8 +2131,7 @@ class control_Negociacion extends CI_Controller {
 			$Nombre = $this->modelProducto->ConsultarNombreE($Equipo);
 			$Descripcion = $this->modelProducto->ConsultarDescripcionE($Equipo);
 			$Equipo = $_POST['equipo'];
-			$HistorialNP['Id_Equipo'] = $Equipo; // Id Accesorio //
-			$HistorialNP['Id_Accesorio'] = NULL; // Id Accesorio //
+			$HistorialNP['Id_Producto'] = $Equipo; // Id Accesorio //
 			$HistorialNP['Id_Negociacion'] = $_POST['Negociacion3'];
 			$HistorialNP['Codigo'] = $Codigo;
 			$HistorialNP['Nombre'] = $Nombre;
@@ -2197,8 +2196,7 @@ class control_Negociacion extends CI_Controller {
 		$Nombre = $this->modelProducto->ConsultarNombreE($Equipo);
 		$Descripcion = $this->modelProducto->ConsultarDescripcionE($Equipo);
 		$Equipo = $_POST['equipo'];
-		$HistorialNP['Id_Equipo'] = $Equipo; // Id Accesorio //
-		$HistorialNP['Id_Accesorio'] = NULL; // Id Accesorio //
+		$HistorialNP['Id_Producto'] = $Equipo; // Id Accesorio //
 		$HistorialNP['Id_Negociacion'] = $_POST['Negociacion22'];
 		$HistorialNP['Codigo'] = $Codigo;
 		$HistorialNP['Nombre'] = $Nombre;
@@ -2299,8 +2297,7 @@ class control_Negociacion extends CI_Controller {
 			$Codigo = $this->modelProducto->ConsultarNombreA($row);
 			$Codigo = $Codigo[0];
 			
-			$HistorialNP['Id_Equipo'] = NULL;
-			$HistorialNP['Id_Accesorio'] = $row;
+			$HistorialNP['Id_Producto'] = $row;
 			$HistorialNP['Id_Negociacion'] = $Negociacion;
 			$HistorialNP['Codigo'] = $Codigo['Codigo'];
 			$HistorialNP['Nombre'] = $Codigo['Nombre'];
@@ -2337,14 +2334,16 @@ class control_Negociacion extends CI_Controller {
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
 		
-		$this->modelProducto->BorrarOrden($Negociacion);
+		$this->modelProducto->BorrarOrden2($Negociacion);
 		
+		// Inserta en la tabla que organiza //
 		if(isset($_POST['checkbox']))
 		foreach($_POST['checkbox'] as $row)
 		{
 			$Codigo = $this->modelProducto->ConsultarNombreO($row);
 			$Codigo = $Codigo[0];
 			
+			$HistorialNP['Id_Producto'] = $row;
 			$HistorialNP['Id_Negociacion'] = $Negociacion;
 			$HistorialNP['Codigo'] = $Codigo['Codigo'];
 			$HistorialNP['Nombre'] = $Codigo['Nombre'];
@@ -2354,6 +2353,22 @@ class control_Negociacion extends CI_Controller {
 			$this->modelProducto->AgregarNuevoOrden($HistorialNP);
 		}
 
+		// Borramos de la tabla Historial para reordenar los productos //
+		$this->modelProducto->BorrarOrden($Negociacion);
+		
+		$Lista = $this->modelProducto->SeleccionarH($Negociacion);
+		foreach ($Lista as $row)
+		{
+			$datos['Id_Producto'] = $row['Id_Producto'];
+			$datos['Id_Negociacion'] = $row['Id_Negociacion'];
+			$datos['Codigo'] = $row['Codigo'];
+			$datos['Nombre'] = $row['Nombre'];
+			$datos['Descripcion'] = $row['Descripcion'];
+			$datos['Cantidad'] = $row['Cantidad'];
+			
+			$this->modelNegociacion->AgregarEquipo($datos);
+		}
+		
 		$this->load->view('Vendedor/Borrador/VOrdenarFin', $usuario);
 
 	}
