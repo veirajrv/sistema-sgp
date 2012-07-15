@@ -10,6 +10,11 @@ class modelNegociacion extends CI_Model {
 	
 	## INSERT ##
 	
+	function AgregarEquipo($datos) 
+	{
+		$this->db->insert('Historial_Np', $datos);
+	}
+	
 	function NuevaNegociacion($datos)
 	{
 		$this->db->insert('Negociacion', $datos);
@@ -1046,6 +1051,15 @@ class modelNegociacion extends CI_Model {
 		$this->db->update('Negociacion', $negociacion);
 	}
 	
+	function prueba23($negociacion, $datos) 
+	{
+		$negociacion->Status = 2;
+		
+		$Id_Negociacion = $datos['ID2'];
+		$this->db->where("Id_Negociacion", $Id_Negociacion);
+		$this->db->update('Negociacion', $negociacion);
+	}
+	
 	function ModificarEstatus2($negociacion, $datos) 
 	{
 		$negociacion->Status = 3;
@@ -1112,14 +1126,14 @@ class modelNegociacion extends CI_Model {
 	function EliminarTodo($Id_Negociacion) 
 	{
 		$this->db->where("Id_Negociacion", $Id_Negociacion);
-		$this->db->where("Id_Accesorio", NULL);
+		$this->db->where("Id_Producto", NULL);
 		$this->db->delete("Historial_Np");				
 	}
 	
 	function EliminarTodo2($Id_Negociacion) 
 	{
 		$this->db->where("Id_Negociacion", $Id_Negociacion);
-		$this->db->where("Id_Equipo", NULL);
+		$this->db->where("Id_Producto", NULL);
 		$this->db->delete("Historial_Np");				
 	}
 	
