@@ -1839,8 +1839,8 @@ class control_Negociacion extends CI_Controller {
 		$usuario['Usuario'] = $Usuario; 
 		$usuario2 = $Usuario;
 		$Id = $this->modelCliente->BuscarId($usuario2);
-		$usuario['Id_Negociacion'] = $_POST['Negociacion'];
-		$IdNegoBorrador = $_POST['Negociacion'];
+		$usuario['Id_Negociacion'] = $_POST['Negociacion2'];
+		$IdNegoBorrador = $_POST['Negociacion2'];
 		$datos['ID2'] = $IdNegoBorrador;
 		$IdSeguimiento = $this->modelNegociacion->BuscarSeguimiento($IdNegoBorrador);
 		$status = $this->modelNegociacion->StatusNegociacion($IdNegoBorrador); 
