@@ -2254,12 +2254,59 @@ class control_Negociacion extends CI_Controller {
 		$this->load->view('Vendedor/Borrador/VConsultaBorrador2', $usuario);
 	}
 	
-	public function modificar_cantidad()
+	public function modificar_cantidad($historial,$Negociacion,$cliente)
 	{
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
+		$status = $this->modelNegociacion->StatusNegociacion($Negociacion); 
+		$usuario['Status'] = $status;
+		$usuario['Id'] = $cliente;
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Negociacion); 
+		$usuario['Porcentaje'] = $porcentaje;
+		$usuario['Codigo'] = $this->modelNegociacion->buscarcodigo($historial); 
+		$usuario['Nombre'] = $this->modelNegociacion->buscarnombre($historial); 
+		$usuario['Cantidad'] = $this->modelNegociacion->buscarcantidad($historial); 
+		$usuario['Historial'] = $historial;
+		$usuario['Id_Negociacion'] = $Negociacion;
 		
-		$this->load->view('Vendedor/Borrador/VModCantidad', $usuario);
+		$this->load->view('Vendedor/Borrador/VModCantidades', $usuario);
+	}
+	
+	public function modificar_cantidad2()
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$IdHistorial = $_POST['Historial'];
+		
+		$datos['ID2'] = $IdHistorial;
+		$historial = new ModelNegociacion;
+		$this->modelNegociacion->cambiarcantidad($historial, $datos);
+		
+		$Negociacion = $_POST['Negociacion'];
+		$cliente = $_POST['idcliente'];
+		$usuario['Id'] = $_POST['idcliente'];
+		$usuario['Id_Negociacion'] = $_POST['Negociacion'];
+		$usuario['Status'] = $_POST['Sta'];
+		$usuario['Porcentaje'] = $_POST['Porcen'];
+		
+		$usuario['FechaP'] = $this->modelNegociacion->FechaPresupuesto($Negociacion);
+		$usuario['NumeroODC'] = $this->modelNegociacion->NumeroOrdenDC($Negociacion);
+		$usuario['FechaODC'] = $this->modelNegociacion->FechaOrdenDC($Negociacion);
+		$usuario['Banco'] = $this->modelNegociacion->Banco($Negociacion);
+		$usuario['PagoInicial'] = $this->modelNegociacion->PagoInicial($Negociacion);
+		$usuario['CondicionesPago'] = $this->modelNegociacion->CondicionesPago($Negociacion);
+		$usuario['FechaPago'] = $this->modelNegociacion->FechaDePago($Negociacion);
+		$usuario['NDeposito'] = $this->modelNegociacion->NumeroDeposito($Negociacion);
+
+		$usuario['NombreC'] = $this->modelNegociacion->NombreCliente($cliente);
+		$usuario['ApellidoC'] = $this->modelNegociacion->ApellidoCliente($cliente);
+		$usuario['EMailC'] = $this->modelNegociacion->MailCliente($cliente);
+		$usuario['TelefonoC'] = $this->modelNegociacion->TelefonoCliente($cliente);
+		
+		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+		$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Negociacion);
+		
+		$this->load->view('Vendedor/Borrador/VConsultaBorrador', $usuario);
 	}
 	
 	public function agregar_otro_accesorios4($Negociacion, $Status, $Cliente) 
