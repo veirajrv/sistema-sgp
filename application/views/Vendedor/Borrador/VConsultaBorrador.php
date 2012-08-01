@@ -19,8 +19,9 @@ window.open('<?php echo base_url();?>index.php/Control_Negociacion/aprobar_orden
 <script language="JavaScript" type="text/javascript">
 <!--
 function PopWindow2()
-{
-window.open('<?php echo base_url();?>index.php/Control_Negociacion/modificar_cantidad','Aprobar','width=230,height=130,menubar=no,scrollbars=yes,toolbar=no,location=no,directories=no,resizable=no,top=50,left=50');
+{ <?php $j=0; foreach ($Lista as $row){?>
+window.open("<?php echo base_url();?>index.php/Control_Negociacion/modificar_cantidad/<?php echo $row['Nombre']?>/<?php echo $Id_Negociacion?>",'Aprobar','width=230,height=130,menubar=no,scrollbars=yes,toolbar=no,location=no,directories=no,resizable=no,top=50,left=50');<?php 
+$j++;}?>
 }
 //-->
 </script>
@@ -412,10 +413,13 @@ Vista Previa</td>
 							echo $row['Cantidad']; echo '</br>';
 							
 							$j++;}?></td>
-                <td width="47" align="right"><a href="sdfsdf">
-                  <?php $j=0; foreach ($Lista as $row){?>
+                <td width="47"><a href="sdfsdf">
+                  <?php $j=0; foreach ($Lista as $row){
 							
-							<a href="JavaScript:PopWindow2()">Modificar</a><?php $j++;}?></td>
+							echo '<a href="'.base_url().'index.php/Control_Negociacion/modificar_cantidad/'.$row['Id_Historial_Np'].'/'.$Id_Negociacion.'/'.$Id.'">Modificar</a>'; echo '</br>';
+							
+							$j++;}?>
+                </a></td>
                 <td width="48" align="right"><a href="sdfsdf">
                   <?php $j=0; foreach ($Lista as $row){
 							

@@ -168,6 +168,42 @@ class modelNegociacion extends CI_Model {
 		return $cedula;
     }
 	
+	function buscarcodigo($historial) 
+	{
+		$query = $this->db->select("Codigo");
+		$query = $this->db->where("Id_Historial_Np", $historial);
+		$query = $this->db->get("historial_np");
+		foreach ($query->result_array() as $row)
+	{
+		$codigo = $row['Codigo'];
+	}
+		return $codigo;
+    }
+	
+	function buscarnombre($historial) 
+	{
+		$query = $this->db->select("Nombre");
+		$query = $this->db->where("Id_Historial_Np", $historial);
+		$query = $this->db->get("historial_np");
+		foreach ($query->result_array() as $row)
+	{
+		$nombre = $row['Nombre'];
+	}
+		return $nombre;
+    }
+	
+	function buscarcantidad($historial) 
+	{
+		$query = $this->db->select("Cantidad");
+		$query = $this->db->where("Id_Historial_Np", $historial);
+		$query = $this->db->get("historial_np");
+		foreach ($query->result_array() as $row)
+	{
+		$cantidad = $row['Cantidad'];
+	}
+		return $cantidad;
+    }
+	
 	function IdMaxStatus($IdNegociacion) 
 	{
 		$this->db->select_max('Id_NS'); 
@@ -993,6 +1029,15 @@ class modelNegociacion extends CI_Model {
 		$IdNegoBorrador = $datos['ID2'];
 		$this->db->where("Id_Negociacion", $IdNegoBorrador);
 		$this->db->update('Negociacion', $Negociacion);
+	}
+	
+	function cambiarcantidad($historial, $datos) 
+	{
+		$historial->Cantidad = $_POST['Cantidad'];
+		
+		$IdHistorial = $datos['ID2'];
+		$this->db->where("Id_Historial_Np", $IdHistorial);
+		$this->db->update('historial_np', $historial);
 	}
 	
 	function ModificarDatos($negociacion, $datos) 
