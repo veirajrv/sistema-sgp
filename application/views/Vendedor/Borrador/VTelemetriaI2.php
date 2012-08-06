@@ -158,7 +158,7 @@ return false;
         </tr>
       </table>
     </form>
-    <form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/agregar_accesorio_telemetria/<?php echo $Id_Negociacion?>/<?php echo $Status; ?>/<?php echo $idcliente; ?>">
+    <form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/agregar_accesorio_telemetria_I/<?php echo $Id_Negociacion?>/<?php echo $Status; ?>/<?php echo $idcliente; ?>">
     <ul id="sortable">
       <?php foreach($Lista2 as $row){?>
       <li class="ui-state-default" style="width:400px">

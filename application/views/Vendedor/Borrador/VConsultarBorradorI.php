@@ -396,10 +396,13 @@ Vista Previa</td>
 							echo $row['Cantidad']; echo '</br>';
 							
 							$j++;}?></td>
-                <td width="47" align="right"><a href="sdfsdf">
-                  <?php $j=0; foreach ($Lista as $row){?>
-                  <a href="JavaScript:PopWindow2()">Modificar</a>
-                  <?php $j++;}?></td>
+                <td width="47"><a href="sdfsdf">
+                  <?php $j=0; foreach ($Lista as $row){
+							
+							echo '<a href="'.base_url().'index.php/Control_Negociacion/modificar_cantidad4/'.$row['Id_Historial_Np'].'/'.$Id_Negociacion.'/'.$Id.'">Modificar</a>'; echo '</br>';
+							
+							$j++;}?>
+                </a></td>
                 <td width="47" align="right"><a href="sdfsdf">
                   <?php $j=0; foreach ($Lista as $row){
 							
