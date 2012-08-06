@@ -213,7 +213,7 @@ function CambiaColor(esto,borde,texto)
           <td colspan="3"></td>
           </tr>
       </table>
-    <form id="form2" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/modificar_cantidad2">
+    <form id="form2" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/modificar_cantidad3">
       <table width="441" border="0">
         <tr>
           <td width="427"><fieldset>
@@ -249,7 +249,7 @@ function CambiaColor(esto,borde,texto)
         </tr>
       </table>
       </form>
-    <form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/atras_paso_extra">
+    <form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/atras_paso_extrai">
       <table width="440" border="0">
         <tr>
           <td width="434" align="left" valign="top">

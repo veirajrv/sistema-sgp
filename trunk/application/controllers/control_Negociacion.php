@@ -2272,6 +2272,60 @@ class control_Negociacion extends CI_Controller {
 		$this->load->view('Vendedor/Borrador/VModCantidades', $usuario);
 	}
 	
+	public function modificar_cantidad_telemetria($historial,$Negociacion,$cliente)
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$status = $this->modelNegociacion->StatusNegociacion($Negociacion); 
+		$usuario['Status'] = $status;
+		$usuario['Id'] = $cliente;
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Negociacion); 
+		$usuario['Porcentaje'] = $porcentaje;
+		$usuario['Codigo'] = $this->modelNegociacion->buscarcodigo($historial); 
+		$usuario['Nombre'] = $this->modelNegociacion->buscarnombre($historial); 
+		$usuario['Cantidad'] = $this->modelNegociacion->buscarcantidad($historial); 
+		$usuario['Historial'] = $historial;
+		$usuario['Id_Negociacion'] = $Negociacion;
+		
+		$this->load->view('Vendedor/Borrador/VModCantidadesTelemetria', $usuario);
+	}
+	
+	public function modificar_cantidad4($historial,$Negociacion,$cliente)
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$status = $this->modelNegociacion->StatusNegociacion($Negociacion); 
+		$usuario['Status'] = $status;
+		$usuario['Id'] = $cliente;
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Negociacion); 
+		$usuario['Porcentaje'] = $porcentaje;
+		$usuario['Codigo'] = $this->modelNegociacion->buscarcodigo($historial); 
+		$usuario['Nombre'] = $this->modelNegociacion->buscarnombre($historial); 
+		$usuario['Cantidad'] = $this->modelNegociacion->buscarcantidad($historial); 
+		$usuario['Historial'] = $historial;
+		$usuario['Id_Negociacion'] = $Negociacion;
+		
+		$this->load->view('Vendedor/Borrador/VModCantidadesI', $usuario);
+	}
+	
+	public function modificar_cantidad_telemetria4($historial,$Negociacion,$cliente)
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$status = $this->modelNegociacion->StatusNegociacion($Negociacion); 
+		$usuario['Status'] = $status;
+		$usuario['Id'] = $cliente;
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Negociacion); 
+		$usuario['Porcentaje'] = $porcentaje;
+		$usuario['Codigo'] = $this->modelNegociacion->buscarcodigo($historial); 
+		$usuario['Nombre'] = $this->modelNegociacion->buscarnombre($historial); 
+		$usuario['Cantidad'] = $this->modelNegociacion->buscarcantidad($historial); 
+		$usuario['Historial'] = $historial;
+		$usuario['Id_Negociacion'] = $Negociacion;
+		
+		$this->load->view('Vendedor/Borrador/VModCantidadesTelemetriaI', $usuario);
+	}
+	
 	public function modificar_cantidad2()
 	{
 		$Usuario = $this->session->userdata('Usuario');
@@ -2307,6 +2361,87 @@ class control_Negociacion extends CI_Controller {
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Negociacion);
 		
 		$this->load->view('Vendedor/Borrador/VConsultaBorrador', $usuario);
+	}
+	
+	public function modificar_cantidad_telemetria2()
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$IdHistorial = $_POST['Historial'];
+		
+		$datos['ID2'] = $IdHistorial;
+		$historial = new ModelNegociacion;
+		$this->modelNegociacion->cambiarcantidad($historial, $datos);
+		
+		$Negociacion = $_POST['Negociacion'];
+		$cliente = $_POST['idcliente'];
+		$usuario['idcliente'] = $_POST['idcliente'];
+		$usuario['Id_Negociacion'] = $_POST['Negociacion'];
+		$usuario['Status'] = $_POST['Sta'];
+		$usuario['Porcentaje'] = $_POST['Porcen'];
+		
+		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Negociacion);
+		
+		$this->load->view('Vendedor/Borrador/VTelemetria', $usuario);
+	}
+	
+	public function modificar_cantidad3()
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$IdHistorial = $_POST['Historial'];
+		
+		$datos['ID2'] = $IdHistorial;
+		$historial = new ModelNegociacion;
+		$this->modelNegociacion->cambiarcantidad($historial, $datos);
+		
+		$Negociacion = $_POST['Negociacion'];
+		$cliente = $_POST['idcliente'];
+		$usuario['Id'] = $_POST['idcliente'];
+		$usuario['Id_Negociacion'] = $_POST['Negociacion'];
+		$usuario['Status'] = $_POST['Sta'];
+		$usuario['Porcentaje'] = $_POST['Porcen'];
+		
+		$usuario['FechaP'] = $this->modelNegociacion->FechaPresupuesto($Negociacion);
+		$usuario['NumeroODC'] = $this->modelNegociacion->NumeroOrdenDC($Negociacion);
+		$usuario['FechaODC'] = $this->modelNegociacion->FechaOrdenDC($Negociacion);
+		$usuario['Banco'] = $this->modelNegociacion->Banco($Negociacion);
+		$usuario['PagoInicial'] = $this->modelNegociacion->PagoInicial($Negociacion);
+		$usuario['CondicionesPago'] = $this->modelNegociacion->CondicionesPago($Negociacion);
+		$usuario['FechaPago'] = $this->modelNegociacion->FechaDePago($Negociacion);
+		$usuario['NDeposito'] = $this->modelNegociacion->NumeroDeposito($Negociacion);
+
+		$usuario['NombreI'] = $this->modelNegociacion->NombreInstitucion($cliente);
+		$usuario['TelefonoI'] = $this->modelNegociacion->TelefonoInstitucion($cliente);
+		
+		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+		$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Negociacion);
+		
+		$this->load->view('Vendedor/Borrador/VConsultarBorradorI', $usuario);
+	}
+	
+	public function modificar_cantidad_telemetria3()
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$IdHistorial = $_POST['Historial'];
+		
+		$datos['ID2'] = $IdHistorial;
+		$historial = new ModelNegociacion;
+		$this->modelNegociacion->cambiarcantidad($historial, $datos);
+		
+		$Negociacion = $_POST['Negociacion'];
+		$cliente = $_POST['idcliente'];
+		$usuario['idcliente'] = $_POST['idcliente'];
+		$usuario['Id_Negociacion'] = $_POST['Negociacion'];
+		$usuario['Status'] = $_POST['Sta'];
+		$usuario['Porcentaje'] = $_POST['Porcen'];
+		
+		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Negociacion);
+		
+		$this->load->view('Vendedor/Borrador/VTelemetriaI', $usuario);
 	}
 	
 	public function agregar_otro_accesorios4($Negociacion, $Status, $Cliente) 
@@ -2428,11 +2563,13 @@ class control_Negociacion extends CI_Controller {
 		if(isset($_POST['checkbox']))
 		foreach($_POST['checkbox'] as $row)
 		{
+			if(isset($_POST['checkbox']))
+		foreach($_POST['checkbox'] as $row)
+		{
 			$Codigo = $this->modelProducto->ConsultarNombreA($row);
 			$Codigo = $Codigo[0];
 			
-			$HistorialNP['Id_Equipo'] = NULL;
-			$HistorialNP['Id_Accesorio'] = $row;
+			$HistorialNP['Id_Producto'] = $row;
 			$HistorialNP['Id_Negociacion'] = $Negociacion;
 			$HistorialNP['Codigo'] = $Codigo['Codigo'];
 			$HistorialNP['Nombre'] = $Codigo['Nombre'];
@@ -2440,6 +2577,7 @@ class control_Negociacion extends CI_Controller {
 			$HistorialNP['Cantidad'] = $_POST[$row];	
 			
 			$this->modelProducto->AgregarAccesorio($HistorialNP);
+		}
 		}
 		
 		$usuario['Id_Negociacion'] = $Negociacion;
