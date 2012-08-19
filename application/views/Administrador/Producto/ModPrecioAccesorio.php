@@ -198,11 +198,7 @@ textarea.LV_invalid_field:active {
   <form id="form3" method="post" action="<?php echo base_url();?>index.php/Control_Producto/index4">
     <table width="440" border="0">
       <tr>
-        <td width="220"><h2 style="font-size:30px"><?php $j=0; foreach ($Datos as $row){
-			
-							echo $row['Nombre'];
-							
-							$j++;}?></h2></td>
+        <td width="220"><h2 style="font-size:30px"><?php echo $row['Nombre'];?></h2></td>
         <td width="210" align="right"><input type="image" src="<?php echo base_url();?>files/images/FlechaI.png" name="Submit" title="Atras" /></td>
       </tr>
       <tr>
@@ -220,43 +216,23 @@ textarea.LV_invalid_field:active {
       </tr>
       <tr>
         <td align="right"><font style="font-size:12px">Codigo BD:</font></td>
-        <td colspan="2"><input name="CBD" type="text" id="CBD" onkeypress="return validar(event)" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" maxlength="50" required="required" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" value="<?php $j=0; foreach ($Datos as $row){
-			
-							echo $row['Id_Accesorio'];
-							
-							$j++;}?>" readonly="readonly" /></td>
+        <td colspan="2"><input name="CBD" type="text" id="CBD" onkeypress="return validar(event)" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" maxlength="50" required="required" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" value="<?php echo $row['Id_Accesorio'];?>" readonly="readonly" /></td>
       </tr>
       <tr>
         <td align="right"><font style="font-size:12px">Codigo:</font></td>
-        <td colspan="2"><input name="Codigo" type="text" id="Codigo" onkeypress="return validar(event)" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" maxlength="30" required="required" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" value="<?php $j=0; foreach ($Datos as $row){
-			
-							echo $row['Codigo'];
-							
-							$j++;}?>"/></td>
+        <td colspan="2"><input name="Codigo" type="text" id="Codigo" onkeypress="return validar(event)" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" maxlength="30" required="required" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" value="<?php echo $row['Codigo'];?>"/></td>
       </tr>
       <tr>
         <td align="right"><font style="font-size:12px">Nombre:</font></td>
-        <td colspan="2"><input name="Nombre" type="text" id="Nombre" onkeypress="return validar(event)" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" maxlength="30" required="required" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" value="<?php $j=0; foreach ($Datos as $row){
-			
-							echo $row['Nombre'];
-							
-							$j++;}?>"/></td>
+        <td colspan="2"><input name="Nombre" type="text" id="Nombre" onkeypress="return validar(event)" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" maxlength="30" required="required" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" value="<?php echo $row['Nombre'];?>"/></td>
       </tr>
       <tr>
         <td align="right"><font style="font-size:12px">Precio:</font></td>
-        <td colspan="2"><input name="Precio" type="text" id="Precio" onkeypress="return soloNumeros(event)" style="width:60px; font-size-adjust:inherit; height:30px; font-size:15px;" maxlength="10" required="required" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" value="<?php $j=0; foreach ($Datos as $row){
-			
-							echo $row['Precio'];
-							
-							$j++;}?>"/> <font style="font-size:12px">Bs.F</font></td>
+        <td colspan="2"><input name="Precio" type="text" id="Precio" onkeypress="return soloNumeros(event)" style="width:60px; font-size-adjust:inherit; height:30px; font-size:15px;" maxlength="10" required="required" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" value="<?php echo $row['Precio'];?>"/> <font style="font-size:12px">Bs.F</font></td>
       </tr>
       <tr>
         <td align="right"><font style="font-size:12px">Descripci&oacute;n corta:</font></td>
-        <td align="left"><input name="Descripcion" type="text" id="Descripcion" onkeypress="return validar(event)" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" maxlength="30" required="required" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" value="<?php $j=0; foreach ($Datos as $row){
-			
-							echo $row['Descripcion'];
-							
-							$j++;}?>"/></td>
+        <td align="left"><input name="Descripcion" type="text" id="Descripcion" onkeypress="return validar(event)" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" maxlength="30" required="required" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" value="<?php echo $row['Descripcion'];?>"/></td>
         <td align="right">&nbsp;</td>
       </tr>
       <tr>
