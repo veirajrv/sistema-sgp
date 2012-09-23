@@ -121,6 +121,32 @@ class Control_Producto extends CI_Controller {
 		$this->load->view('Administrador/Producto/ConsultarAccesorio', $usuario);
 	}
 	
+	public function index5()
+	{
+		$Lista = $this->modelProducto->DConsultarAcce();
+		$usuario['Equipos'] = $this->modelProducto->DConsultarAcce();
+		
+		$this->load->library('table');
+		$this->table->set_empty("&nbsp;");
+		$this->table->set_heading('<font style="font-size:12px" color="#369"><b>Codigo</b></font>','<font style="font-size:12px" color="#369"><b>Accesorio</b></font>', '<font style="font-size:12px" color="#369"><b>Precio Bs.F</b></font>');
+	
+		foreach ($Lista as $row)
+		{
+			$id2 = $row['Id_Accesorio'];
+			$id = $row['Codigo'];
+			$accesorio = $row['Accesorio'];
+			$precio = $row['Precio'];
+			$this->table->add_row($id, $accesorio, $precio, anchor('Control_Producto/dmodificar_accesorio/'.$id2.'','Ver Detalle'));
+		}
+			
+		$usuario['table'] = $this->table->generate();
+		
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		
+		$this->load->view('Despachador/Producto/DConsultarAccesorio', $usuario);
+	}
+	
 	public function buscar_accesorio()
 	{
 		$Usuario = $this->session->userdata('Usuario');
@@ -155,6 +181,43 @@ class Control_Producto extends CI_Controller {
 		{
 			$usuario['Datos'] = $this->modelProducto->BuscarDatosAccesorio2($codigoA);
 			$this->load->view('Administrador/Producto/ModPrecioAccesorio', $usuario);
+		}
+	}
+	
+	public function dbuscar_accesorio()
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$usuario['Equipos'] = $this->modelProducto->DConsultarAcce();
+		$usuario['accesorio'] = $_POST['Vendedor'];
+		$codigoA = $_POST['Vendedor'];
+		$id = $this->modelProducto->BuscarIdAccesorio($codigoA);
+		if($id == FALSE)
+		{
+			$Lista = $this->modelProducto->DConsultarAcce();
+		
+			$this->load->library('table');
+			$this->table->set_empty("&nbsp;");
+			$this->table->set_heading('<font style="font-size:12px" color="#369"><b>Codigo</b></font>','<font style="font-size:12px" color="#369"><b>Accesorio</b></font>', '<font style="font-size:12px" color="#369"><b>Precio Bs.F</b></font>');
+		
+			foreach ($Lista as $row)
+			{
+				$id2 = $row['Id_Accesorio'];
+				$id = $row['Codigo'];
+				$accesorio = $row['Accesorio'];
+				$precio = $row['Precio'];
+				$this->table->add_row($id, $accesorio, $precio, anchor('Control_Producto/dmodificar_accesorio/'.$id2.'','Ver Detalle'));
+			}
+				
+			$usuario['table'] = $this->table->generate();
+			$usuario['Mensaje'] = "El codigo no existe!";
+			
+			$this->load->view('Despachador/Producto/DConsultarAccesorio', $usuario);
+		}
+		else
+		{
+			$usuario['Datos'] = $this->modelProducto->BuscarDatosAccesorio2($codigoA);
+			$this->load->view('Despachador/Producto/DModPrecioAccesorio', $usuario);
 		}
 	}
 	
@@ -244,6 +307,16 @@ class Control_Producto extends CI_Controller {
 		$this->load->view('Administrador/Producto/ModPrecioAccesorio', $usuario);
 	}	
 	
+	// Funcion que nos permite modificar el nombre o precio de un accesorio dentro del sistema.
+	public function dmodificar_accesorio($id)
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$usuario['accesorio'] = $id;
+		$usuario['Datos'] = $this->modelProducto->BuscarDatosAccesorio($id);
+		$this->load->view('Despachador/Producto/DModPrecioAccesorio', $usuario);
+	}
+	
 	public function modificar_accesorio2()
 	{
 		$Usuario = $this->session->userdata('Usuario');
@@ -271,6 +344,35 @@ class Control_Producto extends CI_Controller {
 		$usuario['Mensaje'] = 'Se modificaron los datos del accesorio con &eacute;xito!';
 		
 		$this->load->view('Administrador/Producto/ModPrecioAccesorio', $usuario);
+	}
+	
+	public function dmodificar_accesorio2()
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$id = $_POST['CBD'];
+		$id2 = $_POST['CBD'];
+		
+		// Modifica en el historial de productos que se venden //
+		$datos['ID2'] = $id;
+		$accesorio['Codigo'] = $_POST['Codigo'];
+		$accesorio['Nombre'] = $_POST['Nombre'];
+		$accesorio['Precio'] = $_POST['Precio'];
+		$accesorio['Descripcion'] = $_POST['Descripcion'];
+		$accesorio['Descripcion2'] = $_POST['Descripcion2'];
+		$this->modelProducto->CambiarDatosAccesorio($accesorio, $datos);
+		
+		// Modifica en el historial de productos que se venden //
+		$datos2['ID2'] = $id2;
+		$accesorio2['Codigo'] = $_POST['Codigo'];
+		$accesorio2['Nombre'] = $_POST['Nombre'];
+		$accesorio2['Descripcion'] = $_POST['Descripcion2'];
+		$this->modelProducto->CambiarDatosAccesorio2($accesorio2, $datos2);
+		
+		$usuario['Datos'] = $this->modelProducto->BuscarDatosAccesorio($id);
+		$usuario['Mensaje'] = 'Se modificaron los datos del accesorio con &eacute;xito!';
+		
+		$this->load->view('Despachador/Producto/DModPrecioAccesorio', $usuario);
 	}
 	
 	// Funcion que nos permite agregar marcas nuevas y relaciones entre ellas.
@@ -312,6 +414,15 @@ class Control_Producto extends CI_Controller {
 		$this->load->view('Administrador/Producto/Accesorio', $usuario);
 	}
 	
+	public function dnuevo_accesorio()
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$usuario['Equipo'] = $this->modelProducto->ConsultarEquipo();
+		$usuario['Accesorio'] = $this->modelProducto->ConsultarA();
+		$this->load->view('Despachador/Producto/DAccesorio', $usuario);
+	}
+	
 	// Funcion que toma los datos de un accesorio y lo creo.
 	public function crear_accesorio()
 	{
@@ -335,7 +446,27 @@ class Control_Producto extends CI_Controller {
 		$usuario['Mensaje'] = 'Se agrego el nuevo Accesorio con &eacute;xito!';
 		
 		$this->load->view('Administrador/Producto/Accesorio', $usuario);
-	}	
+	}
+	
+	// Funcion que toma los datos de un accesorio y lo creo.
+	public function dcrear_accesorio()
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$Identificador = "A10";
+		$Accesorio['Id_Accesorio'] = $Identificador.$_POST['Codigo'];
+		$Accesorio['Codigo'] = $_POST['Codigo'];
+		$Accesorio['Nombre'] = $_POST['Accesorio'];
+		$Accesorio['Precio'] = $_POST['Precio'];
+		$Accesorio['Descripcion'] = $_POST['Descripcion'];
+		$Accesorio['Descripcion2'] = $_POST['Descripcion2'];
+		$this->modelProducto->InsertarAccesorio($Accesorio);
+		
+		$usuario['Accesorio'] = $this->modelProducto->ConsultarA();
+		$usuario['Mensaje'] = 'Se agrego el nuevo Accesorio con &eacute;xito!';
+		
+		$this->load->view('Despachador/Producto/DAccesorio', $usuario);
+	}
 	
 	public function crear_accesorio_2()
 	{

@@ -5,53 +5,13 @@
 <script src="<?php echo base_url();?>files/js/jquery-1.6.2.min.js" type="text/javascript"></script>
 <script src="<?php echo base_url();?>files/js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
 
-<head>
+<style>
+	.ui-button { margin-left: -1px; }
+	.ui-button-icon-only .ui-button-text { padding: 0.35em; } 
+	.ui-autocomplete-input { margin: 0; padding: 0.48em 0 0.47em 0.45em; }
+</style>
 
-<script type="text/javascript">
-	 $(document).ready(function(){
-            $("#subgroup").click(function () {
-			var id = $('#subgroup').val();
-			console.log(id);
-                $.ajax({
-                    type: "GET",
-                    url: "<?php echo base_url().'index.php/Control_Combox/ajax_get_accounts/'?>" + id,
-					dataType: 'html',
-					success: function(data)
-					{
-					$('#account').replaceWith("<select name='account' id='account' style='width:200px; font-size-adjust:inherit; height:30px; font-size:15px;' onfocus='CambiaColor(this,'#FFCC00','#000000')' onblur='CambiaColor(this,'','#000000')'>" + data + "</select>");
-					}
-                });
-            });
-			
-			$("#account").live("click", function () {
-			var id = $('#account').val();
-			console.log(id);
-                $.ajax({
-                    type: "GET",
-                    url: "<?php echo base_url().'index.php/Control_Combox/ajax_get_accounts2/'?>" + id,
-					dataType: 'html',
-					success: function(data)
-					{
-					$('#equipo').replaceWith("<select name='equipo' id='equipo' style='width:200px; font-size-adjust:inherit; height:30px; font-size:15px;' onfocus='CambiaColor(this,'#FFCC00','#000000')' onblur='CambiaColor(this,'','#000000')'>" + data + "</select>");
-					}
-                });
-            });
-			
-			$("#equipo").live("click", function () {
-			var id = $('#equipo').val();
-			console.log(id);
-                $.ajax({
-                    type: "GET",
-                    url: "<?php echo base_url().'index.php/Control_Combox/ajax_get_accounts3/'?>" + id,
-					dataType: 'html',
-					success: function(data)
-					{
-					$('#Accesorio').replaceWith("<select name='Accesorio' id='Accesorio' style='width:200px; font-size-adjust:inherit; height:30px; font-size:15px;' onfocus='CambiaColor(this,'#FFCC00','#000000')' onblur='CambiaColor(this,'','#000000')'>" + data + "</select>");
-					}
-                });
-            });
-        });
-</script>
+<head>
 
 <script type="text/javascript">
 function CambiaColor(esto,borde,texto)
@@ -103,6 +63,117 @@ function CambiaColor(esto,borde,texto)
 				});		
 				
 			});			
+</script>
+
+<script>
+	(function( $ ) {
+		$.widget( "ui.combobox", {
+			_create: function() {
+				var self = this,
+					select = this.element.hide(),
+					selected = select.children( ":selected" ),
+					value = selected.val() ? selected.text() : "";
+				var input = this.input = $( "<input>" )
+					.insertAfter( select )
+					.val( value )
+					.autocomplete({
+						delay: 0,
+						minLength: 0,
+						source: function( request, response ) {
+							var matcher = new RegExp( $.ui.autocomplete.escapeRegex(request.term), "i" );
+							response( select.children( "option" ).map(function() {
+								var text = $( this ).text();
+								if ( this.value && ( !request.term || matcher.test(text) ) )
+									return {
+										label: text.replace(
+											new RegExp(
+												"(?![^&;]+;)(?!<[^<>]*)(" +
+												$.ui.autocomplete.escapeRegex(request.term) +
+												")(?![^<>]*>)(?![^&;]+;)", "gi"
+											), "<strong>$1</strong>" ),
+										value: text,
+										option: this
+									};
+							}) );
+						},
+						select: function( event, ui ) {
+							ui.item.option.selected = true;
+							self._trigger( "selected", event, {
+								item: ui.item.option
+							});
+						},
+						change: function( event, ui ) {
+							if ( !ui.item ) {
+								var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( $(this).val() ) + "$", "i" ),
+									valid = false;
+								select.children( "option" ).each(function() {
+									if ( $( this ).text().match( matcher ) ) {
+										this.selected = valid = true;
+										return false;
+									}
+								});
+								if ( !valid ) {
+									// remove invalid value, as it didn't match anything
+									$( this ).val( "" );
+									select.val( "" );
+									input.data( "autocomplete" ).term = "";
+									return false;
+								}
+							}
+						}
+					})
+					.addClass( "ui-widget ui-widget-content ui-corner-left" );
+
+				input.data( "autocomplete" )._renderItem = function( ul, item ) {
+					return $( "<li></li>" )
+						.data( "item.autocomplete", item )
+						.append( "<a>" + item.label + "</a>" )
+						.appendTo( ul );
+				};
+
+				this.button = $( "<button type='button'>&nbsp;</button>" )
+					.attr( "tabIndex", -1 )
+					.attr( "title", "Show All Items" )
+					.insertAfter( input )
+					.button({
+						icons: {
+							primary: "ui-icon-triangle-1-s"
+						},
+						text: false
+					})
+					.removeClass( "ui-corner-all" )
+					.addClass( "ui-corner-right ui-button-icon" )
+					.click(function() {
+						// close if already visible
+						if ( input.autocomplete( "widget" ).is( ":visible" ) ) {
+							input.autocomplete( "close" );
+							return;
+						}
+
+						// work around a bug (likely same cause as #5265)
+						$( this ).blur();
+
+						// pass empty string as value to search for, displaying all results
+						input.autocomplete( "search", "" );
+						input.focus();
+					});
+			},
+
+			destroy: function() {
+				this.input.remove();
+				this.button.remove();
+				this.element.show();
+				$.Widget.prototype.destroy.call( this );
+			}
+		});
+	})( jQuery );
+
+	$(function() {
+		$( "#Vendedor" ).combobox();
+		$( "#toggle" ).click(function() {
+			$( "#Vendedor" ).toggle();
+		});
+	});
 </script>
 
 <!-- meta tags begin -->
@@ -311,43 +382,36 @@ function CambiaColor(esto,borde,texto)
           </tr>
       </table>
     </form>
-    <form id="form2" method="post" action="<?php echo base_url();?>index.php/Control_Venta/agregar_otro_accesorios2">
+    <form id="form2" method="post" action="<?php echo base_url();?>index.php/Control_Venta/agregar_accesorio_telemetria/<?php echo $Id_Negociacion?>/<?php echo $Status; ?>/<?php echo $Id; ?>">
       <table width="440" border="0">
         <tr>
           <td><fieldset>
             <legend style="font-size:15px"><b>Accesorio</b>            </legend>
             <table width="410" border="0">
               <tr>
-                <td width="130" align="right"><font style="font-size:12px">Marca:</font></td>
-                <td colspan="2"><select name="subgroup" id="subgroup" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')">
-                  <option value="-1">Seleccione una marca</option>
+                <td width="130" align="right"><font style="font-size:12px">Accesorio:</font></td>
+                <td colspan="2"><select name="Vendedor" id="Vendedor" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" required="required">
+                  <option></option>
                   <?php
-						foreach ($Marca as $row) {
+						foreach ($Lista2 as $row) {
 				  ?>
-                  <option value="<?php echo $row['Id_Marca']; ?>" <?php echo set_select('Hola',$row['Id_Marca']); ?> ><?php echo $row['Nombre']; ?></option>
+                  <option value="<?php echo $row['Id_Accesorio']; ?>" <?php echo set_select('Hola',$row['Id_Accesorio']); ?> ><?php echo $row['Codigo']; echo " - "; echo $row['Accesorio']; ?></option>
                   <?php
 					}
 					?>
-                </select></td>
-              </tr>
-              <tr>
-                <td align="right"><font style="font-size:12px">Linea de producto:</font></td>
-                <td colspan="2"><select name="account" id="account" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')">
-                  <option value=" " <?php echo set_select('account',' ', TRUE); ?> >Seleccione una linea</option>
-                </select></td>
-              </tr>
-              <tr>
-                <td align="right"><font style="font-size:12px">Equipo:</font></td>
-                <td colspan="2"><select name="equipo" id="equipo" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')">
-                  <option value=" " <?php echo set_select('equipo',' ', TRUE); ?> >Seleccione un equipo</option>
                 </select>
                   <input type="hidden" name="Negociacion22" id="Negociacion22" style="width:20px" value="<?php echo $Id_Negociacion; ?>" />
                   <input type="hidden" name="idcliente2" id="idcliente2" style="width:20px" value="<?php echo $Id; ?>" /></td>
               </tr>
               <tr>
+                <td align="right"><font style="font-size:12px">Cantidad:</font></td>
+                <td align="left"><input type="text" name="Cantidad" id="Cantidad" style="width:40px; font-size-adjust:inherit; height:30px; font-size:15px;" onkeypress="return soloNumeros(event)" maxlength="5" required="required"/></td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
                 <td align="right">&nbsp;</td>
-                <td width="200" align="right"><input type="submit" name="Buscar" id="Buscar" value="Agregar" onclick="return confirm('Usted desea agregar este accesorio a la lista de compras?');"/></td>
-                <td width="66">&nbsp;</td>
+                <td width="152" align="right"><input type="submit" name="Buscar" id="Buscar" value="Agregar" onclick="return confirm('Usted desea agregar este accesorio a la lista de compras?');"/></td>
+                <td width="114">&nbsp;</td>
               </tr>
               <tr>
                 <td colspan="3"><cite>Nota: Esta opcion es solo para agregar accesorios de un equipo en particular</cite></td>
@@ -363,10 +427,10 @@ function CambiaColor(esto,borde,texto)
           <form id="form4" method="post" action="<?php echo base_url();?>index.php/Control_Negociacion/eliminar_producto_2">
             <table width="410" border="0">
               <tr>
-                <td>Codigo/Nombre</td>
-                <td>Descripcion</td>
-                <td>Cantidad</td>
-                <td>&nbsp;</td>
+                <td width="100">Nombre</td>
+                <td width="160">Descripcion</td>
+                <td width="55">Cantidad</td>
+                <td colspan="2" align="right"><?php echo '<a href="'.base_url().'index.php/Control_Negociacion/eliminar_todo2/'.$Id.'/'.$Id_Negociacion.'">ELIMINAR TODO</a>'; echo '</br>';?></td>
               </tr>
               <tr>
                 <td><?php $j=0; foreach ($Lista as $row){
@@ -384,10 +448,17 @@ function CambiaColor(esto,borde,texto)
 							echo $row['Cantidad']; echo '</br>';
 							
 							$j++;}?></td>
-                <td><a href="sdfsdf">
+                <td width="46"><a href="sdfsdf">
                   <?php $j=0; foreach ($Lista as $row){
 							
-							echo '<a href="'.base_url().'index.php/Control_Venta/eliminar_producto/'.$row['Id_HistorialNP'].'/'.$Id.'/'.$Id_Negociacion.'">ELIMINAR</a>'; echo '</br>';
+							echo '<a href="'.base_url().'index.php/Control_Negociacion/dmodificar_cantidad/'.$row['Id_Historial_Np'].'/'.$Id_Negociacion.'/'.$Id.'">Modificar</a>'; echo '</br>';
+							
+							$j++;}?>
+                </a></td>
+                <td width="27"><a href="sdfsdf">
+                  <?php $j=0; foreach ($Lista as $row){
+							
+							echo '<a href="'.base_url().'index.php/Control_Venta/eliminar_producto/'.$row['Id_Historial_Np'].'/'.$Id.'/'.$Id_Negociacion.'">ELIMINAR</a>'; echo '</br>';
 							
 							$j++;}?>
                 </a></td>

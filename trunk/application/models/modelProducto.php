@@ -122,7 +122,7 @@ class ModelProducto extends CI_Model {
 	function BuscarIdAccesorio($codigoA) 
 	{
 		$query = $this->db->select("Id_Accesorio");
-		$query = $this->db->where("Codigo", $codigoA);
+		$query = $this->db->where("Id_Accesorio", $codigoA);
 		$query = $this->db->get("Accesorio");
 		foreach ($query->result_array() as $row)
 		{
@@ -154,7 +154,7 @@ class ModelProducto extends CI_Model {
 	
 	function BuscarDatosAccesorio2($codigoA) 
 	{
-		$query = $this->db->where("Codigo", $codigoA);
+		$query = $this->db->where("Id_Accesorio", $codigoA);
 		$query = $this->db->get('accesorio');
 		return $query->result_array();			
 	}
@@ -449,6 +449,42 @@ A.Precio * H.Cantidad) AS Monto
 		return $query->result_array();		
 	} 
 	
+	function DConsultarCod($prueba) 
+	{
+		$query = $this->db->select("Codigo");
+		$query = $this->db->where("Id_Accesorio", $prueba);
+		$query = $this->db->get("Accesorio");
+		foreach ($query->result_array() as $row)
+		{
+			$codigo = $row['Codigo'];
+		}
+		return $codigo;	
+	} 
+	
+	function DConsultarNom($prueba) 
+	{
+		$query = $this->db->select("Nombre");
+		$query = $this->db->where("Id_Accesorio", $prueba);
+		$query = $this->db->get("Accesorio");
+		foreach ($query->result_array() as $row)
+		{
+			$nombre = $row['Nombre'];
+		}
+		return $nombre;	
+	} 
+	
+	function DConsultarDes($prueba) 
+	{
+		$query = $this->db->select("Descripcion");
+		$query = $this->db->where("Id_Accesorio", $prueba);
+		$query = $this->db->get("Accesorio");
+		foreach ($query->result_array() as $row)
+		{
+			$descripcion = $row['Descripcion'];
+		}
+		return $descripcion;	
+	} 
+	
 	function ConsultarMarcas() 
 	{
 		$query = $this->db->query('SELECT DISTINCT(Id_Marca), Nombre
@@ -511,6 +547,12 @@ A.Precio * H.Cantidad) AS Monto
 	function ConsultarAcce()
 	{
 		$query = $this->db->query('SELECT DISTINCT(A.Id_Accesorio), A.Codigo, A.Nombre AS Accesorio, A.Precio, A.Descripcion, E.Nombre AS Equipo FROM Equipo AS E, ACCESORIO AS A, AEQUIPO AS AE WHERE AE.Id_Accesorio = A.Id_Accesorio AND E.Id_Equipo = AE.Id_Equipo ORDER BY A.Codigo');		
+		return $query->result_array();
+	}
+	
+	function DConsultarAcce()
+	{
+		$query = $this->db->query('SELECT DISTINCT(A.Id_Accesorio), A.Codigo, A.Nombre AS Accesorio, A.Precio, A.Descripcion FROM ACCESORIO AS A ORDER BY A.Codigo');		
 		return $query->result_array();
 	}
 	
