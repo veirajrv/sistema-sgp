@@ -435,7 +435,7 @@ function CambiaColor(esto,borde,texto)
               <tr>
                 <td><?php $j=0; foreach ($Lista as $row){
 							
-							echo $row['Id_Accesorio']; echo '&nbsp;'; echo $row['Nombre']; echo '</br>';
+							echo $row['Nombre']; echo '</br>';
 							
 							$j++;}?></td>
                 <td><?php $j=0; foreach ($Lista as $row){

@@ -1127,7 +1127,7 @@ class control_Negociacion extends CI_Controller {
 			{
 				$codigo = $row['Codigo'];
 				$cantidad = $row['Cantidad'];
-				$descripcion = $row['Descripcion2'];
+				$descripcion = $row['Descripcion'];
 				$this->table->add_row($codigo, $cantidad, $descripcion);
 			}
 				
@@ -1135,7 +1135,7 @@ class control_Negociacion extends CI_Controller {
 			{
 				$codigo2 = $row['Codigo'];
 				$cantidad2 = $row['Cantidad'];
-				$descripcion2 = $row['Descripcion2'];
+				$descripcion2 = $row['Descripcion'];
 				$this->table->add_row($codigo2, $cantidad2, $descripcion2);
 			}
 					
@@ -2331,6 +2331,24 @@ class control_Negociacion extends CI_Controller {
 		$this->load->view('Despachador/Borrador/DModCantidades', $usuario);
 	}
 	
+		public function d2modificar_cantidad($historial,$Negociacion,$cliente)
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$status = $this->modelNegociacion->StatusNegociacion($Negociacion); 
+		$usuario['Status'] = $status;
+		$usuario['Id'] = $cliente;
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Negociacion); 
+		$usuario['Porcentaje'] = $porcentaje;
+		$usuario['Codigo'] = $this->modelNegociacion->buscarcodigo($historial); 
+		$usuario['Nombre'] = $this->modelNegociacion->buscarnombre($historial); 
+		$usuario['Cantidad'] = $this->modelNegociacion->buscarcantidad($historial); 
+		$usuario['Historial'] = $historial;
+		$usuario['Id_Negociacion'] = $Negociacion;
+		
+		$this->load->view('Despachador/Borrador/DModCantidadesI', $usuario);
+	}
+	
 	public function modificar_cantidad_telemetria($historial,$Negociacion,$cliente)
 	{
 		$Usuario = $this->session->userdata('Usuario');
@@ -2457,6 +2475,42 @@ class control_Negociacion extends CI_Controller {
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Negociacion);
 		
 		$this->load->view('Despachador/Borrador/DConsultarBorrador2', $usuario);
+	}
+	
+	public function dmodificar_cantidad2I()
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$IdHistorial = $_POST['Historial'];
+		
+		$datos['ID2'] = $IdHistorial;
+		$historial = new ModelNegociacion;
+		$this->modelNegociacion->cambiarcantidad($historial, $datos);
+		
+		$Negociacion = $_POST['Negociacion'];
+		$cliente = $_POST['idcliente'];
+		$usuario['Id'] = $_POST['idcliente'];
+		$usuario['Id_Negociacion'] = $_POST['Negociacion'];
+		$usuario['Status'] = $_POST['Sta'];
+		$usuario['Porcentaje'] = $_POST['Porcen'];
+		
+		$usuario['FechaP'] = $this->modelNegociacion->FechaPresupuesto($Negociacion);
+		$usuario['NumeroODC'] = $this->modelNegociacion->NumeroOrdenDC($Negociacion);
+		$usuario['FechaODC'] = $this->modelNegociacion->FechaOrdenDC($Negociacion);
+		$usuario['Banco'] = $this->modelNegociacion->Banco($Negociacion);
+		$usuario['PagoInicial'] = $this->modelNegociacion->PagoInicial($Negociacion);
+		$usuario['CondicionesPago'] = $this->modelNegociacion->CondicionesPago($Negociacion);
+		$usuario['FechaPago'] = $this->modelNegociacion->FechaDePago($Negociacion);
+		$usuario['NDeposito'] = $this->modelNegociacion->NumeroDeposito($Negociacion);
+		
+		$cliente = $_POST['idcliente'];
+		$usuario['NombreI'] = $this->modelNegociacion->NombreInstitucion($cliente);
+		$usuario['TelefonoI'] = $this->modelNegociacion->TelefonoInstitucion($cliente);
+		
+		$usuario['Lista2'] = $this->modelProducto->DConsultarAcce();
+		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Negociacion);
+		
+		$this->load->view('Despachador/Borrador/DConsultarBorradorI2', $usuario);
 	}
 	
 	public function modificar_cantidad_telemetria2()
