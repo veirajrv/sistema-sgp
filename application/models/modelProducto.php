@@ -342,14 +342,14 @@ class ModelProducto extends CI_Model {
 	
 	function ConsultarLista2($Negociacion) 
 	{
-		$query = $this->db->query('SELECT H.Id_HistorialNP2, E.Codigo, E.Nombre, E.Descripcion2, E.Precio, H.Cantidad, (
+		$query = $this->db->query('SELECT H.Id_Historial_Np, E.Codigo, E.Nombre, E.Descripcion2, E.Precio, H.Cantidad, (
 E.Precio * H.Cantidad) AS Monto
-								   FROM Equipo AS E, HistorialNP2 AS H, Negociacion AS N
-								   WHERE H.Id_Equipo = E.Id_Equipo
+								   FROM Equipo AS E, Historial_Np AS H, Negociacion AS N
+								   WHERE H.Id_Producto = E.Id_Equipo
 								   AND H.Id_Negociacion = N.Id_Negociacion
 								   AND H.Id_Negociacion = '.$Negociacion.'
-								   GROUP BY H.Id_HistorialNP2
-								   ORDER BY H.Id_HistorialNP2 ASC');	
+								   GROUP BY H.Id_Historial_Np
+								   ORDER BY H.Id_Historial_Np ASC');	
 		
 		return $query->result_array();		
 	} 
@@ -369,9 +369,9 @@ A.Precio * H.Cantidad) AS Monto
 	
 	function Total($Negociacion) 
 	{
-		$query = $this->db->query('SELECT COUNT( H.Id_HistorialNP), ((SUM( A.Precio * H.Cantidad )) * 0.12) + SUM( A.Precio * H.Cantidad ) AS Total
-								   FROM Accesorio AS A, HistorialNP AS H, Negociacion AS N
-								   WHERE H.Id_Accesorio = A.Id_Accesorio
+		$query = $this->db->query('SELECT COUNT( H.Id_Historial_Np	), ((SUM( A.Precio * H.Cantidad )) * 0.12) + SUM( A.Precio * H.Cantidad ) AS Total
+								   FROM Accesorio AS A, historial_np AS H, Negociacion AS N
+								   WHERE H.Id_Producto = A.Id_Accesorio
 								   AND H.Id_Negociacion = N.Id_Negociacion
 								   AND H.Id_Negociacion = '.$Negociacion.'');	
 		
@@ -419,9 +419,9 @@ A.Precio * H.Cantidad) AS Monto
 	
 	function TotalI($Negociacion) 
 	{
-		$query = $this->db->query('SELECT COUNT( H.Id_HistorialNP ) , ((SUM( A.Precio * H.Cantidad )) * 0.12) + SUM( A.Precio * H.Cantidad ) AS Total
-								   FROM Accesorio AS A, HistorialNP AS H, Negociacion AS N
-								   WHERE H.Id_Accesorio = A.Id_Accesorio
+		$query = $this->db->query('SELECT COUNT( H.Id_Historial_Np ) , ((SUM( A.Precio * H.Cantidad )) * 0.12) + SUM( A.Precio * H.Cantidad ) AS Total
+								   FROM Accesorio AS A, historial_np AS H, Negociacion AS N
+								   WHERE H.Id_Producto = A.Id_Accesorio
 								   AND H.Id_Negociacion = N.Id_Negociacion
 								   AND H.Id_Negociacion = '.$Negociacion.'');	
 		

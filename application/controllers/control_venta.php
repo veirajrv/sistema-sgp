@@ -759,10 +759,9 @@ class Control_Venta extends CI_Controller
 				$usuario['TelefonoI'] = $this->modelNegociacion->TelefonoInstitucion($Id_ClienteI);
 				
 				$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Id_Negociacion);
-				$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+				$usuario['Lista2'] = $this->modelProducto->DConsultarAcce();
 				
 				$usuario['Total'] = $this->modelProducto->TotalI($Id_Negociacion);
-				$usuario['Lista2'] = $this->modelProducto->DConsultarAcce();
 				
 				$this->load->view('Despachador/Borrador/DConsultarBorradorI2', $usuario);
 			}
@@ -1614,7 +1613,7 @@ class Control_Venta extends CI_Controller
 		$usuario['NombreI'] = $this->modelNegociacion->NombreInstitucion($cliente);
 		$usuario['TelefonoI'] = $this->modelNegociacion->TelefonoInstitucion($cliente);
 		
-		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+		$usuario['Lista2'] = $this->modelProducto->DConsultarAcce();
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Negociacion);
 		
 		$this->load->view('Despachador/Borrador/DConsultarBorradorI2', $usuario);
@@ -1625,14 +1624,15 @@ class Control_Venta extends CI_Controller
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
 		
-		foreach($_POST['checkbox'] as $row)
-		{
-			$HistorialNP['Id_Accesorio'] = $row;
-			$HistorialNP['Id_Negociacion'] = $Negociacion;
-			$HistorialNP['Cantidad'] = $_POST[$row];	
-			
-			$this->modelProducto->AgregarAccesorio($HistorialNP);
-		}
+		$HistorialNP['Id_Producto'] = $_POST['Vendedor'];
+		$Vendedor = $_POST['Vendedor'];
+		$HistorialNP['Id_Negociacion'] = $Negociacion;
+		$HistorialNP['Codigo'] = $this->modelProducto->DConsultarCod($Vendedor);
+		$HistorialNP['Nombre'] = $this->modelProducto->DConsultarNom($Vendedor);
+		$HistorialNP['Descripcion'] = $this->modelProducto->DConsultarDes($Vendedor);
+		$HistorialNP['Cantidad'] = $_POST['Cantidad'];	
+		
+		$this->modelProducto->AgregarAccesorio($HistorialNP);
 		
 		$usuario['Id_Negociacion'] = $Negociacion;
 		$usuario['Status'] = $Status;
@@ -1652,7 +1652,7 @@ class Control_Venta extends CI_Controller
 		$usuario['NombreI'] = $this->modelNegociacion->NombreInstitucion($Cliente);
 		$usuario['TelefonoI'] = $this->modelNegociacion->TelefonoInstitucion($Cliente);
 		
-		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+		$usuario['Lista2'] = $this->modelProducto->DConsultarAcce();
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Negociacion);
 
 		$this->load->view('Despachador/Borrador/DConsultarBorradorI2', $usuario);
@@ -1849,7 +1849,7 @@ class Control_Venta extends CI_Controller
 		$usuario['TelefonoI'] = $this->modelNegociacion->TelefonoInstitucion($cliente);
 		
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($IdNegoBorrador);
-		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+		$usuario['Lista2'] = $this->modelProducto->DConsultarAcce();
 		
 		$this->load->view('Despachador/Borrador/DConsultarBorradorI2', $usuario);
 	}
@@ -1924,7 +1924,7 @@ class Control_Venta extends CI_Controller
 		//////////////////////////////////////////////////////
 		
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Negociacion);
-		$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+		$usuario['Lista2'] = $this->modelProducto->DConsultarAcce();
 		
 		if($equipo == " ")
 		{
@@ -2022,7 +2022,7 @@ class Control_Venta extends CI_Controller
 		{
 			$codigo = $row['Codigo'];
 			$cantidad = $row['Cantidad'];
-			$descripcion = $row['Descripcion2'];
+			$descripcion = $row['Descripcion'];
 			$this->table->add_row($codigo, $cantidad, $descripcion);
 		}
 			
@@ -2030,7 +2030,7 @@ class Control_Venta extends CI_Controller
 		{
 			$codigo2 = $row['Codigo'];
 			$cantidad2 = $row['Cantidad'];
-			$descripcion2 = $row['Descripcion2'];
+			$descripcion2 = $row['Descripcion'];
 			$this->table->add_row($codigo2, $cantidad2, $descripcion2);
 		}
 				
@@ -2135,7 +2135,7 @@ class Control_Venta extends CI_Controller
 			
 			$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Negociacion);
 			
-			$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+			$usuario['Lista2'] = $this->modelProducto->DConsultarAcce();
 			$this->load->view('Despachador/Cerrada/DConsultaCerradaI', $usuario);
 		}
 		else
@@ -2157,7 +2157,7 @@ class Control_Venta extends CI_Controller
 			$usuario['TelefonoI'] = $this->modelNegociacion->TelefonoInstitucion($cliente);
 			
 			$usuario['Lista'] = $this->modelProducto->ConsultarListaB($Negociacion);
-			$usuario['Marca'] = $this->modelProducto->MarcaProducto();
+			$usuario['Lista2'] = $this->modelProducto->DConsultarAcce();
 		
 			$this->load->view('Despachador/Borrador/DConsultarBorradorI2', $usuario);
 		}
