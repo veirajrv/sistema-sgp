@@ -176,6 +176,15 @@ function CambiaColor(esto,borde,texto)
 	});
 </script>
 
+<script language="JavaScript" type="text/javascript">
+<!--
+function PopWindow()
+{
+window.open('<?php echo base_url();?>index.php/Control_Negociacion/daprobar_orden/<?php echo $Id_Negociacion; ?>','Aprobar','width=450,height=500,menubar=no,scrollbars=yes,toolbar=no,location=no,directories=no,resizable=no,top=50,left=50');
+}
+//-->
+</script>
+
 <!-- meta tags begin -->
 	<!-- vital meta tags -->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -289,8 +298,9 @@ function CambiaColor(esto,borde,texto)
                   <td width="216">
                     <input name="Cliente" type="text" id="Cliente" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" value="<?php echo $NombreC; ?> <?php echo $ApellidoC; ?>" readonly="readonly" />
                   </td>
-                  <td width="120" rowspan="3"><div align="center"><a href="<?php echo base_url();?>index.php/Control_Venta/vista_previa2/<?php echo $Id_Negociacion; ?>/<?php echo $Id; ?>"><img src="<?php echo base_url();?>files/images/698634678.png" alt="" width="42" height="42" title="Vista previa" /></a> <br />
-                    Vista Previa</div></td>
+                  <td width="120" rowspan="2" align="center"><a href="JavaScript:PopWindow()"><img src="<?php echo base_url();?>files/images/icon-check.png" alt="" width="42" height="42" title="Editar Vista Previa" /><br />
+                        
+                      </a>Editar Vista Previa</td>
                 </tr>
                 <tr>
                   <td align="right"><font style="font-size:12px">Telefono:</font></td>
@@ -304,6 +314,8 @@ function CambiaColor(esto,borde,texto)
                     <input name="Telefono" type="text" id="Telefono" style="width:200px; font-size-adjust:inherit; height:30px; font-size:15px;" onfocus="CambiaColor(this,'#FFCC00','#000000')" onblur="CambiaColor(this,'','#000000')" value="<?php echo $EMailC; ?>" readonly="readonly" />
                     <input type="hidden" name="Negociacion" id="Negociacion" style="width:20px" value="<?php echo $Id_Negociacion; ?>" /><input type="hidden" name="idcliente3" id="idcliente3" style="width:20px" value="<?php echo $Id; ?>" />
                   </td>
+                  <td width="120"><div align="center"><a href="<?php echo base_url();?>index.php/Control_Venta/vista_previa2/<?php echo $Id_Negociacion; ?>/<?php echo $Id; ?>"><img src="<?php echo base_url();?>files/images/698634678.png" alt="" width="42" height="42" title="Vista previa" /></a> <br />
+                    Vista Previa</div></td>
                   </tr>
               </table>
               </fieldset></td>

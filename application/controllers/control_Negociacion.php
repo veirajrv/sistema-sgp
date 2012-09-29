@@ -1035,6 +1035,12 @@ class control_Negociacion extends CI_Controller {
 		$stado = $this->modelNegociacion->BuscarEstado($Id_Negociacion2);
 		if (($Id_Negociacion == NULL) || ($stado == 2) || ($vendedor <> $vendedor2))
 		{
+			
+			$cedula = $this->modelCliente->BuscarId($Usuario);
+				
+			$usuario['NumeroPorAprobar'] = $this->modelInicio->NumeroPorAprobar2($cedula);
+			$usuario['SinAutorizar'] = $this->modelInicio->SinAutorizar($cedula);
+				
 			$usuario['Ganadas'] = $this->modelventa->NegoGanadas(); 
 			$usuario['Ganadas2'] = $this->modelventa->NumNegoGanadas(); 
 		
@@ -1042,6 +1048,7 @@ class control_Negociacion extends CI_Controller {
 			$usuario['NoFacturadas2'] = $this->modelventa->NumNoFacturadas();
 		
 			$usuario['SiFacturadas'] = $this->modelventa->NumFacturadas();
+			$usuario['SiFacturadas2'] = $this->modelventa->Facturadas();
 		
 			$this->load->view('Despachador/DPrincipal', $usuario);
 		}
@@ -1664,6 +1671,17 @@ class control_Negociacion extends CI_Controller {
 		$usuario['Lista'] = $this->modelProducto->ConsultarListaAprobacion($Id_Negociacion);
 			
 		$this->load->view('Vendedor/Borrador/VOrdenar', $usuario);
+	}
+	
+	public function daprobar_orden($Id_Negociacion) 
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario; // Id Usuario //
+		$usuario['Id_Negociacion'] = $Id_Negociacion; // Id Negociacion //
+		
+		$usuario['Lista'] = $this->modelProducto->ConsultarListaAprobacion($Id_Negociacion);
+			
+		$this->load->view('Despachador/Borrador/DOrdenar', $usuario);
 	}
 	
 	public function vista_previa_i($Id_Negociacion, $Id) // Vendedor //
@@ -2662,6 +2680,50 @@ class control_Negociacion extends CI_Controller {
 	}
 	
 	public function agregar_orden($Negociacion) 
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		
+		$this->modelProducto->BorrarOrden2($Negociacion);
+		
+		// Inserta en la tabla que organiza //
+		if(isset($_POST['checkbox']))
+		foreach($_POST['checkbox'] as $row)
+		{
+			$Codigo = $this->modelProducto->ConsultarNombreO($row);
+			$Codigo = $Codigo[0];
+			
+			$HistorialNP['Id_Producto'] = $row;
+			$HistorialNP['Id_Negociacion'] = $Negociacion;
+			$HistorialNP['Codigo'] = $Codigo['Codigo'];
+			$HistorialNP['Nombre'] = $Codigo['Nombre'];
+			$HistorialNP['Descripcion'] = $Codigo['Descripcion'];
+			$HistorialNP['Cantidad'] = $Codigo['Cantidad'];
+			
+			$this->modelProducto->AgregarNuevoOrden($HistorialNP);
+		}
+
+		// Borramos de la tabla Historial para reordenar los productos //
+		$this->modelProducto->BorrarOrden($Negociacion);
+		
+		$Lista = $this->modelProducto->SeleccionarH($Negociacion);
+		foreach ($Lista as $row)
+		{
+			$datos['Id_Producto'] = $row['Id_Producto'];
+			$datos['Id_Negociacion'] = $row['Id_Negociacion'];
+			$datos['Codigo'] = $row['Codigo'];
+			$datos['Nombre'] = $row['Nombre'];
+			$datos['Descripcion'] = $row['Descripcion'];
+			$datos['Cantidad'] = $row['Cantidad'];
+			
+			$this->modelNegociacion->AgregarEquipo($datos);
+		}
+		
+		$this->load->view('Vendedor/Borrador/VOrdenarFin', $usuario);
+
+	}
+	
+	public function dagregar_orden($Negociacion) 
 	{
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;

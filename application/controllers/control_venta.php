@@ -6,6 +6,7 @@ class Control_Venta extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('modelventa');
+		$this->load->model('modelInicio');
 		$this->load->model('modelProducto');
 		$this->load->model('modelCliente');
 		$this->load->model('modelNegociacion');
@@ -31,8 +32,8 @@ class Control_Venta extends CI_Controller
 		
 		$usuario['Id_Negociacion'] = $_POST['Ganadas'];
 		$Id_Negociacion = $_POST['Ganadas'];
-		$Lista = $this->modelProducto->ConsultarLista($Id_Negociacion);
 		$Lista2 = $this->modelProducto->ConsultarLista2($Id_Negociacion);
+		$Lista = $this->modelProducto->ConsultarLista($Id_Negociacion);
 		
 		$this->load->library('table');
 		$this->table->set_empty("&nbsp;");
@@ -50,7 +51,7 @@ class Control_Venta extends CI_Controller
 		{
 			$codigo2 = $row['Codigo'];
 			$cantidad2 = $row['Cantidad'];
-			$descripcion2 = $row['Descripcion'];
+			$descripcion2 = $row['Descripcion2'];
 			$this->table->add_row($codigo2, $cantidad2, $descripcion2);
 		}
 				
@@ -122,7 +123,14 @@ class Control_Venta extends CI_Controller
 			$usuario['NoFacturadas2'] = $this->modelventa->NumNoFacturadas();
 		
 			$usuario['SiFacturadas'] = $this->modelventa->NumFacturadas();
-		
+			
+			$cedula = $this->modelCliente->BuscarId($Usuario);
+				
+			$usuario['NumeroPorAprobar'] = $this->modelInicio->NumeroPorAprobar2($cedula);
+			$usuario['SinAutorizar'] = $this->modelInicio->SinAutorizar($cedula);
+			
+			$usuario['SiFacturadas2'] = $this->modelventa->Facturadas();
+	
 			$this->load->view('Despachador/DPrincipal', $usuario);
 		}
 		else 
@@ -143,6 +151,13 @@ class Control_Venta extends CI_Controller
 			$usuario['NoFacturadas2'] = $this->modelventa->NumNoFacturadas();
 		
 			$usuario['SiFacturadas'] = $this->modelventa->NumFacturadas();
+			
+			$cedula = $this->modelCliente->BuscarId($Usuario);
+				
+			$usuario['NumeroPorAprobar'] = $this->modelInicio->NumeroPorAprobar2($cedula);
+			$usuario['SinAutorizar'] = $this->modelInicio->SinAutorizar($cedula);
+			
+			$usuario['SiFacturadas2'] = $this->modelventa->Facturadas();
 			
 			$this->load->view('Despachador/DPrincipal', $usuario);
 		}
@@ -1388,6 +1403,59 @@ class Control_Venta extends CI_Controller
 		$this->load->view('Despachador/Borrador/DVistaPreviaPrueba2', $usuario);
 	}
 	
+	// Funcion que se encarga de la aprobacion de las negociaciones //
+	public function aprobar()
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario; 
+		$Id_Negociacion = $_POST['Negociacion']; // Id Negociacion //
+		$cedula = $this->modelCliente->BuscarId($Usuario);
+		$usuario['SinAutorizar'] = $this->modelInicio->SinAutorizar2($cedula);
+		$cedulaempleado = $this->modelInicio->CedEmpleado($Id_Negociacion);
+		$datos['ID2'] = $Id_Negociacion;
+		
+		// Modifica el estatus de la negociacion //
+		$negociacion = new ModelNegociacion;
+		$this->modelNegociacion->ModificarEstatus2($negociacion, $datos);
+		
+		$usuario['NumeroBorrador'] = $this->modelInicio->NumeroBorradores();
+		$usuario['NumeroActiva'] = $this->modelInicio->NumeroActivas();
+		$usuario['NumeroGanada'] = $this->modelInicio->NumeroGanadas();
+		$usuario['NumeroCerrada'] = $this->modelInicio->NumeroCerradas();
+		$usuario['NumeroPerdida'] = $this->modelInicio->NumeroPerdidas();
+		$usuario['NumeroTotal'] = $this->modelInicio->NumeroTotal();
+		
+		$usuario['SinAutorizar'] = $this->modelInicio->SinAutorizar2($cedula); 
+		$usuario['NumeroPorAprobar'] = $this->modelInicio->NumeroPorAprobar();
+		$mail = $this->modelInicio->MailEmpleado($cedulaempleado);
+		
+		//$this->load->library('email');  
+		//$this->email->from('jrodriguezv.11@gmail.com','Sistema de gestion SGP');  
+		//$this->email->to($mail);  
+		//$this->email->subject('Su negociacion con el Nro ( '.$Id_Negociacion.' ), ha sido aprobada exitosamente');  
+		//$this->email->message("Para acceder a dicha notificacion, haga clic en el siguiente link elp21.no-ip.info:4085/SGP");  
+		//$this->email->send(); 
+		
+		$Alerta = new ModelNegociacion;
+		$this->modelNegociacion->ModificarAlertaM($Alerta, $datos);
+		$usuario['ConAlertaTotal'] = $this->modelInicio->ConAlertaTotal();
+		$usuario['ConModTotal'] = $this->modelInicio->ConModTotal();
+		$usuario['NegociacionesEx'] = $this->modelInicio->NegociacionesEx();
+		
+		$usuario['NumeroPorAprobar'] = $this->modelInicio->NumeroPorAprobar2($cedula);
+		$usuario['SinAutorizar'] = $this->modelInicio->SinAutorizar($cedula);
+		
+		$usuario['Ganadas'] = $this->modelventa->NegoGanadas(); 
+		$usuario['Ganadas2'] = $this->modelventa->NumNegoGanadas(); 
+				
+		$usuario['NoFacturadas'] = $this->modelventa->NoFacturadas(); 
+		$usuario['NoFacturadas2'] = $this->modelventa->NumNoFacturadas();
+				
+		$usuario['SiFacturadas'] = $this->modelventa->NumFacturadas();
+		
+		$this->load->view('Despachador/DPrincipal', $usuario);
+	}
+	
 	// Funcion que nos saca de la vista previa //
 	public function atras_vista_previa() 
 	{
@@ -1483,7 +1551,7 @@ class Control_Venta extends CI_Controller
 			$usuario['Lista2'] = $this->modelProducto->DConsultarAcce();
 			$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Negociacion);
 				
-			$this->load->view('Vendedor/Cerrada/VConsultaCerrada', $usuario);
+			$this->load->view('Despachador/Cerrada/DConsultaCerrada', $usuario);
 		}
 		else
 		{
@@ -1512,6 +1580,54 @@ class Control_Venta extends CI_Controller
 		}
 	}
 	
+	// Funcion que nos saca de la vista previa //
+	public function detalle_ganadas() 
+	{
+		$Usuario = $this->session->userdata('Usuario');
+		$usuario['Usuario'] = $Usuario;
+		$Negociacion = $_POST['Negociacion'];
+		$usuario['Id_Negociacion'] = $_POST['Negociacion'];
+		
+		$status = $this->modelNegociacion->StatusNegociacion($Negociacion); 
+		$usuario['Status'] = $status;
+		$porcentaje = $this->modelNegociacion->PorcentajeNegociacion($Negociacion); 
+	
+		$usuario['Porcentaje'] = $porcentaje;
+		$usuario['FechaP'] = $this->modelNegociacion->FechaPresupuesto($Negociacion);
+		$usuario['NumeroODC'] = $this->modelNegociacion->NumeroOrdenDC($Negociacion);
+		$usuario['FechaODC'] = $this->modelNegociacion->FechaOrdenDC($Negociacion);
+		$usuario['Banco'] = $this->modelNegociacion->Banco($Negociacion);
+		$usuario['PagoInicial'] = $this->modelNegociacion->PagoInicial($Negociacion);
+		$usuario['CondicionesPago'] = $this->modelNegociacion->CondicionesPago($Negociacion);
+		$usuario['FechaPago'] = $this->modelNegociacion->FechaDePago($Negociacion);
+		$usuario['NDeposito'] = $this->modelNegociacion->NumeroDeposito($Negociacion);
+		
+		$Cliente = $this->modelNegociacion->BuscarCliente($Negociacion); // Id cliente persona //
+		$ClienteI = $this->modelNegociacion->BuscarClienteI($Negociacion); // Id cliente institucion //
+		
+		if($Cliente == NULL)
+		{
+			$usuario['Id'] = $Cliente;
+			$usuario['NombreI'] = $this->modelNegociacion->NombreInstitucion($ClienteI);
+			$usuario['TelefonoI'] = $this->modelNegociacion->TelefonoInstitucion($ClienteI);
+			
+			$this->load->view('Despachador/Cerrada/DConsultaCerradaI', $usuario);
+		}
+		else
+		{
+			$usuario['Id'] = $Cliente;
+			$usuario['NombreC'] = $this->modelNegociacion->NombreCliente($Cliente);
+			$usuario['ApellidoC'] = $this->modelNegociacion->ApellidoCliente($Cliente);
+			$usuario['EMailC'] = $this->modelNegociacion->MailCliente($Cliente);
+			$usuario['TelefonoC'] = $this->modelNegociacion->TelefonoCliente($Cliente);
+			
+			$this->load->view('Despachador/Cerrada/DConsultaCerrada', $usuario);
+		}
+			
+		//$usuario['Lista2'] = $this->modelProducto->DConsultarAcce();
+		//$usuario['Lista'] = $this->modelProducto->ConsultarListaA($Negociacion);		
+	}
+		
 	public function agregar_otro_accesorios2() 
 	{
 		$Usuario = $this->session->userdata('Usuario');

@@ -159,6 +159,16 @@ class ModelVenta extends CI_Model
 		return $query->result_array();	
 	} 
 	
+	function Facturadas()
+	{
+		$query = $this->db->query('SELECT N.Id_Negociacion
+								   FROM VENTANEGO AS V, NEGOCIACION AS N
+								   WHERE V.Id_Negociacion = n.Id_Negociacion
+								   ORDER BY V.Id_Negociacion');	
+		
+		return $query->result_array();	
+	}
+	
 	function ConsultarLista2()
 	{
 		$query = $this->db->query('SELECT V.Id_VentaNego, V.Id_Negociacion
