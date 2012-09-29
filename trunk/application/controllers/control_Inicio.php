@@ -105,6 +105,11 @@ class Control_Inicio extends CI_Controller
 				$usuario2 = array('nombre' => $firstName,'apellido' => $lastName,'Usuario' => $userEmail);
 				$this->session->set_userdata($usuario2);
 				
+				$cedula = $this->modelCliente->BuscarId($userEmail);
+				
+				$usuario2['NumeroPorAprobar'] = $this->modelInicio->NumeroPorAprobar2($cedula);
+				$usuario2['SinAutorizar'] = $this->modelInicio->SinAutorizar($cedula);
+				
 				$usuario2['Ganadas'] = $this->modelventa->NegoGanadas(); 
 				$usuario2['Ganadas2'] = $this->modelventa->NumNegoGanadas(); 
 				
@@ -112,6 +117,7 @@ class Control_Inicio extends CI_Controller
 				$usuario2['NoFacturadas2'] = $this->modelventa->NumNoFacturadas();
 				
 				$usuario2['SiFacturadas'] = $this->modelventa->NumFacturadas();
+				$usuario2['SiFacturadas2'] = $this->modelventa->Facturadas();
 				
 				$this->load->view('Despachador/DPrincipal', $usuario2);
 			}
@@ -181,6 +187,11 @@ class Control_Inicio extends CI_Controller
 		$Usuario = $this->session->userdata('Usuario');
 		$usuario['Usuario'] = $Usuario;
 		
+		$cedula = $this->modelCliente->BuscarId($Usuario);
+				
+		$usuario['NumeroPorAprobar'] = $this->modelInicio->NumeroPorAprobar2($cedula);
+		$usuario['SinAutorizar'] = $this->modelInicio->SinAutorizar($cedula);
+		
 		$usuario['Ganadas'] = $this->modelventa->NegoGanadas(); 
 		$usuario['Ganadas2'] = $this->modelventa->NumNegoGanadas(); 
 				
@@ -188,6 +199,7 @@ class Control_Inicio extends CI_Controller
 		$usuario['NoFacturadas2'] = $this->modelventa->NumNoFacturadas();
 				
 		$usuario['SiFacturadas'] = $this->modelventa->NumFacturadas();
+		$usuario['SiFacturadas2'] = $this->modelventa->Facturadas();
 		
 		$this->load->view('Despachador/DPrincipal', $usuario);	
 	}
